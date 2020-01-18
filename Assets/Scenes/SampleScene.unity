@@ -352,8 +352,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 192821679}
-  maxSpeed: 5
-  acceleration: 6
+  moveSpeed: 2
+  sprintSpeed: 3
+  sprintAvailable: 1
 --- !u!1 &334106997
 GameObject:
   m_ObjectHideFlags: 0

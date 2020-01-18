@@ -7,57 +7,60 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject gm;
 
-    public float maxSpeed = 1;
     private int direction = 1;
 
     private Vector2 targetPos;
     private bool enRoute = false;
 
-    private float moveSpeed = 5;
-    public float acceleration;
+    public float moveSpeed;
+    public float sprintSpeed;
 
     private bool sprint = false;
+    public float sprintAvailable;
+    private float sprintRemaining;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+        sprintRemaining = sprintAvailable;
     }
 
-    private float lastClick = 0;
-    private float downTime; //internal time from when the key is pressed
-    private bool isHandled = false;
-    /**
-    void CheckForDoubleClick()
+    float clicked = 0;
+    float clicktime = 0;
+    float clickdelay = 0.7f;
+    bool DoubleClick()
     {
-        //start recording the time when a key is pressed and held.
-        downTime = Time.time;
-        isHandled = false;
 
-        //look for a double click
-        if (Time.time - lastClick < 0.3)
+        if (Input.GetMouseButtonDown(0))
         {
-            // do something
-            sprint = true;
-            Debug.Log("You double clicked the target.");
+            clicked++;
+            if (clicked == 1) clicktime = Time.time;
         }
-        lastClick = Time.time;
+        if (clicked > 1 && Time.time - clicktime < clickdelay)
+        {
+            clicked = 0;
+            clicktime = 0;
+            return true;
+        }
+        else if (clicked > 2 || Time.time - clicktime > 1) clicked = 0;
+        return false;
     }
-    **/
+
     // Update is called once per frame
     void Update()
     {
         //---------------------------------------------------------------Movement--------------------------------------------------------------
-        /**
-        if (Input.GetMouseButtonDown(0))
+        //Sprint
+        if (DoubleClick())
         {
-            CheckForDoubleClick();
+            sprint = true;
         }
-
-        float newMspd = 0;
-
+        
+        //Get target
         if (Input.GetMouseButton(0))
         {
+            enRoute = true;
 
             targetPos = gm.transform.GetChild(0).gameObject.GetComponent<MouseControls>().target;
 
@@ -72,95 +75,61 @@ public class Player : MonoBehaviour
             {
                 direction = 1;
             }
-
-            if (sprint)
-            {
-                Debug.Log("I am Sprinting");
-            }
-            else
-            {
-                moveSpeed += acceleration * Time.deltaTime;
-
-                newMspd = Mathf.Clamp(moveSpeed, 0, maxSpeed);
-
-
-                rb.velocity = new Vector2(newMspd * direction, rb.velocity.y);
-                //Debug.Log(newMspd);
-            }
-
         }
-        else
-        {
-            if (sprint) sprint = false;
-            rb.velocity = new Vector2(0, rb.velocity.y);
-            moveSpeed = 0;
-        }
-        **/
-
-        //Get target
-        if (Input.GetMouseButton(0))
-        {
-            targetPos = gm.transform.GetChild(0).gameObject.GetComponent<MouseControls>().target;
-            enRoute = true;
-
-            //Change direction
-            if(targetPos.x < transform.position.x)
-            {
-
-                direction = -1;
-
-            }
-            else
-            {
-                direction = 1;
-            }
-        }
-
 
         //Move to target now
         if (enRoute)
         {
-            if (targetPos.x - transform.position.x > 0.1 || targetPos.x - transform.position.x < -0.1)
+            if (targetPos.x - transform.position.x > 0.5 || targetPos.x - transform.position.x < -0.5)
             {
-
-                rb.velocity = new Vector2(moveSpeed * direction, rb.velocity.y);
-
-            }
-            else
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-                enRoute = false;
-            }
-        }
-
-
-        /**
-        //Move to target if holding mouse
-        if (Input.GetMouseButton(0))
-        {
-            if (targetPos.x - transform.position.x > 0.1 || targetPos.x - transform.position.x < -0.1)
-            {
-                if (enRoute)
+                if (sprint)
                 {
-                    rb.velocity = new Vector2(moveSpeed * direction, rb.velocity.y);
+                    rb.velocity = new Vector2(sprintSpeed * 100 * direction * Time.fixedDeltaTime, rb.velocity.y);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(moveSpeed * 100 * direction * Time.fixedDeltaTime, rb.velocity.y);
                 }
 
             }
             else
             {
-                enRoute = false;
-            }
-
-            if (!enRoute)
-            {
                 rb.velocity = new Vector2(0, rb.velocity.y);
+                enRoute = false;
+
+                if (sprint)
+                {
+                    sprint = false;
+                }
+            }
+        }
+
+        //Sprint cooldown
+        if (sprint)
+        {
+            if(sprintRemaining > 0)
+            {
+                sprintRemaining -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                sprint = false;
             }
         }
         else
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+
+            if(sprintRemaining < sprintAvailable)
+            {
+                sprintRemaining += Time.fixedDeltaTime;
+            }
+            
+            if(sprintRemaining >= sprintAvailable)
+            {
+                sprintRemaining = sprintAvailable;
+            }
+
         }
-        **/
 
     }
 
