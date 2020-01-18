@@ -1,2 +1,4 @@
 # Project_Ghost
- project for gps 1
+GPS 1 project.
+Theme: Peranakan
+Name: Pantang
