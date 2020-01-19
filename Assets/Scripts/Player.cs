@@ -5,10 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public GameObject gm;
+    private GameObject gm;
 
+    
     private int direction = 1;
 
+    //Movement variables
     private Vector2 targetPos;
     private bool enRoute = false;
 
@@ -19,16 +21,28 @@ public class Player : MonoBehaviour
     public float sprintAvailable;
     private float sprintRemaining;
 
+    //interaction variables
+    public LayerMask interactableLayer;
+    public float interactableSize = 1;
+    public float interactableOffset = 1;
+
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameObject.Find("Gamemanager");
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         sprintRemaining = sprintAvailable;
+
+        if(gm == null)
+        {
+            Debug.Log("Player not linked to Game Manager");
+        }
     }
 
     float clicked = 0;
     float clicktime = 0;
     float clickdelay = 0.7f;
+
     bool DoubleClick()
     {
 
@@ -131,6 +145,61 @@ public class Player : MonoBehaviour
 
         }
 
+        //---------------------------------------------------------------Interact with Objects------------------------------------------------
+        Collider2D[] interactable = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y + interactableOffset), new Vector2(interactableSize, interactableSize), 0, interactableLayer);
+
+        if(interactable != null)
+        {
+
+            for (int i = 0; i < interactable.Length; i++)
+            {
+                if (interactable[i].gameObject.tag == "Door")
+                {
+                    interactable[i].gameObject.GetComponent<Door>().inRange = true;
+                }
+            }
+            
+        }
+
+        //Clicking interactables
+
+        RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (mouseHit.collider != null)
+            {
+                if(mouseHit.collider.gameObject.tag == "Door")
+                {
+                    Door door = mouseHit.collider.gameObject.GetComponent<Door>();
+
+                    if (door.inRange)
+                    {
+                        Debug.Log("I am in range of the door");
+                        if (door.isLocked)
+                        {
+                            door.Unlock();
+                        }
+                        else
+                        {
+                            if (door.isClosed)
+                            {
+                                door.Open();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }//End Update
+   
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y + interactableOffset), new Vector2(interactableSize, interactableSize));
     }
+
+    
 
 }
