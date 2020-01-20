@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-
     public bool isLocked = false;
     public bool isClosed = true;
-    public bool inRange = false;
+    private Interactable it;
+
+    private void Awake()
+    {
+        it = GetComponent<Interactable>();
+    }
 
     public void Unlock()
     {
@@ -29,25 +33,28 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        if (inRange && isLocked)
+        if (it.inRange && isLocked)
         {
             transform.GetChild(0).gameObject.SetActive(true);
         }
+        else
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
         
-        if(inRange && !isLocked)
+        if(it.inRange && !isLocked)
         {
             transform.GetChild(0).gameObject.SetActive(false);
         }
 
-        inRange = false;
-
         if (isClosed)
         {
-            GetComponent<BoxCollider2D>().isTrigger = false;
+            GetComponent<BoxCollider2D>().enabled = true;
         }
         else
         {
-            GetComponent<BoxCollider2D>().isTrigger = true;
+            GetComponent<BoxCollider2D>().enabled = false;
+            it.interactable = false;
         }
 
         if (isLocked && isClosed){
@@ -63,6 +70,21 @@ public class Door : MonoBehaviour
             GetComponent<SpriteRenderer>().color = Color.green;
 
         }
-        
+
+        it.inRange = false;
+
     }
+
+    public void Interact()
+    {
+        if (isLocked)
+        {
+            Unlock();
+        }
+        else if(isClosed)
+        {
+            Open();
+        }
+    }
+
 }

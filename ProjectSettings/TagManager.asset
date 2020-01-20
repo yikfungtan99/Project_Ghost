@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Prop
   layers:
   - Default
   - TransparentFX
