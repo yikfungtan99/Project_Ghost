@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private Vector2 targetPos;
     private Vector2 waypointPos;
     private bool enRoute = false;
+    private bool haveWayPoint;
 
     public float moveSpeed;
 
@@ -102,14 +103,21 @@ public class Player : MonoBehaviour
         //Get target
         if (Input.GetMouseButton(0))
         {
-            if (waypointPos.x - transform.position.x < safeArea || waypointPos.x - transform.position.x > -safeArea)
+            if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
             {
                 waypointPos = targetPos;
+                haveWayPoint = true;
+
             }
+            else
+            {
+                haveWayPoint = false;
+            }
+            
         }
 
         
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && haveWayPoint)
         {
             //Sprint
             if (!sprint && !sprintOnCooldown)
