@@ -41,13 +41,19 @@ public class Player : MonoBehaviour
     public float interactableOffset = 1;
     private bool targetOnInteractable = false;
 
+    //animation && SPrite
+    private SpriteRenderer sprite;
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.Find("Gamemanager");
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+        anim = transform.GetChild(0).GetComponent<Animator>();
+        sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
 
-        if(gm == null)
+        if (gm == null)
         {
             Debug.Log("Player not linked to Game Manager");
         }
@@ -143,12 +149,13 @@ public class Player : MonoBehaviour
             //Change direction
             if (waypointPos.x < transform.position.x)
             {
-
+                sprite.flipX = true;
                 direction = -1;
 
             }
             else
             {
+                sprite.flipX = false;
                 direction = 1;
             }
         }
@@ -186,7 +193,9 @@ public class Player : MonoBehaviour
 
         //Move to target now
         if (enRoute && !targetOnInteractable)
-        { 
+        {
+            anim.SetBool("Move", true);
+
             if(direction > 0 && transform.position.x > waypointPos.x)
             {
                 enRoute = false;
@@ -211,6 +220,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            anim.SetBool("Move", false);
             rb.velocity = new Vector2(0, rb.velocity.y);
 
             if (sprint)
