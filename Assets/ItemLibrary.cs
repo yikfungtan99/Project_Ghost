@@ -14,21 +14,9 @@ public class ItemLibrary : MonoBehaviour
 
     public GameObject FindItem(string itemName)
     {
-        int counter = 0;
 
-        if (itemName == items[counter].name)
-        {
-            return items[counter];
-        }
-        else
-        {
+        //this will be different when comparing
 
-        }
-
-
-        Debug.Log("Item not found!");
-        return null;
-        
     }
 
 }
