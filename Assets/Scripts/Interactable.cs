@@ -7,9 +7,7 @@ public class Interactable : MonoBehaviour
     public bool inRange = false;
     public bool interactable = true;
 
-    string[] stringtags = new string[] { "Door", "Prop" };
-    public enum tagNumbers { Door, Prop };
-    public tagNumbers tagNum;
+    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item"};
 
     public void Interact()
     {
@@ -20,6 +18,10 @@ public class Interactable : MonoBehaviour
         else if(gameObject.tag == stringtags[1])
         {
             GetComponent<Prop_Interactable>().Interact();
+        }
+        else if (gameObject.tag == stringtags[2])
+        {
+            GetComponent<Item_Drop>().Pickup();
         }
     }
 }

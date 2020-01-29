@@ -45,6 +45,16 @@ public class Player : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    //Monologue
+    private GameObject monolog;
+    private bool showMonolog = false;
+    public float monologTimer;
+    private float monologTimeCount;
+
+    //Inventory
+    private GameObject inventory;
+    private bool inventoryOn = false; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,13 +62,21 @@ public class Player : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator>();
         sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        monolog = transform.GetChild(1).GetChild(0).gameObject;
+        inventory = transform.GetChild(2).gameObject;
 
         if (gm == null)
         {
             Debug.Log("Player not linked to Game Manager");
         }
 
+        if(inventory == null)
+        {
+            Debug.Log("Inventory not found");
+        }
+
         staminaRemaining = stamina;
+        monologTimeCount = monologTimer;
     }
 
     // Update is called once per frame
@@ -84,7 +102,8 @@ public class Player : MonoBehaviour
         //Clicking interactables
         RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
 
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && !inventoryOn)
         {
             if (mouseHit.collider != null)
             {
@@ -105,9 +124,9 @@ public class Player : MonoBehaviour
         }
 
         //---------------------------------------------------------------Movement--------------------------------------------------------------
-        
+
         //Get target
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !inventoryOn)
         {
             if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
             {
@@ -119,16 +138,16 @@ public class Player : MonoBehaviour
             {
                 haveWayPoint = false;
             }
-            
+
         }
 
-        
+
         if (Input.GetMouseButton(0) && haveWayPoint)
         {
             //Sprint
             if (!sprint && !sprintOnCooldown)
             {
-                if(sprintMouseDelayTimer < sprintMouseDelay)
+                if (sprintMouseDelayTimer < sprintMouseDelay)
                 {
 
                     sprintMouseDelayTimer += Time.fixedDeltaTime;
@@ -194,15 +213,14 @@ public class Player : MonoBehaviour
         //Move to target now
         if (enRoute && !targetOnInteractable)
         {
-            anim.SetBool("Move", true);
 
-            if(direction > 0 && transform.position.x > waypointPos.x)
+            if (direction > 0 && transform.position.x > waypointPos.x)
             {
                 enRoute = false;
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
 
-            if(direction < 0 && transform.position.x < waypointPos.x)
+            if (direction < 0 && transform.position.x < waypointPos.x)
             {
                 enRoute = false;
                 rb.velocity = new Vector2(0, rb.velocity.y);
@@ -220,7 +238,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            anim.SetBool("Move", false);
+            //anim.SetBool("Move", false);
             rb.velocity = new Vector2(0, rb.velocity.y);
 
             if (sprint)
@@ -229,12 +247,72 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (showMonolog == true)
+        {
+            if (monologTimeCount > 0)
+            {
+                monologTimeCount -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                monologTimeCount = monologTimer;
+                showMonolog = false;
+            }
+
+        }
+
+        monolog.SetActive(showMonolog);
+
+        //Inventory
+        if (Input.GetMouseButtonDown(1))
+        {
+            ToggleInventory();
+        }
+
+        if (inventoryOn)
+        {
+            enRoute = false;
+            haveWayPoint = false;
+        }
+
+        //Animation
+        if(rb.velocity.x > 1 || rb.velocity.x < -1)
+        {
+            anim.SetBool("Move", true);
+        }
+        else
+        {
+            anim.SetBool("Move", false);
+        }
+
+
     }//End Update
+
+    public void ShowMonologue()
+    {
+        showMonolog = true;
+    }
+
+    private void ToggleInventory()
+    {
+        if (inventoryOn)
+        {
+            inventoryOn = false;
+        }
+        else
+        {
+            inventoryOn = true;
+        }
+
+        inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
+
+    }
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y + interactableOffset), new Vector2(interactableSize, interactableSize));
     }
+
 
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class Door : MonoBehaviour
     {
         isClosed = false;
         Debug.Log("I open the door");
+        Teleport();
     }
 
     public void Closed()
@@ -85,6 +87,20 @@ public class Door : MonoBehaviour
         {
             Open();
         }
+    }
+
+    private void Teleport()
+    {
+
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+        
     }
 
 }
