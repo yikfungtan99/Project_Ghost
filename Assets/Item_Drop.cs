@@ -7,10 +7,12 @@ public class Item_Drop : MonoBehaviour
     private ItemLibrary il;
     public string itemName;
     public GameObject item_ui;
+    Interactable it;
 
     // Start is called before the first frame update
     void Start()
     {
+        it = GetComponent<Interactable>();
         il = GameObject.Find("ItemLibrary").GetComponent<ItemLibrary>();
         transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = il.GetSprite(itemName);
     }

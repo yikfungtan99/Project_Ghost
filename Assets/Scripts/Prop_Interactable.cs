@@ -11,20 +11,6 @@ public class Prop_Interactable : MonoBehaviour
         it = GetComponent<Interactable>();
     }
 
-    public void Update()
-    {
-        if (it.inRange)
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-        }
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-        }
-
-        it.inRange = false;
-    }
-
     public void Interact()
     {
         GameObject.Find("Player").GetComponent<Player>().ShowMonologue();
