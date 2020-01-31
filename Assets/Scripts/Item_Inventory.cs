@@ -2,13 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+
     private Canvas canvas;
     private CanvasGroup canvasGroup;
 
     private RectTransform rectTransform;
+
+    public string itemName;
+    private ItemLibrary il;
+    
+
+    private void Start()
+    {
+
+        il = GameObject.Find("ItemLibrary").GetComponent<ItemLibrary>();
+        GetComponent<Image>().sprite = il.GetSprite(itemName);
+
+    }
 
     private void Awake()
     {

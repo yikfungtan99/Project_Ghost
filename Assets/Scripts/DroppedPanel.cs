@@ -29,10 +29,10 @@ public class DroppedPanel : MonoBehaviour, IDropHandler
         {
             if (eventData.pointerDrag.GetComponent<Item_Inventory>())
             {
-                drop_indicator.GetComponent<Item_Drop>().itemType = itemLibrary.FindItem(eventData.pointerDrag.name);
+                GameObject dropInstance = Instantiate(drop_indicator, transform.root.GetChild(0).position, Quaternion.identity);
 
-                Instantiate(drop_indicator, transform.root.GetChild(0).position, Quaternion.identity);
-                
+                dropInstance.GetComponent<Item_Drop>().itemName = eventData.pointerDrag.GetComponent<Item_Inventory>().itemName;
+
                 Destroy(eventData.pointerDrag.gameObject);
             }
         }

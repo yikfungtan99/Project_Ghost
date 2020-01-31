@@ -93,8 +93,13 @@ public class Player : MonoBehaviour
             for (int i = 0; i < interactable.Length; i++)
             {
 
-                interactable[i].gameObject.GetComponent<Interactable>().inRange = true;
+                if (interactable[i].gameObject.GetComponent<Interactable>())
+                {
 
+                    interactable[i].gameObject.GetComponent<Interactable>().inRange = true;
+
+                }
+                
             }
 
         }
@@ -305,6 +310,7 @@ public class Player : MonoBehaviour
         }
 
         inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
+        inventory.transform.GetChild(1).gameObject.SetActive(inventoryOn);
 
     }
 
