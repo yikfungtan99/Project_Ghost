@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
     public bool inRange = false;
     public bool interactable = true;
 
-    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item"};
+    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot"};
 
     public void Interact()
     {
@@ -22,6 +22,10 @@ public class Interactable : MonoBehaviour
         else if (gameObject.tag == stringtags[2])
         {
             GetComponent<Item_Drop>().Pickup();
+        }
+        else if (gameObject.tag == stringtags[3])
+        {
+            GetComponent<Hidable>().Hide();
         }
     }
 

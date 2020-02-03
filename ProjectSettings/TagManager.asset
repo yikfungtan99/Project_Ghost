@@ -7,6 +7,7 @@ TagManager:
   - Door
   - Prop
   - Dropped_Item
+  - Hiding_Spot
   layers:
   - Default
   - TransparentFX
