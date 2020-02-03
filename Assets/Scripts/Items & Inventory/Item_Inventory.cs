@@ -16,6 +16,12 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private ItemLibrary il;
 
     private Vector2 initPos;
+    public bool onHold = false;
+
+    private void OnEnable()
+    {
+
+    }
 
     private void Awake()
     {
@@ -45,10 +51,12 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         canvasGroup.alpha = 1f;
 
-        if(rectTransform.anchoredPosition.x < -300 || rectTransform.anchoredPosition.x > 300 || rectTransform.anchoredPosition.y < -150 || rectTransform.anchoredPosition.y > 150)
+        if (!onHold)
         {
-            rectTransform.anchoredPosition = initPos;
+            if (rectTransform.anchoredPosition.x < -300 || rectTransform.anchoredPosition.x > 300 || rectTransform.anchoredPosition.y < -150 || rectTransform.anchoredPosition.y > 150)
+            {
+                rectTransform.anchoredPosition = initPos;
+            }
         }
-
     }
 }

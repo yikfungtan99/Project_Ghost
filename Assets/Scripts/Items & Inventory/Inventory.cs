@@ -17,7 +17,11 @@ public class Inventory : MonoBehaviour
             float x = Random.Range(-300, 300);
             float y = Random.Range(-150, 150);
 
-            transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
+            if (!transform.GetChild(i).GetComponent<Item_Inventory>().onHold)
+            {
+                transform.GetChild(i).GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
+            }
+
         }
     }
 
