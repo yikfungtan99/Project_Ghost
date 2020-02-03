@@ -87,6 +87,8 @@ public class Player_Interactable : MonoBehaviour
                 }
             }
         }
+
+        GetComponent<Player>().targetOnInteractable = targetOnInteractable;
     }
 
     private void OnDrawGizmosSelected()

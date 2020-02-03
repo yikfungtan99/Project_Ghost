@@ -49,7 +49,6 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Get target position of the mouse
         targetPos = gm.transform.GetChild(0).gameObject.GetComponent<MouseControls>().target;
 

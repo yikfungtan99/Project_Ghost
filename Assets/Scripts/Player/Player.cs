@@ -6,10 +6,9 @@ public class Player : MonoBehaviour
 {
     public GameObject gm;
 
-    //Inventory
+    //Player bool
     public bool inventoryOn = false;
-
-    // Start is called before the first frame update
+    public bool targetOnInteractable = false;
 
     private void Awake()
     {
@@ -25,6 +24,7 @@ public class Player : MonoBehaviour
     {
         GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;
+        GetComponent<Player_Movement>().enabled = !targetOnInteractable;
     }//End Update
 
 }
