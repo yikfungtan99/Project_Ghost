@@ -191,6 +191,7 @@ public class Player : MonoBehaviour
 
         if (sprint)
         {
+            sprite.color = Color.red;
             if (staminaRemaining > 0)
             {
                 staminaRemaining -= Time.fixedDeltaTime;
@@ -204,6 +205,8 @@ public class Player : MonoBehaviour
         }
         else
         {
+            sprite.color = Color.white;
+
             if (staminaRemaining < stamina)
             {
                 staminaRemaining += Time.fixedDeltaTime;
