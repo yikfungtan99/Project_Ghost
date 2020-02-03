@@ -8,6 +8,7 @@ public class MainGhost : MonoBehaviour
     public float ChaseSpeed;
     public float detectRange;
     public float stopRange;
+    public LayerMask Layer;
 
     private float lastX;
     private bool IsMovingRight;
@@ -20,7 +21,7 @@ public class MainGhost : MonoBehaviour
     {
         randomspot = Random.Range(0, moveSpots.Length);
         Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Physics2D.queriesStartInColliders = false;
+       // Physics2D.queriesStartInColliders = false;
         lastX = transform.position.x;
 
 
@@ -59,7 +60,7 @@ public class MainGhost : MonoBehaviour
 
 
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange,Layer);
 
 
         if (hitInfo.collider != null)
