@@ -13,8 +13,7 @@ public class Prop_Interactable : MonoBehaviour
 
     public void Interact()
     {
-        GameObject.Find("Player").GetComponent<Player>().ShowMonologue();
-        Debug.Log("Woooo Painting!");
+        GameObject.Find("Player").GetComponent<Player_Interactable>().showMonolog = true;
 
     }
 }

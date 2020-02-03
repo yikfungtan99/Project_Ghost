@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &812573882
 RectTransform:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 4563730667305377346}
   - component: {fileID: 3780353024015271161}
   m_Layer: 0
-  m_Name: Monologue
+  m_Name: monolog mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -523,6 +523,9 @@ GameObject:
   - component: {fileID: 3556145522249875083}
   - component: {fileID: 3556145522249875084}
   - component: {fileID: 304031443}
+  - component: {fileID: 2212946242675427860}
+  - component: {fileID: 2010921982531460386}
+  - component: {fileID: 5800604849504707875}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -663,17 +666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2468f3289fce74897245d8dd798a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  safeArea: 0.5
-  moveSpeed: 2
-  sprintMouseDelay: 0.45
-  sprintSpeed: 3
-  stamina: 1
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  interactableSize: 2
-  interactableOffset: 0.2
-  monologTimer: 3
+  gm: {fileID: 0}
+  inventoryOn: 0
 --- !u!212 &304031443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -723,6 +717,54 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2212946242675427860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556145522249875082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ce2cfcd59cb3649aeaaccc57776b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  safeArea: 0.5
+  moveSpeed: 2
+  sprintMouseDelay: 0.45
+  sprintSpeed: 3
+  stamina: 1
+--- !u!114 &2010921982531460386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556145522249875082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c434b20259f4b4480d6939894dd633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5800604849504707875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556145522249875082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e4864940f7c0a4db8ea3677f7360be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  interactableSize: 2
+  interactableOffset: 0.2
+  showMonolog: 0
+  showMonologTimer: 1
 --- !u!1 &5287318252418680727
 GameObject:
   m_ObjectHideFlags: 0
