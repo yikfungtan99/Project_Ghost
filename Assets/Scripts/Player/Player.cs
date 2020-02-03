@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public GameObject gm;
-
+    public bool hidden;
     //Player bool
     public bool inventoryOn = false;
     public bool targetOnInteractable = false;
