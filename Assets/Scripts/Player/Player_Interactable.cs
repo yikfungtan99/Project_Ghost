@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Interactable : MonoBehaviour
 {
-
     private GameObject gm;
 
     private Vector2 targetPos;
