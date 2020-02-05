@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+
+    public Vector2 inventorySafeArea;
+
     private void OnEnable()
     {
         RandomizePosition();
@@ -14,8 +17,8 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
 
-            float x = Random.Range(-300, 300);
-            float y = Random.Range(-150, 150);
+            float x = Random.Range(-inventorySafeArea.x, inventorySafeArea.x);
+            float y = Random.Range(-inventorySafeArea.y, inventorySafeArea.y);
 
             if (!transform.GetChild(i).GetComponent<Item_Inventory>().onHold)
             {

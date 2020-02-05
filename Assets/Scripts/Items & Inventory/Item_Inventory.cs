@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
 
     private Canvas canvas;
@@ -57,6 +57,18 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             {
                 rectTransform.anchoredPosition = initPos;
             }
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (onHold && GameObject.Find("Player").GetComponent<Player>().inventoryOn)
+        {
+            transform.SetParent(transform.parent.parent.GetChild(0));
+
+            rectTransform.anchoredPosition = new Vector2(Random.Range(-300, 300), Random.Range(-150, 150));
+
+            onHold = false;
         }
     }
 }
