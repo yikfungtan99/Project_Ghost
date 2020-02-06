@@ -8,6 +8,7 @@ TagManager:
   - Prop
   - Dropped_Item
   - Hiding_Spot
+  - Enemy
   layers:
   - Default
   - TransparentFX

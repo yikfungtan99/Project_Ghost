@@ -12,7 +12,7 @@ public class Hidable : MonoBehaviour
 
     public void Hide()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().enabled = false;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = true;
     }

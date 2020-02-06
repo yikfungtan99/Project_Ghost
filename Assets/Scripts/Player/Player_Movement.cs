@@ -138,6 +138,8 @@ public class Player_Movement : MonoBehaviour
         //Move to target now
         if (enRoute)
         {
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = false;
             if (direction > 0 && transform.position.x > waypointPos.x)
             {
                 enRoute = false;    
