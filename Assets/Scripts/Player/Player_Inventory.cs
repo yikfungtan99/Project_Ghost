@@ -42,6 +42,6 @@ public class Player_Inventory : MonoBehaviour
         }
 
         inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
-        inventory.transform.GetChild(1).gameObject.SetActive(inventoryOn);
+
     }
 }

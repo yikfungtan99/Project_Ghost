@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [HideInInspector]
     public GameObject gm;
+    public Inventory iv;
     public bool hidden;
     public int talisman=3;
     //Player bool
@@ -14,6 +16,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         gm = GameObject.Find("Gamemanager");
+        iv = transform.GetChild(2).GetComponent<Inventory>();
         if (gm == null)
         {
             Debug.Log("Player not linked to Game Manager");
@@ -26,7 +29,10 @@ public class Player : MonoBehaviour
         GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !targetOnInteractable;
+
        // GetComponent<Player_Movement>().enabled = !hidden;
+
+
     }//End Update
 
     void OnTriggerEnter2D(Collider2D other)

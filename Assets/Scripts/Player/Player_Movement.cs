@@ -35,6 +35,8 @@ public class Player_Movement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    bool randomized = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,9 +108,17 @@ public class Player_Movement : MonoBehaviour
             sprintMouseDelayTimer = 0;
         }
 
+        
+
         if (sprint)
         {
-            sprite.color = Color.red;
+            //insert animation bool
+            if (!randomized)
+            {
+                randomized = true;
+                transform.GetComponent<Player>().iv.RandomizePosition();
+            }
+
             if (staminaRemaining > 0)
             {
                 staminaRemaining -= Time.fixedDeltaTime;
@@ -133,6 +143,9 @@ public class Player_Movement : MonoBehaviour
                 staminaRemaining = stamina;
                 sprintOnCooldown = false;
             }
+
+            randomized = false;
+
         }
 
         //Move to target now

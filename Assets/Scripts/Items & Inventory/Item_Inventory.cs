@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
 
     private Canvas canvas;
@@ -18,10 +18,7 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private Vector2 initPos;
     public bool onHold = false;
 
-    private void OnEnable()
-    {
-
-    }
+    private Inventory iv;
 
     private void Awake()
     {
@@ -33,6 +30,7 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private void Start()
     {
         il = GameObject.Find("ItemLibrary").GetComponent<ItemLibrary>();
+        iv = transform.parent.parent.GetComponent<Inventory>();
         GetComponent<Image>().sprite = il.GetSprite(itemName);
     }
 
@@ -53,10 +51,22 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
         if (!onHold)
         {
-            if (rectTransform.anchoredPosition.x < -300 || rectTransform.anchoredPosition.x > 300 || rectTransform.anchoredPosition.y < -150 || rectTransform.anchoredPosition.y > 150)
+            if (rectTransform.anchoredPosition.x < -iv.inventorySafeArea.x || rectTransform.anchoredPosition.x > iv.inventorySafeArea.x || rectTransform.anchoredPosition.y < -iv.inventorySafeArea.y || rectTransform.anchoredPosition.y > iv.inventorySafeArea.y)
             {
                 rectTransform.anchoredPosition = initPos;
             }
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (onHold && GameObject.Find("Player").GetComponent<Player>().inventoryOn)
+        {
+            transform.SetParent(transform.parent.parent.GetChild(0));
+
+            rectTransform.anchoredPosition = new Vector2(Random.Range(-iv.inventorySafeArea.x, iv.inventorySafeArea.x), Random.Range(-iv.inventorySafeArea.y, iv.inventorySafeArea.y));
+
+            onHold = false;
         }
     }
 }
