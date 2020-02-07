@@ -71,6 +71,7 @@ public class Player_Interactable : MonoBehaviour
         {
             if (mouseHit.collider != null)
             {
+
                 if (mouseHit.collider.gameObject.GetComponent<Interactable>().inRange && mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
                 {
                     mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
