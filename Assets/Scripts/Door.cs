@@ -7,11 +7,19 @@ public class Door : MonoBehaviour
 {
     public bool isLocked = false;
     public bool isClosed = true;
+
+    public enum Orientation { LeftRight, Up, Down }
+
+    public Orientation orientation;
+
     private Interactable it;
 
-    private void Awake()
+    private RoomManager rm;
+
+    private void Start()
     {
         it = GetComponent<Interactable>();
+        rm = GameObject.Find("RoomManager").GetComponent<RoomManager>();
     }
 
     public void Unlock()
@@ -24,7 +32,28 @@ public class Door : MonoBehaviour
     {
         isClosed = false;
         Debug.Log("I open the door");
-        Teleport();
+        //Teleport();
+
+        if(orientation == Orientation.LeftRight)
+        {
+            if(GameObject.Find("Player").transform.position.x > transform.position.x)
+            {
+                rm.SwitchRoom("Left");
+            }
+            else
+            {
+                rm.SwitchRoom("Right");
+            }
+            
+        }
+        else if(orientation == Orientation.Up)
+        {
+            rm.SwitchRoom("Up");
+
+        }else if (orientation == Orientation.Down)
+        {
+            rm.SwitchRoom("Down");
+        }
     }
 
     public void Closed()

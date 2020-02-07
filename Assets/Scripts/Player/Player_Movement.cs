@@ -52,7 +52,7 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         //Get target position of the mouse
-        targetPos = gm.transform.GetChild(0).gameObject.GetComponent<MouseControls>().target;
+        targetPos = gm.GetComponent<MouseControls>().target;
 
         //Get waypoint
         if (Input.GetMouseButton(0))

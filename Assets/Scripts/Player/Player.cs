@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        gm = GameObject.Find("Gamemanager");
+        gm = GameObject.Find("GameManager");
         iv = transform.GetChild(2).GetComponent<Inventory>();
         if (gm == null)
         {

@@ -43,7 +43,7 @@ public class Player_Interactable : MonoBehaviour
         }
 
         //Get target position of the mouse
-        targetPos = gm.transform.GetChild(0).gameObject.GetComponent<MouseControls>().target;
+        targetPos = gm.GetComponent<MouseControls>().target;
 
         //---------------------------------------------------------------Interact with Objects------------------------------------------------
         Collider2D[] interactable = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y + interactableOffset), new Vector2(interactableSize, interactableSize), 0, interactableLayer);
