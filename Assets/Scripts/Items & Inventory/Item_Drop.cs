@@ -25,6 +25,8 @@ public class Item_Drop : MonoBehaviour
 
         instance.GetComponent<Item_Inventory>().itemName = itemName;
 
+        inventory.GetComponent<Inventory>().RandomizePosition();
+
         Destroy(gameObject);
     }
 

@@ -34,6 +34,8 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
+        Debug.Log("Enter Door");
+
         isClosed = false;
 
         if (LeftRight)

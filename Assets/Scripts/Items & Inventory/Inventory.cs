@@ -26,9 +26,6 @@ public class Inventory : MonoBehaviour
                 {
                     transform.GetChild(0).GetChild(i).GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
                 }
-
-                Debug.Log(transform.GetChild(0).GetChild(i).GetComponent<RectTransform>().anchoredPosition);
-
             }
 
         }

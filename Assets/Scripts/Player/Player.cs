@@ -41,8 +41,6 @@ public class Player : MonoBehaviour
         if (hidden == false)
         {
 
-
-           
             if (other.CompareTag("Enemy"))
             {
                 if(talisman>0)
@@ -64,15 +62,10 @@ public class Player : MonoBehaviour
 
         }
 
-
-
-
     }
     IEnumerator EnemyWake()
     {
         //This is a coroutine
-       
-
         yield return new WaitForSeconds(10);    //Wait one frame
         GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
 
