@@ -246,14 +246,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.013837, y: 0.014848232, z: -6.954797}
   m_LocalScale: {x: 1, y: 1, z: 1}
-
   m_Children:
-  - {fileID: 304031445}
-  - {fileID: 893763891}
   - {fileID: 1932781904}
-
-  m_Children: []
-
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -523,7 +517,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -547,7 +541,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6961632, y: -2.185152, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1725,7 +1719,7 @@ Transform:
   m_LocalScale: {x: 14.1, y: 22, z: 1}
   m_Children: []
   m_Father: {fileID: 172410915}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1932781905
 MonoBehaviour:
@@ -1812,7 +1806,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.11, y: 0.16}
   m_EdgeRadius: 0
 --- !u!114 &1932781908
 MonoBehaviour:
