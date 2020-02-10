@@ -64,6 +64,13 @@ public class Player_Interactable : MonoBehaviour
 
         }
 
+    }
+
+    public bool CheckForInteractables() //This will prevent any unnecessary movement such as when clicking on an interactable that is within range
+    {
+        bool onInteractable = false;
+        targetPos = gm.GetComponent<MouseControls>().target;
+        
         //Clicking interactables
         RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
 
@@ -71,11 +78,10 @@ public class Player_Interactable : MonoBehaviour
         {
             if (mouseHit.collider != null)
             {
-
                 if (mouseHit.collider.gameObject.GetComponent<Interactable>().inRange && mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
                 {
                     mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
-                    targetOnInteractable = true;
+                    onInteractable = true;
                 }
 
             }
@@ -83,12 +89,12 @@ public class Player_Interactable : MonoBehaviour
             {
                 if (targetOnInteractable)
                 {
-                    targetOnInteractable = false;
+                    onInteractable = false;
                 }
             }
         }
 
-        GetComponent<Player>().targetOnInteractable = targetOnInteractable;
+        return onInteractable;
     }
 
     private void OnDrawGizmosSelected()

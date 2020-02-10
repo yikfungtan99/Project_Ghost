@@ -43,12 +43,12 @@ public class Door : MonoBehaviour
             if (GameObject.Find("Player").transform.position.x > transform.position.x)
             {
                 rm.SwitchRoom("Left");
-                GameObject.Find("Player").transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true;
+                GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else
             {
                 rm.SwitchRoom("Right");
-                GameObject.Find("Player").transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+                GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
         }

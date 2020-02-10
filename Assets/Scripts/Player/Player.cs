@@ -9,9 +9,13 @@ public class Player : MonoBehaviour
     public Inventory iv;
     public bool hidden;
     public int talisman=3;
+
+    //Player float 
+    public float delayTimer;
+
     //Player bool
     public bool inventoryOn = false;
-    public bool targetOnInteractable = false;
+    public bool haveLighter = false;
 
     private void Awake()
     {
@@ -28,9 +32,8 @@ public class Player : MonoBehaviour
     {
         GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;
-        GetComponent<Player_Movement>().enabled = !targetOnInteractable;
 
-       // GetComponent<Player_Movement>().enabled = !hidden;
+        // GetComponent<Player_Movement>().enabled = !hidden;
 
 
     }//End Update
@@ -69,5 +72,12 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(10);    //Wait one frame
         GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
 
+    }
+
+    public void ObtainLighter()
+    {
+        //Lighter
+        transform.GetChild(2).GetChild(2).gameObject.SetActive(true);
+        transform.GetChild(3).gameObject.SetActive(true);
     }
 }
