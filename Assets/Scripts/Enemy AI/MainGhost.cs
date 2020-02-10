@@ -127,18 +127,20 @@ public class MainGhost : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomspot].position, ChaseSpeed * Time.deltaTime);
 
+            if (moveSpots[randomspot].position.x < transform.position.x && transform.eulerAngles.y == 0)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+            }
+            else if (moveSpots[randomspot].position.x > transform.position.x && transform.eulerAngles.y == 180)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+
             if (Vector2.Distance(transform.position, moveSpots[randomspot].position) < 0.2f)
             {
                 randomspot = Random.Range(0, moveSpots.Length);
 
-                if (moveSpots[randomspot].position.x < transform.position.x && transform.eulerAngles.y == 0)
-                {
-                    transform.eulerAngles = new Vector3(0, -180, 0);
-                }
-                else if (moveSpots[randomspot].position.x > transform.position.x && transform.eulerAngles.y == 180)
-                {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
-                }
+                
 
 
                 // transform.Rotate(0, 180f, 0);
