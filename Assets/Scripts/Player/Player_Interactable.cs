@@ -69,27 +69,32 @@ public class Player_Interactable : MonoBehaviour
     public bool CheckForInteractables() //This will prevent any unnecessary movement such as when clicking on an interactable that is within range
     {
         bool onInteractable = false;
-        targetPos = gm.GetComponent<MouseControls>().target;
-        
-        //Clicking interactables
-        RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
 
         if (Input.GetMouseButtonDown(0))
         {
+            targetPos = gm.GetComponent<MouseControls>().target;
+            RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
+            //Clicking interactables
+
             if (mouseHit.collider != null)
             {
-                if (mouseHit.collider.gameObject.GetComponent<Interactable>().inRange && mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
+                if (mouseHit.collider.gameObject.GetComponent<Interactable>().inRange)
                 {
-                    mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
-                    onInteractable = true;
-                }
+                    if (mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
+                    {
+                        Debug.Log(targetPos);
+                        mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
+                        onInteractable = true;
+                    }
 
-            }
-            else
-            {
-                if (targetOnInteractable)
+                }
+                else
                 {
-                    onInteractable = false;
+                    if (targetOnInteractable)
+                    {
+                        onInteractable = false;
+                    }
+
                 }
             }
         }
