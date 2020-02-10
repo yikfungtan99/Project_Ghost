@@ -9,6 +9,7 @@ TagManager:
   - Dropped_Item
   - Hiding_Spot
   - Enemy
+  - Candle
   layers:
   - Default
   - TransparentFX

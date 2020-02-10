@@ -97,6 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLocked: 0
   isClosed: 1
+  LeftRight: 0
+  Up: 0
+  Down: 0
 --- !u!114 &4700227782527324308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inRange: 0
   interactable: 1
-  tagNum: 0
 --- !u!61 &3883064144717476473
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -37,6 +37,8 @@ public class Player_Movement : MonoBehaviour
 
     bool randomized = false;
 
+    bool pressedButton = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,61 +53,76 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Get target position of the mouse
-        targetPos = gm.transform.GetChild(0).gameObject.GetComponent<MouseControls>().target;
-
-        //Get waypoint
-        if (Input.GetMouseButton(0))
+        if (pressedButton)
         {
-            if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
-            {
-                waypointPos = targetPos;
-                haveWayPoint = true;
-                enRoute = true;
-
-            }
-            else
-            {
-                haveWayPoint = false;
-            }
-
-        }
-
-        if (Input.GetMouseButton(0) && haveWayPoint)
-        {
-            //Sprint
-            if (!sprint && !sprintOnCooldown)
-            {
-                if (sprintMouseDelayTimer < sprintMouseDelay)
-                {
-
-                    sprintMouseDelayTimer += Time.fixedDeltaTime;
-
-                }
-                else
-                {
-                    sprintMouseDelayTimer = 0;
-                    sprint = true;
-                }
-            }
-
-            //Change direction
-            if (waypointPos.x < transform.position.x)
-            {
-                sprite.flipX = true;
-                direction = -1;
-
-            }
-            else
-            {
-                sprite.flipX = false;
-                direction = 1;
-            }
+            pressedButton = false;
         }
         else
         {
-            if (sprint) sprint = false;
-            sprintMouseDelayTimer = 0;
+            //Get waypoint
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (GetComponent<Player_Interactable>().CheckForInteractables())
+                {
+                    haveWayPoint = false;
+                    enRoute = false;
+                    sprint = false;
+                }
+                else
+                {
+                    //Get target position of the mouse
+                    targetPos = gm.GetComponent<MouseControls>().target;
+
+                    if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
+                    {
+                        waypointPos = targetPos;
+                        haveWayPoint = true;
+                        enRoute = true;
+
+                    }
+                    else
+                    {
+                        haveWayPoint = false;
+                    }
+
+                    if (haveWayPoint)
+                    {
+                        //Sprint
+                        if (!sprint && !sprintOnCooldown)
+                        {
+                            if (sprintMouseDelayTimer < sprintMouseDelay)
+                            {
+
+                                sprintMouseDelayTimer += Time.fixedDeltaTime;
+
+                            }
+                            else
+                            {
+                                sprintMouseDelayTimer = 0;
+                                sprint = true;
+                            }
+                        }
+
+                        //Change direction
+                        if (waypointPos.x < transform.position.x)
+                        {
+                            transform.rotation = Quaternion.Euler(0, 180, 0);
+                            direction = -1;
+
+                        }
+                        else
+                        {
+                            transform.rotation = Quaternion.Euler(0, 0, 0);
+                            direction = 1;
+                        }
+                    }
+                    else
+                    {
+                        if (sprint) sprint = false;
+                        sprintMouseDelayTimer = 0;
+                    }
+                }
+            }
         }
 
         
@@ -194,6 +211,11 @@ public class Player_Movement : MonoBehaviour
         {
             anim.SetBool("Move", false);
         }
+    }
+
+    public void CheckButton()
+    {
+        pressedButton = true;
     }
 
     private void OnDisable()

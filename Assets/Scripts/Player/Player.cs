@@ -8,14 +8,14 @@ public class Player : MonoBehaviour
     public GameObject gm;
     public Inventory iv;
     public bool hidden;
-    
+
     //Player bool
     public bool inventoryOn = false;
-    public bool targetOnInteractable = false;
+    public bool haveLighter = false;
 
     private void Awake()
     {
-        gm = GameObject.Find("Gamemanager");
+        gm = GameObject.Find("GameManager");
         iv = transform.GetChild(2).GetComponent<Inventory>();
         if (gm == null)
         {
@@ -28,12 +28,11 @@ public class Player : MonoBehaviour
     {
         GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;
-        GetComponent<Player_Movement>().enabled = !targetOnInteractable;
 
-       // GetComponent<Player_Movement>().enabled = !hidden;
+        // GetComponent<Player_Movement>().enabled = !hidden;
 
 
     }//End Update
 
-    
+
 }

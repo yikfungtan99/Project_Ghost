@@ -7,24 +7,65 @@ public class Door : MonoBehaviour
 {
     public bool isLocked = false;
     public bool isClosed = true;
+
+    [Header("Orientation")]
+
+    public bool LeftRight = false;
+    public bool Up = false;
+    public bool Down = false;
+
     private Interactable it;
 
-    private void Awake()
+    private RoomManager rm;
+
+    public GameObject linkedDoor;
+    public Transform doorSpawnPoint;
+
+    private void Start()
     {
+        rm = GameObject.Find("RoomManager").GetComponent<RoomManager>();
         it = GetComponent<Interactable>();
     }
 
     public void Unlock()
     {
         isLocked = false;
-        Debug.Log("I unlock the door");
     }
 
     public void Open()
     {
+        Debug.Log("Enter Door");
+
         isClosed = false;
-        Debug.Log("I open the door");
-        Teleport();
+
+        if (LeftRight)
+        {
+            if (GameObject.Find("Player").transform.position.x > transform.position.x)
+            {
+                rm.SwitchRoom("Left");
+                GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                rm.SwitchRoom("Right");
+                GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+
+        }
+        else if (Up)
+        {
+            rm.SwitchRoom("Up");
+
+        }
+        else if (Down)
+        {
+            rm.SwitchRoom("Down");
+        }
+
+        GameObject.Find("Player").transform.position = doorSpawnPoint.position;
+
+        StartCoroutine(AutoClose(2));
+
     }
 
     public void Closed()
@@ -35,23 +76,10 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        if (it.inRange && isLocked)
-        {
-            transform.GetChild(0).gameObject.SetActive(true);
-        }
-        else
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-        }
-        
-        if(it.inRange && !isLocked)
-        {
-            transform.GetChild(0).gameObject.SetActive(false);
-        }
-
         if (isClosed)
         {
             GetComponent<BoxCollider2D>().enabled = true;
+            it.interactable = true;
         }
         else
         {
@@ -101,6 +129,12 @@ public class Door : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
         
+    }
+
+    IEnumerator AutoClose(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Closed();
     }
 
 }

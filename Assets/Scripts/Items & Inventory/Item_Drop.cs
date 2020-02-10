@@ -19,13 +19,16 @@ public class Item_Drop : MonoBehaviour
 
     public void Pickup()
     {
-        GameObject inventory = GameObject.Find("Inventory");
+        GameObject inventory = GameObject.Find("Inventory_UI");
 
         GameObject instance = Instantiate(item_ui, inventory.transform.GetChild(0));
 
         instance.GetComponent<Item_Inventory>().itemName = itemName;
 
+        inventory.GetComponent<Inventory>().RandomizePosition();
+
         Destroy(gameObject);
     }
+
 
 }
