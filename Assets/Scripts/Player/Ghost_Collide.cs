@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ghost_Collide : MonoBehaviour
 {
-    public int talisman = 3;
+    //public int talisman = 3;
 
 
     void OnTriggerEnter2D(Collider2D other)
@@ -12,10 +12,22 @@ public class Ghost_Collide : MonoBehaviour
 
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden== false)
         {
-
+            
             if (other.CompareTag("Enemy"))
             {
-                if (talisman > 0)
+                
+                if (GameObject.Find("Hold Panel").transform.GetChild(1))
+                {
+                    if(GameObject.Find("Hold Panel").transform.GetChild(1).GetComponent<Item_Inventory>().itemName=="talisman")
+                    {
+                        Debug.Log("talisman");
+                    }
+                }
+                else
+                {
+                    Debug.Log("NOTHNING WTF");
+                }
+               /* if (talisman > 0)
                 {
 
                     if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled == true)
@@ -25,7 +37,7 @@ public class Ghost_Collide : MonoBehaviour
                         talisman--;
                     }
                     Debug.Log(talisman);
-                }
+                }*/
 
 
 
