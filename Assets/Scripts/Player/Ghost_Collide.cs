@@ -19,7 +19,13 @@ public class Ghost_Collide : MonoBehaviour
 
                     if (GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "talisman")
                     {
-                        Debug.Log("talisman");
+                        if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled == true)
+                        {
+                            GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = false;
+                            Destroy(GameObject.Find("Hold Panel").transform.GetChild(0).gameObject);
+                            StartCoroutine(EnemyWake());
+                            
+                        }
                     }
 
                 }
