@@ -1,0 +1,17 @@
+In "Prototype" Scene:
+
+- In Hierarchy:
+	- Added "AudioManager" GameObject
+
+- In "Scripts" Folder in Project Assets:
+	- Created new "Audio" Folder
+	- Added "AudioManager" Script in "Audio" Folder
+	- Added "Audio" Script in "Audio" Folder
+
+- In "Audio" Script:
+	- Added public Audioclip audioclip
+	- Added public float(s) volume & pitch
+	- Added public bool loop
+
+- In "AudioManager" Script:
+	- 
