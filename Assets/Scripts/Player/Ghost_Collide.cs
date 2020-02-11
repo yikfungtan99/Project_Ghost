@@ -15,13 +15,13 @@ public class Ghost_Collide : MonoBehaviour
             
             if (other.CompareTag("Enemy"))
             {
-                
-                if (GameObject.Find("Hold Panel").transform.GetChild(1))
-                {
-                    if(GameObject.Find("Hold Panel").transform.GetChild(1).GetComponent<Item_Inventory>().itemName=="talisman")
+                if(GameObject.Find("Hold Panel").transform.childCount != 0) {
+
+                    if (GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "talisman")
                     {
                         Debug.Log("talisman");
                     }
+
                 }
                 else
                 {
