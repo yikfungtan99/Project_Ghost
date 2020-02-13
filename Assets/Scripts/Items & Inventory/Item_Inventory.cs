@@ -34,6 +34,23 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         GetComponent<Image>().sprite = il.GetSprite(itemName);
     }
 
+    private void Update()
+    {
+        if (onHold)
+        {
+            if (!GameObject.Find("Player").GetComponent<Player>().inventoryOn)
+            {
+
+                gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+            }
+            else
+            {
+                gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            }
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 0.6f;

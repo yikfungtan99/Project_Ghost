@@ -612,7 +612,7 @@ Transform:
   m_GameObject: {fileID: 3556145522249875082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.92, y: 1.3051518, z: 6.954797}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8625, y: 1.9621, z: 1}
   m_Children:
   - {fileID: 5268328367772441946}
   - {fileID: 6830081349502047295}
@@ -729,7 +729,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 256
-  interactableSize: 2
+  interactableSize: 3.44
   interactableOffset: 0.2
   showMonolog: 0
   showMonologTimer: 1
@@ -745,7 +745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c368a2466a4dec94796947dfcff56fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  talisman: 3
 --- !u!1 &3745501161444858514
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +900,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b6d0e145629a8874a991a97ca3ff39fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

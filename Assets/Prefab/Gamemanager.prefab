@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8734157256178482007}
   - component: {fileID: 1683267668926217291}
+  - component: {fileID: 2197297109963990938}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -43,6 +44,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7136ed1751b1ced49acfac7e738a0b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2197297109963990938
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4157549307807986955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60528eb6668788b4da50f071e8737218, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5123675646716434258
 GameObject:
   m_ObjectHideFlags: 0
@@ -52,8 +72,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5123675646716434253}
+  - component: {fileID: 2299243489410916711}
   m_Layer: 0
-  m_Name: Gamemanager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,3 +95,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2299243489410916711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123675646716434258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d10700bde03ad344a33ba432d91def5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0, y: 0}

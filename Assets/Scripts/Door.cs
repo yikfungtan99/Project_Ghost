@@ -19,12 +19,23 @@ public class Door : MonoBehaviour
     private RoomManager rm;
 
     public GameObject linkedDoor;
-    public Transform doorSpawnPoint;
+    private Transform doorSpawnPoint;
 
     private void Start()
     {
         rm = GameObject.Find("RoomManager").GetComponent<RoomManager>();
         it = GetComponent<Interactable>();
+
+        if(linkedDoor == null)
+        {
+
+            Debug.LogError(gameObject.name + " have missing door connection!!!");
+
+        }
+        else
+        {
+            doorSpawnPoint = linkedDoor.transform.GetChild(0);
+        }
     }
 
     public void Unlock()
@@ -115,20 +126,6 @@ public class Door : MonoBehaviour
         {
             Open();
         }
-    }
-
-    private void Teleport()
-    {
-
-        if(SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        }
-        
     }
 
     IEnumerator AutoClose(float waitTime)
