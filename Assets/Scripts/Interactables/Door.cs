@@ -99,23 +99,6 @@ public class Door : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             it.interactable = false;
         }
-
-        if (isLocked && isClosed){
-
-            GetComponent<SpriteRenderer>().color = Color.red;
-
-        }else if (!isLocked && isClosed){
-
-            GetComponent<SpriteRenderer>().color = Color.yellow;
-
-        }else if(!isLocked && !isClosed){
-
-            GetComponent<SpriteRenderer>().color = Color.green;
-
-        }
-
-        it.inRange = false;
-
     }
 
     public void Interact()
@@ -134,6 +117,11 @@ public class Door : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         Closed();
+    }
+
+    private void LateUpdate()
+    {
+        it.inRange = false;
     }
 
 }

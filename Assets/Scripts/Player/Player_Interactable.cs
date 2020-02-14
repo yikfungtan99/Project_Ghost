@@ -92,7 +92,21 @@ public class Player_Interactable : MonoBehaviour
                     if (mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
                     {
                         Debug.Log(targetPos);
-                        mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
+
+                        if(mouseHit.collider.gameObject.tag == "Candle")
+                        {
+                            if (GetComponent<Player_Lighter>().lighterOn)
+                            {
+                                mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
+                            }
+                        }
+                        else
+                        {
+
+                            mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
+
+                        }
+                        
                         onInteractable = true;
                     }
 

@@ -40,7 +40,7 @@ public class Interactable : MonoBehaviour
         {
             if (transform.GetChild(i).GetComponent<ParticleSystem>())
             {
-                transform.GetChild(i).gameObject.SetActive(isSeen);
+                transform.GetChild(i).gameObject.SetActive(isSeen); 
             }
         }
     }

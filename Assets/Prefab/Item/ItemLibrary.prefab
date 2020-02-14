@@ -50,3 +50,5 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: 37123afe423b8e44a8de644f2962aa12, type: 3}
   - itemName: talisman
     itemSprite: {fileID: 21300000, guid: 82c8df2c1ed8ad040ae2ac1cd948dddf, type: 3}
+  - itemName: lighter
+    itemSprite: {fileID: 21300000, guid: 6a254f4d9bc08d940b6c78de67306693, type: 3}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8734157256178482007}
   - component: {fileID: 1683267668926217291}
-  - component: {fileID: 2197297109963990938}
+  - component: {fileID: 6715961878648715205}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7136ed1751b1ced49acfac7e738a0b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &2197297109963990938
+--- !u!95 &6715961878648715205
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 5123675646716434253}
   - component: {fileID: 2299243489410916711}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Gamemanager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

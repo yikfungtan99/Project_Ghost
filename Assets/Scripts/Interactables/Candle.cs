@@ -9,11 +9,8 @@ public class Candle : MonoBehaviour
 
     public void LightCandle()
     {
-        if (isLit)
-        {
-            isLit = false;
-        }
-        else
+
+        if(!isLit)
         {
             isLit = true;
         }

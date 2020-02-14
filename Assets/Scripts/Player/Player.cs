@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     //Player bool
     public bool inventoryOn = false;
     public bool lighterOn = false;
+    public bool holdingLighter = false;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
     {
         GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;
-        lighterOn = transform.GetChild(3).gameObject.GetComponent<Player_Lighter>().lighterOn;
+        lighterOn = GetComponent<Player_Lighter>().lighterOn;
 
         // GetComponent<Player_Movement>().enabled = !hidden;
 
