@@ -9,6 +9,7 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     private Canvas canvas;
     private CanvasGroup canvasGroup;
+    private Player player;
 
     private RectTransform rectTransform;
 
@@ -25,29 +26,44 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         canvas = transform.parent.parent.GetComponent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
+        iv = transform.parent.parent.GetComponent<Inventory>();
+    }
+
+    private void OnEnable()
+    {
+        if (!onHold)
+        {
+            if (rectTransform.anchoredPosition.x < -iv.inventorySafeArea.x || rectTransform.anchoredPosition.x > iv.inventorySafeArea.x || rectTransform.anchoredPosition.y < -iv.inventorySafeArea.y || rectTransform.anchoredPosition.y > iv.inventorySafeArea.y)
+            {
+                rectTransform.anchoredPosition = initPos;
+            }
+        }
     }
 
     private void Start()
     {
         il = GameObject.Find("ItemLibrary").GetComponent<ItemLibrary>();
-        iv = transform.parent.parent.GetComponent<Inventory>();
         GetComponent<Image>().sprite = il.GetSprite(itemName);
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     private void Update()
     {
         if (onHold)
         {
-            if (!GameObject.Find("Player").GetComponent<Player>().inventoryOn)
+            if (!player.inventoryOn)
             {
 
                 gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+                rectTransform.anchoredPosition = new Vector2(0, 0);
 
             }
             else
             {
                 gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
             }
+
         }
     }
 
@@ -60,6 +76,7 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
