@@ -6,11 +6,6 @@ public class ItemLibrary : MonoBehaviour
 {
     public Item[] items;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     public Sprite GetSprite(string itemName)
     {
         Sprite target = null;

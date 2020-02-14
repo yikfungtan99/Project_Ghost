@@ -11,8 +11,7 @@ public class Door : MonoBehaviour
     [Header("Orientation")]
 
     public bool LeftRight = false;
-    public bool Up = false;
-    public bool Down = false;
+    public bool UpDown = false;
 
     private Interactable it;
 
@@ -63,14 +62,17 @@ public class Door : MonoBehaviour
             }
 
         }
-        else if (Up)
+        else if (UpDown)
         {
-            rm.SwitchRoom("Up");
+            if (GameObject.Find("Player").transform.position.y > transform.position.y)
+            {
+                rm.SwitchRoom("Down");
+            }
+            else
+            {
+                rm.SwitchRoom("Up");
+            }
 
-        }
-        else if (Down)
-        {
-            rm.SwitchRoom("Down");
         }
 
         GameObject.Find("Player").transform.position = doorSpawnPoint.position;
