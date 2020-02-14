@@ -14,6 +14,8 @@ public class MainGhost : MonoBehaviour
     private bool IsMovingRight;
     private Transform Target;
     public Transform[] moveSpots;
+    public Transform[] Set1;
+    public Transform[] Set2;
     private int randomspot;
 
 
@@ -21,7 +23,7 @@ public class MainGhost : MonoBehaviour
     {
         randomspot = Random.Range(0, moveSpots.Length);
         Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-       // Physics2D.queriesStartInColliders = false;
+        // Physics2D.queriesStartInColliders = false;
         lastX = transform.position.x;
 
 
@@ -32,7 +34,13 @@ public class MainGhost : MonoBehaviour
     void Update()
     {
 
+        if (GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered == true)
+        {
+            transform.position = GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Trigger[0].position;
+            GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered = false;
+            moveSpots = Set2;
 
+        }
         /* if (transform.position.x < lastX)
          {
              IsMovingRight = false;
@@ -60,7 +68,7 @@ public class MainGhost : MonoBehaviour
 
 
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange,Layer);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
 
 
         if (hitInfo.collider != null)
@@ -140,7 +148,7 @@ public class MainGhost : MonoBehaviour
             {
                 randomspot = Random.Range(0, moveSpots.Length);
 
-                
+
 
 
                 // transform.Rotate(0, 180f, 0);
@@ -151,3 +159,4 @@ public class MainGhost : MonoBehaviour
     }
 
 }
+
