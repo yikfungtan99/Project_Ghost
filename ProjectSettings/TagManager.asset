@@ -10,6 +10,8 @@ TagManager:
   - Hiding_Spot
   - Enemy
   - Candle
+  - Safe_Bowl
+  - Death_Bowl
   layers:
   - Default
   - TransparentFX
