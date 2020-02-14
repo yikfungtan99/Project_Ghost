@@ -14,6 +14,8 @@ public class MainGhost : MonoBehaviour
     private bool IsMovingRight;
     private Transform Target;
     public Transform[] moveSpots;
+    public Transform[] Set1;
+    public Transform[] Set2;
     private int randomspot;
 
 
@@ -32,7 +34,13 @@ public class MainGhost : MonoBehaviour
     void Update()
     {
 
-
+      if(GameObject.Find("GhostSpawner").GetComponent<GhostSpawn>().Triggered==true)
+       {
+            transform.position = GameObject.Find("GhostSpawner").GetComponent<GhostSpawn>().Trigger[0].position;
+            GameObject.Find("GhostSpawner").GetComponent<GhostSpawn>().Triggered = false;
+            moveSpots = Set2;
+            
+       }
         /* if (transform.position.x < lastX)
          {
              IsMovingRight = false;
