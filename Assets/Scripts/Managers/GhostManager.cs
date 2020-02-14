@@ -17,7 +17,7 @@ public class GhostManager : MonoBehaviour
     void Update()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Debug.Log(Player);
+        
         if (Vector2.Distance(Player.position, Trigger[0].position) < 1f)
         {
             Triggered = true;

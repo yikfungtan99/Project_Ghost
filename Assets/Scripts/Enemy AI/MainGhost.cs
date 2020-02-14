@@ -12,6 +12,7 @@ public class MainGhost : MonoBehaviour
 
     private float lastX;
     private bool IsMovingRight;
+    public bool Chasing;
     private Transform Target;
     public Transform[] moveSpots;
     public Transform[] Set1;
@@ -77,17 +78,20 @@ public class MainGhost : MonoBehaviour
             if (hitInfo.collider.CompareTag("Player") && hitInfo.collider.gameObject.GetComponent<Player>().hidden == false)
             {
                 Chase(true);
+                Chasing = true;
                 gameObject.GetComponent<Renderer>().material.color = Color.red;
             }
             else
             {
                 Chase(false);
+                Chasing = false;
                 gameObject.GetComponent<Renderer>().material.color = Color.green;
             }
         }
         else
         {
             Chase(false);
+            Chasing = false;
             gameObject.GetComponent<Renderer>().material.color = Color.green;
             Debug.DrawLine(transform.position, transform.position + transform.right * detectRange, Color.green);
 
@@ -130,6 +134,7 @@ public class MainGhost : MonoBehaviour
         if (check)
         {
             transform.position = Vector2.MoveTowards(transform.position, Target.position, ChaseSpeed * Time.deltaTime);
+            
         }
         else
         {

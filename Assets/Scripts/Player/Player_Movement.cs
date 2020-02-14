@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Experimental.Rendering.LWRP;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+   
     private GameObject gm;
     private Rigidbody2D rb;
 
@@ -87,20 +89,27 @@ public class Player_Movement : MonoBehaviour
 
                     if (haveWayPoint)
                     {
-                        //Sprint
-                        if (!sprint && !sprintOnCooldown)
+                        //Sprint Volunteering
+                        /* if (!sprint && !sprintOnCooldown)
+                         {
+                             if (sprintMouseDelayTimer < sprintMouseDelay)
+                             {
+
+                                 sprintMouseDelayTimer += Time.fixedDeltaTime;
+
+                             }
+                             else
+                             {
+                                 sprintMouseDelayTimer = 0;
+                                 sprint = true;
+                             }
+                         }*/
+                        // contexual running
+                        sprint = true;
+                        if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().Chasing==true )
                         {
-                            if (sprintMouseDelayTimer < sprintMouseDelay)
-                            {
-
-                                sprintMouseDelayTimer += Time.fixedDeltaTime;
-
-                            }
-                            else
-                            {
-                                sprintMouseDelayTimer = 0;
-                                sprint = true;
-                            }
+                            staminaRemaining = stamina;
+                            
                         }
 
                         //Change direction
@@ -125,9 +134,9 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        
 
-        if (sprint)
+        // sprint volunteering
+        /*if (sprint)
         {
             //insert animation bool
             if (!randomized)
@@ -135,7 +144,6 @@ public class Player_Movement : MonoBehaviour
                 randomized = true;
                 transform.GetComponent<Player>().iv.RandomizePosition();
             }
-
             if (staminaRemaining > 0)
             {
                 staminaRemaining -= Time.fixedDeltaTime;
@@ -163,13 +171,45 @@ public class Player_Movement : MonoBehaviour
 
             randomized = false;
 
-        }
+        }*/
 
+        //contextual running
+        if (sprint)
+        {
+            //insert animation bool
+            if (!randomized)
+            {
+                randomized = true;
+                transform.GetComponent<Player>().iv.RandomizePosition();
+            }
+            if (staminaRemaining > 0)
+            {
+                staminaRemaining -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                staminaRemaining = 0;
+                
+                sprint = false;
+            }
+        }
+        else
+        {
+           
+
+            randomized = false;
+
+        }
         //Move to target now
         if (enRoute)
         {
-            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = true;
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = false;
+
+            foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
+            {
+                fooObj.GetComponent<Hidable>().Unhide();
+            }
+            
+            
             if (direction > 0 && transform.position.x > waypointPos.x)
             {
                 enRoute = false;    
