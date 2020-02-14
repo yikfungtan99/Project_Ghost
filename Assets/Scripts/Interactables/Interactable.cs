@@ -5,10 +5,10 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public bool inRange = false;
-    public bool isSeen = false;
     public bool interactable = true;
+    public bool isSeen = false;
 
-    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle"};
+    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle", "Safe_Bowl", "Death_Bowl"};
 
     public void Interact()
     {
@@ -32,6 +32,25 @@ public class Interactable : MonoBehaviour
         {
             GetComponent<Candle>().LightCandle();
         }
+        else if (gameObject.tag == stringtags[5])
+        {
+            GetComponent<Safe_Bowl>().Interact();
+        }
+        else if (gameObject.tag == stringtags[6])
+        {
+            GetComponent<Death_Bowl>().Interact();
+        }
+    }
+
+    void EnableParticles()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).GetComponent<ParticleSystem>())
+            {
+                transform.GetChild(i).gameObject.SetActive(inRange);
+            }
+        }
     }
 
     private void Update()
@@ -40,7 +59,7 @@ public class Interactable : MonoBehaviour
         {
             if (transform.GetChild(i).GetComponent<ParticleSystem>())
             {
-                transform.GetChild(i).gameObject.SetActive(isSeen); 
+                transform.GetChild(i).gameObject.SetActive(inRange);
             }
         }
     }
@@ -48,7 +67,6 @@ public class Interactable : MonoBehaviour
     private void LateUpdate()
     {
         inRange = false;
-        isSeen = false;
     }
 
 }

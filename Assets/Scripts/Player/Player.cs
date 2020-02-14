@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     public GameObject gm;
     public Inventory iv;
     public bool hidden;
+    public bool playerFainted;
+    private bool faintDebugMsg;
    
     //Player bool
     public bool inventoryOn = false;
+    public bool haveLighter = false;
     public bool lighterOn = false;
-    public bool holdingLighter = false;
 
     private void Awake()
     {
@@ -22,6 +24,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Player not linked to Game Manager");
         }
+
+        playerFainted = false;
+        faintDebugMsg = false;
     }
 
     // Update is called once per frame
@@ -29,10 +34,20 @@ public class Player : MonoBehaviour
     {
         GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;
-        lighterOn = GetComponent<Player_Lighter>().lighterOn;
 
         // GetComponent<Player_Movement>().enabled = !hidden;
+        if(playerFainted && !faintDebugMsg)
+        {
+            faintDebugMsg = true;
+            Debug.Log("Player has fainted!");
+        }
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            playerFainted = false;
+            faintDebugMsg = false;
+            Debug.Log("Player revived");
+        }
 
     }//End Update
 

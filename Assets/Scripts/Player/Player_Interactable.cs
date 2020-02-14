@@ -91,7 +91,6 @@ public class Player_Interactable : MonoBehaviour
                 {
                     if (mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
                     {
-                        Debug.Log(targetPos);
 
                         if(mouseHit.collider.gameObject.tag == "Candle")
                         {

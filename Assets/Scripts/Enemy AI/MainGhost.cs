@@ -24,9 +24,6 @@ public class MainGhost : MonoBehaviour
        // Physics2D.queriesStartInColliders = false;
         lastX = transform.position.x;
 
-
-
-
     }
 
     void Update()
