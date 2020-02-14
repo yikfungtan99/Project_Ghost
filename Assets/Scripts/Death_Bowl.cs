@@ -7,15 +7,20 @@ public class Death_Bowl : Dining_Bowl
     public new void Interact()
     {
         Debug.Log("Clickin Death bowl");
-        if (!GameObject.Find("Player").GetComponent<Player>().playerFainted)
+
+        CheckForSpoon();
+
+        if (spoonTarget == null)
         {
-            disablePuzzle = false;
+            return;
         }
 
         //! Kill Player
         if (!disablePuzzle)
         {
             disablePuzzle = true;
+
+            //! Make player faint
             GameObject.Find("Player").GetComponent<Player>().playerFainted = true;
         }
     }

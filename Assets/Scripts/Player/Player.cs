@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [HideInInspector]
     public GameObject gm;
+    public Transform respawnPoint;
     public Inventory iv;
     public bool hidden;
     public bool playerFainted;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         gm = GameObject.Find("GameManager");
+        respawnPoint = GameObject.Find("Respawn Point").transform;
         iv = transform.GetChild(2).GetComponent<Inventory>();
         if (gm == null)
         {
@@ -35,12 +37,18 @@ public class Player : MonoBehaviour
         GetComponent<Player_Movement>().enabled = !inventoryOn;
 
         // GetComponent<Player_Movement>().enabled = !hidden;
+        if(!playerFainted)
+        {
+            faintDebugMsg = false;
+        }
+
         if(playerFainted && !faintDebugMsg)
         {
             faintDebugMsg = true;
             Debug.Log("Player has fainted!");
         }
 
+        //! Temporary Debug tool: Instantly revive player character
         if(Input.GetKeyDown(KeyCode.Space))
         {
             playerFainted = false;
