@@ -12,8 +12,11 @@ public class MainGhost : MonoBehaviour
 
     private float lastX;
     private bool IsMovingRight;
+    public bool Chasing;
     private Transform Target;
     public Transform[] moveSpots;
+    public Transform[] Set1;
+    public Transform[] Set2;
     private int randomspot;
 
 
@@ -21,7 +24,7 @@ public class MainGhost : MonoBehaviour
     {
         randomspot = Random.Range(0, moveSpots.Length);
         Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-       // Physics2D.queriesStartInColliders = false;
+        // Physics2D.queriesStartInColliders = false;
         lastX = transform.position.x;
 
     }
@@ -29,7 +32,13 @@ public class MainGhost : MonoBehaviour
     void Update()
     {
 
+        if (GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered == true)
+        {
+            transform.position = GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Trigger[0].position;
+            GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered = false;
+            moveSpots = Set2;
 
+        }
         /* if (transform.position.x < lastX)
          {
              IsMovingRight = false;
@@ -57,7 +66,7 @@ public class MainGhost : MonoBehaviour
 
 
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange,Layer);
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
 
 
         if (hitInfo.collider != null)
@@ -66,17 +75,20 @@ public class MainGhost : MonoBehaviour
             if (hitInfo.collider.CompareTag("Player") && hitInfo.collider.gameObject.GetComponent<Player>().hidden == false)
             {
                 Chase(true);
+                Chasing = true;
                 gameObject.GetComponent<Renderer>().material.color = Color.red;
             }
             else
             {
                 Chase(false);
+                Chasing = false;
                 gameObject.GetComponent<Renderer>().material.color = Color.green;
             }
         }
         else
         {
             Chase(false);
+            Chasing = false;
             gameObject.GetComponent<Renderer>().material.color = Color.green;
             Debug.DrawLine(transform.position, transform.position + transform.right * detectRange, Color.green);
 
@@ -119,6 +131,7 @@ public class MainGhost : MonoBehaviour
         if (check)
         {
             transform.position = Vector2.MoveTowards(transform.position, Target.position, ChaseSpeed * Time.deltaTime);
+            
         }
         else
         {
@@ -137,7 +150,7 @@ public class MainGhost : MonoBehaviour
             {
                 randomspot = Random.Range(0, moveSpots.Length);
 
-                
+
 
 
                 // transform.Rotate(0, 180f, 0);
@@ -148,3 +161,4 @@ public class MainGhost : MonoBehaviour
     }
 
 }
+
