@@ -7,7 +7,7 @@ public class Player_Movement : MonoBehaviour
     private GameObject gm;
     private Rigidbody2D rb;
 
-    private int direction = 1;
+    public int direction = 1;
 
     [Header("Movement")]
     //Movement variables

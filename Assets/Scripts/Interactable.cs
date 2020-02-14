@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public bool inRange = false;
+    public bool isSeen = false;
     public bool interactable = true;
 
     string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle"};
@@ -33,24 +34,13 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    void EnableParticles()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).GetComponent<ParticleSystem>())
-            {
-                transform.GetChild(i).gameObject.SetActive(inRange);
-            }
-        }
-    }
-
     private void Update()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).GetComponent<ParticleSystem>())
             {
-                transform.GetChild(i).gameObject.SetActive(inRange);
+                transform.GetChild(i).gameObject.SetActive(isSeen);
             }
         }
     }
@@ -58,6 +48,7 @@ public class Interactable : MonoBehaviour
     private void LateUpdate()
     {
         inRange = false;
+        isSeen = false;
     }
 
 }

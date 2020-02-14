@@ -10,8 +10,9 @@ public class Player_Interactable : MonoBehaviour
 
     //interaction variables
     public LayerMask interactableLayer;
-    public float interactableSize = 1;
-    public float interactableOffset = 1;
+    public Vector2 interactableSize;
+    public Vector2 interactableOffset;
+    private int dir = 1;
     private bool targetOnInteractable = false;
 
     [HideInInspector]
@@ -45,8 +46,11 @@ public class Player_Interactable : MonoBehaviour
         //Get target position of the mouse
         targetPos = gm.GetComponent<MouseControls>().target;
 
+        dir = transform.GetComponent<Player_Movement>().direction;
+
         //---------------------------------------------------------------Interact with Objects------------------------------------------------
-        Collider2D[] interactable = Physics2D.OverlapBoxAll(new Vector2(transform.position.x, transform.position.y + interactableOffset), new Vector2(interactableSize, interactableSize), 0, interactableLayer);
+
+        Collider2D[] interactable = Physics2D.OverlapBoxAll(new Vector2(transform.position.x + interactableOffset.x * dir, transform.position.y + interactableOffset.y), new Vector2(interactableSize.x, interactableSize.y), 0, interactableLayer);
 
         if (interactable != null)
         {
@@ -57,6 +61,11 @@ public class Player_Interactable : MonoBehaviour
                 {
 
                     interactable[i].gameObject.GetComponent<Interactable>().inRange = true;
+
+                    if (transform.GetComponent<Player>().lighterOn)
+                    {
+                        interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+                    }
 
                 }
 
@@ -105,6 +114,6 @@ public class Player_Interactable : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawCube(new Vector2(transform.position.x, transform.position.y + interactableOffset), new Vector2(interactableSize, interactableSize));
+        Gizmos.DrawCube(new Vector2(transform.position.x + interactableOffset.x*dir, transform.position.y + interactableOffset.y), new Vector2(interactableSize.x, interactableSize.y));
     }
 }
