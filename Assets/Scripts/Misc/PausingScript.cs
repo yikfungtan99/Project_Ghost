@@ -45,7 +45,7 @@ public class PausingScript : MonoBehaviour
     {
         Debug.Log("Loading options...");
         canvas.transform.GetChild(2).gameObject.SetActive(false);
-        canvas.transform.GetChild(3).gameObject.SetActive(true);
+        canvas.transform.GetChild(1).gameObject.SetActive(true);
     }
 
     public void QuitGame()
@@ -57,7 +57,7 @@ public class PausingScript : MonoBehaviour
     {
         Debug.Log("Returning to menu...");
         canvas.transform.GetChild(2).gameObject.SetActive(true);
-        canvas.transform.GetChild(3).gameObject.SetActive(false);
+        canvas.transform.GetChild(1).gameObject.SetActive(false);
 
     }
 }

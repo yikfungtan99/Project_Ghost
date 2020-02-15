@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: 29aca5d3bb7fe86448170f2c2f641fa8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Door_Altar
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1292
+      y: 260
+      width: 186
+      height: 353
+    spriteID: 154d805defd8ad742b147fe8b7e86d0d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1152, y: 83}
+  - name: Large Table
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1486
+      y: 260
+      width: 175
+      height: 239
+    spriteID: eabc13389d078344c8e9fdbfc36d08dd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 810, y: 112}
+  - name: Vase
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1379
+      y: 732
+      width: 529
+      height: 68
+    spriteID: c633ea0b79fecaf46aaa346538022805
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 882, y: 461}
+  - name: Frames
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1292
+      y: 4
+      width: 614
+      height: 248
+    spriteID: 58ee6c9072c63d1429af1d75ea2939ce
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 838, y: -299}
+  - name: 'chair '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2079
+      width: 762
+      height: 155
+    spriteID: 63dfff54dd3ce3e4d89bc94186c8bb8b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -376, y: 1931}
+  - name: Left Door_Entrance
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1292
+      y: 732
+      width: 79
+      height: 635
+    spriteID: 61cfab30f1f2b3a428f597c312614b8a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1292, y: 732}
+  - name: Layer 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1914
+      y: 4
+      width: 110
+      height: 673
+    spriteID: fac7d6a558a2e444b816b1b2dc7aee91
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 744, y: -27}
+  - name: Shadows
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1460
+      width: 940
+      height: 611
+    spriteID: 518040f6e23efd442b50f9a1f132d78a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -336, y: 1376}
+  - name: Wall, Floor, Ceiling copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1280
+      height: 720
+    spriteID: 5a65f5cb94a7cb24885ee267a7a32dbe
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Background
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 732
+      width: 1280
+      height: 720
+    spriteID: 22fa55623b5c2f644acf16e0dceabeb3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 732}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 1280, y: 720}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Door_Altar
+    spriteName: Door_Altar
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 154d805defd8ad742b147fe8b7e86d0d
+    layerID: 99
+    mosaicPosition: {x: 1292, y: 260}
+  - name: Large Table
+    spriteName: Large Table
+    isGroup: 0
+    parentIndex: -1
+    spriteID: eabc13389d078344c8e9fdbfc36d08dd
+    layerID: 83
+    mosaicPosition: {x: 1486, y: 260}
+  - name: Vase
+    spriteName: Vase
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c633ea0b79fecaf46aaa346538022805
+    layerID: 79
+    mosaicPosition: {x: 1379, y: 732}
+  - name: Frames
+    spriteName: Frames
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 58ee6c9072c63d1429af1d75ea2939ce
+    layerID: 75
+    mosaicPosition: {x: 1292, y: 4}
+  - name: 'chair '
+    spriteName: 'chair '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 63dfff54dd3ce3e4d89bc94186c8bb8b
+    layerID: 70
+    mosaicPosition: {x: 4, y: 2079}
+  - name: Left Door_Entrance
+    spriteName: Left Door_Entrance
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 61cfab30f1f2b3a428f597c312614b8a
+    layerID: 63
+    mosaicPosition: {x: 1292, y: 732}
+  - name: Layer 4
+    spriteName: Layer 4
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fac7d6a558a2e444b816b1b2dc7aee91
+    layerID: 117
+    mosaicPosition: {x: 1914, y: 4}
+  - name: Shadows
+    spriteName: Shadows
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 518040f6e23efd442b50f9a1f132d78a
+    layerID: 116
+    mosaicPosition: {x: 4, y: 1460}
+  - name: Wall, Floor, Ceiling copy
+    spriteName: Wall, Floor, Ceiling copy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5a65f5cb94a7cb24885ee267a7a32dbe
+    layerID: 115
+    mosaicPosition: {x: 4, y: 4}
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 22fa55623b5c2f644acf16e0dceabeb3
+    layerID: 1
+    mosaicPosition: {x: 4, y: 732}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Main Entrance Texture
+  prefabAssetName: Main Entrance Prefab
+  spriteLibAssetName: Main Entrance Sprite Lib

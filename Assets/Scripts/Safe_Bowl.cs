@@ -7,17 +7,28 @@ public class Safe_Bowl : Dining_Bowl
     public new void Interact()
     {
         Debug.Log("Clickin Safe bowl");
-        if (!GameObject.Find("Player").GetComponent<Player>().playerFainted)
+
+        CheckForSpoon();
+
+        if (spoonTarget == null)
         {
-            disablePuzzle = false;
+            return;
         }
 
         //! Give Player key item
         if (!disablePuzzle)
         {
             disablePuzzle = true;
-            ConvertItemStringToInstance("stairwell key");
             isPuzzleClear = true;
+
+            //! Destroy spoon object in player inventory
+            if(spoonTarget != null)
+            {
+                Destroy(spoonTarget);
+            }
+            
+            //! Instantiate key item reward in player inventory
+            ConvertItemStringToInstance("stairwell key");
         }
     }
 

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Hidable : MonoBehaviour
 {
+
+    public float darkness;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,7 @@ public class Hidable : MonoBehaviour
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = true;
-        GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = 0.05f;
+        GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = darkness;
         transform.GetChild(0).gameObject.SetActive(true);
     }
 

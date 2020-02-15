@@ -59,7 +59,7 @@ public class Interactable : MonoBehaviour
         {
             if (transform.GetChild(i).GetComponent<ParticleSystem>())
             {
-                transform.GetChild(i).gameObject.SetActive(inRange);
+                transform.GetChild(i).gameObject.SetActive(isSeen);
             }
         }
     }
@@ -67,6 +67,7 @@ public class Interactable : MonoBehaviour
     private void LateUpdate()
     {
         inRange = false;
+        isSeen = false;
     }
 
 }

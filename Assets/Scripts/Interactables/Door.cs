@@ -50,7 +50,7 @@ public class Door : MonoBehaviour
 
         if (LeftRight)
         {
-            if (GameObject.Find("Player").transform.position.x > transform.position.x)
+            if (GameObject.Find("Player").transform.position.x > doorSpawnPoint.position.x)
             {
                 rm.SwitchRoom("Left");
                 GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 180, 0);
@@ -64,7 +64,7 @@ public class Door : MonoBehaviour
         }
         else if (UpDown)
         {
-            if (GameObject.Find("Player").transform.position.y > transform.position.y)
+            if (GameObject.Find("Player").transform.position.y > doorSpawnPoint.position.y)
             {
                 rm.SwitchRoom("Down");
             }
