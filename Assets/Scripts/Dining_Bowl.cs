@@ -53,6 +53,11 @@ public class Dining_Bowl : MonoBehaviour
     protected void CheckForSpoon()
     {
         spoonTarget = null;
+
+        if(isPuzzleClear)
+        {
+            return;
+        }
         
         if (GameObject.Find("Hold Panel").transform.childCount == 0 || GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName != "spoon")
         {

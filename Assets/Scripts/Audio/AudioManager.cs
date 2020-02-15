@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
     //! Only use this when an audioclip is to be played at the start of game (i.e. BGM theme)
     void Start()
     {
-        PlayAudio("Test Theme");
+        //PlayAudio("Test Theme");
     }
 
     public void PlayAudio(string searchName)
@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
         //! In case audio name cannot be identified
         if(a == null)
         {
-            Debug.LogWarning("Audio: " + searchName + " is not found!");
+            Debug.LogWarning("Audio: '" + searchName + "' is not found!");
             return;
         }
 
