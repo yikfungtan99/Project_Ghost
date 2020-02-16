@@ -115,10 +115,10 @@ public class MainGhost : MonoBehaviour
          }
          */
 
-
-
-
-
+        if(Chasing)
+        {
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(1);
+        }     
     }
 
 

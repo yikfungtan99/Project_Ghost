@@ -9,6 +9,8 @@ public class Player_Lighter : MonoBehaviour
     public int difficulty = 100;
     private int triesCounter;
 
+    private bool playOnce = false;
+
     private void Start()
     {
         triesCounter = difficulty;
@@ -56,7 +58,18 @@ public class Player_Lighter : MonoBehaviour
 
         transform.GetChild(3).GetChild(0).gameObject.SetActive(lighterOn);
 
-        
+        if(lighterOn)
+        {
+            if(!playOnce)
+            {
+                playOnce = true;
+                GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(0);
+            }
+        }
+        else
+        {
+            playOnce = false;
+        }
     }
 
     void TurnLighterOn(int chances)

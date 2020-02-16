@@ -595,7 +595,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0000041962, y: 220.1}
-  m_SizeDelta: {x: 921.6, y: 217.5}
+  m_SizeDelta: {x: 735, y: 217.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126557861
 MonoBehaviour:
@@ -615,7 +615,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'Hello there! ... General Kenobi...!
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -643,8 +645,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -684,13 +686,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 126557861}
-    characterCount: 0
+    characterCount: 36
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 5
+    wordCount: 4
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -919,7 +921,7 @@ PrefabInstance:
     - target: {fileID: 813572301400491712, guid: 9e31def3b468b174e9b44154cb5d0643,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 813572301400491716, guid: 9e31def3b468b174e9b44154cb5d0643,
         type: 3}
@@ -1285,9 +1287,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 126557861}
   sentenceList:
-  - This is a painting
-  - That is not a wall
+  - description: When lighter is lit
+    index: 0
+    sentenceText: Let there be light!
+    cooldown: 3
+    cooldownCounter: 0
+  - description: When being chased by ghost (contextual running)
+    index: 1
+    sentenceText: AHHHHHHHHHHHHHHHHHHHH
+    cooldown: 3
+    cooldownCounter: 0
   typingSpeed: 0.01
+  isSentenceDrawn: 0
+  showMonologue: 1
+  showMonologueTimer: 1
 --- !u!4 &555430191
 Transform:
   m_ObjectHideFlags: 0
@@ -2505,7 +2518,7 @@ GameObject:
   - component: {fileID: 944263353}
   - component: {fileID: 944263352}
   m_Layer: 5
-  m_Name: Dialogue
+  m_Name: Monologue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3226,7 +3239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359783940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8677773, y: -0.5599997, z: -10}
+  m_LocalPosition: {x: -5.89, y: -1.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
