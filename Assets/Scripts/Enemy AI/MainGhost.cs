@@ -135,7 +135,7 @@ public class MainGhost : MonoBehaviour
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomspot].position, ChaseSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomspot].position, speed * Time.deltaTime);
 
             if (moveSpots[randomspot].position.x < transform.position.x && transform.eulerAngles.y == 0)
             {
