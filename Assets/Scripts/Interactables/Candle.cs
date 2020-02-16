@@ -35,7 +35,7 @@ public class Candle : MonoBehaviour
             {
                 if(other.gameObject.GetComponent<MainGhost>().Chasing==false)
                 {
-                    Debug.Log("Snuff");
+                    
                     isLit = false;
                     GetComponent<SpriteRenderer>().sprite = spriteNotLit;
                     transform.GetChild(0).gameObject.SetActive(isLit);
