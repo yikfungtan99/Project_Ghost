@@ -48,9 +48,10 @@ public class Ghost_Collide : MonoBehaviour
 
 
             }
-
+           
 
         }
+
 
     }
     IEnumerator EnemyWake()
