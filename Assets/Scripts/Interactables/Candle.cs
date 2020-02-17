@@ -37,8 +37,7 @@ public class Candle : MonoBehaviour
                 {
                     
                     isLit = false;
-                    GetComponent<SpriteRenderer>().sprite = spriteNotLit;
-                    transform.GetChild(0).gameObject.SetActive(isLit);
+                   
 
                     if (other.gameObject.GetComponent<MainGhost>().enabled == true)
                     {
@@ -59,7 +58,9 @@ public class Candle : MonoBehaviour
         IEnumerator EnemyWake()
         {
             //This is a coroutine
-            yield return new WaitForSeconds(2);    //Wait one frame
+            yield return new WaitForSeconds(1);    //Wait one frame
+            GetComponent<SpriteRenderer>().sprite = spriteNotLit;
+            transform.GetChild(0).gameObject.SetActive(isLit);
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
 
         }
