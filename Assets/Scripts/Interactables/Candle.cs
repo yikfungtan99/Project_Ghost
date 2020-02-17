@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Candle : MonoBehaviour
 {
+    private bool playMonologueOnce = false;
 
     public bool isLit = false;
     public Sprite spriteLit;
@@ -23,6 +24,8 @@ public class Candle : MonoBehaviour
         }
 
         transform.GetChild(0).gameObject.SetActive(isLit);
+
+        UpdateMonologue();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -70,4 +73,16 @@ public class Candle : MonoBehaviour
         }
     }
 
+    void UpdateMonologue()
+    {
+        if(isLit && !playMonologueOnce)
+        {
+            playMonologueOnce = true;
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(1);
+        }
+        if(!isLit)
+        {
+            playMonologueOnce = false;
+        }
+    }
 }

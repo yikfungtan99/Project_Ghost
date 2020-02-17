@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MainGhost : MonoBehaviour
 {
+    private bool playMonologueOnce = false;
+
     public float speed;
     public float ChaseSpeed;
     public float detectRange;
@@ -18,7 +20,6 @@ public class MainGhost : MonoBehaviour
     public Transform[] Set1;
     public Transform[] Set2;
     private int randomspot;
-
 
     void Start()
     {
@@ -118,7 +119,7 @@ public class MainGhost : MonoBehaviour
 
 
 
-
+        UpdateMonologue();
     }
 
 
@@ -160,5 +161,17 @@ public class MainGhost : MonoBehaviour
         }
     }
 
+    void UpdateMonologue()
+    {
+        if(Chasing && !playMonologueOnce)
+        {
+            playMonologueOnce = true;
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(2);
+        }
+        if(!Chasing)
+        {
+            playMonologueOnce = false;
+        }
+    }
 }
 

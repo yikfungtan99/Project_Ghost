@@ -28,8 +28,13 @@ public class Item_Drop : MonoBehaviour
 
         inventory.GetComponent<Inventory>().RandomizePosition();
 
+        UpdateMonologue();
+
         Destroy(gameObject);
     }
 
-
+    void UpdateMonologue()
+    {
+        GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(4);
+    }
 }

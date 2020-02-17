@@ -21,7 +21,15 @@ public class Death_Bowl : Dining_Bowl
             disablePuzzle = true;
 
             //! Make player faint
-            GameObject.Find("Player").GetComponent<Player>().playerFainted = true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerFainted = true;
+
+            Destroy(GameObject.FindGameObjectWithTag("Player"));
+
+            int child = GameObject.Find("DeathCanvas").transform.childCount;
+            for (int i = 0; i < child; i++)
+            {
+                GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(true);
+            }
         }
     }
 }

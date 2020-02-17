@@ -8,9 +8,9 @@ public class Dining_Bowl : MonoBehaviour
     protected GameObject inventory;
     protected static bool disablePuzzle;
     protected static bool isPuzzleClear;
-    protected GameObject spoonTarget;
-    private bool forewarnPlayer;
-    private bool puzzleClearDebugMsg;
+    protected static GameObject spoonTarget;
+    private static bool forewarnPlayer;
+    private static bool puzzleClearDebugMsg;
     public GameObject item_ui;
 
     // Start is called before the first frame update
@@ -53,24 +53,53 @@ public class Dining_Bowl : MonoBehaviour
     protected void CheckForSpoon()
     {
         spoonTarget = null;
-        
+        if(isPuzzleClear)
+        {
+            return;
+        }
+
         if (GameObject.Find("Hold Panel").transform.childCount == 0 || GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName != "spoon")
         {
             Debug.Log("You can do nothing with the bowl as it is. Maybe a spoon will help.");
+
+            UpdateMonologue(1);
             return;
         }
         else
         {
+            if (isPuzzleClear)
+            {
+                return;
+            }
+
             if (!forewarnPlayer)
             {
                 forewarnPlayer = true;
                 Debug.Log("I think I have to be a little more cautious about this...");
+
+                UpdateMonologue(2);
             }
             else
             {
                 spoonTarget = GameObject.Find("Hold Panel").transform.GetChild(0).gameObject;
                 ResetPuzzleOnPlayerRespawn();
             }
+        }
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        if(displayIndex == 1)
+        {
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(5);
+        }
+        else if(displayIndex == 2)
+        {
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(6);
+        }
+        else
+        {
+            Debug.LogError("displayIndex in UpdateMonologue() is out of bounds.");
         }
     }
 }

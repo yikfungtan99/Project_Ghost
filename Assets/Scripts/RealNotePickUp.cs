@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RealNotePickUp : MonoBehaviour
 {
+    private bool playMonologueOnce = false;
+
     private Interactable it;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
@@ -56,11 +58,13 @@ public class RealNotePickUp : MonoBehaviour
             {
                 Note1PickedUp = true;
                 Debug.Log("Note1 has been picked up");
+                UpdateMonologue();
             }
             if (NoteCount == 2)
             {
                 Note2PickedUp = true;
                 Debug.Log("Note2 has been picked up");
+                UpdateMonologue();
             }
     }
     public void ToNotes()
@@ -115,5 +119,10 @@ public class RealNotePickUp : MonoBehaviour
         canvas.transform.GetChild(3).gameObject.SetActive(false);
         canvas.transform.GetChild(4).gameObject.SetActive(false);
         canvas.transform.GetChild(5).gameObject.SetActive(false);
+    }
+
+    void UpdateMonologue()
+    {
+        GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(3);
     }
 }

@@ -29,6 +29,8 @@ public class Safe_Bowl : Dining_Bowl
             
             //! Instantiate key item reward in player inventory
             ConvertItemStringToInstance("stairwell key");
+
+            UpdateMonologue();
         }
     }
 
@@ -39,5 +41,10 @@ public class Safe_Bowl : Dining_Bowl
         GameObject instance = Instantiate(item_ui, inventory.transform.GetChild(0));
 
         instance.GetComponent<Item_Inventory>().itemName = name;
+    }
+
+    void UpdateMonologue()
+    {
+        GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(7);
     }
 }
