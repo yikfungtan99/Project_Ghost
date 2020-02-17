@@ -6,9 +6,10 @@ public class Inventory : MonoBehaviour
 {
     private Player player;
     public Vector2 inventorySafeArea;
+    public GameObject itemPrefab;
 
-    private void Start()
-    {
+    private void Start() 
+    { 
         player = transform.root.GetComponent<Player>();
     }
 
@@ -30,6 +31,23 @@ public class Inventory : MonoBehaviour
 
         }
     }
+
+    public void ObtainItem(string item)
+    {
+
+        float x = Random.Range(-inventorySafeArea.x, inventorySafeArea.x);
+        float y = Random.Range(-inventorySafeArea.y, inventorySafeArea.y);
+
+        GameObject obtained = itemPrefab;
+
+        Instantiate(obtained, transform.GetChild(0));
+
+        obtained.GetComponent<Item_Inventory>().itemName = item;
+
+        obtained.GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
+
+    }
+
 
     private void OnDrawGizmosSelected()
     {

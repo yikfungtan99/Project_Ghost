@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,6 +43,13 @@ public class Interactable : MonoBehaviour
         else if(gameObject.tag == stringtags[7])
         {
             GetComponent<RealNotePickUp>().Interact();
+        }
+
+        if (GetComponent<Interactable_Give_Item>())
+        {
+
+            GetComponent<Interactable_Give_Item>().Give_Item();
+
         }
     }
 
