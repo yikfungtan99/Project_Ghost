@@ -37,8 +37,6 @@ public class Candle : MonoBehaviour
                 {
                     Debug.Log("Snuff");
                     isLit = false;
-                    GetComponent<SpriteRenderer>().sprite = spriteNotLit;
-                    transform.GetChild(0).gameObject.SetActive(isLit);
 
                     if (other.gameObject.GetComponent<MainGhost>().enabled == true)
                     {
@@ -61,6 +59,10 @@ public class Candle : MonoBehaviour
             //This is a coroutine
             yield return new WaitForSeconds(2);    //Wait one frame
             GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
+
+            GetComponent<SpriteRenderer>().sprite = spriteNotLit;
+            transform.GetChild(0).gameObject.SetActive(isLit);
+
 
         }
     }
