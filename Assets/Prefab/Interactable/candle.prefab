@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4928372338412585966}
   - component: {fileID: 4928372338412585967}
   - component: {fileID: 4928372338412585961}
+  - component: {fileID: 5040786520374280018}
   m_Layer: 8
   m_Name: candle
   m_TagString: Candle
@@ -98,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.33909297, y: 0}
+  m_Offset: {x: 0.20578289, y: -1.6509457}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.8589826, y: 7.2}
+  m_Size: {x: 9.369858, y: 15.53334}
   m_EdgeRadius: 0
 --- !u!114 &4928372338412585967
 MonoBehaviour:
@@ -141,6 +142,27 @@ MonoBehaviour:
   isLit: 0
   spriteLit: {fileID: 21300000, guid: dbb4cf38a8a528f4a818dda4cfea41e8, type: 3}
   spriteNotLit: {fileID: 21300000, guid: ec2fa88f9d021d94abb1228fab035559, type: 3}
+--- !u!50 &5040786520374280018
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519459656754906611}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4928372338395229960
 GameObject:
   m_ObjectHideFlags: 0
