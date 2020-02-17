@@ -31,7 +31,18 @@ public class Ghost_Collide : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("NOTHNING WTF");
+
+                    /*GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled = false;*/
+                    Destroy(GameObject.FindGameObjectWithTag("Player"));
+
+                    int child = GameObject.Find("DeathCanvas").transform.childCount;
+                    for(int i=0;i<child;i++)
+                    {
+                        GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(true);
+                    }
+                    
+
                 }
                /* if (talisman > 0)
                 {

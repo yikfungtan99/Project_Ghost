@@ -125,7 +125,7 @@ public class MainGhost : MonoBehaviour
 
 
 
-
+        
     void Chase(bool check)
     {
         if (check)
