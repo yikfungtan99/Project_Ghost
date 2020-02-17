@@ -335,7 +335,27 @@ PrefabInstance:
     - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
         type: 3}
       propertyPath: showMonologueTimer
-      value: 1
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
+        type: 3}
+      propertyPath: sentenceList.Array.data[0].index
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
+        type: 3}
+      propertyPath: sentenceList.Array.data[0].description
+      value: pick up note
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
+        type: 3}
+      propertyPath: sentenceList.Array.data[0].sentenceText
+      value: A piece of torn paper? Might be useful.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
+        type: 3}
+      propertyPath: sentenceList.Array.data[0].cooldown
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5231533299487635717, guid: cad0fa56c6dc6d04ca70668f1908df50,
         type: 3}
@@ -6169,7 +6189,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 3.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6193,7 +6213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743711822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.8677773, y: -0.5599997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

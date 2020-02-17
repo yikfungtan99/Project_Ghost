@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Player_Lighter : MonoBehaviour
 {
-    public bool lighterOn = false;
+    private bool playMonologueOnce = false;
 
+    public bool lighterOn = false;
+    
     public int difficulty = 100;
     private int triesCounter;
 
@@ -56,7 +58,7 @@ public class Player_Lighter : MonoBehaviour
 
         transform.GetChild(3).GetChild(0).gameObject.SetActive(lighterOn);
 
-        
+        UpdateMonologue();
     }
 
     void TurnLighterOn(int chances)
@@ -76,4 +78,16 @@ public class Player_Lighter : MonoBehaviour
         }
     }
 
+    void UpdateMonologue()
+    {
+        if (lighterOn && !playMonologueOnce)
+        {
+            playMonologueOnce = true;
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(0);
+        }
+        if(!lighterOn)
+        {
+            playMonologueOnce = false;
+        }
+    }
 }
