@@ -284,6 +284,28 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 130, y: -9}
+  - name: Standing
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 342
+      y: 4
+      width: 57
+      height: 272
+    spriteID: 866d18d9fce153a499d6c7309ea1aa36
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 283, y: -7}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -310,6 +332,13 @@ ScriptedImporter:
     spriteID: 00000000000000000000000000000000
     layerID: 57
     mosaicPosition: {x: 0, y: 0}
+  - name: Standing
+    spriteName: Standing
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 866d18d9fce153a499d6c7309ea1aa36
+    layerID: 72
+    mosaicPosition: {x: 342, y: 4}
   - name: 9
     spriteName: 9
     isGroup: 0
