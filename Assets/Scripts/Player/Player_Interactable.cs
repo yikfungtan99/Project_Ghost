@@ -15,33 +15,22 @@ public class Player_Interactable : MonoBehaviour
     private int dir = 1;
     private bool targetOnInteractable = false;
 
-    [HideInInspector]
-    public bool showMonolog = false;
-    public float showMonologTimer;
-    private float showMonologTimerCounter;
+    
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GetComponent<Player>().gm;
 
-        showMonologTimerCounter = showMonologTimer;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.GetChild(1).gameObject.SetActive(showMonolog);
-
-        if (showMonolog && showMonologTimerCounter > 0)
-        {
-            showMonologTimerCounter -= Time.deltaTime;
-        }
-        else
-        {
-            showMonolog = false;
-            showMonologTimerCounter = showMonologTimer;
-        }
 
         //Get target position of the mouse
         targetPos = gm.GetComponent<MouseControls>().target;
@@ -62,7 +51,7 @@ public class Player_Interactable : MonoBehaviour
 
                     interactable[i].gameObject.GetComponent<Interactable>().inRange = true;
 
-                    if (transform.GetComponent<Player>().lighterOn)
+                    if (transform.GetComponent<Player_Lighter>().lighterOn && !GetComponent<Player>().hidden)
                     {
                         interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
                     }
