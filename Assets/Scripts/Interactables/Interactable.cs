@@ -40,6 +40,14 @@ public class Interactable : MonoBehaviour
         {
             GetComponent<Death_Bowl>().Interact();
         }
+
+        if (GetComponent<Interactable_Give_Item>())
+        {
+
+            GetComponent<Interactable_Give_Item>().Give_Item();
+
+        }
+
     }
 
     void EnableParticles()
