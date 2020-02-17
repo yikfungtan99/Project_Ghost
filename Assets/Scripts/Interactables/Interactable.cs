@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
     public bool interactable = true;
     public bool isSeen = false;
 
-    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle", "Safe_Bowl", "Death_Bowl"};
+    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle", "Safe_Bowl", "Death_Bowl", "Note"};
 
     public void Interact()
     {
@@ -39,6 +39,10 @@ public class Interactable : MonoBehaviour
         else if (gameObject.tag == stringtags[6])
         {
             GetComponent<Death_Bowl>().Interact();
+        }
+        else if(gameObject.tag == stringtags[7])
+        {
+            GetComponent<RealNotePickUp>().Interact();
         }
     }
 
