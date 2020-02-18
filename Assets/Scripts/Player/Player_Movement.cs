@@ -104,13 +104,14 @@ public class Player_Movement : MonoBehaviour
                                  sprint = true;
                              }
                          }*/
+
                         // contexual running
-                        sprint = true;
                         if (GameObject.FindGameObjectWithTag("Enemy"))
                         {
                             if(GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().Chasing == true)
                             {
                                 staminaRemaining = stamina;
+                                sprint = true;
                             } 
                             
                         }
