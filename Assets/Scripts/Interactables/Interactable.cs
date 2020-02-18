@@ -58,6 +58,12 @@ public class Interactable : MonoBehaviour
             GetComponent<pocTrigger>().ActivateTrigger();
 
         }
+
+        if (GetComponent<Interactable_Checker>())
+        {
+            GetComponent<Interactable_Checker>().CheckHoldPanel();
+        }
+
     }
 
     void EnableParticles()
