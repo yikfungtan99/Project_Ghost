@@ -10,8 +10,6 @@ public class DeathLoad : MonoBehaviour
     public void Restart()
     {
         Application.LoadLevel(Application.loadedLevel);
-
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerFainted = false;
     }
 
 }

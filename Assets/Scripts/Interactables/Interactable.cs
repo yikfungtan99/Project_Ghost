@@ -51,6 +51,13 @@ public class Interactable : MonoBehaviour
             GetComponent<Interactable_Give_Item>().Give_Item();
 
         }
+
+        if (GetComponent<pocTrigger>())
+        {
+
+            GetComponent<pocTrigger>().ActivateTrigger();
+
+        }
     }
 
     void EnableParticles()

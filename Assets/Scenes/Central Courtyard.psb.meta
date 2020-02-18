@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: 0236ccf8fb73746468acfe2210b02606
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Orkid
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1892
+      y: 2427
+      width: 143
+      height: 220
+    spriteID: defc821c8e9ee424d8a5ea117f9cbab1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1327, y: 2325}
+  - name: 'Shadow Plants '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2026
+      width: 1024
+      height: 393
+    spriteID: 237f918a977bd7a408764809b4c6cbde
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -112, y: 2013}
+  - name: Plants
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2427
+      width: 1083
+      height: 328
+    spriteID: f14eca92d8ce62443a538ad0667ba2c3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -66, y: 2274}
+  - name: 'Table_Foreground '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1036
+      y: 2026
+      width: 637
+      height: 180
+    spriteID: 0fb2e62648c4bdb4eaaed09728172435
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 696, y: 2026}
+  - name: 'Pillars '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1460
+      width: 1205
+      height: 558
+    spriteID: 411fad27475f9124eba7805c67d9825b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -50, y: 1298}
+  - name: Layer 19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1292
+      y: 4
+      width: 90
+      height: 377
+    spriteID: 3f6458d7d4418fc45b284a1face12625
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 866, y: -226}
+  - name: 'Table_Background '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1681
+      y: 2026
+      width: 257
+      height: 145
+    spriteID: be559ff3fc908a14ca75bf918367aa6c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1080, y: 1694}
+  - name: 'Chairs '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1095
+      y: 2427
+      width: 669
+      height: 177
+    spriteID: d6ae5bfcfb6a2a747aa8fe72dc965704
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 704, y: 2056}
+  - name: 'Wall deco '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1036
+      y: 2214
+      width: 492
+      height: 198
+    spriteID: 9ea22669a65debc428d65b4ad5adee78
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 520, y: 1727}
+  - name: 'Window stairs '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1892
+      y: 2655
+      width: 80
+      height: 85
+    spriteID: c3383a8e23e63cf4f8fdbef645d534c6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1669, y: 2020}
+  - name: 'Door_Right '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1878
+      y: 1460
+      width: 111
+      height: 550
+    spriteID: 1a17413f9509a9a41929f26bf1732a87
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 709, y: 1290}
+  - name: Door_Left
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1743
+      y: 1460
+      width: 127
+      height: 558
+    spriteID: bb254fedbcdf8984688e587aa2b26289
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1743, y: 1298}
+  - name: Layer 11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1772
+      y: 2427
+      width: 112
+      height: 292
+    spriteID: 9aafd6f24a6274f48a82e81622d6370d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 708, y: 2014}
+  - name: Stairs
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1217
+      y: 1460
+      width: 518
+      height: 379
+    spriteID: e3d116727c5866842b5c31d7a28fc4ee
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1083, y: 1119}
+  - name: Wall, Floor, Shadows
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1280
+      height: 720
+    spriteID: b0e0976152106ef49a99acc614d10c0d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Background
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 732
+      width: 1280
+      height: 720
+    spriteID: 7a8976a81481cde47ae6babdd9d36ea8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 732}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 1280, y: 720}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Orkid
+    spriteName: Orkid
+    isGroup: 0
+    parentIndex: -1
+    spriteID: defc821c8e9ee424d8a5ea117f9cbab1
+    layerID: 66
+    mosaicPosition: {x: 1892, y: 2427}
+  - name: 'Shadow Plants '
+    spriteName: 'Shadow Plants '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 237f918a977bd7a408764809b4c6cbde
+    layerID: 68
+    mosaicPosition: {x: 4, y: 2026}
+  - name: Plants
+    spriteName: Plants
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f14eca92d8ce62443a538ad0667ba2c3
+    layerID: 67
+    mosaicPosition: {x: 4, y: 2427}
+  - name: 'Table_Foreground '
+    spriteName: 'Table_Foreground '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0fb2e62648c4bdb4eaaed09728172435
+    layerID: 23
+    mosaicPosition: {x: 1036, y: 2026}
+  - name: 'Pillars '
+    spriteName: 'Pillars '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 411fad27475f9124eba7805c67d9825b
+    layerID: 51
+    mosaicPosition: {x: 4, y: 1460}
+  - name: Layer 19
+    spriteName: Layer 19
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3f6458d7d4418fc45b284a1face12625
+    layerID: 61
+    mosaicPosition: {x: 1292, y: 4}
+  - name: 'Table_Background '
+    spriteName: 'Table_Background '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: be559ff3fc908a14ca75bf918367aa6c
+    layerID: 34
+    mosaicPosition: {x: 1681, y: 2026}
+  - name: 'Chairs '
+    spriteName: 'Chairs '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d6ae5bfcfb6a2a747aa8fe72dc965704
+    layerID: 36
+    mosaicPosition: {x: 1095, y: 2427}
+  - name: 'Wall deco '
+    spriteName: 'Wall deco '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9ea22669a65debc428d65b4ad5adee78
+    layerID: 40
+    mosaicPosition: {x: 1036, y: 2214}
+  - name: 'Window stairs '
+    spriteName: 'Window stairs '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c3383a8e23e63cf4f8fdbef645d534c6
+    layerID: 45
+    mosaicPosition: {x: 1892, y: 2655}
+  - name: 'Door_Right '
+    spriteName: 'Door_Right '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1a17413f9509a9a41929f26bf1732a87
+    layerID: 43
+    mosaicPosition: {x: 1878, y: 1460}
+  - name: Door_Left
+    spriteName: Door_Left
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bb254fedbcdf8984688e587aa2b26289
+    layerID: 42
+    mosaicPosition: {x: 1743, y: 1460}
+  - name: Layer 11
+    spriteName: Layer 11
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9aafd6f24a6274f48a82e81622d6370d
+    layerID: 41
+    mosaicPosition: {x: 1772, y: 2427}
+  - name: Stairs
+    spriteName: Stairs
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e3d116727c5866842b5c31d7a28fc4ee
+    layerID: 19
+    mosaicPosition: {x: 1217, y: 1460}
+  - name: Wall, Floor, Shadows
+    spriteName: Wall, Floor, Shadows
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b0e0976152106ef49a99acc614d10c0d
+    layerID: 62
+    mosaicPosition: {x: 4, y: 4}
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7a8976a81481cde47ae6babdd9d36ea8
+    layerID: 1
+    mosaicPosition: {x: 4, y: 732}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Central Courtyard Texture
+  prefabAssetName: Central Courtyard Prefab
+  spriteLibAssetName: Central Courtyard Sprite Lib

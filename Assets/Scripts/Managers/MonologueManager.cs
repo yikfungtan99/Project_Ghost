@@ -123,6 +123,11 @@ public class MonologueManager : MonoBehaviour
     //! monologue timer & enabling textbox code
     void CountMonologueTimer()
     {
+        if(textBox == null)
+        {
+            return;
+        }
+
         textBox.gameObject.SetActive(showMonologue);
 
         if (showMonologue && showMonologueTimerCounter > 0)

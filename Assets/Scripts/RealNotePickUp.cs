@@ -25,6 +25,7 @@ public class RealNotePickUp : MonoBehaviour
     public void ToPause()
     {
         GameIsPaused = true;
+        Pause();
     }
 
     public void Resume()

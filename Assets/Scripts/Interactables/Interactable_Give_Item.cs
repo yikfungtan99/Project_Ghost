@@ -14,8 +14,17 @@ public class Interactable_Give_Item : MonoBehaviour
         {
             GameObject.Find("Player").transform.GetChild(2).GetComponent<Inventory>().ObtainItem(itemName);
             charges -= 1;
+
+            UpdateMonologue();
         }
 
     }
 
+    void UpdateMonologue()
+    {
+        if(itemName == "talisman")
+        {
+            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(8);
+        }
+    }
 }

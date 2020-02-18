@@ -19,6 +19,7 @@ public class Hidable : MonoBehaviour
         //GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = true;
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector2(this.transform.position.x, this.transform.position.y);
         GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = darkness;
         transform.GetChild(0).gameObject.SetActive(true);
     }
@@ -27,7 +28,12 @@ public class Hidable : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = true;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = false;
-        GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = 0.15f;
+       
+        if (GameObject.Find("Global Light 2D"))
+        {
+            GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = 0.15f;
+        }
+
         transform.GetChild(0).gameObject.SetActive(false);
     }
 

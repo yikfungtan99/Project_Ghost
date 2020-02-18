@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainGhost : MonoBehaviour
 {
-    private bool playMonologueOnce = false;
+    //private bool playMonologueOnce = false;
 
     public float speed;
     public float ChaseSpeed;
@@ -23,7 +23,8 @@ public class MainGhost : MonoBehaviour
 
     void Start()
     {
-        randomspot = Random.Range(0, moveSpots.Length);
+        randomspot =1;
+      //  randomspot = Random.Range(0, moveSpots.Length);
         Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         // Physics2D.queriesStartInColliders = false;
         lastX = transform.position.x;
@@ -119,7 +120,7 @@ public class MainGhost : MonoBehaviour
 
 
 
-        UpdateMonologue();
+        
     }
 
 
@@ -161,17 +162,22 @@ public class MainGhost : MonoBehaviour
         }
     }
 
-    void UpdateMonologue()
+   /* void UpdateMonologue()
     {
-        if(Chasing && !playMonologueOnce)
+        if (Chasing && !playMonologueOnce)
         {
             playMonologueOnce = true;
             GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(2);
         }
-        if(!Chasing)
+        if (!Chasing)
         {
             playMonologueOnce = false;
         }
+    }*/
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawRay(transform.position, transform.right*detectRange);
     }
 }
 

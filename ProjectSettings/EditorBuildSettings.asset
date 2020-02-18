@@ -15,6 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/New Scene.unity
     guid: 5cd96d79279e944439663d6193c641e7
   - enabled: 1
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Main
+      Menu.unity
+    guid: aade21535b7457f499a42cc1a4551be1
+  - enabled: 1
     path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Game
       Scene.unity
     guid: a4e96d1b4b69cb249aebe4fbb09dd117

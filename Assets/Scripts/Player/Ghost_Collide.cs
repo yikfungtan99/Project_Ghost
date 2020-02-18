@@ -15,17 +15,16 @@ public class Ghost_Collide : MonoBehaviour
             
             if (other.CompareTag("Enemy"))
             {
-                if(GameObject.Find("Hold Panel").transform.childCount != 0) {
+                if(GameObject.Find("Hold Panel").transform.childCount != 0 && GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "talisman") 
+                {
 
-                    if (GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "talisman")
+                    if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled == true)
                     {
-                        if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled == true)
-                        {
-                            GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = false;
-                            Destroy(GameObject.Find("Hold Panel").transform.GetChild(0).gameObject);
-                            StartCoroutine(EnemyWake());
+                        GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = false;
+                        GameObject.FindGameObjectWithTag("Enemy").GetComponent<CapsuleCollider2D>().enabled = false;
+                        Destroy(GameObject.Find("Hold Panel").transform.GetChild(0).gameObject);
+                        StartCoroutine(EnemyWake());
                             
-                        }
                     }
 
                 }
@@ -70,6 +69,7 @@ public class Ghost_Collide : MonoBehaviour
         //This is a coroutine
         yield return new WaitForSeconds(10);    //Wait one frame
         GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<CapsuleCollider2D>().enabled = true;
 
     }
 }

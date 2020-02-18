@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
 
     public void RandomizePosition()
     {
+
         for (int i = 0; i < transform.GetChild(0).childCount; i++)
         {
 
