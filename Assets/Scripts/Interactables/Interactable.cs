@@ -12,7 +12,12 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        if(gameObject.tag == stringtags[0])
+        if (CheckIfHiding())
+        {
+            return;
+        }
+
+        if (gameObject.tag == stringtags[0])
         {
             GetComponent<Door>().Interact();
         }
@@ -83,4 +88,12 @@ public class Interactable : MonoBehaviour
         isSeen = false;
     }
 
+    private bool CheckIfHiding()
+    {
+        if(GameManager.Instance.player.hidden)
+        {
+            return true;
+        }
+        return false;
+    }
 }

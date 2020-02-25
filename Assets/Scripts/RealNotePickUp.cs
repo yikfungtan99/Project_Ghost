@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class RealNotePickUp : MonoBehaviour
 {
-    private bool playMonologueOnce = false;
-
     private Interactable it;
-    public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public Canvas canvas;
     static int NoteCount = 0;
     public static bool Note1PickedUp = false;
     public static bool Note2PickedUp = false;
 
+    private void Awake()
+    {
+        NoteCount = 0;
+        Note1PickedUp = false;
+        Note2PickedUp = false;
+
+        it = GetComponent<Interactable>();
+    }
+
     void Update()
     {
-        if (GameIsPaused == true)
+        if (GameManager.gamePaused == true)
         {
             canvas.transform.GetChild(2).gameObject.SetActive(true);
-            GameIsPaused = false;
         }
     }
     public void ToPause()
     {
-        GameIsPaused = true;
+        Debug.Log("ToPause()");
         Pause();
     }
 
@@ -32,19 +37,14 @@ public class RealNotePickUp : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
+        GameManager.Instance.SetPause(false);
     }
     void Pause()
     {
+        Debug.Log("Pause()");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
-    }
-
-
-    private void Awake()
-    {
-        it = GetComponent<Interactable>();
+        GameManager.Instance.SetPause(true);
     }
 
     public void Interact()
