@@ -55,205 +55,208 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pressedButton)
+        if(!GameManager.gamePaused)
         {
-            pressedButton = false;
-        }
-        else
-        {
-            //Get waypoint
-            if (Input.GetMouseButtonDown(0))
+            if (pressedButton)
             {
-                if (GetComponent<Player_Interactable>().CheckForInteractables())
+                pressedButton = false;
+            }
+            else
+            {
+                //Get waypoint
+                if (Input.GetMouseButtonDown(0))
                 {
-                    haveWayPoint = false;
-                    enRoute = false;
-                    sprint = false;
-                }
-                else
-                {
-                    //Get target position of the mouse
-                    targetPos = gm.GetComponent<MouseControls>().target;
-
-                    if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
+                    if (GetComponent<Player_Interactable>().CheckForInteractables())
                     {
-                        waypointPos = targetPos;
-                        haveWayPoint = true;
-                        enRoute = true;
-
+                        haveWayPoint = false;
+                        enRoute = false;
+                        sprint = false;
                     }
                     else
                     {
-                        haveWayPoint = false;
-                    }
+                        //Get target position of the mouse
+                        targetPos = gm.GetComponent<MouseControls>().target;
 
-                    if (haveWayPoint)
-                    {
-                        //Sprint Volunteering
-                        /* if (!sprint && !sprintOnCooldown)
-                         {
-                             if (sprintMouseDelayTimer < sprintMouseDelay)
-                             {
-
-                                 sprintMouseDelayTimer += Time.fixedDeltaTime;
-
-                             }
-                             else
-                             {
-                                 sprintMouseDelayTimer = 0;
-                                 sprint = true;
-                             }
-                         }*/
-
-                        // contexual running
-                        if (GameObject.FindGameObjectWithTag("Enemy"))
+                        if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                         {
-                            if(GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().Chasing == true)
-                            {
-                                staminaRemaining = stamina;
-                                sprint = true;
-                            } 
-                            
-                        }
-
-                        //Change direction
-                        if (waypointPos.x < transform.position.x)
-                        {
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                            direction = -1;
+                            waypointPos = targetPos;
+                            haveWayPoint = true;
+                            enRoute = true;
 
                         }
                         else
                         {
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                            direction = 1;
+                            haveWayPoint = false;
                         }
-                    }
-                    else
-                    {
-                        if (sprint) sprint = false;
-                        sprintMouseDelayTimer = 0;
+
+                        if (haveWayPoint)
+                        {
+                            //Sprint Volunteering
+                            /* if (!sprint && !sprintOnCooldown)
+                             {
+                                 if (sprintMouseDelayTimer < sprintMouseDelay)
+                                 {
+
+                                     sprintMouseDelayTimer += Time.fixedDeltaTime;
+
+                                 }
+                                 else
+                                 {
+                                     sprintMouseDelayTimer = 0;
+                                     sprint = true;
+                                 }
+                             }*/
+
+                            // contexual running
+                            if (GameObject.FindGameObjectWithTag("Enemy"))
+                            {
+                                if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().Chasing == true)
+                                {
+                                    staminaRemaining = stamina;
+                                    sprint = true;
+                                }
+
+                            }
+
+                            //Change direction
+                            if (waypointPos.x < transform.position.x)
+                            {
+                                transform.rotation = Quaternion.Euler(0, 180, 0);
+                                direction = -1;
+
+                            }
+                            else
+                            {
+                                transform.rotation = Quaternion.Euler(0, 0, 0);
+                                direction = 1;
+                            }
+                        }
+                        else
+                        {
+                            if (sprint) sprint = false;
+                            sprintMouseDelayTimer = 0;
+                        }
                     }
                 }
             }
-        }
 
 
-        // sprint volunteering
-        /*if (sprint)
-        {
-            //insert animation bool
-            if (!randomized)
+            // sprint volunteering
+            /*if (sprint)
             {
-                randomized = true;
-                transform.GetComponent<Player>().iv.RandomizePosition();
-            }
-            if (staminaRemaining > 0)
-            {
-                staminaRemaining -= Time.fixedDeltaTime;
-            }
-            else
-            {
-                staminaRemaining = 0;
-                sprintOnCooldown = true;
-                sprint = false;
-            }
-        }
-        else
-        {
-            sprite.color = Color.white;
-
-            if (staminaRemaining < stamina)
-            {
-                staminaRemaining += Time.fixedDeltaTime;
+                //insert animation bool
+                if (!randomized)
+                {
+                    randomized = true;
+                    transform.GetComponent<Player>().iv.RandomizePosition();
+                }
+                if (staminaRemaining > 0)
+                {
+                    staminaRemaining -= Time.fixedDeltaTime;
+                }
+                else
+                {
+                    staminaRemaining = 0;
+                    sprintOnCooldown = true;
+                    sprint = false;
+                }
             }
             else
             {
-                staminaRemaining = stamina;
-                sprintOnCooldown = false;
-            }
+                sprite.color = Color.white;
 
-            randomized = false;
+                if (staminaRemaining < stamina)
+                {
+                    staminaRemaining += Time.fixedDeltaTime;
+                }
+                else
+                {
+                    staminaRemaining = stamina;
+                    sprintOnCooldown = false;
+                }
 
-        }*/
+                randomized = false;
 
-        //contextual running
-        if (sprint)
-        {
-            //insert animation bool
-            if (!randomized)
-            {
-                randomized = true;
-                transform.GetComponent<Player>().iv.RandomizePosition();
-            }
-            if (staminaRemaining > 0)
-            {
-                staminaRemaining -= Time.fixedDeltaTime;
-            }
-            else
-            {
-                staminaRemaining = 0;
-                
-                sprint = false;
-            }
-        }
-        else
-        {
-           
+            }*/
 
-            randomized = false;
-
-        }
-        //Move to target now
-        if (enRoute)
-        {
-
-            foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
-            {
-                fooObj.GetComponent<Hidable>().Unhide();
-            }
-            
-            
-            if (direction > 0 && transform.position.x > waypointPos.x)
-            {
-                enRoute = false;    
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
-
-            if (direction < 0 && transform.position.x < waypointPos.x)
-            {
-                enRoute = false;
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }
-
+            //contextual running
             if (sprint)
             {
-                rb.velocity = new Vector2(sprintSpeed * 100 * direction * Time.fixedDeltaTime, rb.velocity.y);
+                //insert animation bool
+                if (!randomized)
+                {
+                    randomized = true;
+                    transform.GetComponent<Player>().iv.RandomizePosition();
+                }
+                if (staminaRemaining > 0)
+                {
+                    staminaRemaining -= Time.fixedDeltaTime;
+                }
+                else
+                {
+                    staminaRemaining = 0;
+
+                    sprint = false;
+                }
             }
             else
             {
-                rb.velocity = new Vector2(moveSpeed * 100 * direction * Time.fixedDeltaTime, rb.velocity.y);
+
+
+                randomized = false;
+
             }
-
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-
-            if (sprint)
+            //Move to target now
+            if (enRoute)
             {
-                sprint = false;
-            }
-        }
 
-        //Animation
-        if (rb.velocity.x > 1 || rb.velocity.x < -1)
-        {
-            anim.SetBool("Move", true);
-        }
-        else
-        {
-            anim.SetBool("Move", false);
+                foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
+                {
+                    fooObj.GetComponent<Hidable>().Unhide();
+                }
+
+
+                if (direction > 0 && transform.position.x > waypointPos.x)
+                {
+                    enRoute = false;
+                    rb.velocity = new Vector2(0, rb.velocity.y);
+                }
+
+                if (direction < 0 && transform.position.x < waypointPos.x)
+                {
+                    enRoute = false;
+                    rb.velocity = new Vector2(0, rb.velocity.y);
+                }
+
+                if (sprint)
+                {
+                    rb.velocity = new Vector2(sprintSpeed * 100 * direction * Time.fixedDeltaTime, rb.velocity.y);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(moveSpeed * 100 * direction * Time.fixedDeltaTime, rb.velocity.y);
+                }
+
+            }
+            else
+            {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+
+                if (sprint)
+                {
+                    sprint = false;
+                }
+            }
+
+            //Animation
+            if (rb.velocity.x > 1 || rb.velocity.x < -1)
+            {
+                anim.SetBool("Move", true);
+            }
+            else
+            {
+                anim.SetBool("Move", false);
+            }
         }
     }
 

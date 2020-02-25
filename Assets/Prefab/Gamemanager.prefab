@@ -54,7 +54,7 @@ Animator:
   m_GameObject: {fileID: 4157549307807986955}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 60528eb6668788b4da50f071e8737218, type: 2}
+  m_Controller: {fileID: 9100000, guid: e358a7c463275654b98122c6f1f5b2dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5123675646716434253}
   - component: {fileID: 2299243489410916711}
+  - component: {fileID: 39947229}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -107,4 +108,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d10700bde03ad344a33ba432d91def5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: 3c8c78a612ee0c34999bc27e23556d0e, type: 3}
   target: {x: 0, y: 0}
+--- !u!114 &39947229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5123675646716434258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6baef8c9b01dc241aa556d9eebab849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
+  monologueManager: {fileID: 0}
+  roomManager: {fileID: 4157549307807986955}
+  itemLibrary: {fileID: 0}
+  pauseMenuManager: {fileID: 0}
+  realPauseMenuScript: {fileID: 0}
+  deathScreenManager: {fileID: 0}
+  winScreenManager: {fileID: 0}
+  puzzleManager: {fileID: 0}
+  playerObject: {fileID: 0}
+  player: {fileID: 0}
+  playerInteractable: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerInventory: {fileID: 0}
+  playerLighter: {fileID: 0}
+  mainGhost: {fileID: 0}
+  allMoveSpots: {fileID: 0}
+  ghostManager: {fileID: 0}
+  mainEntrance: {fileID: 0}
+  centralCourtYard: {fileID: 0}
+  altarRoom: {fileID: 0}
+  diningRoom: {fileID: 0}
+  bridalRoom: {fileID: 0}
+  mainCamera: {fileID: 0}
+  cinemachine: {fileID: 0}
+  eventSystem: {fileID: 0}

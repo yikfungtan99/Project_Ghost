@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Inventory : MonoBehaviour
-{ 
-    private GameObject inventory;
-    private bool inventoryOn = false;
+{
+    public GameObject inventory;
+    public bool inventoryOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +23,13 @@ public class Player_Inventory : MonoBehaviour
     void Update()
     {
         //Inventory
-        if (Input.GetMouseButtonDown(1))
+        if(!GameManager.gamePaused)
         {
-            ToggleInventory();
-            GetComponent<Player>().inventoryOn = inventoryOn;
+            if (Input.GetMouseButtonDown(1))
+            {
+                ToggleInventory();
+                GetComponent<Player>().inventoryOn = inventoryOn;
+            }
         }
     }
 
