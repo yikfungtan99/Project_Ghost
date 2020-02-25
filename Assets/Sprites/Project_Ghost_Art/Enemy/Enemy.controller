@@ -66,9 +66,6 @@ AnimatorStateMachine:
     m_State: {fileID: -1994745829524504670}
     m_Position: {x: 320, y: 110, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 4465017837740123377}
-    m_Position: {x: 150, y: 330, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: 3971336957685992890}
     m_Position: {x: 360, y: 240, z: 0}
   m_ChildStateMachines: []
@@ -180,12 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3b84e602286541a1a7e10ba95d918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {fileID: 0}
   speed: 5
-  moveSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  Set1: []
-  Set2: []
 --- !u!1101 &1187255319403012900
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -231,32 +224,6 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: d54d12cc536186047a11de6db5b33770, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
---- !u!1102 &4465017837740123377
-AnimatorState:
-  serializedVersion: 5
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Chase Chase Jin Test 2
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8f3ecf01078270f478db395bb5977db2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

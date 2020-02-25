@@ -72,4 +72,6 @@ public class Ghost_Collide : MonoBehaviour
         GameObject.FindGameObjectWithTag("Enemy").GetComponent<CapsuleCollider2D>().enabled = true;
 
     }
+
+
 }

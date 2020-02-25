@@ -36,7 +36,15 @@ public class Candle : MonoBehaviour
             
             if (other.CompareTag("Enemy"))
             {
-                if(other.gameObject.GetComponent<MainGhost>().Chasing==false)
+                if(other.gameObject.GetComponent<CarrotMain>().anima.GetBool("isChase") == false)
+                {
+                    isLit = false;
+                    other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", true);
+                    other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", false);
+                    StartCoroutine(EnemyWake());
+
+                }
+                /*if(other.gameObject.GetComponent<MainGhost>().Chasing==false)
                 {
                     
                     isLit = false;
@@ -49,7 +57,7 @@ public class Candle : MonoBehaviour
                         StartCoroutine(EnemyWake());
 
                     }
-                }
+                }*/
                 
             }
         }
@@ -64,7 +72,9 @@ public class Candle : MonoBehaviour
             yield return new WaitForSeconds(1);    //Wait one frame
             GetComponent<SpriteRenderer>().sprite = spriteNotLit;
             transform.GetChild(0).gameObject.SetActive(isLit);
-            GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
+            other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", true);
+            other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isChase", false);
+            other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", false);
 
             GetComponent<SpriteRenderer>().sprite = spriteNotLit;
             transform.GetChild(0).gameObject.SetActive(isLit);
