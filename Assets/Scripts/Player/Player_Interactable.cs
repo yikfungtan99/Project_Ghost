@@ -15,11 +15,6 @@ public class Player_Interactable : MonoBehaviour
     private int dir = 1;
     private bool targetOnInteractable = false;
 
-    
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {

@@ -66,24 +66,13 @@ public class Interactable : MonoBehaviour
 
     }
 
-    void EnableParticles()
-    {
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            if (transform.GetChild(i).GetComponent<ParticleSystem>())
-            {
-                transform.GetChild(i).gameObject.SetActive(inRange);
-            }
-        }
-    }
-
     private void Update()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).GetComponent<ParticleSystem>())
+            if (GetComponentInChildren<Interactable_Glow>(true))
             {
-                transform.GetChild(i).gameObject.SetActive(isSeen);
+                GetComponentInChildren<Interactable_Glow>(true).gameObject.SetActive(isSeen);
             }
         }
     }

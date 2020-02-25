@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class MouseControls : MonoBehaviour
 {
-
-    private GameObject crosshair;
+    public Texture2D cursor;
     public Vector2 target;
 
-    // Start is called before the first frame update
-    void Awake()
+
+    private void Start()
     {
-        crosshair = transform.GetChild(0).gameObject;
+        //Cursor.SetCursor(cursor, target, CursorMode.Auto);
 
     }
 
@@ -20,4 +19,5 @@ public class MouseControls : MonoBehaviour
     {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
+        
 }
