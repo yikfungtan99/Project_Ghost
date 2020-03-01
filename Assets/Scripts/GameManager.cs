@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Experimental.Rendering.LWRP;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("All Technical Managers")]
     public GameObject audioManager;
     public GameObject monologueManager;
-    public GameObject roomManager;
+    public RoomManager roomManager;
     public GameObject itemLibrary;
     public GameObject pauseMenuManager;
     public RealNotePickUp realPauseMenuScript;
@@ -39,6 +40,9 @@ public class GameManager : MonoBehaviour
     public GameObject altarRoom;
     public GameObject diningRoom;
     public GameObject bridalRoom;
+
+    [Header("Lights")]
+    public Light2D GlobalLight;
 
     [Header("Camera Components")]
     public Camera mainCamera;

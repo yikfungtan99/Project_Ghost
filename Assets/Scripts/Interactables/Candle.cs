@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Candle : MonoBehaviour
+public class Candle : Interactable
 {
     private bool playMonologueOnce = false;
 
     public bool isLit = false;
     public Sprite spriteLit;
     public Sprite spriteNotLit;
+
+    public override void Interact()
+    {
+ 
+        LightCandle();
+
+    }
 
     public void LightCandle()
     {
@@ -55,7 +62,7 @@ public class Candle : MonoBehaviour
         }
         else
         {
-            Debug.Log("nothing to snuff");
+            //Debug.Log("nothing to snuff");
         }
 
         IEnumerator EnemyWake()

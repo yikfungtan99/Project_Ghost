@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Door : MonoBehaviour
+public class Door : Interactable
 {
+    private RoomManager rm;
+    private GameObject player;
+
     public bool isLocked = false;
     public bool isClosed = true;
 
@@ -13,17 +16,13 @@ public class Door : MonoBehaviour
     public bool LeftRight = false;
     public bool UpDown = false;
 
-    private Interactable it;
-
-    private RoomManager rm;
-
     public GameObject linkedDoor;
     private Transform doorSpawnPoint;
 
     private void Start()
     {
-        rm = GameObject.Find("RoomManager").GetComponent<RoomManager>();
-        it = GetComponent<Interactable>();
+        rm = gm.roomManager;
+        player = gm.playerObject;
 
         if(linkedDoor == null)
         {
@@ -44,27 +43,26 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
-        Debug.Log("Enter Door");
 
         isClosed = false;
 
         if (LeftRight)
         {
-            if (GameObject.Find("Player").transform.position.x > doorSpawnPoint.position.x)
+            if (player.transform.position.x > doorSpawnPoint.position.x)
             {
                 rm.SwitchRoom("Left");
-                GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 180, 0);
+                player.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else
             {
                 rm.SwitchRoom("Right");
-                GameObject.Find("Player").transform.rotation = Quaternion.Euler(0, 0, 0);
+                player.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
         }
         else if (UpDown)
         {
-            if (GameObject.Find("Player").transform.position.y > doorSpawnPoint.position.y)
+            if (player.transform.position.y > doorSpawnPoint.position.y)
             {
                 rm.SwitchRoom("Down");
             }
@@ -75,7 +73,7 @@ public class Door : MonoBehaviour
 
         }
 
-        GameObject.Find("Player").transform.position = doorSpawnPoint.position;
+        player.transform.position = doorSpawnPoint.position;
 
         StartCoroutine(AutoClose(2));
 
@@ -92,17 +90,18 @@ public class Door : MonoBehaviour
         if (isClosed)
         {
             GetComponent<BoxCollider2D>().enabled = true;
-            it.interactable = true;
         }
         else
         {
             GetComponent<BoxCollider2D>().enabled = false;
-            it.interactable = false;
         }
     }
 
-    public void Interact()
+    public override void Interact()
     {
+
+        base.Interact();
+
         if (isLocked)
         {
             Unlock();
@@ -117,11 +116,6 @@ public class Door : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         Closed();
-    }
-
-    private void LateUpdate()
-    {
-        it.inRange = false;
     }
 
 }

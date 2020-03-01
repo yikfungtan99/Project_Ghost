@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    private GameManager gm;
+
     private Player player;
     public Vector2 inventorySafeArea;
     public GameObject itemPrefab;
 
     private void Start() 
-    { 
-        player = transform.root.GetComponent<Player>();
+    {
+        gm = GameManager.Instance;
+        player = gm.player;
     }
 
     public void RandomizePosition()

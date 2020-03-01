@@ -1180,6 +1180,8 @@ MonoBehaviour:
   inRange: 0
   interactable: 1
   isSeen: 0
+  itemName: 
+  charges: 0
 --- !u!4 &357135097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 178361627956033761, guid: b64af548dd820cb4bbc769540b828f43,
@@ -5004,6 +5006,8 @@ MonoBehaviour:
   inRange: 0
   interactable: 1
   isSeen: 0
+  itemName: 
+  charges: 0
 --- !u!61 &1170821348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6330,6 +6334,10 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 2063313069}
+    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
+      propertyPath: GlobalLight
+      value: 
+      objectReference: {fileID: 1162020745}
     - target: {fileID: 5123675646716434253, guid: 1419b3fbd29ec454a99c819981e3f54c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7003,6 +7011,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a1428009ed1a1459345555890b6721, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemName: 
+  charges: 0
   darkness: 0
 --- !u!114 &2027116751
 MonoBehaviour:
@@ -7019,6 +7032,8 @@ MonoBehaviour:
   inRange: 0
   interactable: 1
   isSeen: 0
+  itemName: 
+  charges: 0
 --- !u!61 &2027116752
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7411,5 +7426,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: candle (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4928372338412585967, guid: 1265e6adc30199e45854d6ab3d880ccb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1265e6adc30199e45854d6ab3d880ccb, type: 3}

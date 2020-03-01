@@ -3,47 +3,37 @@ using System.Collections.Generic;
 using UnityEngine.Experimental.Rendering.LWRP;
 using UnityEngine;
 
-public class Hidable : MonoBehaviour
+public class Hidable : Interactable
 {
-
+    private GameObject player;
     public float darkness;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = gm.playerObject;
     }
 
     public void Hide()
     {
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Movement>().enabled = false;
-        GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = true;
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector2(this.transform.position.x, this.transform.position.y);
-        GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = darkness;
+        //player.GetComponent<Player_Movement>().enabled = false;
+        player.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
+        gm.player.hidden = true;
+        player.transform.position = new Vector2(this.transform.position.x, this.transform.position.y);
+        gm.GlobalLight.intensity = darkness;
         transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void Unhide()
     {
-        GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetComponent<Renderer>().enabled = true;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden = false;
+        player.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
+        player.GetComponent<Player>().hidden = false;
        
-        if (GameObject.Find("Global Light 2D"))
+        if (gm.GlobalLight)
         {
-            GameObject.Find("Global Light 2D").GetComponent<Light2D>().intensity = 0.15f;
+            gm.GlobalLight.intensity = 0.15f;
         }
 
         transform.GetChild(0).gameObject.SetActive(false);
-    }
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

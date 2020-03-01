@@ -4,71 +4,83 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    protected GameManager gm;
+
     public bool inRange = false;
     public bool interactable = true;
     public bool isSeen = false;
 
+    public string itemName;
+    public int charges = 0;
+
     string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle", "Safe_Bowl", "Death_Bowl", "Note"};
 
-    public void Interact()
+    private void Start()
+    {
+        gm = GameManager.Instance;
+    }
+
+    public virtual void Interact()
     {
         if (CheckIfHiding())
         {
             return;
         }
+    }
 
-        if (gameObject.tag == stringtags[0])
+    protected void GiveItem()
+    {
+
+        if (charges > 0)
         {
-            GetComponent<Door>().Interact();
-        }
-        else if(gameObject.tag == stringtags[1])
-        {
-            GetComponent<Prop_Interactable>().Interact();
-        }
-        else if (gameObject.tag == stringtags[2])
-        {
-            GetComponent<Item_Drop>().Pickup();
-        }
-        else if (gameObject.tag == stringtags[3])
-        {
-            GetComponent<Hidable>().Hide();
-        }
-        else if (gameObject.tag == stringtags[4])
-        {
-            GetComponent<Candle>().LightCandle();
-        }
-        else if (gameObject.tag == stringtags[5])
-        {
-            GetComponent<Safe_Bowl>().Interact();
-        }
-        else if (gameObject.tag == stringtags[6])
-        {
-            GetComponent<Death_Bowl>().Interact();
-        }
-        else if(gameObject.tag == stringtags[7])
-        {
-            GetComponent<RealNotePickUp>().Interact();
+            gm.playerInventory.inventory.GetComponent<Inventory>().ObtainItem(itemName);
+            charges -= 1;
+
+            UpdateMonologue();
         }
 
-        if (GetComponent<Interactable_Give_Item>())
+    }
+
+    protected void CheckHoldSlot()
+    {
+
+        if (GameObject.Find("Player"))
         {
 
-            GetComponent<Interactable_Give_Item>().Give_Item();
+            Transform holdPanel = GameObject.Find("Player").transform.GetChild(2).GetChild(1);
 
+            if (holdPanel.childCount != 0)
+            {
+
+                if (holdPanel.GetChild(0).GetComponent<Item_Inventory>().itemName == itemName)
+                {
+
+                    GameObject.Find("Win").transform.GetChild(0).gameObject.SetActive(true);
+                    Time.timeScale = 0;
+
+                }
+                else
+                {
+                    UpdateMonologue();
+                }
+
+            }
+            else
+            {
+
+                UpdateMonologue();
+
+            }
         }
 
-        if (GetComponent<pocTrigger>())
+    }
+
+    protected void UpdateMonologue()
+    {
+        if (itemName == "talisman")
         {
-
-            GetComponent<pocTrigger>().ActivateTrigger();
-
+            GameManager.Instance.GetComponent<MonologueManager>().DisplaySentence(8);
         }
-
-        if (GetComponent<Interactable_Checker>())
-        {
-            GetComponent<Interactable_Checker>().CheckHoldPanel();
-        }
-
     }
 
     private void Update()
