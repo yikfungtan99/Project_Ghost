@@ -112,6 +112,15 @@ public class Door : Interactable
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        //! For left right doors
+        if(col.gameObject == gm.playerObject)
+        {
+            Interact();
+        }
+    }
+
     public override void Interact()
     {
 

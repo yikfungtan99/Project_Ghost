@@ -19,7 +19,7 @@ public class Player_Lighter : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+        //Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
 
         if(transform.GetChild(2).GetChild(1).childCount != 0)
         {

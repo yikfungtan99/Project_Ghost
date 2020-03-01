@@ -114,12 +114,10 @@ public class Interactable : MonoBehaviour
 
     public virtual void UpdateMonologue()
     {
-        /* Fix this
         if (itemName == "talisman")
         {
-            gm.GetComponent<MonologueManager>().DisplaySentence(8);
+            gm.monologueManager.DisplaySentence(8);
         }
-        */
     }
 
     private void Update()
