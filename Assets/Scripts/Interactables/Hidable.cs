@@ -9,9 +9,17 @@ public class Hidable : Interactable
     public float darkness;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         player = gm.playerObject;
+    }
+
+    public override void Interact()
+    {
+        base.Interact();
+
+        Hide();
+
     }
 
     public void Hide()

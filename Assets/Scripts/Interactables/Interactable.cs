@@ -9,15 +9,15 @@ public class Interactable : MonoBehaviour
     public bool inRange = false;
     public bool interactable = true;
     public bool isSeen = false;
+    public bool itemGiver = false;
 
     public string itemName;
     public int charges = 0;
 
-    string[] stringtags = new string[] { "Door", "Prop", "Dropped_Item","Hiding_Spot", "Candle", "Safe_Bowl", "Death_Bowl", "Note"};
-
-    private void Start()
+    public void Awake()
     {
         gm = GameManager.Instance;
+
     }
 
     public virtual void Interact()
@@ -26,6 +26,29 @@ public class Interactable : MonoBehaviour
         {
             return;
         }
+
+        if (itemGiver)
+        {
+            if(itemName != null)
+            {
+
+                if(charges  == 0)
+                {
+                    Debug.LogWarning(gameObject.name + ": Charges is 0!!!");
+                }
+
+                GiveItem();
+
+            }
+            else
+            {
+
+                Debug.LogError(gameObject.name + ": ItemGiver item name empty!");
+
+            }
+            
+
+        }
     }
 
     protected void GiveItem()
@@ -33,7 +56,21 @@ public class Interactable : MonoBehaviour
 
         if (charges > 0)
         {
-            gm.playerInventory.inventory.GetComponent<Inventory>().ObtainItem(itemName);
+
+            if (gm)
+            {
+
+                gm.inventory.ObtainItem(itemName);
+
+            }
+            else
+            {
+
+                Debug.LogError(gameObject.name + "GameManager Not Found");
+
+            }
+
+           
             charges -= 1;
 
             UpdateMonologue();
@@ -75,12 +112,14 @@ public class Interactable : MonoBehaviour
 
     }
 
-    protected void UpdateMonologue()
+    public virtual void UpdateMonologue()
     {
+        /* Fix this
         if (itemName == "talisman")
         {
-            GameManager.Instance.GetComponent<MonologueManager>().DisplaySentence(8);
+            gm.GetComponent<MonologueManager>().DisplaySentence(8);
         }
+        */
     }
 
     private void Update()

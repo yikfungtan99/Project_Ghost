@@ -18,13 +18,16 @@ public class Player_Lighter : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
+
         if(transform.GetChild(2).GetChild(1).childCount != 0)
         {
 
             if(transform.GetChild(2).GetChild(1).GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
             {
 
-                if (Input.GetAxis("Mouse ScrollWheel") != 0)
+                if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
                 {
 
                     if (triesCounter <= 0)
@@ -54,6 +57,13 @@ public class Player_Lighter : MonoBehaviour
         else
         {
             lighterOn = false;
+        }
+
+        if(Input.GetAxis("Mouse ScrollWheel") > 0.0f && lighterOn)
+        {
+
+            lighterOn = false;
+
         }
 
         transform.GetChild(3).GetChild(0).gameObject.SetActive(lighterOn);

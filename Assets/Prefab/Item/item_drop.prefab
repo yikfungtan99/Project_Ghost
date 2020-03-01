@@ -90,7 +90,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1998747029963930398}
   - component: {fileID: 780687145334454355}
-  - component: {fileID: 1070841437}
   - component: {fileID: 1979879180}
   m_Layer: 8
   m_Name: item_drop
@@ -128,21 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: spoon
   item_ui: {fileID: 2918097546687986465, guid: 972e15550fca8f44184dea282e2f37c7, type: 3}
---- !u!114 &1070841437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998747029963930396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
 --- !u!61 &1979879180
 BoxCollider2D:
   m_ObjectHideFlags: 0

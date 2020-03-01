@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1519459656754906609}
   - component: {fileID: 1519459656754906608}
   - component: {fileID: 4928372338412585966}
-  - component: {fileID: 4928372338412585967}
   - component: {fileID: 4928372338412585961}
   - component: {fileID: 5040786520374280018}
   m_Layer: 8
@@ -111,21 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.369858, y: 15.53334}
   m_EdgeRadius: 0
---- !u!114 &4928372338412585967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519459656754906611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
 --- !u!114 &4928372338412585961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e971dcf4880a5498198e6d4f390d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemName: 
+  charges: 0
   isLit: 0
   spriteLit: {fileID: 21300000, guid: dbb4cf38a8a528f4a818dda4cfea41e8, type: 3}
   spriteNotLit: {fileID: 21300000, guid: ec2fa88f9d021d94abb1228fab035559, type: 3}

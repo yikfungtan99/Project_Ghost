@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 983844782457266520}
   - component: {fileID: 1855148443610604136}
   - component: {fileID: 332129668897239430}
-  - component: {fileID: 8849748263856547384}
   - component: {fileID: 3007583058523037867}
   m_Layer: 8
   m_Name: Gateway1
@@ -127,26 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb93ff13220b914ea2356807caf5ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemName: 
+  charges: 0
   isLocked: 0
   isClosed: 1
   LeftRight: 1
   UpDown: 0
   linkedDoor: {fileID: 8549202947361990154}
---- !u!114 &8849748263856547384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6797742899791224268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
 --- !u!61 &3007583058523037867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -246,7 +235,6 @@ GameObject:
   - component: {fileID: 8949859106876243981}
   - component: {fileID: 2856833297878035447}
   - component: {fileID: 5811486982048356783}
-  - component: {fileID: 1654862665775319401}
   - component: {fileID: 5025634248020085569}
   m_Layer: 8
   m_Name: Gateway2
@@ -332,26 +320,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb93ff13220b914ea2356807caf5ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemName: 
+  charges: 0
   isLocked: 0
   isClosed: 1
   LeftRight: 1
   UpDown: 0
   linkedDoor: {fileID: 6797742899791224268}
---- !u!114 &1654862665775319401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8549202947361990154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
 --- !u!61 &5025634248020085569
 BoxCollider2D:
   m_ObjectHideFlags: 0

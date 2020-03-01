@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 892212721018151432}
   - component: {fileID: 7401746923562272650}
   - component: {fileID: 7067107734222096418}
-  - component: {fileID: 2665092037429156251}
   m_Layer: 8
   m_Name: Gateway2
   m_TagString: Door
@@ -96,6 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb93ff13220b914ea2356807caf5ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemName: 
+  charges: 0
   isLocked: 0
   isClosed: 1
   LeftRight: 0
@@ -127,21 +131,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.69, y: 3.97}
   m_EdgeRadius: 0
---- !u!114 &2665092037429156251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434015892480803825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
 --- !u!1 &1576834179798116102
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +175,6 @@ GameObject:
   - component: {fileID: 6890532684124735168}
   - component: {fileID: 5992019734977768961}
   - component: {fileID: 8156655094872495415}
-  - component: {fileID: 6052727678195315661}
   m_Layer: 8
   m_Name: Gateway1
   m_TagString: Door
@@ -270,6 +258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb93ff13220b914ea2356807caf5ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemName: 
+  charges: 0
   isLocked: 0
   isClosed: 1
   LeftRight: 0
@@ -301,21 +294,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.69, y: 3.97}
   m_EdgeRadius: 0
---- !u!114 &6052727678195315661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950177312124136424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
 --- !u!1 &2412641712570143762
 GameObject:
   m_ObjectHideFlags: 0

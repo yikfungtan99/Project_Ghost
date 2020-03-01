@@ -21,7 +21,22 @@ public class Door : Interactable
 
     private void Start()
     {
-        rm = gm.roomManager;
+
+        if (gm)
+        {
+
+            rm = gm.roomManager;
+
+        }
+        else
+        {
+
+            Debug.Log("Cant find gameManager");
+
+        }
+
+        
+
         player = gm.playerObject;
 
         if(linkedDoor == null)

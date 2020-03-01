@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManager: {fileID: 0}
   monologueManager: {fileID: 0}
-  roomManager: {fileID: 4157549307807986955}
+  roomManager: {fileID: 1683267668926217291}
   itemLibrary: {fileID: 0}
   pauseMenuManager: {fileID: 0}
   realPauseMenuScript: {fileID: 0}
@@ -136,6 +136,7 @@ MonoBehaviour:
   playerInteractable: {fileID: 0}
   playerMovement: {fileID: 0}
   playerInventory: {fileID: 0}
+  inventory: {fileID: 0}
   playerLighter: {fileID: 0}
   mainGhost: {fileID: 0}
   allMoveSpots: {fileID: 0}
@@ -145,6 +146,7 @@ MonoBehaviour:
   altarRoom: {fileID: 0}
   diningRoom: {fileID: 0}
   bridalRoom: {fileID: 0}
+  GlobalLight: {fileID: 0}
   mainCamera: {fileID: 0}
   cinemachine: {fileID: 0}
   eventSystem: {fileID: 0}
