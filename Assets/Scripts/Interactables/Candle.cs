@@ -28,19 +28,20 @@ public class Candle : MonoBehaviour
         UpdateMonologue();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D collision)
     {
         
         if(isLit==true)
         {
             
-            if (other.CompareTag("Enemy"))
+            if (collision.CompareTag("Enemy")&& collision.GetComponent<CarrotMain>().anima.GetBool("isLight")==true)
             {
-                if(other.gameObject.GetComponent<CarrotMain>().anima.GetBool("isChase") == false)
+                if(collision.gameObject.GetComponent<CarrotMain>().anima.GetBool("isChase") == false)
                 {
                     isLit = false;
-                    other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", true);
-                    other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", false);
+                    collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", true);
+                    collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", false);
+                    collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isLight", false);
                     StartCoroutine(EnemyWake());
 
                 }
@@ -72,9 +73,10 @@ public class Candle : MonoBehaviour
             yield return new WaitForSeconds(1);    //Wait one frame
             GetComponent<SpriteRenderer>().sprite = spriteNotLit;
             transform.GetChild(0).gameObject.SetActive(isLit);
-            other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", true);
-            other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isChase", false);
-            other.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", false);
+            collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", true);
+            collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isChase", false);
+            collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", false);
+            collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isLight", false);
 
             GetComponent<SpriteRenderer>().sprite = spriteNotLit;
             transform.GetChild(0).gameObject.SetActive(isLit);
