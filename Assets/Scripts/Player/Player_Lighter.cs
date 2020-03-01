@@ -18,7 +18,6 @@ public class Player_Lighter : MonoBehaviour
 
     private void Update()
     {
-
         if(transform.GetChild(2).GetChild(1).childCount != 0)
         {
 
