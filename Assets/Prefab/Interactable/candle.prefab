@@ -125,6 +125,7 @@ MonoBehaviour:
   inRange: 0
   interactable: 1
   isSeen: 0
+  itemGiver: 0
   itemName: 
   charges: 0
   isLit: 0
@@ -162,9 +163,9 @@ GameObject:
   - component: {fileID: 4928372338553841594}
   - component: {fileID: 4928372338553841605}
   - component: {fileID: 4928372338553841604}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: candle_light
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

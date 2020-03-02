@@ -35,48 +35,44 @@ public class Candle : Interactable
         UpdateMonologue();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D collision)
     {
-        
-        if(isLit==true)
+
+        if (isLit == true)
         {
-            
-            if (other.CompareTag("Enemy"))
+
+            if (collision.CompareTag("Enemy") && collision.GetComponent<CarrotMain>().anima.GetBool("isLight") == true)
             {
-                if(other.gameObject.GetComponent<MainGhost>().Chasing==false)
+                if (collision.gameObject.GetComponent<CarrotMain>().anima.GetBool("isChase") == false)
                 {
-                    
                     isLit = false;
+                    collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", true);
+                    collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", false);
+                    collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isLight", false);
+                    StartCoroutine(EnemyWake());
 
-
-                    if (other.gameObject.GetComponent<MainGhost>().enabled == true)
-                    {
-                        other.gameObject.GetComponent<MainGhost>().enabled = false;
-                        
-                        StartCoroutine(EnemyWake());
-
-                    }
                 }
-                
             }
-        }
-        else
-        {
-            //Debug.Log("nothing to snuff");
-        }
+            else
+            {
+                //Debug.Log("nothing to snuff");
+            }
 
-        IEnumerator EnemyWake()
-        {
-            //This is a coroutine
-            yield return new WaitForSeconds(1);    //Wait one frame
-            GetComponent<SpriteRenderer>().sprite = spriteNotLit;
-            transform.GetChild(0).gameObject.SetActive(isLit);
-            GameObject.FindGameObjectWithTag("Enemy").GetComponent<MainGhost>().enabled = true;
+            IEnumerator EnemyWake()
+            {
+                yield return new WaitForSeconds(1);    //Wait one frame
+                GetComponent<SpriteRenderer>().sprite = spriteNotLit;
+                transform.GetChild(0).gameObject.SetActive(isLit);
+                collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isPatrol", true);
+                collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isChase", false);
+                collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", false);
+                collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isLight", false);
 
-            GetComponent<SpriteRenderer>().sprite = spriteNotLit;
-            transform.GetChild(0).gameObject.SetActive(isLit);
+                GetComponent<SpriteRenderer>().sprite = spriteNotLit;
+                transform.GetChild(0).gameObject.SetActive(isLit);
 
 
+            }
         }
     }
 
