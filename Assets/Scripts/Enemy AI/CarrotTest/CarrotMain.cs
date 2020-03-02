@@ -17,6 +17,7 @@ public class CarrotMain : MonoBehaviour
     public Animator anima;
     public GameObject player;
     public Transform CurrentLight;
+    public GhostManager ghostMan;
     RaycastHit2D hitInfo;
     RaycastHit2D LightSeeker;
     
@@ -172,5 +173,21 @@ public class CarrotMain : MonoBehaviour
 
     }
 
+    public void TeleportTrigger()
+    {
+        if (GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered == true)
+        {
+            transform.position = GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Trigger[0].position;
+            GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered = false;
+            //moveSpots = Set2;
+
+        }
+    }
+
+    public void TeleportMirror()
+    {
+        transform.position = ghostMan.GetComponent<GhostManager>().currentMirror.position;
+    }
+  
    
 }

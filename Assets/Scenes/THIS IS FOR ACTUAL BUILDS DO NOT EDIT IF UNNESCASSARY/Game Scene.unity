@@ -491,6 +491,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 813572301400491712, guid: 9e31def3b468b174e9b44154cb5d0643,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 813572301400491716, guid: 9e31def3b468b174e9b44154cb5d0643,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3956,6 +3961,7 @@ MonoBehaviour:
   Trigger:
   - {fileID: 0}
   Player: {fileID: 0}
+  currentMirror: {fileID: 0}
 --- !u!1 &844101218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1849676445476003568, guid: 3a802937ec4769742af60ecf6dfc57e9,
@@ -5523,6 +5529,11 @@ PrefabInstance:
       propertyPath: moveSpots.Array.data[1]
       value: 
       objectReference: {fileID: 884231361}
+    - target: {fileID: 2988962845036739214, guid: d9be689a28e32874fa113488ab0dab12,
+        type: 3}
+      propertyPath: ghostMan
+      value: 
+      objectReference: {fileID: 835750433}
     - target: {fileID: 2988962845036739215, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7434,6 +7445,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1254838575500850611, guid: f6cbc8dc500d14f4db51bda5aa17643c,
+        type: 3}
+      propertyPath: ghostSpawn
+      value: 
+      objectReference: {fileID: 835750433}
     - target: {fileID: 1254838575500850620, guid: f6cbc8dc500d14f4db51bda5aa17643c,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -7,6 +7,7 @@ public class GhostManager : MonoBehaviour
     public bool Triggered;
     public Transform[] Trigger;
     public Transform Player;
+    public Transform currentMirror;
     // Start is called before the first frame update
     void Start()
     {

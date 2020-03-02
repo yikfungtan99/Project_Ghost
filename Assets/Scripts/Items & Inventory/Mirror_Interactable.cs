@@ -9,7 +9,7 @@ public class Mirror_Interactable : Interactable
 
     public int countDownTime;
     public int chanceRange;
-
+    public GhostManager ghostSpawn;
     public override void Interact()
     {
 
@@ -76,6 +76,9 @@ public class Mirror_Interactable : Interactable
             Debug.Log("Warning! Ghost will teleport to the mirror in " + i + " second(s)!");
             yield return new WaitForSeconds(1);
         }
+        ghostSpawn.GetComponent<GhostManager>().currentMirror = transform;
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<CarrotMain>().TeleportMirror();
+        Debug.Log("HMMMMMM?");
         Debug.LogWarning("BBABAM GHOST HAS SPAWNED TO KILL YOU!!!!!");
 
         ghostTeleporting = false;
