@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 4928372338553841594}
   - component: {fileID: 4928372338553841605}
   - component: {fileID: 4928372338553841604}
+  - component: {fileID: 8811155228295395147}
   m_Layer: 10
   m_Name: candle_light
   m_TagString: Light
@@ -238,3 +239,19 @@ MonoBehaviour:
   frequency: 0.1
   minLightIntensity: 0.75
   maxLightIntensity: 1.69
+--- !u!70 &8811155228295395147
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928372338553841595}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.21112756, y: 0}
+  m_Size: {x: 70.97789, y: 62.8414}
+  m_Direction: 0

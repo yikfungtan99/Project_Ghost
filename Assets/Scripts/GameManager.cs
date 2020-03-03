@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject holdPanel;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
-    public MainGhost mainGhost;
+    public CarrotMain carrotMain;
     public GameObject allMoveSpots;
     public GhostManager ghostManager;
 
@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     //! All Global Game Variables
     [Header("Global Game Variables")]
     public static bool gamePaused = false;
+    public bool playerHide = false;
 
     private void Awake()
     {
@@ -82,6 +83,8 @@ public class GameManager : MonoBehaviour
         {
             DisableInventory();
         }
+
+        playerHide = player.hidden;
     }
     
     //! Player Inventory Manipulation Functions

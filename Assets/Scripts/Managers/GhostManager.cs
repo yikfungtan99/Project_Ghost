@@ -19,7 +19,7 @@ public class GhostManager : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         
-        if (Vector2.Distance(Player.position, Trigger[0].position) < 1f)
+       /* if (Vector2.Distance(Player.position, Trigger[0].position) < 1f)
         {
             Triggered = true;
 
@@ -29,6 +29,6 @@ public class GhostManager : MonoBehaviour
             // transform.Rotate(0, 180f, 0);
             // transform.eulerAngles = new Vector3(0, -180, 0);
 
-        }
+        }*/
     }
 }

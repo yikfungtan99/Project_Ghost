@@ -25,11 +25,16 @@ public class Player_Inventory : MonoBehaviour
         //Inventory
         if(!GameManager.gamePaused)
         {
-            if (Input.GetMouseButtonDown(1))
+            if (!GameManager.Instance.player.hidden)
             {
-                ToggleInventory();
-                GetComponent<Player>().inventoryOn = inventoryOn;
+                if (Input.GetMouseButtonDown(1))
+                {
+                    ToggleInventory();
+                    GetComponent<Player>().inventoryOn = inventoryOn;
+                }
+
             }
+           
         }
     }
 

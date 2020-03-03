@@ -9,7 +9,11 @@ public class Mirror_Interactable : Interactable
 
     public int countDownTime;
     public int chanceRange;
-    public GhostManager ghostSpawn;
+
+    private void Start()
+    {
+
+    }
     public override void Interact()
     {
 
@@ -47,6 +51,7 @@ public class Mirror_Interactable : Interactable
         {
             if (collider.gameObject == gm.playerObject)
             {
+                gm.ghostManager.currentMirror = transform;
                 Debug.Log("Whoosh! You walked past the mirror.");
 
                 int randomChance = Random.Range(1, chanceRange);
@@ -70,18 +75,28 @@ public class Mirror_Interactable : Interactable
     IEnumerator CountDown(int countDownTime)
     {
         ghostTeleporting = true;
-
-        for(int i = countDownTime; i > 0; i--)
+        
+        for (int i = countDownTime; i > 0; i--)
         {
             Debug.Log("Warning! Ghost will teleport to the mirror in " + i + " second(s)!");
             yield return new WaitForSeconds(1);
         }
-        ghostSpawn.GetComponent<GhostManager>().currentMirror = transform;
-        GameObject.FindGameObjectWithTag("Enemy").GetComponent<CarrotMain>().TeleportMirror();
-        Debug.Log("HMMMMMM?");
-        Debug.LogWarning("BBABAM GHOST HAS SPAWNED TO KILL YOU!!!!!");
+        SpawnGhost();
 
         ghostTeleporting = false;
     }
     
+
+    void SpawnGhost()
+    {
+        if(isDisabled)
+        {
+            return;
+        }
+
+        gm.carrotMain.TeleportMirror();
+        Debug.Log("HMMMMMM?");
+        Debug.LogWarning("BBABAM GHOST HAS SPAWNED TO KILL YOU!!!!!");
+
+    }
 }
