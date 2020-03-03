@@ -210,10 +210,7 @@ public class Player_Movement : MonoBehaviour
             if (enRoute)
             {
 
-                foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
-                {
-                    fooObj.GetComponent<Hidable>().Unhide();
-                }
+                
 
 
                 if (direction > 0 && transform.position.x > waypointPos.x)

@@ -35,14 +35,14 @@ public class Hidable : Interactable
 
     public void Unhide()
     {
-        Debug.Log("UNHIDE");
+        
 
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
         player.GetComponent<Player>().hidden = false;
        
         if (gm.GlobalLight)
         {
-            //gm.GlobalLight.intensity = 0.15f;
+            gm.GlobalLight.intensity = 0.094f;
         }
 
         transform.GetChild(0).gameObject.SetActive(false);

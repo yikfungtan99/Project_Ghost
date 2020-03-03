@@ -33,7 +33,7 @@ public class CarrotMain : MonoBehaviour
         if (anima.GetBool("isIdle") == true)
         {
             //hitInfo = Physics2D.BoxCast(transform.position, new Vector2(6,1)*2, 0f,transform.right, Layer);
-            hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
+            hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, NoRayLayer);
             LightSeeker = Physics2D.Raycast(transform.position, transform.right, 0, NoRayLayer);
         }
         else
