@@ -5559,7 +5559,7 @@ PrefabInstance:
     - target: {fileID: 2988962845036739218, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be689a28e32874fa113488ab0dab12, type: 3}
@@ -5793,7 +5793,7 @@ PrefabInstance:
     - target: {fileID: 2212946242675427860, guid: fb30d40019876bb4bba500a76cc1512f,
         type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2212946242675427860, guid: fb30d40019876bb4bba500a76cc1512f,
         type: 3}
@@ -5935,6 +5935,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5971491
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381005832849557313, guid: fb30d40019876bb4bba500a76cc1512f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381005832849557313, guid: fb30d40019876bb4bba500a76cc1512f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381005832849557313, guid: fb30d40019876bb4bba500a76cc1512f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5696091504095666213, guid: fb30d40019876bb4bba500a76cc1512f,
         type: 3}
@@ -6605,7 +6620,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6629,7 +6644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8641014, y: -0.5599997, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7500,6 +7515,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2120996403 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5381005832849557313, guid: fb30d40019876bb4bba500a76cc1512f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474774799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &2120996407
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120996403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.86, y: 1.35}
+  m_Direction: 0
 --- !u!1 &2135650797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6011889587258725999, guid: 32f214ec721f57e4f94bd16b77db397a,
@@ -7587,6 +7624,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cursed Mirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254838575500850623, guid: f6cbc8dc500d14f4db51bda5aa17643c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cbc8dc500d14f4db51bda5aa17643c, type: 3}
