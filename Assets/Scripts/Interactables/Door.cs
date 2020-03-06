@@ -65,12 +65,12 @@ public class Door : Interactable
         {
             if (player.transform.position.x > doorSpawnPoint.position.x)
             {
-                rm.SwitchRoom("Left");
+                rm.SwitchRoom("Left", transform);
                 player.transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             else
             {
-                rm.SwitchRoom("Right");
+                rm.SwitchRoom("Right", transform);
                 player.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
 
@@ -79,11 +79,11 @@ public class Door : Interactable
         {
             if (player.transform.position.y > doorSpawnPoint.position.y)
             {
-                rm.SwitchRoom("Down");
+                rm.SwitchRoom("Down", transform);
             }
             else
             {
-                rm.SwitchRoom("Up");
+                rm.SwitchRoom("Up", transform);
             }
 
         }
@@ -119,11 +119,36 @@ public class Door : Interactable
         {
             Interact();
         }
+
+
+        //THIS IS FOR GHOST AI 
+        //if (col.gameObject.CompareTag("Enemy"))
+        //{
+
+        //    if (col.gameObject.CompareTag("Enemy").GetComponent<Enemy>().canChangeRoom)
+        //    {
+        //        EnemyOpen();
+        //    }
+        //}
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //THIS IS FOR GHOST AI 
+        //if (collision.CompareTag("Enemy"))
+        //{
+        //    if (collision.CompareTag("Enemy").GetComponent<Enemy>().canChangeRoom)
+        //    {
+        //        EnemyOpen();
+        //    }
+
+        //}
+
     }
 
     public override void Interact()
     {
-
         base.Interact();
 
         if (isLocked)
@@ -134,6 +159,14 @@ public class Door : Interactable
         {
             Open();
         }
+    }
+
+    public void EnemyOpen()
+    {
+        //THIS IS FOR GHOST AI 
+        //enemy.transform.position = doorSpawnPoint.position;
+        //enemy.canChangeRoom = false;
+
     }
 
     IEnumerator AutoClose(float waitTime)

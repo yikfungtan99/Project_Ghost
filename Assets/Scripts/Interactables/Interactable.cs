@@ -124,9 +124,9 @@ public class Interactable : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (GetComponentInChildren<Interactable_Glow>(true))
+            if (GetComponentInChildren<ParticleSystem>(true))
             {
-                GetComponentInChildren<Interactable_Glow>(true).gameObject.SetActive(isSeen);
+                GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
             }
         }
     }

@@ -4,46 +4,36 @@ using UnityEngine;
 
 public class Interactable_Checker : MonoBehaviour
 {
+    public Vector2 interactableOffset;
+    public Vector2 interactableSize;
+    public LayerMask interactableLayer;
 
-    public string itemName;
-
-    // Start is called before the first frame update
-    public void CheckHoldPanel()
+    private void Update()
     {
+        Collider2D[] interactable = Physics2D.OverlapBoxAll(new Vector2(transform.position.x + interactableOffset.x, transform.position.y + interactableOffset.y), new Vector2(interactableSize.x, interactableSize.y), 0, interactableLayer);
 
-        if (GameObject.Find("Player"))
+        if (interactable != null)
         {
-
-            Transform holdPanel = GameObject.Find("Player").transform.GetChild(2).GetChild(1);
-
-            if (holdPanel.childCount != 0)
+            for (int i = 0; i < interactable.Length; i++)
             {
 
-                if (holdPanel.GetChild(0).GetComponent<Item_Inventory>().itemName == itemName)
+                if (interactable[i].gameObject.GetComponent<Interactable>())
                 {
 
-                    GameObject.Find("Win").transform.GetChild(0).gameObject.SetActive(true);
-                    Time.timeScale = 0;
+                    interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
 
-                }
-                else
-                {
-                    UpdateMonologue();
                 }
 
             }
-            else
-            {
 
-                UpdateMonologue();
-
-            }
         }
 
     }
 
-    void UpdateMonologue()
+    private void OnDrawGizmosSelected()
     {
-        GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(2);
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawCube(new Vector2(transform.position.x + interactableOffset.x, transform.position.y + interactableOffset.y), new Vector2(interactableSize.x, interactableSize.y));
     }
+
 }
