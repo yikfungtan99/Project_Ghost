@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class CarrotMain : MonoBehaviour
 {
-    
+
+    public float patrolSpeed = 1;
+    public float chaseSpeed = 3;
+    public Transform[] patrolSpots = new Transform[2];
+
+    public bool chasing = false;
+
+    public bool canChangeRoom = false;
+    public Transform doorToUse = null;
+
+    //JIN JIN==============================
     public int TalismanStunTime;
     public Transform[] moveSpots;
     public Transform[] Set1;
@@ -24,7 +34,9 @@ public class CarrotMain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         anima = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -51,6 +63,8 @@ public class CarrotMain : MonoBehaviour
 
             if (hitInfo.collider.CompareTag("Player") && hitInfo.collider.gameObject.GetComponent<Player>().hidden == false)
             {
+
+                chasing = true;
                 anima.SetBool("isChase", true);
                 anima.SetBool("isPatrol", false);
                 anima.SetBool("isLight", false);
@@ -58,6 +72,7 @@ public class CarrotMain : MonoBehaviour
             }
             else
             {
+                chasing = false;
                 anima.SetBool("isChase", false);
                 anima.SetBool("isPatrol", true);
                 gameObject.GetComponent<Renderer>().material.color = Color.green;
@@ -77,13 +92,11 @@ public class CarrotMain : MonoBehaviour
             Debug.DrawLine(transform.position + new Vector3(0, 1f, 0f), LightSeeker.point, Color.magenta);
             if (anima.GetBool("isPatrol") == true)
             {
+
                 Debug.Log("LightSpotted!");
                 CurrentLight = LightSeeker.collider.GetComponentInParent<Transform>().transform;
                 anima.SetBool("isPatrol", false);
                 anima.SetBool("isLight", true);
-                
-                
-                
 
             }
             
@@ -93,25 +106,8 @@ public class CarrotMain : MonoBehaviour
         {
             Debug.DrawLine(transform.position + new Vector3(0, 1f, 0f), transform.position + transform.right * LightSeekingRange + new Vector3(0, 1f, 0f), Color.yellow);
         }
+
     }
-
-    private void OnDrawGizmosSelected()
-    {
-        //Gizmos.DrawRay(transform.position, transform.right * detectRange);
-    }
-
-    private void OnDrawGizmos()
-    {
-
-
-        /*Vector3 VisionBox = new Vector2(6, 1) * 2;
-         Gizmos.DrawWireCube(transform.position + VisionBox / 2, VisionBox);*/
-       
-       
-        
-    }
-
-
    
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -153,12 +149,6 @@ public class CarrotMain : MonoBehaviour
             }
 
         }
-      
-
-       
-
-
-
 
     }
     IEnumerator EnemyWake(int stuntime)
@@ -188,6 +178,17 @@ public class CarrotMain : MonoBehaviour
     {
         transform.position = ghostMan.GetComponent<GhostManager>().currentMirror.position;
     }
-  
-   
+
+    public void UpdatePlayerRoom()
+    {
+        if (anima.GetBool("isChasing"))
+        {
+
+            Debug.Log("I can change room!");
+            canChangeRoom = true;
+
+        }
+
+    }
+
 }

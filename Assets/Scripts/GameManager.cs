@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public GameObject holdPanel;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
+    public GameObject ghostMain;
     public CarrotMain carrotMain;
     public GameObject allMoveSpots;
     public GhostManager ghostManager;

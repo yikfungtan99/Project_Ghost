@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
+    private GameManager gm;
     private Animator roomState;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = GameManager.Instance;
         roomState = transform.GetComponent<Animator>();
     }
 
@@ -17,14 +19,19 @@ public class RoomManager : MonoBehaviour
     {
         Debug.Log("Move" + direction);
         roomState.SetTrigger("Move" + direction);
-        
-        //return a room for the enemy to use
 
-        //if not chasing dun do it
-        //enemy.canChangedRoom
-        //enemy.doorToUse = door;
+        //Let Ghost know that it can change room now
+        if (gm.ghostMain.GetComponent<CarrotMain>().chasing)
+        {
+
+            gm.ghostMain.GetComponent<CarrotMain>().canChangeRoom = true;
+            gm.ghostMain.GetComponent<CarrotMain>().doorToUse = door;
+
+        }
 
     }
 
    
+
+
 }

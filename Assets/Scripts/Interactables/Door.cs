@@ -96,8 +96,9 @@ public class Door : Interactable
 
     public void Closed()
     {
+
         isClosed = true;
-        Debug.Log("I close the door");
+
     }
 
     private void Update()
@@ -120,30 +121,39 @@ public class Door : Interactable
             Interact();
         }
 
+        if (col.gameObject.CompareTag("Enemy"))
+        {
 
-        //THIS IS FOR GHOST AI 
-        //if (col.gameObject.CompareTag("Enemy"))
-        //{
+            if (col.gameObject.GetComponent<CarrotMain>())
+            {
+                if (col.gameObject.GetComponent<CarrotMain>().canChangeRoom)
+                {
 
-        //    if (col.gameObject.CompareTag("Enemy").GetComponent<Enemy>().canChangeRoom)
-        //    {
-        //        EnemyOpen();
-        //    }
-        //}
+                    EnemyOpen(col.gameObject);
+
+                }
+                
+            }
+        }
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //THIS IS FOR GHOST AI 
-        //if (collision.CompareTag("Enemy"))
-        //{
-        //    if (collision.CompareTag("Enemy").GetComponent<Enemy>().canChangeRoom)
-        //    {
-        //        EnemyOpen();
-        //    }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
 
-        //}
+            if (collision.gameObject.GetComponent<CarrotMain>())
+            {
+                if (collision.gameObject.GetComponent<CarrotMain>().canChangeRoom)
+                {
+
+                    EnemyOpen(collision.gameObject);
+
+                }
+
+            }
+        }
 
     }
 
@@ -161,11 +171,11 @@ public class Door : Interactable
         }
     }
 
-    public void EnemyOpen()
+    public void EnemyOpen(GameObject enemy)
     {
-        //THIS IS FOR GHOST AI 
-        //enemy.transform.position = doorSpawnPoint.position;
-        //enemy.canChangeRoom = false;
+
+        enemy.transform.position = doorSpawnPoint.position;
+        enemy.GetComponent<CarrotMain>().canChangeRoom = false;
 
     }
 

@@ -11,13 +11,13 @@ public class GhostManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Player = GameManager.Instance.playerObject.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        
         
        /* if (Vector2.Distance(Player.position, Trigger[0].position) < 1f)
         {
