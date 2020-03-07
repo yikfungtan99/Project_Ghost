@@ -170,18 +170,21 @@ public class CarrotMain : MonoBehaviour
 
     public void TeleportTrigger()
     {
-        if (GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered == true)
-        {
-            transform.position = GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Trigger[0].position;
-            GameObject.Find("GhostSpawner").GetComponent<GhostManager>().Triggered = false;
-            //moveSpots = Set2;
 
+        if (anima.GetBool("isPatrol") == true || anima.GetBool("isLight") == true)
+        {
+            transform.position = new Vector3(ghostMan.GetComponent<GhostManager>().currentDoor.position.x, transform.position.y, 0);
         }
+
     }
 
     public void TeleportMirror()
     {
-        transform.position = ghostMan.GetComponent<GhostManager>().currentMirror.position;
+        if (anima.GetBool("isPatrol") == true || anima.GetBool("isLight") == true)
+        {
+            transform.position = ghostMan.GetComponent<GhostManager>().currentMirror.position;
+        }
+
     }
 
     public void UpdatePlayerRoom()

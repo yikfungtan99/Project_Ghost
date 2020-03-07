@@ -68,7 +68,6 @@ public class CarrotPatrol : StateMachineBehaviour
             //Normal Patrol
             if (patrolSpots != null)
             {
-                Debug.Log(transform.position.x - patrolSpots[heading].position.x);
 
                 if (patrolSpots[heading].position.x > transform.position.x)
                 {

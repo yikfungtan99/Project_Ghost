@@ -6,6 +6,7 @@ public class RoomChecker : MonoBehaviour
 {
     private CarrotMain mainGhost;
     public Transform[] patrolSpots;
+    public GameObject trigger;
 
     private void Awake()
     {
@@ -19,6 +20,8 @@ public class RoomChecker : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
+
+            trigger.GetComponent<Trigger>().isDisabled = true;
 
             for (int i = 0; i < patrolSpots.Length; i++)
             {
@@ -44,6 +47,18 @@ public class RoomChecker : MonoBehaviour
 
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("Enemy"))
+        {
+
+            trigger.GetComponent<Trigger>().isDisabled = false;
+            
+        }
+
+    }
+
 
     //private void OnTriggerStay2D(Collider2D collision)
     //{
@@ -61,7 +76,7 @@ public class RoomChecker : MonoBehaviour
     //                {
     //                    mainGhost.patrolSpots[i] = patrolSpots[i];
     //                }
-                    
+
     //            }
     //            else
     //            {
@@ -69,7 +84,7 @@ public class RoomChecker : MonoBehaviour
     //                Debug.Log("Can't Find MainGhost");
 
     //            }
-                
+
 
     //        }
 
