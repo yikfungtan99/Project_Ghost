@@ -14,6 +14,7 @@ TagManager:
   - Safe_Bowl
   - Note
   - Light
+  - PlayerLight
   layers:
   - Default
   - TransparentFX
@@ -24,9 +25,9 @@ TagManager:
   - 
   - 
   - Interactable
-  - 'Player '
+  - Player
   - Light
-  - 
+  - HideLayer
   - 
   - 
   - 

@@ -17,7 +17,8 @@ public class CarrotMain : MonoBehaviour
     public int heading = 0;
 
     //JIN JIN==============================
-    public int TalismanStunTime;
+    public float TalismanStunTime;
+    public float DiscoverPlayerStunTime;
     public Transform[] moveSpots;
     public Transform[] Set1;
     public float detectRange;
@@ -26,6 +27,7 @@ public class CarrotMain : MonoBehaviour
     public LayerMask Layer;
     public LayerMask LightLayer;
     public LayerMask NoRayLayer;
+    public LayerMask HideLayer;
     public Animator anima;
     public GameObject player;
     public Transform CurrentLight;
@@ -46,26 +48,37 @@ public class CarrotMain : MonoBehaviour
     {
         if (anima.GetBool("isIdle") == true)
         {
-            //hitInfo = Physics2D.BoxCast(transform.position, new Vector2(6,1)*2, 0f,transform.right, Layer);
+            
             hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, NoRayLayer);
             LightSeeker = Physics2D.Raycast(transform.position, transform.right, 0, NoRayLayer);
         }
-        else
+        else if(anima.GetBool("isPatrol") == true)
         {
-            //hitInfo = Physics2D.BoxCast(transform.position, new Vector2(1, 1) * 2, 0f, transform.right, Layer);
+            
             hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
             LightSeeker = Physics2D.Raycast(transform.position + new Vector3(0, 1f,0f), transform.right, LightSeekingRange, LightLayer);
             
         }
-        
+        else if (anima.GetBool("isChase") == true)
+        {
+            hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, HideLayer);
+        }
+        else if (anima.GetBool("isLight") == true)
+        {
+           
+            LightSeeker = Physics2D.Raycast(transform.position + new Vector3(0, 1f, 0f), transform.right, LightSeekingRange, LightLayer);
+        }
 
-        if (hitInfo.collider != null)
+
+
+            if (hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
 
-            if (hitInfo.collider.CompareTag("Player") && hitInfo.collider.gameObject.GetComponent<Player>().hidden == false)
+            if (hitInfo.collider.CompareTag("Player") /*&& hitInfo.collider.gameObject.GetComponent<Player>().hidden == false*/)
             {
-
+                
+                
                 chasing = true;
                 anima.SetBool("isChase", true);
                 anima.SetBool("isPatrol", false);
@@ -96,11 +109,18 @@ public class CarrotMain : MonoBehaviour
             Debug.DrawLine(transform.position + new Vector3(0, 1f, 0f), LightSeeker.point, Color.magenta);
             if (anima.GetBool("isPatrol") == true)
             {
+                
 
                 Debug.Log("LightSpotted!");
                 CurrentLight = LightSeeker.collider.GetComponentInParent<Transform>().transform;
                 anima.SetBool("isPatrol", false);
                 anima.SetBool("isLight", true);
+
+                if (LightSeeker.collider.CompareTag("PlayerLight"))
+                {
+                    hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, HideLayer);
+                    Debug.Log("PlayerLightSpotted!");
+                }
 
             }
             
@@ -112,10 +132,10 @@ public class CarrotMain : MonoBehaviour
         }
 
     }
-   
-    void OnTriggerEnter2D(Collider2D other)
+
+    void OnTriggerStay2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             if (player.GetComponent<Player>().hidden == false)
             {
@@ -151,11 +171,26 @@ public class CarrotMain : MonoBehaviour
 
                 }
             }
+            else if (player.GetComponent<Player>().hidden == true&&anima.GetBool("isChase")==true)
+            {
+                anima.SetBool("isLight", false);
+                anima.SetBool("isPatrol", false);
+                anima.SetBool("isChase", false);
+                anima.SetBool("isIdle", true);
+
+                this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+                foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
+                {
+                    fooObj.GetComponent<Hidable>().Unhide();
+                }
+
+                StartCoroutine(EnemyWake(DiscoverPlayerStunTime));
+            }
 
         }
 
     }
-    IEnumerator EnemyWake(int stuntime)
+    IEnumerator EnemyWake(float stuntime)
     {
         //This is a coroutine
         yield return new WaitForSeconds(stuntime);    //Wait one frame

@@ -27,6 +27,7 @@ public class Hidable : Interactable
         //player.GetComponent<Player_Movement>().enabled = false;
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
         gm.player.hidden = true;
+        player.layer = LayerMask.NameToLayer("HideLayer");
         player.transform.position = new Vector2(this.transform.position.x, this.transform.position.y);
         
         gm.GlobalLight.intensity = darkness;
@@ -39,7 +40,8 @@ public class Hidable : Interactable
 
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
         player.GetComponent<Player>().hidden = false;
-       
+        player.layer = LayerMask.NameToLayer("Player");
+
         if (gm.GlobalLight)
         {
             gm.GlobalLight.intensity = 0.094f;
