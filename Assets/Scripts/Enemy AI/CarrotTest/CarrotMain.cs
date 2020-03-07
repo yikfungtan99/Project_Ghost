@@ -38,7 +38,6 @@ public class CarrotMain : MonoBehaviour
     {
 
         anima = GetComponent<Animator>();
-        heading = 0;
 
     }
 
@@ -75,7 +74,7 @@ public class CarrotMain : MonoBehaviour
             }
             else
             {
-                
+                chasing = false;
                 anima.SetBool("isChase", false);
                 anima.SetBool("isPatrol", true);
                 gameObject.GetComponent<Renderer>().material.color = Color.green;

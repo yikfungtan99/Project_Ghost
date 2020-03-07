@@ -48,8 +48,7 @@ public class CarrotPatrol : StateMachineBehaviour
         //patrol spots now always control by the roomChecker
         //patrol spots is always in the room that the ghost in
 
-        heading = mainGhost.heading;
-
+        Debug.Log(heading);
 
         if (!mainGhost.canChangeRoom)
         {
@@ -68,6 +67,7 @@ public class CarrotPatrol : StateMachineBehaviour
             //Normal Patrol
             if (patrolSpots != null)
             {
+                //Debug.Log(Vector2.Distance(transform.position, patrolSpots[heading].position));
 
                 if (patrolSpots[heading].position.x > transform.position.x)
                 {
@@ -80,6 +80,23 @@ public class CarrotPatrol : StateMachineBehaviour
                 {
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     transform.position = new Vector2(transform.position.x - (moveSpeed * Time.deltaTime), transform.position.y);
+
+                }
+
+                if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 0.2f)
+                {
+                    if (heading == 0)
+                    {
+
+                        heading = 1;
+
+                    }
+                    else
+                    {
+
+                        heading = 0;
+
+                    }
 
                 }
 
