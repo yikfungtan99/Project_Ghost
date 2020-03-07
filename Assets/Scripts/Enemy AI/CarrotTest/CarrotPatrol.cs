@@ -31,8 +31,6 @@ public class CarrotPatrol : StateMachineBehaviour
 
         patrolSpots = new Transform[2];
 
-        heading = 0;
-
         transform = animator.transform;
 
         /* Jin
@@ -49,6 +47,9 @@ public class CarrotPatrol : StateMachineBehaviour
         //now always have 2 patrol spots
         //patrol spots now always control by the roomChecker
         //patrol spots is always in the room that the ghost in
+
+        heading = mainGhost.heading;
+
 
         if (!mainGhost.canChangeRoom)
         {
@@ -67,37 +68,24 @@ public class CarrotPatrol : StateMachineBehaviour
             //Normal Patrol
             if (patrolSpots != null)
             {
-                if (patrolSpots[heading].position.x >= transform.position.x)
+                Debug.Log(transform.position.x - patrolSpots[heading].position.x);
+
+                if (patrolSpots[heading].position.x > transform.position.x)
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     transform.position = new Vector2(transform.position.x + (moveSpeed * Time.deltaTime), transform.position.y);
 
                 }
 
-                if (patrolSpots[heading].position.x <= transform.position.x)
+                if (patrolSpots[heading].position.x < transform.position.x)
                 {
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     transform.position = new Vector2(transform.position.x - (moveSpeed * Time.deltaTime), transform.position.y);
 
                 }
 
-                if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 0.2f)
-                {
-                    if (heading == 0)
-                    {
-                        heading = 1;
-                    }
-                    else
-                    {
-                        heading = 0;
-                    }
-
-
-                }
-
-
             }
-
+         
         }
         else
         {
@@ -109,7 +97,7 @@ public class CarrotPatrol : StateMachineBehaviour
                 transform.position = new Vector2(transform.position.x - (mainGhost.chaseSpeed * Time.deltaTime), transform.position.y);
 
             }
-            else
+            else if(mainGhost.doorToUse.position.x > transform.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
                 transform.position = new Vector2(transform.position.x + (mainGhost.chaseSpeed * Time.deltaTime), transform.position.y);

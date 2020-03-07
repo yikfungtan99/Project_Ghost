@@ -17,11 +17,9 @@ public class RoomChecker : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        Debug.Log("Something has entered");
-
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("Detected Ghost");
+
             for (int i = 0; i < patrolSpots.Length; i++)
             {
                 if (mainGhost)

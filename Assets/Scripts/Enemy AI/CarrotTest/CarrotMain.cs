@@ -14,6 +14,8 @@ public class CarrotMain : MonoBehaviour
     public bool canChangeRoom = false;
     public Transform doorToUse = null;
 
+    public int heading = 0;
+
     //JIN JIN==============================
     public int TalismanStunTime;
     public Transform[] moveSpots;
@@ -36,6 +38,7 @@ public class CarrotMain : MonoBehaviour
     {
 
         anima = GetComponent<Animator>();
+        heading = 0;
 
     }
 
@@ -72,7 +75,7 @@ public class CarrotMain : MonoBehaviour
             }
             else
             {
-                chasing = false;
+                
                 anima.SetBool("isChase", false);
                 anima.SetBool("isPatrol", true);
                 gameObject.GetComponent<Renderer>().material.color = Color.green;
@@ -80,6 +83,8 @@ public class CarrotMain : MonoBehaviour
         }
         else if (anima.GetBool("isIdle") == false)
         {
+
+            chasing = false;
             anima.SetBool("isChase", false);
             anima.SetBool("isPatrol", true);
             gameObject.GetComponent<Renderer>().material.color = Color.green;
