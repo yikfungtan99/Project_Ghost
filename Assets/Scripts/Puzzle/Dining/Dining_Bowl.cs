@@ -54,7 +54,7 @@ public class Dining_Bowl : Interactable
         {
             Debug.Log("You can do nothing with the bowl as it is. Maybe a spoon will help.");
 
-            UpdateMonologue(1);
+            UpdateMonologue(1, "");
             return;
         }
         else
@@ -69,7 +69,7 @@ public class Dining_Bowl : Interactable
                 pm.diningForewarnPlayer = true;
                 Debug.Log("I think I have to be a little more cautious about this...");
 
-                UpdateMonologue(2);
+                UpdateMonologue(2, "");
             }
             else
             {
@@ -79,7 +79,7 @@ public class Dining_Bowl : Interactable
         }
     }
 
-    public override void UpdateMonologue(int displayIndex)
+    public override void UpdateMonologue(int displayIndex, string itemName)
     {
         if(displayIndex == 1)
         {

@@ -69,12 +69,11 @@ public class Interactable : MonoBehaviour
                 Debug.LogError(gameObject.name + "GameManager Not Found");
 
             }
-
-            Debug.Log("You got " + itemName);
            
             charges -= 1;
 
-            UpdateMonologue(-1);
+
+            UpdateMonologue(-1, "");
         }
 
     }
@@ -99,21 +98,21 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
-                    UpdateMonologue(-1);
+                    UpdateMonologue(-1, "");
                 }
 
             }
             else
             {
 
-                UpdateMonologue(-1);
+                UpdateMonologue(-1, "");
 
             }
         }
 
     }
 
-    public virtual void UpdateMonologue(int displayIndex)
+    public virtual void UpdateMonologue(int displayIndex, string itemName)
     {
         if (itemName == "talisman")
         {

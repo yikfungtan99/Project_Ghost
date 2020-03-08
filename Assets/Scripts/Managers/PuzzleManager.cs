@@ -19,22 +19,38 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Kitchen Puzzle")]
     public Kitchen_Steamer kitchenSteamer;
+    public string firstIngredientRequiredName;
+    public string secondIngredientRequiredName;
+    public string thirdIngredientRequiredName;
+    public string fourthIngredientRequiredName;
     public bool isKitchenPuzzleClear = false;
     public bool disableKitchenPuzzle = true;
     public bool isSteamerMakingKuih = false;
     public bool isKuihReady = false;
-    public int ingredientCount = 0;
+    public int sequenceCount = 0;
     public string targetIngredient;
     public bool makingKuihOnce = false;
     public bool kitchenPuzzleClearMsgTrigger = false;
     public int makingKuihCountDownTime;
 
     [Header("Lounge Puzzle")]
-    public GameObject tempSlot2;
+    public Lounge_Pairs loungePairs;
+    public string stoneStatueRequiredName;
+    public string photoframeRequiredName;
+    [Tooltip("Lounge Puzzle Completion Reward Spawn Delay")]
+    public int loungePuzzleCompletionRewardSpawnDelay;
+    public GameObject rewardObject;
+    public bool isLoungePuzzleClear = false;
+    public bool disableLoungePuzzle = true;
+    public bool isStoneStatuePairComplete = false;
+    public bool isCursedMirrorPairComplete = false;
+    public bool isPhotoFramePairComplete = false;
+    public bool loungePuzzleClearMsgTrigger = false;
 
     private void Awake()
     {
         disableKitchenPuzzle = true;
+        disableLoungePuzzle = true;
     }
 
     void Start()

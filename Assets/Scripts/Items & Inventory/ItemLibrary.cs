@@ -17,7 +17,7 @@ public class ItemLibrary : MonoBehaviour
             {
                 target = items[i].itemSprite;
             }
-              
+            
         }
 
         return target;

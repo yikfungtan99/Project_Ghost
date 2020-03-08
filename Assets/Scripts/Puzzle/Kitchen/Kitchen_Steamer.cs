@@ -34,7 +34,7 @@ public class Kitchen_Steamer : Interactable
         }
 
         //! switch case to check how many ingredients are put in the steamer & set variables respectively
-        switch(pm.ingredientCount)
+        switch(pm.sequenceCount)
         {
             case 0:
                 pm.targetIngredient = "flour";
@@ -67,7 +67,7 @@ public class Kitchen_Steamer : Interactable
             {
                 pm.makingKuihOnce = true;
 
-                UpdateMonologue(4);
+                UpdateMonologue(4, "");
 
                 StartCoroutine(MakingKuihCountDown());
             }
@@ -81,7 +81,7 @@ public class Kitchen_Steamer : Interactable
         //! this interact function will not run until previous Dining Puzzle is completed
         if (pm.disableKitchenPuzzle)
         {
-            Debug.Log("Need to complete dining puzzle first");
+            Debug.Log("Puzzle Disabled either due to (1) Dining Puzzle not cleared or (2) Kitchen Puzzle already cleared.");
             return;
         }
         //! puzzle cannot be done again when it is cleared for the first time
@@ -101,7 +101,7 @@ public class Kitchen_Steamer : Interactable
             {
                 Debug.Log("No items held in hand.");
 
-                UpdateMonologue(1);
+                UpdateMonologue(1, "");
                 return;
             }
 
@@ -110,18 +110,19 @@ public class Kitchen_Steamer : Interactable
             {
                 Destroy(currentHeldItem);
 
-                UpdateMonologue(3);
+                UpdateMonologue(3, "");
 
-                pm.ingredientCount += 1;
+                pm.sequenceCount += 1;
             }
             else
             {
-                UpdateMonologue(2);
+                UpdateMonologue(2, "");
             }
         }
         else
         {
-            UpdateMonologue(5);
+            UpdateMonologue(5, "");
+            pm.sequenceCount += 1;
         }
         
     }
@@ -130,13 +131,20 @@ public class Kitchen_Steamer : Interactable
     {
         pm.disableKitchenPuzzle = true;
 
-        yield return new WaitForSeconds(pm.makingKuihCountDownTime);
+        for (int i = pm.makingKuihCountDownTime; i > 0; i--)
+        {
+            Debug.Log("Kuih will be made in " + i + " second(s)!");
+            yield return new WaitForSeconds(1);
+        }
+        Debug.Log("Ding! Ding! Something smells good.");
+
+        UpdateMonologue(6, "");
 
         pm.disableKitchenPuzzle = false;
         itemGiver = true;
     }
 
-    public override void UpdateMonologue(int displayIndex)
+    public override void UpdateMonologue(int displayIndex, string itemName)
     {
         switch(displayIndex)
         {
@@ -154,6 +162,9 @@ public class Kitchen_Steamer : Interactable
                 break;
             case 5:
                 gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(13);
+                break;
+            case 6:
+                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(21);
                 break;
         }
     }

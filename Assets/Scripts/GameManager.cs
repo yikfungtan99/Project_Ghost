@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
     public GameObject altarRoom;
     public GameObject diningRoom;
     public GameObject bridalRoom;
+    public GameObject kitchen;
+    public GameObject loungeRoom;
 
     [Header("Lights")]
     public Light2D GlobalLight;

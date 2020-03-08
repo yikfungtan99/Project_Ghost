@@ -29,11 +29,11 @@ public class Safe_Bowl : Dining_Bowl
 
             gm.inventory.ObtainItem("zinc key");
 
-            UpdateMonologue(-1);
+            UpdateMonologue(-1, "");
         }
     }
 
-    public override void UpdateMonologue(int displayIndex)
+    public override void UpdateMonologue(int displayIndex, string itemName)
     {
         gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(7);
     }

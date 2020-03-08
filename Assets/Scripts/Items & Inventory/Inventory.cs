@@ -43,12 +43,10 @@ public class Inventory : MonoBehaviour
         float y = Random.Range(-inventorySafeArea.y, inventorySafeArea.y);
 
         GameObject obtained = itemPrefab;
+        obtained.GetComponent<Item_Inventory>().itemName = item;
+        obtained.GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
 
         Instantiate(obtained, transform.GetChild(0));
-
-        obtained.GetComponent<Item_Inventory>().itemName = item;
-
-        obtained.GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
 
     }
 

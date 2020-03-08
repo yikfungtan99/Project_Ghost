@@ -21,6 +21,9 @@ public class MonologueManager : MonoBehaviour
     public float showMonologueTimer;
     private float showMonologueTimerCounter;
 
+    public float itemDisplayCooldown;
+    public float itemDisplayCooldownCounter;
+
     void Awake()
     {
         for(int i=0; i<sentenceList.Length; i++)
@@ -47,6 +50,8 @@ public class MonologueManager : MonoBehaviour
     {
         CountMonologueTimer();
 
+        CountItemDisplayCooldown();
+
         CountTextCooldown();
     }
 
@@ -64,10 +69,27 @@ public class MonologueManager : MonoBehaviour
         isSentenceDrawn = true;
     }
 
-    void TypeSentence()
+    void TypeDisplaySentence()
     {
         sentenceList[this.index].cooldownCounter = sentenceList[this.index].cooldown;
         textBox.text = sentenceList[this.index].sentenceText;
+    }
+
+    public void DisplayPickUpSentence(string itemName)
+    {
+        if (itemDisplayCooldownCounter == 0)
+        {
+            //! for enabling the monologue gameobject
+            showMonologue = true;
+
+            if (showMonologueTimerCounter > 0)
+            {
+                ResetMonologueTimer();
+            }
+        }
+
+        itemDisplayCooldownCounter = itemDisplayCooldown;
+        textBox.text = "Picked up one " + itemName + " and put it in the bag.";
     }
 
     //! public function that can be called anywhere to display sentence in monologue text from given index
@@ -84,29 +106,7 @@ public class MonologueManager : MonoBehaviour
             }
         }
 
-        //! if these criteria are met, a new sentence will not be drawn
-        if (index < 0 || index + 1 > sentenceList.Length || !isSentenceDrawn || sentenceList[index].cooldownCounter > 0)
-        {
-            if(index < 0)
-            {
-                Debug.Log("Sentence index is out of bounds (lower bound error).");
-            }
-            else if(index + 1 > sentenceList.Length)
-            {
-                Debug.Log("Sentence index is out of bounds (upper bound error).");
-            }
-            else if(!isSentenceDrawn)
-            {
-                Debug.LogWarning("An attempt to draw more than 1 sentence with coroutine was made.");
-            }
-            else if(sentenceList[index].cooldownCounter > 0)
-            {
-                Debug.Log("Sentence of index " + index + " cannot be displayed because it is on cooldown.");
-            }
-            return;
-        }
-        //! clear current text in textbox
-        textBox.text = "";
+        CheckIndexValidity();
 
         //! check for passed in index to display correct sentence in monologue text
         for (int i = 0; i < sentenceList.Length; i++)
@@ -117,7 +117,7 @@ public class MonologueManager : MonoBehaviour
             }
         }
         //StartCoroutine(Type());
-        TypeSentence();
+        TypeDisplaySentence();
     }
 
     //! monologue timer & enabling textbox code
@@ -138,6 +138,18 @@ public class MonologueManager : MonoBehaviour
         {
             showMonologue = false;
             ResetMonologueTimer();
+        }
+    }
+
+    void CountItemDisplayCooldown()
+    {
+        if(itemDisplayCooldownCounter > 0)
+        {
+            itemDisplayCooldownCounter -= Time.deltaTime;
+        }
+        if(itemDisplayCooldownCounter <= 0)
+        {
+            itemDisplayCooldownCounter = 0;
         }
     }
 
@@ -162,13 +174,41 @@ public class MonologueManager : MonoBehaviour
         showMonologueTimerCounter = showMonologueTimer;
     }
 
+    private void CheckIndexValidity()
+    {
+        //! if these criteria are met, a new sentence will not be drawn
+        if (index < 0 || index + 1 > sentenceList.Length || !isSentenceDrawn || sentenceList[index].cooldownCounter > 0)
+        {
+            if (index < 0)
+            {
+                Debug.Log("Sentence index is out of bounds (lower bound error).");
+            }
+            else if (index + 1 > sentenceList.Length)
+            {
+                Debug.Log("Sentence index is out of bounds (upper bound error).");
+            }
+            else if (!isSentenceDrawn)
+            {
+                Debug.LogWarning("An attempt to draw more than 1 sentence with function was made.");
+            }
+            else if (sentenceList[index].cooldownCounter > 0)
+            {
+                Debug.Log("Sentence of index " + index + " cannot be displayed because it is on cooldown (" + sentenceList[index].cooldownCounter + " second(s) left).");
+            }
+            return;
+        }
+
+        //! clear current text in textbox
+        textBox.text = "";
+    }
+
     //! only for Editor script
     public void DebugFunction()
     {
         index = 2;
         if(sentenceList[index].cooldownCounter == 0)
         {
-            TypeSentence();
+            //TypeDisplaySentence();
         }
     }
 }

@@ -31,13 +31,18 @@ public class Item_Drop : Interactable
 
         inventory.GetComponent<Inventory>().RandomizePosition();
 
-        UpdateMonologue(-1);
+        UpdateMonologue(-1, itemName);
 
         Destroy(gameObject);
     }
 
-    public override void UpdateMonologue(int displayIndex)
+    public override void UpdateMonologue(int displayIndex, string itemName)
     {
-        GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(4);
+        if(displayIndex == -1)
+        {
+            gm.monologueManager.DisplayPickUpSentence(itemName);
+
+            return;
+        }
     }
 }
