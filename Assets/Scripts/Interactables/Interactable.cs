@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
     public string itemName;
     public int charges = 0;
 
-    public void Awake()
+    virtual public void Awake()
     {
         gm = GameManager.Instance;
 
@@ -70,10 +70,11 @@ public class Interactable : MonoBehaviour
 
             }
 
+            Debug.Log("You got " + itemName);
            
             charges -= 1;
 
-            UpdateMonologue();
+            UpdateMonologue(-1);
         }
 
     }
@@ -98,21 +99,21 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
-                    UpdateMonologue();
+                    UpdateMonologue(-1);
                 }
 
             }
             else
             {
 
-                UpdateMonologue();
+                UpdateMonologue(-1);
 
             }
         }
 
     }
 
-    public virtual void UpdateMonologue()
+    public virtual void UpdateMonologue(int displayIndex)
     {
         if (itemName == "talisman")
         {

@@ -55,7 +55,7 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameManager.gamePaused)
+        if(!GameManager.Instance.gamePaused)
         {
             if (pressedButton)
             {

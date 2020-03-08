@@ -4,47 +4,37 @@ using UnityEngine;
 
 public class Safe_Bowl : Dining_Bowl
 {
-    public new void Interact()
+    public override void Interact()
     {
         Debug.Log("Clickin Safe bowl");
 
         CheckForSpoon();
 
-        if (spoonTarget == null)
+        if (pm.spoonTarget == null)
         {
             return;
         }
 
         //! Give Player key item
-        if (!disablePuzzle)
+        if (!pm.disableDiningPuzzle)
         {
-            disablePuzzle = true;
-            isPuzzleClear = true;
+            pm.disableDiningPuzzle = true;
+            pm.isDiningPuzzleClear = true;
 
             //! Destroy spoon object in player inventory
-            if(spoonTarget != null)
+            if(pm.spoonTarget != null)
             {
-                Destroy(spoonTarget);
+                Destroy(pm.spoonTarget);
             }
-            
-            //! Instantiate key item reward in player inventory
-            ConvertItemStringToInstance("stairwell key");
 
-            UpdateMonologue();
+            gm.inventory.ObtainItem("zinc key");
+
+            UpdateMonologue(-1);
         }
     }
 
-    //Creating a new item to be slotted under Inventory (--> inventory panel) gameObject
-    void ConvertItemStringToInstance(string name)
+    public override void UpdateMonologue(int displayIndex)
     {
-        GameObject inventory = GameObject.Find("Inventory_UI");
-        GameObject instance = Instantiate(item_ui, inventory.transform.GetChild(0));
-
-        instance.GetComponent<Item_Inventory>().itemName = name;
-    }
-
-    void UpdateMonologue()
-    {
-        GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(7);
+        gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(7);
     }
 }

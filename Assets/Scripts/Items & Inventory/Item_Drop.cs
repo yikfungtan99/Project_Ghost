@@ -31,12 +31,12 @@ public class Item_Drop : Interactable
 
         inventory.GetComponent<Inventory>().RandomizePosition();
 
-        UpdateMonologue();
+        UpdateMonologue(-1);
 
         Destroy(gameObject);
     }
 
-    public override void UpdateMonologue()
+    public override void UpdateMonologue(int displayIndex)
     {
         GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(4);
     }

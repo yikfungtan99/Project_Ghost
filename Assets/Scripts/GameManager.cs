@@ -16,11 +16,12 @@ public class GameManager : MonoBehaviour
     private GameObject roomManagerObject;
     public RoomManager roomManager;
     public ItemLibrary itemLibrary;
+    public Canvas masterUICanvas;
     public GameObject pauseMenuManager;
     public RealNotePickUp realPauseMenuScript;
     public GameObject deathScreenManager;
     public GameObject winScreenManager;
-    public GameObject puzzleManager; //! if needed
+    public PuzzleManager puzzleManager;
 
     [Header("Player Components")]
     public GameObject playerObject;
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     //! All Global Game Variables
     [Header("Global Game Variables")]
-    public static bool gamePaused = false;
+    public bool gamePaused = false;
     public bool playerHide = false;
 
     private void Awake()

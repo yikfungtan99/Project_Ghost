@@ -22,7 +22,7 @@ public class RealNotePickUp : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.gamePaused == true)
+        if (GameManager.Instance.gamePaused == true)
         {
             canvas.transform.GetChild(2).gameObject.SetActive(true);
         }

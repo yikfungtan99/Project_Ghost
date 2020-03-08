@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class Death_Bowl : Dining_Bowl
 {
-    public new void Interact()
+    public override void Interact()
     {
         Debug.Log("Clickin Death bowl");
 
         CheckForSpoon();
 
-        if (spoonTarget == null)
+        if (pm.spoonTarget == null)
         {
             return;
         }
 
         //! Kill Player
-        if (!disablePuzzle)
+        if (!pm.disableDiningPuzzle)
         {
-            disablePuzzle = true;
+            pm.disableDiningPuzzle = true;
 
             //! Make player faint
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().playerFainted = true;
+            gm.player.playerFainted = true;
 
-            Destroy(GameObject.FindGameObjectWithTag("Player"));
+            Destroy(gm.playerObject); // <------ this has to be changed or the player reference will be lost lol
+            
 
+            //! need to wait for Master UI Canvas to be implemented before optimising the codes below
             int child = GameObject.Find("DeathCanvas").transform.childCount;
             for (int i = 0; i < child; i++)
             {

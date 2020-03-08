@@ -6,13 +6,32 @@ public class Mirror_Interactable : Interactable
 {
     public bool isDisabled = false;
     public bool ghostTeleporting = false;
+    public GameObject uncoveredSprite;
+    public GameObject coveredSprite;
 
     public int countDownTime;
     public int chanceRange;
 
-    private void Start()
+    public override void Awake()
     {
+        base.Awake();
 
+        uncoveredSprite = transform.GetChild(0).gameObject;
+        coveredSprite = transform.GetChild(1).gameObject;
+    }
+
+    private void Update()
+    {
+        if(!isDisabled)
+        {
+            uncoveredSprite.SetActive(true);
+            coveredSprite.SetActive(false);
+        }
+        else
+        {
+            uncoveredSprite.SetActive(false);
+            coveredSprite.SetActive(true);
+        }
     }
     public override void Interact()
     {

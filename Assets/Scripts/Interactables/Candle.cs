@@ -32,7 +32,7 @@ public class Candle : Interactable
 
         transform.GetChild(0).gameObject.SetActive(isLit);
 
-        UpdateMonologue();
+        UpdateMonologue(-1);
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -76,7 +76,7 @@ public class Candle : Interactable
         }
     }
 
-    void UpdateMonologue()
+    public override void UpdateMonologue(int displayIndex)
     {
         if(isLit && !playMonologueOnce)
         {

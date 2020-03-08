@@ -2,34 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dining_Bowl : MonoBehaviour
+public class Dining_Bowl : Interactable
 {
-    protected Interactable it;
-    protected GameObject inventory;
-    protected static bool disablePuzzle;
-    protected static bool isPuzzleClear;
-    protected static GameObject spoonTarget;
-    private static bool forewarnPlayer;
-    private static bool puzzleClearDebugMsg;
-    public GameObject item_ui;
-
+    protected PuzzleManager pm;
+    
     // Start is called before the first frame update
-    void Awake()
+    public override void Awake()
     {
-        isPuzzleClear = false;
-        spoonTarget = null;
-        it = GetComponent<Interactable>();
-        inventory = GameObject.Find("Inventory_UI").gameObject;
-        disablePuzzle = false;
-        forewarnPlayer = false;
-        puzzleClearDebugMsg = false;
+        base.Awake();
+        pm = gm.puzzleManager;
+
+        pm.isDiningPuzzleClear = false;
+        pm.spoonTarget = null;
+        pm.disableDiningPuzzle = false;
+        pm.diningForewarnPlayer = false;
+        pm.diningPuzzleClearMsgTrigger = false;
     }
 
     void Update()
     {
-        if(isPuzzleClear && !puzzleClearDebugMsg)
+        if(pm.isDiningPuzzleClear && !pm.diningPuzzleClearMsgTrigger)
         {
-            puzzleClearDebugMsg = true;
+            pm.diningPuzzleClearMsgTrigger = true;
             Debug.Log("Congrats! You cleared the puzzle! You obtained a 'Key' Item!");
             return;
         }
@@ -37,14 +31,12 @@ public class Dining_Bowl : MonoBehaviour
         //Debug.Log(disablePuzzle);
     }
 
-    virtual public void Interact() {}
-
     void ResetPuzzleOnPlayerRespawn()
     {
-        if (GameObject.Find("Player").GetComponent<Player>().playerFainted == false)
+        if (gm.player.playerFainted == false)
         {
-            disablePuzzle = false;
-            forewarnPlayer = false;
+            pm.disableDiningPuzzle = false;
+            pm.diningForewarnPlayer = false;
         }
     }
 
@@ -52,13 +44,13 @@ public class Dining_Bowl : MonoBehaviour
     //  If spoon is not found, return. If spoon is found, its parent's child index will be recorded (position in inventory)
     protected void CheckForSpoon()
     {
-        spoonTarget = null;
-        if(isPuzzleClear)
+        pm.spoonTarget = null;
+        if(pm.isDiningPuzzleClear)
         {
             return;
         }
 
-        if (GameObject.Find("Hold Panel").transform.childCount == 0 || GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName != "spoon")
+        if (gm.holdPanel.transform.childCount == 0 || gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName != "spoon")
         {
             Debug.Log("You can do nothing with the bowl as it is. Maybe a spoon will help.");
 
@@ -67,35 +59,35 @@ public class Dining_Bowl : MonoBehaviour
         }
         else
         {
-            if (isPuzzleClear)
+            if (pm.isDiningPuzzleClear)
             {
                 return;
             }
 
-            if (!forewarnPlayer)
+            if (!pm.diningForewarnPlayer)
             {
-                forewarnPlayer = true;
+                pm.diningForewarnPlayer = true;
                 Debug.Log("I think I have to be a little more cautious about this...");
 
                 UpdateMonologue(2);
             }
             else
             {
-                spoonTarget = GameObject.Find("Hold Panel").transform.GetChild(0).gameObject;
+                pm.spoonTarget = gm.holdPanel.transform.GetChild(0).gameObject;
                 ResetPuzzleOnPlayerRespawn();
             }
         }
     }
 
-    void UpdateMonologue(int displayIndex)
+    public override void UpdateMonologue(int displayIndex)
     {
         if(displayIndex == 1)
         {
-            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(5);
+            gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(5);
         }
         else if(displayIndex == 2)
         {
-            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(6);
+            gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(6);
         }
         else
         {
