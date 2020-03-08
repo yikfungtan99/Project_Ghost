@@ -15,7 +15,7 @@ public class Interactable_Glow : MonoBehaviour
     private void OnEnable()
     {
         sprite = GetComponent<SpriteRenderer>();
-        Debug.Log("Set");
+        //Debug.Log("Set");
         sprite.sprite = transform.parent.GetComponent<SpriteRenderer>().sprite;
         transform.localScale = transform.parent.localScale;
         

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//delete afterwards
+using TMPro;
+
 public class CarrotMain : MonoBehaviour
 {
 
@@ -15,6 +18,11 @@ public class CarrotMain : MonoBehaviour
     public Transform doorToUse = null;
 
     public int heading = 0;
+
+    //debugHUD
+    public TextMeshProUGUI debug;
+    public TextMeshProUGUI debug1;
+    public bool showDebug = false;
 
     //JIN JIN==============================
     public float TalismanStunTime;
@@ -46,6 +54,17 @@ public class CarrotMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (debug1 != null)
+        {
+
+            if (showDebug)
+            {
+                debug1.text = "\nPatrol: " + anima.GetBool("isPatrol") + " ||Chase: " + anima.GetBool("isChase") + " ||Stunned: " + anima.GetBool("isIdle") + " ||LightSeeking: " + anima.GetBool("isLight");
+            }
+
+        }
+       
+
         if (anima.GetBool("isIdle") == true)
         {
             
@@ -71,7 +90,7 @@ public class CarrotMain : MonoBehaviour
 
 
 
-            if (hitInfo.collider != null)
+        if (hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
 

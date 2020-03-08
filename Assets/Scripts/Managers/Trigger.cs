@@ -35,9 +35,9 @@ public class Trigger : MonoBehaviour
 
     private void ChanceToTeleportGhost(Collider2D collider)
     {
-        if (!isDisabled)
+        if (collider.gameObject == gm.playerObject)
         {
-            if (collider.gameObject == gm.playerObject)
+            if (!isDisabled)
             {
                 gm.ghostManager.currentMirror = transform;
                 Debug.Log("Whoosh! You walked past the spot!");
@@ -51,12 +51,12 @@ public class Trigger : MonoBehaviour
                     {
                         Debug.Log("Ghost is already teleporting!");
                     }
-                
+
             }
-        }
-        else
-        {
-            Debug.Log("Spot disable");
+            else
+            {
+                Debug.Log("Spot disable");
+            }
         }
 
     }

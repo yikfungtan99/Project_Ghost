@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Interactable : MonoBehaviour
 {
-    private GameObject gm;
+    private GameManager gm;
 
     private Vector2 targetPos;
 
@@ -18,9 +18,8 @@ public class Player_Interactable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GetComponent<Player>().gm;
+        gm = GameManager.Instance;
 
-        
     }
 
     // Update is called once per frame
@@ -28,7 +27,7 @@ public class Player_Interactable : MonoBehaviour
     {
 
         //Get target position of the mouse
-        targetPos = gm.GetComponent<MouseControls>().target;
+        targetPos = gm.mouseControl.target;
 
         dir = transform.GetComponent<Player_Movement>().direction;
 
@@ -59,13 +58,14 @@ public class Player_Interactable : MonoBehaviour
 
     }
 
+
     public bool CheckForInteractables() //This will prevent any unnecessary movement such as when clicking on an interactable that is within range
     {
         bool onInteractable = false;
 
         if (Input.GetMouseButtonDown(0))
         {
-            targetPos = gm.GetComponent<MouseControls>().target;
+            targetPos = gm.mouseControl.target;
             RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
             //Clicking interactables
 
@@ -76,7 +76,7 @@ public class Player_Interactable : MonoBehaviour
                     if (mouseHit.collider.gameObject.GetComponent<Interactable>().interactable)
                     {
 
-                        if(mouseHit.collider.gameObject.tag == "Candle")
+                        if (mouseHit.collider.gameObject.tag == "Candle")
                         {
                             if (GetComponent<Player_Lighter>().lighterOn)
                             {

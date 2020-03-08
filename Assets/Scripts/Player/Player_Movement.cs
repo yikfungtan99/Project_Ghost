@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
    
-    private GameObject gm;
+    private GameManager gm;
     private Rigidbody2D rb;
 
     public int direction = 1;
@@ -44,7 +44,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GetComponent<Player>().gm;
+        gm = GameManager.Instance;
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator>();
         sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();

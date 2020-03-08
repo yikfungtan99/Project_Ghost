@@ -51,6 +51,11 @@ public class Door : Interactable
         }
     }
 
+    public override void UpdateCursor()
+    {
+        gm.mouseControl.changeCursor("door");
+    }
+
     public void Unlock()
     {
         isLocked = false;
@@ -90,7 +95,7 @@ public class Door : Interactable
 
         player.transform.position = doorSpawnPoint.position;
 
-        StartCoroutine(AutoClose(2));
+        StartCoroutine(AutoClose(0.2f));
 
     }
 
@@ -103,6 +108,7 @@ public class Door : Interactable
 
     private void Update()
     {
+        /*
         if (isClosed)
         {
             GetComponent<BoxCollider2D>().enabled = true;
@@ -111,6 +117,7 @@ public class Door : Interactable
         {
             GetComponent<BoxCollider2D>().enabled = false;
         }
+        */
     }
 
     private void OnCollisionEnter2D(Collision2D col)

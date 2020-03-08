@@ -31,6 +31,7 @@ public class Player_Inventory : MonoBehaviour
                 {
                     ToggleInventory();
                     GetComponent<Player>().inventoryOn = inventoryOn;
+                    GetComponent<Player>().gm.mouseControl.exitCursor();
                 }
 
             }

@@ -20,8 +20,17 @@ public class RoomChecker : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
+            if(trigger != null)
+            {
+                trigger.GetComponent<Trigger>().isDisabled = true;
+            }
+            else
+            {
 
-            trigger.GetComponent<Trigger>().isDisabled = true;
+                Debug.LogWarning("WARNING NO TRIGGER IN THIS ROOM IGNORING TRIGGER");
+
+            }
+            
 
             for (int i = 0; i < patrolSpots.Length; i++)
             {
@@ -52,9 +61,18 @@ public class RoomChecker : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
+            if (trigger)
+            {
+                trigger.GetComponent<Trigger>().isDisabled = false;
+            }
+            else
+            {
 
-            trigger.GetComponent<Trigger>().isDisabled = false;
-            
+                Debug.LogWarning("WARNING NO TRIGGER IN THIS ROOM IGNORING TRIGGER");
+
+            }
+
+
         }
 
     }

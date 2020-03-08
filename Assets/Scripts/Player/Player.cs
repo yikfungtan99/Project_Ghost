@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [HideInInspector]
-    public GameObject gm;
+    public GameManager gm;
     public Transform respawnPoint;
     public Inventory iv;
     public bool hidden;
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        gm = GameObject.Find("GameManager");
+        gm = GameManager.Instance;
         iv = transform.GetChild(2).GetComponent<Inventory>();
         if (gm == null)
         {
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         GetComponent<Player_Movement>().enabled = !inventoryOn;*/
 
         //! this function replaces the above codes, also fixes a refresh bug where Player Update() does not call
-        GameManager.Instance.RefreshPlayerUnpausedState();
+       gm.RefreshPlayerUnpausedState();
 
         // GetComponent<Player_Movement>().enabled = !hidden;
         if (!playerFainted)

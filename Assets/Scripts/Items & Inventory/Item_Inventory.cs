@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
 
     private Canvas canvas;
@@ -21,12 +21,19 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     private Inventory iv;
 
+    private GameManager gm;
+    private MouseControls mc;
+
     private void Awake()
     {
+
+        gm = GameManager.Instance;
         canvas = transform.parent.parent.GetComponent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
-        iv = transform.parent.parent.GetComponent<Inventory>();
+        iv = gm.inventory;
+        mc = gm.mouseControl;
+        
     }
 
     private void OnEnable()
@@ -42,13 +49,14 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     private void Start()
     {
-        il = GameObject.Find("ItemLibrary").GetComponent<ItemLibrary>();
+        il = gm.itemLibrary;
         GetComponent<Image>().sprite = il.GetSprite(itemName);
-        player = GameObject.Find("Player").GetComponent<Player>();
+        player = gm.player;
     }
 
     private void Update()
     {
+
         if (onHold)
         {
             if (!player.inventoryOn)
@@ -69,18 +77,21 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+
         canvasGroup.alpha = 0.6f;
         initPos = rectTransform.anchoredPosition;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
 
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+
         canvasGroup.alpha = 1f;
 
         if (!onHold)
@@ -94,7 +105,10 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (onHold && GameObject.Find("Player").GetComponent<Player>().inventoryOn)
+        Debug.Log("x: " + iv.inventorySafeArea.x);
+        Debug.Log("y: " + iv.inventorySafeArea.y);
+
+        if (onHold && player.inventoryOn)
         {
             transform.SetParent(transform.parent.parent.GetChild(0));
 
@@ -102,5 +116,18 @@ public class Item_Inventory : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
             onHold = false;
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+
+        mc.changeCursor("item");
+
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+
+        mc.exitCursor();
     }
 }

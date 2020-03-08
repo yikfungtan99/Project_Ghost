@@ -43,20 +43,11 @@ public class Inventory : MonoBehaviour
         float y = Random.Range(-inventorySafeArea.y, inventorySafeArea.y);
 
         GameObject obtained = itemPrefab;
+        obtained.GetComponent<Item_Inventory>().itemName = item;
+        obtained.GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
 
         Instantiate(obtained, transform.GetChild(0));
 
-        obtained.GetComponent<Item_Inventory>().itemName = item;
-
-        obtained.GetComponent<RectTransform>().anchoredPosition = new Vector2(x, y);
-
-    }
-
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawCube(transform.position, new Vector3(inventorySafeArea.x, inventorySafeArea.y));
     }
 
 

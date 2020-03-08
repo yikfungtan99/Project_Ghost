@@ -51,6 +51,13 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public virtual void UpdateCursor()
+    {
+
+        gm.mouseControl.changeCursor("interact");
+
+    }
+
     protected void GiveItem()
     {
 

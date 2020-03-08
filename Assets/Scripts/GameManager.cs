@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject deathScreenManager;
     public GameObject winScreenManager;
     public GameObject puzzleManager; //! if needed
+    public MouseControls mouseControl;
 
     [Header("Player Components")]
     public GameObject playerObject;
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
 
         roomManagerObject = transform.GetChild(0).gameObject;
         roomManager = roomManagerObject.GetComponent<RoomManager>();
+        mouseControl = GetComponent<MouseControls>();
 
     }
 

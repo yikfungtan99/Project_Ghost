@@ -17,7 +17,7 @@ public class RoomManager : MonoBehaviour
 
     public void SwitchRoom(string direction, Transform door)
     {
-        Debug.Log("Move" + direction);
+        //Debug.Log("Move" + direction);
         roomState.SetTrigger("Move" + direction);
 
         //Let Ghost know that it can change room now
