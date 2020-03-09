@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: fe54d697aaebf4a4fb854045f0e494db
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6781377617080342427
+    second: OpenBagAniSpriteSheetIGuess_0
+  - first:
+      213: -7437504812619084009
+    second: OpenBagAniSpriteSheetIGuess_1
+  - first:
+      213: 5066802572891621227
+    second: OpenBagAniSpriteSheetIGuess_2
+  - first:
+      213: 1675674129167787311
+    second: OpenBagAniSpriteSheetIGuess_3
+  - first:
+      213: -5691957621703079732
+    second: OpenBagAniSpriteSheetIGuess_4
+  - first:
+      213: 4487203989360475696
+    second: OpenBagAniSpriteSheetIGuess_5
+  - first:
+      213: -485866437916447506
+    second: OpenBagAniSpriteSheetIGuess_6
+  - first:
+      213: -1721394290629362219
+    second: OpenBagAniSpriteSheetIGuess_7
+  - first:
+      213: -6705520666822133843
+    second: OpenBagAniSpriteSheetIGuess_8
+  - first:
+      213: -528455579363712320
+    second: OpenBagAniSpriteSheetIGuess_9
+  - first:
+      213: 8933649415726719925
+    second: OpenBagAniSpriteSheetIGuess_10
+  - first:
+      213: 3701470288499320114
+    second: OpenBagAniSpriteSheetIGuess_11
+  - first:
+      213: 5426602805147552932
+    second: OpenBagAniSpriteSheetIGuess_12
+  - first:
+      213: -7593849425038129547
+    second: OpenBagAniSpriteSheetIGuess_13
+  - first:
+      213: 7422495456573466486
+    second: OpenBagAniSpriteSheetIGuess_14
+  - first:
+      213: 6080853659497336213
+    second: OpenBagAniSpriteSheetIGuess_15
+  - first:
+      213: 5834751108740294662
+    second: OpenBagAniSpriteSheetIGuess_16
+  - first:
+      213: -8264788562887248422
+    second: OpenBagAniSpriteSheetIGuess_17
+  - first:
+      213: 3503946318219520255
+    second: OpenBagAniSpriteSheetIGuess_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfe11aada3580f4fb633850f59c01fe
+      internalID: 6781377617080342427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_1
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462fb8727be412a45837d59e9be3433c
+      internalID: -7437504812619084009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_2
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd447bf75d149b44990e8d85169a2d4
+      internalID: 5066802572891621227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_3
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc464eb4c3dc8e5419c09ec7dbda7e2b
+      internalID: 1675674129167787311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_4
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b132d4d8b103e4980e0ef1603ee6e3
+      internalID: -5691957621703079732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_5
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff052a363e43344e8bfb01e985a1146
+      internalID: 4487203989360475696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_6
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917ec954674765c4b92dcc0ff3d6a48e
+      internalID: -485866437916447506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_7
+      rect:
+        serializedVersion: 2
+        x: 5712
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1679582ccdcb54aa9ebd9b7481a70c
+      internalID: -1721394290629362219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_8
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa47558692274824c985ca67fc095756
+      internalID: -6705520666822133843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_9
+      rect:
+        serializedVersion: 2
+        x: 7344
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c302b0f5c12da94883f451cc6736052
+      internalID: -528455579363712320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_10
+      rect:
+        serializedVersion: 2
+        x: 8160
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6b3668d9da8284099fb5d02bb2e1d3
+      internalID: 8933649415726719925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_11
+      rect:
+        serializedVersion: 2
+        x: 8976
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92644ad4155cd574a8c8930e31270b64
+      internalID: 3701470288499320114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_12
+      rect:
+        serializedVersion: 2
+        x: 9792
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38623fde05bfbc34695e03740205cc45
+      internalID: 5426602805147552932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_13
+      rect:
+        serializedVersion: 2
+        x: 10608
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc2ba5d2618ea64fa754b671988a6a3
+      internalID: -7593849425038129547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_14
+      rect:
+        serializedVersion: 2
+        x: 11424
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc5eec6e56d4da449aef583f1eae044
+      internalID: 7422495456573466486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_15
+      rect:
+        serializedVersion: 2
+        x: 12240
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb348a1fbd8ffb244bdd21922f6214f7
+      internalID: 6080853659497336213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_16
+      rect:
+        serializedVersion: 2
+        x: 13056
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ebba3837d7548468594cb1248890eb
+      internalID: 5834751108740294662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_17
+      rect:
+        serializedVersion: 2
+        x: 13872
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72460d2d285c4843abd084651d30b4e
+      internalID: -8264788562887248422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpenBagAniSpriteSheetIGuess_18
+      rect:
+        serializedVersion: 2
+        x: 14688
+        y: 0
+        width: 816
+        height: 1632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b8d63510c99bb4b89b7ae90c5e18b9
+      internalID: 3503946318219520255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
