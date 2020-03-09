@@ -7,6 +7,7 @@ public class Cursed_Mirror_Pair : Lounge_Pairs
     private bool isMirrorCovered = false;
     private bool triggerOnce = false;
 
+    //! always tracks the isDisabled bool from the mirror_interactable script
     void Update()
     {
         if (!pm.isLoungePuzzleClear)
@@ -42,10 +43,10 @@ public class Cursed_Mirror_Pair : Lounge_Pairs
         switch (displayIndex)
         {
             case 1:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(16);
+                gm.monologueManager.DisplaySentence(16);
                 break;
             case 2:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(19);
+                gm.monologueManager.DisplaySentence(19);
                 break;
         }
     }

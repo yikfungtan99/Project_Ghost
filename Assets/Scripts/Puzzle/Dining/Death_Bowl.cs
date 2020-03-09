@@ -23,7 +23,7 @@ public class Death_Bowl : Dining_Bowl
             //! Make player faint
             gm.player.playerFainted = true;
 
-            Destroy(gm.playerObject); // <------ this has to be changed or the player reference will be lost lol
+            Destroy(gm.playerObject); // <- this has to be changed or the player reference will be lost lol
             
 
             //! need to wait for Master UI Canvas to be implemented before optimising the codes below

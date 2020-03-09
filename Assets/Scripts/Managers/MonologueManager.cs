@@ -75,7 +75,7 @@ public class MonologueManager : MonoBehaviour
         textBox.text = sentenceList[this.index].sentenceText;
     }
 
-    public void DisplayPickUpSentence(string itemName)
+    public void DisplayPickUpSentence(string itemName, bool isItemInContainer)
     {
         if (itemDisplayCooldownCounter == 0)
         {
@@ -89,7 +89,14 @@ public class MonologueManager : MonoBehaviour
         }
 
         itemDisplayCooldownCounter = itemDisplayCooldown;
-        textBox.text = "Picked up one " + itemName + " and put it in the bag.";
+        if(!isItemInContainer)
+        {
+            textBox.text = "Picked up one " + itemName + " and put it in the bag.";
+        }
+        else
+        {
+            textBox.text = "Found one " + itemName + " inside and put it in the bag.";
+        }
     }
 
     //! public function that can be called anywhere to display sentence in monologue text from given index

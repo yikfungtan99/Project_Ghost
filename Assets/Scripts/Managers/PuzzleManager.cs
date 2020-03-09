@@ -7,10 +7,6 @@ public class PuzzleManager : MonoBehaviour
     //! All Puzzle Components
     [Header("Dining Puzzle")]
     public Dining_Bowl diningBowl;
-    public Death_Bowl deathBowl1st;
-    public Death_Bowl deathBowl2nd;
-    public Safe_Bowl safeBowl3rd;
-    public Death_Bowl deathBowl4th;
     public bool isDiningPuzzleClear = false;
     public bool disableDiningPuzzle = false;
     public GameObject spoonTarget;
@@ -49,17 +45,13 @@ public class PuzzleManager : MonoBehaviour
 
     private void Awake()
     {
+        //! Dining Puzzle Settings
+        spoonTarget = null;
+
+        //! Kitchen Puzzle Settings
         disableKitchenPuzzle = true;
+
+        //! Lounge Puzzle Settings
         disableLoungePuzzle = true;
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

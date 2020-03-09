@@ -44,8 +44,126 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 0}
-  sentenceList: []
-  typingSpeed: 0
+  sentenceList:
+  - description: '[0] When player lighter is lit'
+    index: 0
+    sentenceText: Lighter flame sparks into life.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[1] When player lights a candle'
+    index: 1
+    sentenceText: Candle is lit by the shared flame.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[2] no key click door to escape mansion'
+    index: 2
+    sentenceText: The door is locked, the key to unlock it is missing...
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[3] When player picks up a note'
+    index: 3
+    sentenceText: A piece of torn paper? Might be useful.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[4] (Generic) When picking any object into inventory'
+    index: 4
+    sentenceText: Item has been added into the bag.
+    cooldown: 1
+    cooldownCounter: 0
+  - description: '[5] DiningPuzzle: (no spoon click)'
+    index: 5
+    sentenceText: Some bowls filled with rice, could scoop one up with a spoon.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[6] DiningPuzzle: (spoon click, forewarn)'
+    index: 6
+    sentenceText: I feel that I'll have to be a little more cautious...
+    cooldown: 1
+    cooldownCounter: 0
+  - description: '[7] DiningPuzzle: (puzzle completed)'
+    index: 7
+    sentenceText: An item was hidden within the bowl of rice!
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[8] Clicking statue to get talisman'
+    index: 8
+    sentenceText: Picked up the 1 Talisman laying near the statue foot.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[9] KitchenPuzzle: (no item click)'
+    index: 9
+    sentenceText: A steamer? I might have remembered seeing these in one of the notes
+      I picked up. Could I make something with it?
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[10] KitchenPuzzle: wrong ingredient (item click)'
+    index: 10
+    sentenceText: I feel compelled to think that I should not put this in just yet.
+      I should check the recipe again.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[11] KitchenPuzzle: correct ingredient (item click)'
+    index: 11
+    sentenceText: That feels right, I wonder what am I making...
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[12] KitchenPuzzle: all ingredients gathered'
+    index: 12
+    sentenceText: That's all of it... ! I think I hear something coming!
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[13] KitchenPuzzle: kuih is finally made (no item click)'
+    index: 13
+    sentenceText: What's this? The steamer has made a piece of kuih in a matter of
+      seconds! I wonder if this will be useful somewhere.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[14] LoungePuzzle: missing placable table item (no item click)'
+    index: 14
+    sentenceText: There seems to be something out of place for this table.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[15] LoungePuzzle: trying to place wrong item (item click)'
+    index: 15
+    sentenceText: I do not think this is what's missing here.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[16] LoungePuzzle: interacting with mirror (item click; no cloth)'
+    index: 16
+    sentenceText: The way this mirror is in this room... Something does not feel right
+      about it.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[17] LoungePuzzle: stone statue pair formed'
+    index: 17
+    sentenceText: That's it, two stone statues form a pair!
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[18] LoungePuzzle: empty photo frame pair formed'
+    index: 18
+    sentenceText: This photo frame perfectly matches with the one at the other end
+      of the room.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[19] LoungePuzzle: mirror successfuly covered'
+    index: 19
+    sentenceText: Now that's one less mirror to worry about...
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[20] LoungePuzzle: reward delivery'
+    index: 20
+    sentenceText: That sounded like something fell from the ceiling... I should go
+      check on it.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[21] LoungePuzzle: player prompt when kuih is ready to collect'
+    index: 21
+    sentenceText: Something... smells good.
+    cooldown: 3
+    cooldownCounter: 0
+  typingSpeed: 0.01
   isSentenceDrawn: 0
   showMonologue: 0
-  showMonologueTimer: 0
+  showMonologueTimer: 2.5
+  itemDisplayCooldown: 1
+  itemDisplayCooldownCounter: 0

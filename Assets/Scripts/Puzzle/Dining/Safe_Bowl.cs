@@ -35,6 +35,6 @@ public class Safe_Bowl : Dining_Bowl
 
     public override void UpdateMonologue(int displayIndex, string itemName)
     {
-        gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(7);
+        gm.monologueManager.DisplaySentence(7);
     }
 }

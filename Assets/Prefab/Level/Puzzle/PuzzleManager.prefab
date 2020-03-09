@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &278244515806150120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278244515806150126}
+  - component: {fileID: 278244515806150121}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &278244515806150126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278244515806150120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.7606483, y: -9.689506, z: -1363.8711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &278244515806150121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278244515806150120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a61c5a2c65465438195082aaddb335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diningBowl: {fileID: 0}
+  isDiningPuzzleClear: 0
+  disableDiningPuzzle: 0
+  spoonTarget: {fileID: 0}
+  diningForewarnPlayer: 0
+  diningPuzzleClearMsgTrigger: 0
+  kitchenSteamer: {fileID: 0}
+  firstIngredientRequiredName: flour
+  secondIngredientRequiredName: sugar
+  thirdIngredientRequiredName: baking soda
+  fourthIngredientRequiredName: pink dye
+  isKitchenPuzzleClear: 0
+  disableKitchenPuzzle: 1
+  isSteamerMakingKuih: 0
+  isKuihReady: 0
+  sequenceCount: 0
+  targetIngredient: 
+  makingKuihOnce: 0
+  kitchenPuzzleClearMsgTrigger: 0
+  makingKuihCountDownTime: 10
+  loungePairs: {fileID: 0}
+  stoneStatueRequiredName: stone statue
+  photoframeRequiredName: empty photo frame
+  loungePuzzleCompletionRewardSpawnDelay: 5
+  rewardObject: {fileID: 0}
+  isLoungePuzzleClear: 0
+  disableLoungePuzzle: 1
+  isStoneStatuePairComplete: 0
+  isCursedMirrorPairComplete: 0
+  isPhotoFramePairComplete: 0
+  loungePuzzleClearMsgTrigger: 0

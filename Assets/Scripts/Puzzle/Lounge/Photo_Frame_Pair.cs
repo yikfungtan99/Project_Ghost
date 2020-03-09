@@ -32,6 +32,7 @@ public class Photo_Frame_Pair : Lounge_Pairs
         {
             currentHeldItem = gm.holdPanel.transform.GetChild(0).gameObject;
 
+            //! This checks if player has the correct item in the hold panel
             if (currentHeldItem.GetComponent<Item_Inventory>().itemName == pm.photoframeRequiredName)
             {
                 Destroy(currentHeldItem);
@@ -57,13 +58,13 @@ public class Photo_Frame_Pair : Lounge_Pairs
         switch (displayIndex)
         {
             case 1:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(14);
+                gm.monologueManager.DisplaySentence(14);
                 break;
             case 2:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(15);
+                gm.monologueManager.DisplaySentence(15);
                 break;
             case 3:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(18);
+                gm.monologueManager.DisplaySentence(18);
                 break;
         }
     }

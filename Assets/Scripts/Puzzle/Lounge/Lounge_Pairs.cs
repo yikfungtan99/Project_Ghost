@@ -32,6 +32,7 @@ public class Lounge_Pairs : Interactable
             return;
         }
 
+        //! check completion conditions for all object pairs
         if (pm.isStoneStatuePairComplete && pm.isPhotoFramePairComplete && pm.isCursedMirrorPairComplete)
         {
             SetPuzzleCompletion();
@@ -68,6 +69,6 @@ public class Lounge_Pairs : Interactable
 
     public override void UpdateMonologue(int displayIndex, string itemName)
     {
-        gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(20);
+        gm.monologueManager.DisplaySentence(20);
     }
 }

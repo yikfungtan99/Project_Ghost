@@ -8,6 +8,7 @@ public class Stone_Statue_Pair : Lounge_Pairs
     {
         base.Awake();
 
+        //! sprite is disabled until it is interacted with the correct item
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.enabled = false;
     }
@@ -32,6 +33,7 @@ public class Stone_Statue_Pair : Lounge_Pairs
         {
             currentHeldItem = gm.holdPanel.transform.GetChild(0).gameObject;
 
+            //! This checks if player has the correct item in the hold panel
             if(currentHeldItem.GetComponent<Item_Inventory>().itemName == pm.stoneStatueRequiredName)
             {
                 Destroy(currentHeldItem);
@@ -57,13 +59,13 @@ public class Stone_Statue_Pair : Lounge_Pairs
         switch(displayIndex)
         {
             case 1:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(14);
+                gm.monologueManager.DisplaySentence(14);
                 break;
             case 2:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(15);
+                gm.monologueManager.DisplaySentence(15);
                 break;
             case 3:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(17);
+                gm.monologueManager.DisplaySentence(17);
                 break;
         }
     }

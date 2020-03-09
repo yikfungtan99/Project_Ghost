@@ -7,19 +7,12 @@ public class Kitchen_Steamer : Interactable
     private PuzzleManager pm;
     private GameObject currentHeldItem;
     
-
     public override void Awake()
     {
         base.Awake();
 
         pm = gm.puzzleManager;
     }
-
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
@@ -38,19 +31,15 @@ public class Kitchen_Steamer : Interactable
         {
             case 0:
                 pm.targetIngredient = "flour";
-                //Debug.Log("Ingredient needed: Flour");
                 break;
             case 1:
                 pm.targetIngredient = "sugar";
-                //Debug.Log("Ingredient needed: Sugar");
                 break;
             case 2:
                 pm.targetIngredient = "baking soda";
-                //Debug.Log("Ingredient needed: Baking Soda");
                 break;
             case 3:
                 pm.targetIngredient = "pink dye";
-                //Debug.Log("Ingredient needed: Pink Dye");
                 break;
             case 4:
                 pm.isSteamerMakingKuih = true;
@@ -149,22 +138,22 @@ public class Kitchen_Steamer : Interactable
         switch(displayIndex)
         {
             case 1:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(9);
+                gm.monologueManager.DisplaySentence(9);
                 break;
             case 2:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(10);
+                gm.monologueManager.DisplaySentence(10);
                 break;
             case 3:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(11);
+                gm.monologueManager.DisplaySentence(11);
                 break;
             case 4:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(12);
+                gm.monologueManager.DisplaySentence(12);
                 break;
             case 5:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(13);
+                gm.monologueManager.DisplaySentence(13);
                 break;
             case 6:
-                gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(21);
+                gm.monologueManager.DisplaySentence(21);
                 break;
         }
     }

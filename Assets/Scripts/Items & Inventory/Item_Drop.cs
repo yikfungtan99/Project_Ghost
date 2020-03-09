@@ -40,7 +40,7 @@ public class Item_Drop : Interactable
     {
         if(displayIndex == -1)
         {
-            gm.monologueManager.DisplayPickUpSentence(itemName);
+            gm.monologueManager.DisplayPickUpSentence(itemName, false);
 
             return;
         }

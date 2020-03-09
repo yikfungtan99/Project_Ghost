@@ -81,7 +81,7 @@ public class Candle : Interactable
         if(isLit && !playMonologueOnce)
         {
             playMonologueOnce = true;
-            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(1);
+            gm.monologueManager.DisplaySentence(1);
         }
         if(!isLit)
         {

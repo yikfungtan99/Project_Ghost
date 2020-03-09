@@ -711,24 +711,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b181238b0cb594b9c2866b657c0f45, type: 3}
---- !u!1 &78871634 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3914974959475646560, guid: 53b181238b0cb594b9c2866b657c0f45,
-    type: 3}
-  m_PrefabInstance: {fileID: 78871633}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &78871635 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3914974959475646567, guid: 53b181238b0cb594b9c2866b657c0f45,
-    type: 3}
-  m_PrefabInstance: {fileID: 78871633}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78871634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa81312a59dd3b442b27e8b075ac9878, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &78871636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3914974960134802567, guid: 53b181238b0cb594b9c2866b657c0f45,
@@ -1014,470 +996,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
         type: 3}
-      propertyPath: sentenceList.Array.size
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 1371749190}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: showMonologueTimer
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[0].description
-      value: '[0] When player lighter is lit'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[0].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[0].sentenceText
-      value: Lighter flame sparks into life.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[1].description
-      value: '[1] When player lights a candle'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[1].index
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[1].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[1].sentenceText
-      value: Candle is lit by the shared flame.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[2].description
-      value: '[2] no key click door to escape mansion'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[2].index
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[2].sentenceText
-      value: The door is locked, the key to unlock it is missing...
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[2].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[3].description
-      value: '[3] When player picks up a note'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[3].index
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[3].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[3].sentenceText
-      value: A piece of torn paper? Might be useful.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[4].index
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[4].description
-      value: '[4] (Generic) When picking any object into inventory'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[4].sentenceText
-      value: Item has been added into the bag.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[4].cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[5].index
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[5].description
-      value: '[5] DiningPuzzle: (no spoon click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[5].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[5].sentenceText
-      value: Some bowls filled with rice, could scoop one up with a spoon.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[6].index
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[6].description
-      value: '[6] DiningPuzzle: (spoon click, forewarn)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[6].cooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[6].sentenceText
-      value: I feel that I'll have to be a little more cautious...
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[7].description
-      value: '[7] DiningPuzzle: (puzzle completed)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[7].index
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[7].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[7].sentenceText
-      value: An item was hidden within the bowl of rice!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: typingSpeed
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[8].description
-      value: '[8] Clicking statue to get talisman'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[8].index
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[8].sentenceText
-      value: Picked up the 1 Talisman laying near the statue foot.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[8].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[9].description
-      value: '[9] KitchenPuzzle: (no item click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[9].index
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[9].sentenceText
-      value: A steamer? I might have remembered seeing these in one of the notes I
-        picked up. Could I make something with it?
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[9].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[10].description
-      value: '[10] KitchenPuzzle: wrong ingredient (item click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[10].index
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[10].sentenceText
-      value: I feel compelled to think that I should not put this in just yet. I should
-        check the recipe again.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[10].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[11].description
-      value: '[11] KitchenPuzzle: correct ingredient (item click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[11].index
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[11].sentenceText
-      value: That feels right, I wonder what am I making...
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[11].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[12].description
-      value: '[12] KitchenPuzzle: all ingredients gathered'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[12].index
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[12].sentenceText
-      value: That's all of it... ! I think I hear something coming!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[12].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[13].description
-      value: '[13] KitchenPuzzle: kuih is finally made (no item click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[13].index
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[13].sentenceText
-      value: What's this? The steamer has made a piece of kuih in a matter of seconds!
-        I wonder if this will be useful somewhere.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[13].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: itemDisplayCooldown
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[14].description
-      value: '[14] LoungePuzzle: missing placable table item (no item click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[14].index
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[14].sentenceText
-      value: There seems to be something out of place for this table.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[14].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[15].description
-      value: '[15] LoungePuzzle: trying to place wrong item (item click)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[15].index
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[15].sentenceText
-      value: I do not think this is what's missing here.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[15].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[16].description
-      value: '[16] LoungePuzzle: interacting with mirror (item click; no cloth)'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[16].index
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[16].sentenceText
-      value: The way this mirror is in this room... Something does not feel right
-        about it.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[16].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[17].description
-      value: '[17] LoungePuzzle: stone statue pair formed'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[17].index
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[17].sentenceText
-      value: That's it, two stone statues form a pair!
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[17].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[18].description
-      value: '[18] LoungePuzzle: empty photo frame pair formed'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[18].index
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[18].sentenceText
-      value: This photo frame perfectly matches with the one at the other end of the
-        room.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[18].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[19].description
-      value: '[19] LoungePuzzle: mirror successfuly covered'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[19].index
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[19].sentenceText
-      value: Now that's one less mirror to worry about...
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[19].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[20].description
-      value: '[20] LoungePuzzle: reward delivery'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[20].index
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[20].sentenceText
-      value: That sounded like something fell from the ceiling... I should go check
-        on it.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[20].cooldown
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[21].description
-      value: '[21] LoungePuzzle: player prompt when kuih is ready to collect'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[21].index
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[21].sentenceText
-      value: Something... smells good.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[21].cooldown
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5231533299487635717, guid: cad0fa56c6dc6d04ca70668f1908df50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2083,18 +1604,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1704636589}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &205616994 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9030141989589023178, guid: c97a37c07b8231a458f07fab3ac3ba60,
-    type: 3}
-  m_PrefabInstance: {fileID: 1435197205}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0be2dc00d4d8c3445ac589d7768dd45f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &224574069
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,33 +2049,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 1760971538}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: monologueManager
       value: 
       objectReference: {fileID: 118261262}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
+      propertyPath: puzzleManager
+      value: 
+      objectReference: {fileID: 791618947}
+    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: itemLibrary
       value: 
       objectReference: {fileID: 498336304}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: pauseMenuManager
-      value: 
-      objectReference: {fileID: 78871634}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: realPauseMenuScript
-      value: 
-      objectReference: {fileID: 78871635}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: deathScreenManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: winScreenManager
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: playerObject
       value: 
@@ -2588,17 +2081,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1318985623}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 1122970251}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: playerLighter
       value: 
       objectReference: {fileID: 1318985620}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: mainGhost
+      propertyPath: inventory
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1122970251}
+    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
+      propertyPath: holdPanel
+      value: 
+      objectReference: {fileID: 408869437}
+    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
+      propertyPath: ghostMain
+      value: 
+      objectReference: {fileID: 1829210210}
+    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
+      propertyPath: carrotMain
+      value: 
+      objectReference: {fileID: 1829210209}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: mainEntrance
       value: 
@@ -2635,26 +2136,6 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 2146878801}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: holdPanel
-      value: 
-      objectReference: {fileID: 408869437}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: ghostManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: carrotMain
-      value: 
-      objectReference: {fileID: 1829210209}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: ghostMain
-      value: 
-      objectReference: {fileID: 1829210210}
-    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
-      propertyPath: puzzleManager
-      value: 
-      objectReference: {fileID: 791618947}
     - target: {fileID: 5123675646716434253, guid: 1419b3fbd29ec454a99c819981e3f54c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2764,7 +2245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &337990343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,7 +2285,7 @@ Transform:
   m_Children:
   - {fileID: 1601633400}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &337990345
 MonoBehaviour:
@@ -3607,132 +3088,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[6].itemName
-      value: note
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[6].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 85fd4c240cbb5324dbfd7eb3b89bbf7f,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[7].itemName
-      value: red cloth
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[7].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f877b7dc75bb692449bcd1961b1d1305,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[5].itemName
-      value: zinc key
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[5].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e0d93783161130a42b11565d6227e894,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[8].itemName
-      value: flour
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[8].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4152700ac04447b4fa00924ad245303b,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[9].itemName
-      value: sugar
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[9].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1de4d3786d96d6046b8187af29b8cbd3,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[10].itemName
-      value: baking soda
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[10].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 174a796d2400155449943da37be606c5,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[11].itemName
-      value: pink dye
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[11].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5e3cdde2630fd9440878e80bde40943b,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[12].itemName
-      value: kuih
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[12].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0be556691bb837a4789e9107d4e45ef5,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[13].itemName
-      value: stone statue
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[13].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b4db9b44bd3df294e8c869a5c95ce3fc,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[14].itemName
-      value: empty photo frame
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[14].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ac2f9886f376c6041a44a8ef9f74abfd,
-        type: 3}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[15].itemName
-      value: comb
-      objectReference: {fileID: 0}
-    - target: {fileID: 8439771976821511423, guid: fa0c85106955aca43b96895ca601ee08,
-        type: 3}
-      propertyPath: items.Array.data[15].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 48189d66510f9c944beef177692c88dc,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa0c85106955aca43b96895ca601ee08, type: 3}
 --- !u!114 &498336304 stripped
@@ -8708,7 +8063,7 @@ Transform:
   m_Children:
   - {fileID: 2085564415}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &506739047
 MonoBehaviour:
@@ -9374,7 +8729,7 @@ Transform:
   m_Children:
   - {fileID: 438056241}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &598534042
 MonoBehaviour:
@@ -9871,13 +9226,13 @@ MonoBehaviour:
   m_ShowDebugText: 0
   m_EnableAllChildCameras: 0
   m_ChildCameras:
+  - {fileID: 337990343}
   - {fileID: 2047301072}
   - {fileID: 506739045}
   - {fileID: 2010387504}
   - {fileID: 598534040}
   - {fileID: 1491918331}
   - {fileID: 1537042334}
-  - {fileID: 337990343}
   m_Instructions:
   - m_FullHash: -1725225063
     m_VirtualCamera: {fileID: 506739045}
@@ -9919,13 +9274,13 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -2.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 337990344}
   - {fileID: 2047301073}
   - {fileID: 506739046}
   - {fileID: 2010387505}
   - {fileID: 598534041}
   - {fileID: 1491918332}
   - {fileID: 1537042335}
-  - {fileID: 337990344}
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10265,7 +9620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651246259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8677773, y: -20.43, z: -10}
+  m_LocalPosition: {x: -5.89, y: -11.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15385,84 +14740,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786865561}
   m_CullTransparentMesh: 0
---- !u!1 &791618946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 791618948}
-  - component: {fileID: 791618947}
-  m_Layer: 0
-  m_Name: PuzzleManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &791618947
+--- !u!114 &791618947 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 278244515806150121, guid: 9e278f256043a74418e2932f1a6db385,
+    type: 3}
+  m_PrefabInstance: {fileID: 278244515355842666}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791618946}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a61c5a2c65465438195082aaddb335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  diningBowl: {fileID: 1846518204}
-  deathBowl1st: {fileID: 1838676576}
-  deathBowl2nd: {fileID: 899178043}
-  safeBowl3rd: {fileID: 205616994}
-  deathBowl4th: {fileID: 1253614945}
-  isDiningPuzzleClear: 0
-  disableDiningPuzzle: 0
-  spoonTarget: {fileID: 0}
-  diningForewarnPlayer: 0
-  diningPuzzleClearMsgTrigger: 0
-  kitchenSteamer: {fileID: 2068809381}
-  firstIngredientRequiredName: flour
-  secondIngredientRequiredName: sugar
-  thirdIngredientRequiredName: baking soda
-  fourthIngredientRequiredName: pink dye
-  isKitchenPuzzleClear: 0
-  disableKitchenPuzzle: 1
-  isSteamerMakingKuih: 0
-  isKuihReady: 0
-  sequenceCount: 0
-  targetIngredient: 
-  makingKuihOnce: 0
-  kitchenPuzzleClearMsgTrigger: 0
-  makingKuihCountDownTime: 10
-  loungePairs: {fileID: 2036366822}
-  stoneStatueRequiredName: stone statue
-  photoframeRequiredName: empty photo frame
-  loungePuzzleCompletionRewardSpawnDelay: 5
-  rewardObject: {fileID: 108108972}
-  isLoungePuzzleClear: 0
-  disableLoungePuzzle: 1
-  isStoneStatuePairComplete: 0
-  isCursedMirrorPairComplete: 0
-  isPhotoFramePairComplete: 0
-  loungePuzzleClearMsgTrigger: 0
---- !u!4 &791618948
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791618946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7606483, y: -9.689506, z: -1363.8711}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &801990990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25733,18 +25022,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899178043 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4116033218230089356, guid: c97a37c07b8231a458f07fab3ac3ba60,
-    type: 3}
-  m_PrefabInstance: {fileID: 1435197205}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25b67bb7c6a264e9ed5eb65d104863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &951965672
 GameObject:
   m_ObjectHideFlags: 0
@@ -26728,7 +26005,7 @@ PrefabInstance:
     - target: {fileID: 3556145522249875087, guid: fb30d40019876bb4bba500a76cc1512f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.58
+      value: -12.14
       objectReference: {fileID: 0}
     - target: {fileID: 3556145522249875087, guid: fb30d40019876bb4bba500a76cc1512f,
         type: 3}
@@ -27025,18 +26302,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f214ec721f57e4f94bd16b77db397a, type: 3}
---- !u!114 &1253614945 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2431154648780077838, guid: c97a37c07b8231a458f07fab3ac3ba60,
-    type: 3}
-  m_PrefabInstance: {fileID: 1435197205}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25b67bb7c6a264e9ed5eb65d104863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1276062277
 GameObject:
   m_ObjectHideFlags: 0
@@ -37765,7 +37030,7 @@ Transform:
   m_Children:
   - {fileID: 1044801874}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1491918333
 MonoBehaviour:
@@ -37898,7 +37163,7 @@ Transform:
   m_Children:
   - {fileID: 1791784336}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1537042336
 MonoBehaviour:
@@ -38710,12 +37975,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafa1b1a51b9b5f44978a70317693495, type: 3}
---- !u!1 &1760971538 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3351820602699550238, guid: fafa1b1a51b9b5f44978a70317693495,
-    type: 3}
-  m_PrefabInstance: {fileID: 1760971537}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1770044260
 GameObject:
   m_ObjectHideFlags: 0
@@ -39313,18 +38572,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1829210208}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1838676576 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4127231747357232669, guid: c97a37c07b8231a458f07fab3ac3ba60,
-    type: 3}
-  m_PrefabInstance: {fileID: 1435197205}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e25b67bb7c6a264e9ed5eb65d104863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1846518204 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2966452750846457158, guid: c97a37c07b8231a458f07fab3ac3ba60,
@@ -39902,7 +39149,7 @@ Transform:
   m_Children:
   - {fileID: 559248390}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2010387506
 MonoBehaviour:
@@ -40116,7 +39363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2047301072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40156,7 +39403,7 @@ Transform:
   m_Children:
   - {fileID: 384488996}
   m_Father: {fileID: 629210947}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2047301074
 MonoBehaviour:
@@ -40552,3 +39799,92 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &278244515355842666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 278244515806150120, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_Name
+      value: PuzzleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150121, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: diningBowl
+      value: 
+      objectReference: {fileID: 1846518204}
+    - target: {fileID: 278244515806150121, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: kitchenSteamer
+      value: 
+      objectReference: {fileID: 2068809381}
+    - target: {fileID: 278244515806150121, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: loungePairs
+      value: 
+      objectReference: {fileID: 2036366822}
+    - target: {fileID: 278244515806150121, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: rewardObject
+      value: 
+      objectReference: {fileID: 108108972}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.7606483
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.689506
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1363.8711
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278244515806150126, guid: 9e278f256043a74418e2932f1a6db385,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e278f256043a74418e2932f1a6db385, type: 3}

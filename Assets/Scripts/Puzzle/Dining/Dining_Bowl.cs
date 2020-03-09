@@ -6,29 +6,22 @@ public class Dining_Bowl : Interactable
 {
     protected PuzzleManager pm;
     
-    // Start is called before the first frame update
     public override void Awake()
     {
         base.Awake();
-        pm = gm.puzzleManager;
 
-        pm.isDiningPuzzleClear = false;
-        pm.spoonTarget = null;
-        pm.disableDiningPuzzle = false;
-        pm.diningForewarnPlayer = false;
-        pm.diningPuzzleClearMsgTrigger = false;
+        pm = gm.puzzleManager;
     }
 
     void Update()
     {
+        //! checks if Dining Puzzle has been completed (purely for Debug)
         if(pm.isDiningPuzzleClear && !pm.diningPuzzleClearMsgTrigger)
         {
             pm.diningPuzzleClearMsgTrigger = true;
             Debug.Log("Congrats! You cleared the puzzle! You obtained a 'Key' Item!");
             return;
         }
-
-        //Debug.Log(disablePuzzle);
     }
 
     void ResetPuzzleOnPlayerRespawn()
@@ -83,11 +76,11 @@ public class Dining_Bowl : Interactable
     {
         if(displayIndex == 1)
         {
-            gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(5);
+            gm.monologueManager.DisplaySentence(5);
         }
         else if(displayIndex == 2)
         {
-            gm.monologueManager.GetComponent<MonologueManager>().DisplaySentence(6);
+            gm.monologueManager.DisplaySentence(6);
         }
         else
         {

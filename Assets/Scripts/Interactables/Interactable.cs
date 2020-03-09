@@ -73,7 +73,7 @@ public class Interactable : MonoBehaviour
             charges -= 1;
 
 
-            UpdateMonologue(-1, "");
+            UpdateMonologue(-1, itemName);
         }
 
     }
@@ -117,6 +117,11 @@ public class Interactable : MonoBehaviour
         if (itemName == "talisman")
         {
             gm.monologueManager.DisplaySentence(8);
+        }
+        else if(itemName != "")
+        {
+            //! this is for all item givers (where the item come from inside a container in-game)
+            gm.monologueManager.DisplayPickUpSentence(itemName, true);
         }
     }
 

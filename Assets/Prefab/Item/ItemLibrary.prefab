@@ -54,5 +54,25 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: 31c9c16b442eb7f46908e733a00a341c, type: 3}
   - itemName: spoon
     itemSprite: {fileID: 21300000, guid: 692029f4d5d00564c982f4ae0be90d1c, type: 3}
-  - itemName: stairwell key
-    itemSprite: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada, type: 3}
+  - itemName: zinc key
+    itemSprite: {fileID: 21300000, guid: e0d93783161130a42b11565d6227e894, type: 3}
+  - itemName: note
+    itemSprite: {fileID: 21300000, guid: 85fd4c240cbb5324dbfd7eb3b89bbf7f, type: 3}
+  - itemName: red cloth
+    itemSprite: {fileID: 21300000, guid: f877b7dc75bb692449bcd1961b1d1305, type: 3}
+  - itemName: flour
+    itemSprite: {fileID: 21300000, guid: 4152700ac04447b4fa00924ad245303b, type: 3}
+  - itemName: sugar
+    itemSprite: {fileID: 21300000, guid: 1de4d3786d96d6046b8187af29b8cbd3, type: 3}
+  - itemName: baking soda
+    itemSprite: {fileID: 21300000, guid: 174a796d2400155449943da37be606c5, type: 3}
+  - itemName: pink dye
+    itemSprite: {fileID: 21300000, guid: 5e3cdde2630fd9440878e80bde40943b, type: 3}
+  - itemName: kuih
+    itemSprite: {fileID: 21300000, guid: 0be556691bb837a4789e9107d4e45ef5, type: 3}
+  - itemName: stone statue
+    itemSprite: {fileID: 21300000, guid: b4db9b44bd3df294e8c869a5c95ce3fc, type: 3}
+  - itemName: empty photo frame
+    itemSprite: {fileID: 21300000, guid: ac2f9886f376c6041a44a8ef9f74abfd, type: 3}
+  - itemName: comb
+    itemSprite: {fileID: 21300000, guid: 48189d66510f9c944beef177692c88dc, type: 3}

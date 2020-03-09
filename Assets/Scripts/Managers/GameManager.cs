@@ -11,33 +11,39 @@ public class GameManager : MonoBehaviour
 
     //! all instances game library
     [Header("All Technical Managers")]
-    public GameObject audioManager;
-    public MonologueManager monologueManager;
-    private GameObject roomManagerObject;
-    public RoomManager roomManager;
-    public ItemLibrary itemLibrary;
+    public GameObject audioManagerObject;
+    public GameObject monologueManagerObject;
+    public GameObject roomManagerObject;
+    public GameObject puzzleManagerObject;
+    public GameObject pauseMenuManagerObject;
     public Canvas masterUICanvas;
-    public GameObject pauseMenuManager;
-    public RealNotePickUp realPauseMenuScript;
-    public GameObject deathScreenManager;
-    public GameObject winScreenManager;
+    public GameObject itemLibraryObject;
+    
+    public AudioManager audioManager;
+    public MonologueManager monologueManager;
+    public RoomManager roomManager;
     public PuzzleManager puzzleManager;
+    public RealNotePickUp pauseMenuManager;
+    public ItemLibrary itemLibrary;
 
     [Header("Player Components")]
     public GameObject playerObject;
+    
     public Player player;
     public Player_Interactable playerInteractable;
     public Player_Movement playerMovement;
     public Player_Inventory playerInventory;
-    public Inventory inventory;
     public Player_Lighter playerLighter;
+    public Inventory inventory;
     public GameObject holdPanel;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
     public GameObject ghostMain;
+    public GameObject ghostManagerObject;
+    
     public CarrotMain carrotMain;
-    public GameObject allMoveSpots;
     public GhostManager ghostManager;
+    public GameObject allMoveSpots;
 
     [Header("Room Components")]
     public GameObject mainEntrance;
@@ -61,7 +67,6 @@ public class GameManager : MonoBehaviour
     //! All Global Game Variables
     [Header("Global Game Variables")]
     public bool gamePaused = false;
-    public bool playerHide = false;
 
     private void Awake()
     {
@@ -74,10 +79,6 @@ public class GameManager : MonoBehaviour
         {
             thisInstance = this;
         }
-
-        roomManagerObject = transform.GetChild(0).gameObject;
-        roomManager = roomManagerObject.GetComponent<RoomManager>();
-
     }
 
     private void Update()
@@ -87,8 +88,6 @@ public class GameManager : MonoBehaviour
         {
             DisableInventory();
         }
-
-        playerHide = player.hidden;
     }
     
     //! Player Inventory Manipulation Functions
