@@ -95,7 +95,7 @@ public class Door : Interactable
 
         player.transform.position = doorSpawnPoint.position;
 
-        StartCoroutine(AutoClose(0.2f));
+        StartCoroutine(AutoClose(1.0f));
 
     }
 

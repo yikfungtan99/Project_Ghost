@@ -19,6 +19,9 @@ public class RoomManager : MonoBehaviour
     {
         //Debug.Log("Move" + direction);
         roomState.SetTrigger("Move" + direction);
+        gm.playerMovement.haveWayPoint = false;
+        gm.playerMovement.enRoute = false;
+
 
         //Let Ghost know that it can change room now
         if (gm.ghostMain.GetComponent<CarrotMain>().chasing)

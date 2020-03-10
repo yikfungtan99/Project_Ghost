@@ -16,8 +16,8 @@ public class Player_Movement : MonoBehaviour
     public float safeArea;
     private Vector2 targetPos;
     private Vector2 waypointPos;
-    private bool enRoute = false;
-    private bool haveWayPoint;
+    public bool enRoute = false;
+    public bool haveWayPoint;
 
     public float moveSpeed;
 
@@ -75,7 +75,7 @@ public class Player_Movement : MonoBehaviour
                     else
                     {
                         //Get target position of the mouse
-                        targetPos = gm.GetComponent<MouseControls>().target;
+                        targetPos = gm.mouseControl.target;
 
                         if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                         {

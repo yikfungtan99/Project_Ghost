@@ -40,24 +40,31 @@ public class MouseControls : MonoBehaviour
 
     public void changeCursor(string type)
     {
-        if(type == "interact")
+
+        Texture2D cursorToSwitch = null;
+
+        switch (type)
         {
 
-            Cursor.SetCursor(cursorOnInteract, target, CursorMode.Auto);
+            case "interact":
+
+                cursorToSwitch = cursorOnInteract;
+                break;
+
+            case "door":
+
+                cursorToSwitch = cursorOnDoor;
+                break;
+
+            case "item":
+
+                cursorToSwitch = cursorOnInventoryItem;
+                break;
 
         }
-        else if(type == "door")
-        {
 
-            Cursor.SetCursor(cursorOnDoor, target, CursorMode.Auto);
 
-        }else if(type == "item")
-        {
-
-            Cursor.SetCursor(cursorOnInventoryItem, target, CursorMode.Auto);
-
-        }
-        
+        Cursor.SetCursor(cursorToSwitch, target, CursorMode.Auto);
 
     }
 

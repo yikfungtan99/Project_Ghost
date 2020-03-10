@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class DeathLoad : MonoBehaviour
 {
-  
 
     public void Restart()
     {

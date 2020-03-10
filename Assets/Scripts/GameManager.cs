@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour
 
         roomManagerObject = transform.GetChild(0).gameObject;
         roomManager = roomManagerObject.GetComponent<RoomManager>();
-        mouseControl = GetComponent<MouseControls>();
 
     }
 

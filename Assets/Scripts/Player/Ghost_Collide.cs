@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Ghost_Collide : MonoBehaviour
 {
+
+    GameManager gm;
+
     //public int talisman = 3;
     public int TalismanStunTime;
     public int DiscoverPlayerStunTime;
 
+    private void Start()
+    {
+
+        gm = GameManager.Instance;
+
+    }
 
     void OnTriggerStay2D(Collider2D collision)
     {
@@ -16,9 +25,9 @@ public class Ghost_Collide : MonoBehaviour
             
          if (collision.CompareTag("Enemy"))
          {
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden == false)
+            if (gm.player.hidden == false)
             {
-                if (GameObject.Find("Hold Panel").transform.childCount != 0 && GameObject.Find("Hold Panel").transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "talisman")
+                if (gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "talisman")
                 {
 
 
@@ -35,20 +44,15 @@ public class Ghost_Collide : MonoBehaviour
                 else
                 {
 
+                    Destroy(gm.playerObject);
 
-                    Destroy(GameObject.FindGameObjectWithTag("Player"));
-
-                    int child = GameObject.Find("DeathCanvas").transform.childCount;
-                    for (int i = 0; i < child; i++)
-                    {
-                        GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(true);
-                    }
+                    gm.deathScreenManager.transform.GetChild(0).gameObject.SetActive(true);
 
 
                 }
 
             }
-            if(GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().hidden == true&& collision.GetComponent<CarrotMain>().anima.GetBool("isChase")==true)
+            if(gm.player.hidden == true && collision.GetComponent<CarrotMain>().anima.GetBool("isChase")==true)
             {
                 
                 collision.gameObject.GetComponent<CarrotMain>().anima.SetBool("isIdle", true);
