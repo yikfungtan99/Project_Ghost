@@ -128,6 +128,8 @@ MonoBehaviour:
   puzzleManagerObject: {fileID: 0}
   pauseMenuManagerObject: {fileID: 0}
   masterUICanvas: {fileID: 0}
+  deathScreenObject: {fileID: 0}
+  winScreenObject: {fileID: 0}
   itemLibraryObject: {fileID: 0}
   audioManager: {fileID: 0}
   monologueManager: {fileID: 0}
@@ -135,13 +137,15 @@ MonoBehaviour:
   puzzleManager: {fileID: 0}
   pauseMenuManager: {fileID: 0}
   itemLibrary: {fileID: 0}
+  mouseControl: {fileID: 0}
   playerObject: {fileID: 0}
+  lighterObject: {fileID: 0}
   player: {fileID: 0}
   playerInteractable: {fileID: 0}
   playerMovement: {fileID: 0}
   playerInventory: {fileID: 0}
-  playerLighter: {fileID: 0}
   inventory: {fileID: 0}
+  playerLighter: {fileID: 0}
   holdPanel: {fileID: 0}
   ghostMain: {fileID: 0}
   ghostManagerObject: {fileID: 0}
@@ -155,6 +159,8 @@ MonoBehaviour:
   bridalRoom: {fileID: 0}
   kitchen: {fileID: 0}
   loungeRoom: {fileID: 0}
+  toilet: {fileID: 0}
+  livingRoom: {fileID: 0}
   GlobalLight: {fileID: 0}
   mainCamera: {fileID: 0}
   cinemachine: {fileID: 0}

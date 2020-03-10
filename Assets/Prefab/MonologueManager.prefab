@@ -105,7 +105,7 @@ MonoBehaviour:
   - description: '[11] KitchenPuzzle: correct ingredient (item click)'
     index: 11
     sentenceText: That feels right, I wonder what am I making...
-    cooldown: 3
+    cooldown: 0
     cooldownCounter: 0
   - description: '[12] KitchenPuzzle: all ingredients gathered'
     index: 12

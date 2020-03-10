@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject puzzleManagerObject;
     public GameObject pauseMenuManagerObject;
     public Canvas masterUICanvas;
+    public GameObject deathScreenObject;
+    public GameObject winScreenObject;
     public GameObject itemLibraryObject;
     
     public AudioManager audioManager;
@@ -25,16 +27,18 @@ public class GameManager : MonoBehaviour
     public PuzzleManager puzzleManager;
     public RealNotePickUp pauseMenuManager;
     public ItemLibrary itemLibrary;
+    public MouseControls mouseControl;
 
     [Header("Player Components")]
     public GameObject playerObject;
+    public GameObject lighterObject;
     
     public Player player;
     public Player_Interactable playerInteractable;
     public Player_Movement playerMovement;
     public Player_Inventory playerInventory;
-    public Player_Lighter playerLighter;
     public Inventory inventory;
+    public Player_Lighter playerLighter;
     public GameObject holdPanel;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
@@ -53,6 +57,8 @@ public class GameManager : MonoBehaviour
     public GameObject bridalRoom;
     public GameObject kitchen;
     public GameObject loungeRoom;
+    public GameObject toilet;
+    public GameObject livingRoom;
 
     [Header("Lights")]
     public Light2D GlobalLight;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player_Lighter : MonoBehaviour
 {
+    private GameManager gm;
     private bool playMonologueOnce = false;
 
     public bool lighterOn = false;
@@ -14,14 +15,15 @@ public class Player_Lighter : MonoBehaviour
     private void Start()
     {
         triesCounter = difficulty;
+        gm = GetComponent<Player>.gm;
     }
 
     private void Update()
     {
-        if(transform.GetChild(2).GetChild(1).childCount != 0)
+        if(gm.holdPanel.transform.childCount != 0)
         {
 
-            if(transform.GetChild(2).GetChild(1).GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
+            if(gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
             {
 
                 if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
@@ -63,7 +65,7 @@ public class Player_Lighter : MonoBehaviour
 
         }
 
-        transform.GetChild(3).GetChild(0).gameObject.SetActive(lighterOn);
+        gm.lighterObject.transform.GetChild(0).gameObject.SetActive(lighterOn);
 
         UpdateMonologue();
     }
@@ -81,7 +83,7 @@ public class Player_Lighter : MonoBehaviour
         }
         else
         {
-            transform.GetChild(3).GetChild(1).gameObject.GetComponent<ParticleSystem>().Play();
+            gm.lighterObject.GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 

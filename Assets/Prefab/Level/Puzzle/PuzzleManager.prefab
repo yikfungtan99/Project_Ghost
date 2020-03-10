@@ -62,7 +62,7 @@ MonoBehaviour:
   targetIngredient: 
   makingKuihOnce: 0
   kitchenPuzzleClearMsgTrigger: 0
-  makingKuihCountDownTime: 10
+  makingKuihCountDownTime: 5
   loungePairs: {fileID: 0}
   stoneStatueRequiredName: stone statue
   photoframeRequiredName: empty photo frame

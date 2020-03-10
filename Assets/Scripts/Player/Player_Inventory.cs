@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Player_Inventory : MonoBehaviour
 {
+    private GameManager gm;
     public GameObject inventory;
     public bool inventoryOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        inventory = transform.GetChild(2).gameObject;
+        gm = GetComponent<Player>().gm;
+        inventory = gm.inventory.gameObject;
 
         if (inventory == null)
         {
