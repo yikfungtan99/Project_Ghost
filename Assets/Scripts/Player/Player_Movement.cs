@@ -68,6 +68,7 @@ public class Player_Movement : MonoBehaviour
                 {
                     if (GetComponent<Player_Interactable>().CheckForInteractables())
                     {
+                        
                         haveWayPoint = false;
                         enRoute = false;
                         sprint = false;
@@ -76,6 +77,7 @@ public class Player_Movement : MonoBehaviour
                     {
                         //Get target position of the mouse
                         targetPos = gm.mouseControl.target;
+                        Debug.Log(targetPos);
 
                         if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                         {
@@ -269,6 +271,14 @@ public class Player_Movement : MonoBehaviour
         rb.velocity = new Vector2(0, rb.velocity.y);
 
         anim.SetBool("Move", false);
+
+    }
+
+    private void OnDrawGizmos()
+    {
+
+        Gizmos.color = new Color(0, 1, 0, 0.5f);
+        Gizmos.DrawCube(transform.position, new Vector2((safeArea * 2), 3));
 
     }
 }

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public Player_Inventory playerInventory;
     public Inventory inventory;
     public Player_Lighter playerLighter;
+    public GameObject lighterObject;
     public GameObject holdPanel;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code

@@ -11,6 +11,7 @@ public class MouseControls : MonoBehaviour
     public Texture2D cursorOnInventoryItem;
 
     private GameManager gm;
+    private Camera cam;
 
     public Vector2 target;
 
@@ -20,6 +21,7 @@ public class MouseControls : MonoBehaviour
     {
 
         gm = GameManager.Instance;
+        cam = Camera.main;
 
     }
 
@@ -27,7 +29,9 @@ public class MouseControls : MonoBehaviour
     void Update()
     {
 
-        target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePos = Input.mousePosition;
+
+        target = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.transform.position.z));
 
         if (!detectInteractable() && !gm.player.inventoryOn)
         {
