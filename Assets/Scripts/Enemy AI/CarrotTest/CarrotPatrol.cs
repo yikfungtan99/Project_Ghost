@@ -90,7 +90,10 @@ public class CarrotPatrol : StateMachineBehaviour
 
                 }
 
-                if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 1f)
+                //if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 1f)
+                Debug.Log(DistanceBetweenX(transform.position, patrolSpots[heading].position));
+
+                if(DistanceBetweenX(transform.position, patrolSpots[heading].position) < 1f)
                 {
                     if (heading == 0)
                     {
@@ -129,6 +132,7 @@ public class CarrotPatrol : StateMachineBehaviour
 
         }
         
+        
 
         /*  Jin
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[randomspot].position, speed * Time.deltaTime);
@@ -148,6 +152,28 @@ public class CarrotPatrol : StateMachineBehaviour
 
         }
         */
+    }
+
+    float DistanceBetweenX(Vector2 target1, Vector2 target2)
+    {
+
+        float answer;
+
+        if(target1.x > target2.x)
+        {
+
+            answer = target1.x - target2.x;
+
+        }
+        else
+        {
+
+            answer = target2.x - target1.x;
+
+        }
+
+        return answer;
+
     }
 
     /* void OnTriggerEnter2D(Collider2D other)
