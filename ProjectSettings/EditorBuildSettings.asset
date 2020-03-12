@@ -14,12 +14,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/New Scene.unity
     guid: 5cd96d79279e944439663d6193c641e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Main
       Menu.unity
     guid: aade21535b7457f499a42cc1a4551be1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Game
       Scene.unity
     guid: a4e96d1b4b69cb249aebe4fbb09dd117
+  - enabled: 1
+    path: Assets/Scenes/MainMenuIGuess.unity
+    guid: eb22bf1934f6eee46a2dac00a19447eb
+  - enabled: 1
+    path: Assets/Scenes/TransitFromGameMenuForTesting.unity
+    guid: e9437b242c8ca9f41aed4d990ee68b8a
   m_configObjects: {}
