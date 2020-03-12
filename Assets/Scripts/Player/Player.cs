@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     public bool inventoryOn = false;
     public bool haveLighter = false;
     public bool lighterOn = false;
+    public GameObject WarningLeft;
+    public GameObject WarningRight;
 
     private void Awake()
     {
@@ -60,6 +62,8 @@ public class Player : MonoBehaviour
         }
 
     }//End Update
+
+
 
    
 

@@ -10,6 +10,8 @@ public class Trigger : MonoBehaviour
     public int countDownTime;
     public Transform[] door;
     public int doorNumber;
+   
+    
     // Start is called before the first frame update
 
     private void Awake()
@@ -46,6 +48,8 @@ public class Trigger : MonoBehaviour
                     if (!ghostTeleporting)
                     {
                         StartCoroutine(CountDown(countDownTime));
+                        Warning();
+
                     }
                     else
                     {
@@ -61,6 +65,22 @@ public class Trigger : MonoBehaviour
 
     }
 
+    void Warning()
+    {
+        if (gm.playerObject.transform.position.x > door[doorNumber].position.x)
+        {
+            Debug.Log("LEFT!");
+            gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(true);
+            
+
+        }
+        else
+        {
+            Debug.Log("RIGHT!");
+            gm.playerObject.GetComponent<Player>().WarningRight.SetActive(true);
+        }
+    }
+
     IEnumerator CountDown(int countDownTime)
     {
         ghostTeleporting = true;
@@ -72,8 +92,12 @@ public class Trigger : MonoBehaviour
         }
         if(!isDisabled)
         {
+            Debug.Log("FUCKING HELL");
+            gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
+            gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
             gm.ghostManager.currentDoor = door[doorNumber].transform;
             gm.carrotMain.TeleportTrigger();
+            
         }
         
        // isDisabled = true;

@@ -62,8 +62,9 @@ public class Ghost_Collide : MonoBehaviour
                 foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
                 {
                     fooObj.GetComponent<Hidable>().Unhide();
+                    
                 }
-                
+                gm.playerObject.GetComponent<Player_Movement>().enabled = false;
                 StartCoroutine(EnemyWake(DiscoverPlayerStunTime));
             }
 

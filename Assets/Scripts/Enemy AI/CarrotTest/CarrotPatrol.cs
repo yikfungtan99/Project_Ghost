@@ -91,7 +91,7 @@ public class CarrotPatrol : StateMachineBehaviour
                 }
 
                 //if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 1f)
-                Debug.Log(DistanceBetweenX(transform.position, patrolSpots[heading].position));
+               // Debug.Log(DistanceBetweenX(transform.position, patrolSpots[heading].position));
 
                 if(DistanceBetweenX(transform.position, patrolSpots[heading].position) < 1f)
                 {

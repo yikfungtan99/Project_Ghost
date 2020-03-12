@@ -77,7 +77,7 @@ public class Player_Movement : MonoBehaviour
                     {
                         //Get target position of the mouse
                         targetPos = gm.mouseControl.target;
-                        Debug.Log(targetPos);
+    
 
                         if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                         {
@@ -188,7 +188,8 @@ public class Player_Movement : MonoBehaviour
                 if (!randomized)
                 {
                     randomized = true;
-                    transform.GetComponent<Player>().iv.RandomizePosition();
+                  //  transform.GetComponent<Player>().iv.RandomizePosition();
+                    gm.inventory.RandomizePosition();
                 }
                 if (staminaRemaining > 0)
                 {

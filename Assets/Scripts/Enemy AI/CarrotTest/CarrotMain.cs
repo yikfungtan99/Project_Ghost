@@ -226,7 +226,7 @@ public class CarrotMain : MonoBehaviour
 
         if (anima.GetBool("isPatrol") == true || anima.GetBool("isLight") == true)
         {
-            transform.position = new Vector3(ghostMan.GetComponent<GhostManager>().currentDoor.position.x, transform.position.y, 0);
+            transform.position = new Vector3(ghostMan.GetComponent<GhostManager>().currentDoor.position.x, ghostMan.GetComponent<GhostManager>().currentDoor.position.y, 0);
         }
 
     }
