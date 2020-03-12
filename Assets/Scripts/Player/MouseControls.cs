@@ -33,6 +33,9 @@ public class MouseControls : MonoBehaviour
 
         target = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.transform.position.z));
 
+        Debug.Log(target);
+
+
         if (!detectInteractable() && !gm.player.inventoryOn)
         {
             exitCursor();
@@ -68,14 +71,15 @@ public class MouseControls : MonoBehaviour
         }
 
 
-        Cursor.SetCursor(cursorToSwitch, target, CursorMode.Auto);
+        //Cursor.SetCursor(cursorToSwitch, new Vector2(cursorToSwitch.width/2 , cursorToSwitch.height/2), CursorMode.Auto);
+        Cursor.SetCursor(cursorToSwitch, new Vector2(0,0), CursorMode.Auto);
 
     }
 
     public void exitCursor()
     {
 
-        Cursor.SetCursor(cursorMove, target, CursorMode.Auto);
+        Cursor.SetCursor(cursorMove, new Vector2(0, 0), CursorMode.Auto);
 
     }
 
