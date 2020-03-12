@@ -1,0 +1,133 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    //! Singleton
+    private static GameManager thisInstance;
+    public static GameManager Instance { get { return thisInstance; } }
+
+    //! all instances game library
+    [Header("All Technical Managers")]
+    public GameObject audioManagerObject;
+    public GameObject monologueManagerObject;
+    public GameObject roomManagerObject;
+    public GameObject puzzleManagerObject;
+    public GameObject pauseMenuManagerObject;
+    public Canvas masterUICanvas;
+    public GameObject deathScreenObject;
+    public GameObject winScreenObject;
+    public GameObject itemLibraryObject;
+    
+    public AudioManager audioManager;
+    public MonologueManager monologueManager;
+    public RoomManager roomManager;
+    public PuzzleManager puzzleManager;
+    public RealNotePickUp pauseMenuManager;
+    public ItemLibrary itemLibrary;
+    public MouseControls mouseControl;
+
+    [Header("Player Components")]
+    public GameObject playerObject;
+    public GameObject lighterObject;
+    
+    public Player player;
+    public Player_Interactable playerInteractable;
+    public Player_Movement playerMovement;
+    public Player_Inventory playerInventory;
+    public Inventory inventory;
+    public Player_Lighter playerLighter;
+    public GameObject holdPanel;
+
+    [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
+    public GameObject ghostMain;
+    public GameObject ghostManagerObject;
+    
+    public CarrotMain carrotMain;
+    public GhostManager ghostManager;
+    public GameObject allMoveSpots;
+
+    [Header("Room Components")]
+    public GameObject mainEntrance;
+    public GameObject centralCourtYard;
+    public GameObject altarRoom;
+    public GameObject diningRoom;
+    public GameObject bridalRoom;
+    public GameObject kitchen;
+    public GameObject loungeRoom;
+    public GameObject toilet;
+    public GameObject livingRoom;
+
+    [Header("Literally Just Doors")]
+    public Door doorScript;
+    public GameObject doorVerticalMainToAltar;
+    public GameObject doorVerticalMainToStorage;
+    public GameObject doorHorizontalMainToCentral;
+    public GameObject doorHorizontalCentralToLiving;
+    public GameObject doorVerticalLivingToLounge;
+    public GameObject doorVerticalLivingToBridal;
+    public GameObject doorHorizontalLivingToDining;
+    public GameObject doorHorizontalDiningToKitchen;
+    public GameObject doorVerticalKitchenToToilet;
+    public GameObject doorHorizontalLoungeToToilet;
+
+    [Header("Lights")]
+    public Light2D GlobalLight;
+
+    [Header("Camera Components")]
+    public Camera mainCamera;
+    public GameObject cinemachine;
+    
+    [Header("Misc Game Components")]
+    public GameObject eventSystem;
+
+    //! All Global Game Variables
+    [Header("Global Game Variables")]
+    public bool gamePaused = false;
+
+    private void Awake()
+    {
+        //! first check if got singleton duplicate (purge all clones)
+        if (thisInstance != null && thisInstance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            thisInstance = this;
+        }
+    }
+
+    private void Update()
+    {
+        //! disable inventory (regardless of state) when game paused
+        if(gamePaused)
+        {
+            DisableInventory();
+        }
+    }
+    
+    //! Player Inventory Manipulation Functions
+    private void DisableInventory()
+    {
+        playerInventory.inventoryOn = false;
+        playerInventory.inventory.transform.GetChild(0).gameObject.SetActive(playerInventory.inventoryOn);
+    }
+
+    //! Player Manipulation Functions
+    public void RefreshPlayerUnpausedState()
+    {
+        playerMovement.enabled = !playerInventory.inventoryOn;
+        playerInteractable.enabled = !playerInventory.inventoryOn;
+    }
+    
+    //! Game Pause Manipulation Functions
+    public void SetPause(bool statement)
+    {
+        Debug.Log("SetPause()");
+        Debug.Log(gamePaused);
+        gamePaused = statement;
+    }
+}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 580485565313436079}
   - component: {fileID: 2996628966077947141}
   m_Layer: 8
-  m_Name: rice bowl
+  m_Name: Rice Bowl
   m_TagString: Death_Bowl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e25b67bb7c6a264e9ed5eb65d104863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item_ui: {fileID: 2918097546687986465, guid: 972e15550fca8f44184dea282e2f37c7, type: 3}
+  inRange: 0
+  interactable: 1
+  isSeen: 0
+  itemGiver: 0
+  itemName: 
+  charges: 0
 --- !u!114 &580485565313436079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +117,9 @@ MonoBehaviour:
   inRange: 0
   interactable: 1
   isSeen: 0
+  itemGiver: 0
+  itemName: 
+  charges: 0
 --- !u!61 &2996628966077947141
 BoxCollider2D:
   m_ObjectHideFlags: 0

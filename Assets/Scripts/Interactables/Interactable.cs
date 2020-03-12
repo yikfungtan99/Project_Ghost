@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
     public string itemName;
     public int charges = 0;
 
-    public void Awake()
+    virtual public void Awake()
     {
         gm = GameManager.Instance;
 
@@ -76,11 +76,11 @@ public class Interactable : MonoBehaviour
                 Debug.LogError(gameObject.name + "GameManager Not Found");
 
             }
-
            
             charges -= 1;
 
-            UpdateMonologue();
+
+            UpdateMonologue(-1, itemName);
         }
 
     }
@@ -105,25 +105,30 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
-                    UpdateMonologue();
+                    UpdateMonologue(-1, "");
                 }
 
             }
             else
             {
 
-                UpdateMonologue();
+                UpdateMonologue(-1, "");
 
             }
         }
 
     }
 
-    public virtual void UpdateMonologue()
+    public virtual void UpdateMonologue(int displayIndex, string itemName)
     {
         if (itemName == "talisman")
         {
             gm.monologueManager.DisplaySentence(8);
+        }
+        else if(itemName != "")
+        {
+            //! this is for all item givers (where the item come from inside a container in-game)
+            gm.monologueManager.DisplayPickUpSentence(itemName, true);
         }
     }
 

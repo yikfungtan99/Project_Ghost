@@ -44,7 +44,7 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gm = GameManager.Instance;
+        gm = GetComponent<Player>().gm;
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator>();
         sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -55,7 +55,7 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GameManager.gamePaused)
+        if(!GameManager.Instance.gamePaused)
         {
             if (pressedButton)
             {
@@ -68,7 +68,6 @@ public class Player_Movement : MonoBehaviour
                 {
                     if (GetComponent<Player_Interactable>().CheckForInteractables())
                     {
-                        
                         haveWayPoint = false;
                         enRoute = false;
                         sprint = false;
@@ -77,7 +76,7 @@ public class Player_Movement : MonoBehaviour
                     {
                         //Get target position of the mouse
                         targetPos = gm.mouseControl.target;
-    
+                        Debug.Log(targetPos);
 
                         if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                         {
@@ -188,8 +187,7 @@ public class Player_Movement : MonoBehaviour
                 if (!randomized)
                 {
                     randomized = true;
-                  //  transform.GetComponent<Player>().iv.RandomizePosition();
-                    gm.inventory.RandomizePosition();
+                    transform.GetComponent<Player>().iv.RandomizePosition();
                 }
                 if (staminaRemaining > 0)
                 {

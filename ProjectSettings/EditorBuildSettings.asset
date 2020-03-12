@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Prototype.unity
+    path: Assets/Scenes/Testing Scenes/Prototype.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/Prototype-Level2.unity
+    path: Assets/Scenes/Testing Scenes/Prototype-Level2.unity
     guid: 6878ba206cba53f408e9f63dd9a84210
   - enabled: 0
-    path: Assets/Scenes/New Scene.unity
+    path: Assets/Scenes/Testing Scenes/New Scene.unity
     guid: 5cd96d79279e944439663d6193c641e7
   - enabled: 0
     path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Main

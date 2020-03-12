@@ -32,7 +32,7 @@ public class Candle : Interactable
 
         transform.GetChild(0).gameObject.SetActive(isLit);
 
-        UpdateMonologue();
+        UpdateMonologue(-1, "");
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -76,12 +76,12 @@ public class Candle : Interactable
         }
     }
 
-    void UpdateMonologue()
+    public override void UpdateMonologue(int displayIndex, string itemName)
     {
         if(isLit && !playMonologueOnce)
         {
             playMonologueOnce = true;
-            GameObject.Find("MonologueManager").GetComponent<MonologueManager>().DisplaySentence(1);
+            gm.monologueManager.DisplaySentence(1);
         }
         if(!isLit)
         {

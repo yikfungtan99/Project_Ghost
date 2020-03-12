@@ -54,5 +54,19 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: 31c9c16b442eb7f46908e733a00a341c, type: 3}
   - itemName: spoon
     itemSprite: {fileID: 21300000, guid: 692029f4d5d00564c982f4ae0be90d1c, type: 3}
-  - itemName: stairwell key
-    itemSprite: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada, type: 3}
+  - itemName: zinc key
+    itemSprite: {fileID: 21300000, guid: 1d17202947a5f4b46b12dac3cffb1283, type: 3}
+  - itemName: note
+    itemSprite: {fileID: 21300000, guid: 85fd4c240cbb5324dbfd7eb3b89bbf7f, type: 3}
+  - itemName: red cloth
+    itemSprite: {fileID: 21300000, guid: f877b7dc75bb692449bcd1961b1d1305, type: 3}
+  - itemName: flour
+    itemSprite: {fileID: 21300000, guid: 5603ddd0c31968d4695c6819c1cffb9a, type: 3}
+  - itemName: sugar
+    itemSprite: {fileID: 21300000, guid: 0a4f89c728fd8874db2b4cc3759fd405, type: 3}
+  - itemName: baking soda
+    itemSprite: {fileID: 21300000, guid: cfbbdf46b714a154685433200a2e633c, type: 3}
+  - itemName: pink dye
+    itemSprite: {fileID: 21300000, guid: 401b44eab28e7f34197a5ad2123641a3, type: 3}
+  - itemName: kuih
+    itemSprite: {fileID: 21300000, guid: c4088ecf2b54c58448b7e561ad5868e6, type: 3}

@@ -56,9 +56,21 @@ public class Door : Interactable
         gm.mouseControl.changeCursor("door");
     }
 
-    public void Unlock()
+    public void TryToUnlock()
     {
-        isLocked = false;
+        //! the repitition is a template only,hoping that there will be custom monologue for each door
+        if(GatewayIsLocked(gm.doorHorizontalDiningToKitchen))
+        {
+            UpdateMonologue(-1, "");
+        }
+        if(GatewayIsLocked(gm.doorVerticalKitchenToToilet))
+        {
+            UpdateMonologue(-1, "");
+        }
+        if(GatewayIsLocked(gm.doorVerticalLivingToLounge))
+        {
+            UpdateMonologue(-1, "");
+        }
     }
 
     public void Open()
@@ -170,7 +182,7 @@ public class Door : Interactable
 
         if (isLocked)
         {
-            Unlock();
+            TryToUnlock();
         }
         else if(isClosed)
         {
@@ -192,4 +204,26 @@ public class Door : Interactable
         Closed();
     }
 
+    public void SetIsLockedOnDoor(GameObject door, bool statement)
+    {
+        for (int i = 0; i < door.transform.childCount; i++)
+        {
+            door.transform.GetChild(i).GetComponent<Door>().isLocked = statement;
+        }
+    }
+
+    private bool GatewayIsLocked(GameObject door)
+    {
+        return door.transform.GetChild(0).GetComponent<Door>().isLocked;
+    }
+
+    public override void UpdateMonologue(int displayIndex, string itemName)
+    {
+        switch(displayIndex)
+        {
+            case -1:
+                gm.monologueManager.DisplaySentence(22);
+                break;
+        }
+    }
 }

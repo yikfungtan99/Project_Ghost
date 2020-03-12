@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7189136440494755493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7189136440494755498}
+  - component: {fileID: 7189136440494755499}
+  m_Layer: 0
+  m_Name: ItemLibrary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7189136440494755498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7189136440494755493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.013837, y: 0.014848513, z: -6.954797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7189136440494755499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7189136440494755493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e21bb3059ba24244b566d30397658aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - itemName: potato
+    itemSprite: {fileID: 21300000, guid: 4d90e6e8890100043b80f763d84831a0, type: 3}
+  - itemName: carrot
+    itemSprite: {fileID: 21300000, guid: 37123afe423b8e44a8de644f2962aa12, type: 3}
+  - itemName: talisman
+    itemSprite: {fileID: 21300000, guid: 82c8df2c1ed8ad040ae2ac1cd948dddf, type: 3}
+  - itemName: lighter
+    itemSprite: {fileID: 21300000, guid: 31c9c16b442eb7f46908e733a00a341c, type: 3}
+  - itemName: spoon
+    itemSprite: {fileID: 21300000, guid: 692029f4d5d00564c982f4ae0be90d1c, type: 3}
+  - itemName: zinc key
+    itemSprite: {fileID: 21300000, guid: 1d17202947a5f4b46b12dac3cffb1283, type: 3}
+  - itemName: note
+    itemSprite: {fileID: 21300000, guid: 85fd4c240cbb5324dbfd7eb3b89bbf7f, type: 3}
+  - itemName: red cloth
+    itemSprite: {fileID: 21300000, guid: f877b7dc75bb692449bcd1961b1d1305, type: 3}
+  - itemName: flour
+    itemSprite: {fileID: 21300000, guid: 5603ddd0c31968d4695c6819c1cffb9a, type: 3}
+  - itemName: sugar
+    itemSprite: {fileID: 21300000, guid: 0a4f89c728fd8874db2b4cc3759fd405, type: 3}
+  - itemName: baking soda
+    itemSprite: {fileID: 21300000, guid: cfbbdf46b714a154685433200a2e633c, type: 3}
+  - itemName: pink dye
+    itemSprite: {fileID: 21300000, guid: 401b44eab28e7f34197a5ad2123641a3, type: 3}
+  - itemName: kuih
+    itemSprite: {fileID: 21300000, guid: c4088ecf2b54c58448b7e561ad5868e6, type: 3}
