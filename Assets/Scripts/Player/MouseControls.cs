@@ -33,7 +33,7 @@ public class MouseControls : MonoBehaviour
 
         target = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.transform.position.z));
 
-        Debug.Log(target);
+       // Debug.Log(target);
 
 
         if (!detectInteractable() && !gm.player.inventoryOn)

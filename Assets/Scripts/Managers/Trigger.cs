@@ -100,7 +100,7 @@ public class Trigger : MonoBehaviour
             
         }
         
-       // isDisabled = true;
+        isDisabled = true;
         ghostTeleporting = false;
     }
 
