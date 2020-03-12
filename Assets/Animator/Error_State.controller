@@ -184,7 +184,7 @@ AnimatorStateMachine:
     m_Position: {x: 1150, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5868729224001475810}
-    m_Position: {x: 1150, y: 240, z: 0}
+    m_Position: {x: 1450, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1132595894121257821}
     m_Position: {x: 560, y: 120, z: 0}
@@ -193,13 +193,13 @@ AnimatorStateMachine:
     m_Position: {x: 830, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1178654986948124452}
-    m_Position: {x: 1160, y: -10, z: 0}
+    m_Position: {x: 830, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -623177830681651302}
     m_Position: {x: 830, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5201964001707998645}
-    m_Position: {x: 1620, y: 230, z: 0}
+    m_Position: {x: 1450, y: -10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -244,7 +244,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MoveRight
+    m_ConditionEvent: MoveUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5201964001707998645}
@@ -443,7 +443,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Main_Room_State
+  m_Name: Error_State
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: MoveLeft
@@ -492,7 +492,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MoveLeft
+    m_ConditionEvent: MoveDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5868729224001475810}
@@ -648,7 +648,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MoveDown
+    m_ConditionEvent: MoveRight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5201964001707998645}
@@ -800,7 +800,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MoveUp
+    m_ConditionEvent: MoveLeft
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1178654986948124452}
