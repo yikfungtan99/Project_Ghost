@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
     public Player_Lighter playerLighter;
     public GameObject holdPanel;
 
+    public Tutorial TutorialNavi;
+    public Animator BagAnim;
+
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
     public GameObject ghostMain;
     public GameObject ghostManagerObject;

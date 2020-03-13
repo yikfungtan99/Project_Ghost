@@ -71,12 +71,33 @@ public class Door : Interactable
         {
             UpdateMonologue(-1, "");
         }
+        if (GatewayIsLocked(gm.doorHorizontalOutsideToMain))
+        {
+            gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Next");
+            gm.playerInventory.firstTime = true;
+
+            if (CheckHoldSlot())
+            {
+
+                SetIsLockedOnDoor(this.transform.root.gameObject, false);
+                gm.TutorialNavi.gameObject.SetActive(false);
+
+            }
+        }
+
     }
 
     public void Open()
     {
 
         isClosed = false;
+
+        if (gm.playerInventory.firstTime)
+        {
+
+            gm.playerInventory.firstTime = false;
+
+        }
 
         if (LeftRight)
         {
@@ -210,6 +231,21 @@ public class Door : Interactable
         {
             door.transform.GetChild(i).GetComponent<Door>().isLocked = statement;
         }
+
+        if(statement == false)
+        {
+
+            Unlock();
+
+        }
+
+    }
+
+    private void Unlock()
+    {
+
+        Debug.Log("Its Unlocked!");
+
     }
 
     private bool GatewayIsLocked(GameObject door)
