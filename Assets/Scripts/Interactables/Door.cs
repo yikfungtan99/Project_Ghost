@@ -61,15 +61,23 @@ public class Door : Interactable
         //! the repitition is a template only,hoping that there will be custom monologue for each door
         if(GatewayIsLocked(gm.doorHorizontalDiningToHall4))
         {
-            UpdateMonologue(-1, "");
+            UpdateMonologue(1, "");
+            Debug.Log("Dining to Hall4");
         }
         if(GatewayIsLocked(gm.doorVerticalKitchenToToilet))
         {
-            UpdateMonologue(-1, "");
+            UpdateMonologue(1, "");
+            Debug.Log("Kitchen to Toilet");
         }
         if(GatewayIsLocked(gm.doorVerticalLivingToHall2))
         {
-            UpdateMonologue(-1, "");
+            UpdateMonologue(1, "");
+            Debug.Log("Living to Hall2");
+        }
+        if (GatewayIsLocked(gm.doorVerticalMainToStorage))
+        {
+            UpdateMonologue(1, "");
+            Debug.Log("Main to Storage");
         }
         if (GatewayIsLocked(gm.doorHorizontalOutsideToMain))
         {
@@ -81,7 +89,13 @@ public class Door : Interactable
 
                 SetIsLockedOnDoor(this.transform.root.gameObject, false);
                 gm.TutorialNavi.gameObject.SetActive(false);
-
+                
+                UpdateMonologue(2, "");
+            }
+            else
+            {
+                UpdateMonologue(1, "");
+                Debug.Log("Outside to Main");
             }
         }
 
@@ -250,15 +264,37 @@ public class Door : Interactable
 
     private bool GatewayIsLocked(GameObject door)
     {
-        return door.transform.GetChild(0).GetComponent<Door>().isLocked;
+        bool isDoorCurrentlyLocked = false;
+        bool isDoorInRange = false;
+
+        isDoorCurrentlyLocked = door.transform.GetChild(0).GetComponent<Door>().isLocked;
+        if(gm.playerInteractable.publicMouseHit.collider.transform.parent.gameObject == door)
+        {
+            if(gm.playerInteractable.publicMouseHit.collider.GetComponent<Door>().inRange)
+            {
+                isDoorInRange = inRange;
+            }
+        }
+
+        if(isDoorCurrentlyLocked && isDoorInRange)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public override void UpdateMonologue(int displayIndex, string itemName)
     {
         switch(displayIndex)
         {
-            case -1:
+            case 1:
                 gm.monologueManager.DisplaySentence(22);
+                break;
+            case 2:
+                gm.monologueManager.DisplaySentence(23);
                 break;
         }
     }

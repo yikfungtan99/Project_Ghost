@@ -15,6 +15,8 @@ public class Player_Interactable : MonoBehaviour
     private int dir = 1;
     private bool targetOnInteractable = false;
 
+    public RaycastHit2D publicMouseHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,8 +69,9 @@ public class Player_Interactable : MonoBehaviour
         {
             targetPos = gm.mouseControl.target;
             RaycastHit2D mouseHit = Physics2D.Raycast(targetPos, Vector2.zero, 0.1f, interactableLayer);
+            publicMouseHit = mouseHit;
+            
             //Clicking interactables
-
             if (mouseHit.collider != null)
             {
                 if (mouseHit.collider.gameObject.GetComponent<Interactable>().inRange)
