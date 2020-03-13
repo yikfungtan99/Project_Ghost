@@ -60,7 +60,7 @@ public class PuzzleManager : MonoBehaviour
 
         //! Lounge Puzzle Settings
         disableLoungePuzzle = true;
-        //gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, true);
+        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, true);
     }
 
     public void UpdatePuzzleCompleteMonologue(int displayIndex, string itemName)

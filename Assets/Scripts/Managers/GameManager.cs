@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     public GameObject allMoveSpots;
 
     [Header("Room Components")]
+    public GameObject outside;
     public GameObject mainEntrance;
     public GameObject centralCourtYard;
     public GameObject altarRoom;
@@ -59,9 +60,11 @@ public class GameManager : MonoBehaviour
     public GameObject loungeRoom;
     public GameObject toilet;
     public GameObject livingRoom;
+    public GameObject storageRoom;
 
     [Header("Literally Just Doors")]
     public Door doorScript;
+    public GameObject doorHorizontalOutsideToMain;
     public GameObject doorVerticalMainToAltar;
     public GameObject doorVerticalMainToStorage;
     public GameObject doorHorizontalMainToCentral;

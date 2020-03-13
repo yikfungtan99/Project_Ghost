@@ -68,7 +68,6 @@ public class Lounge_Pairs : Interactable
 
         pm.rewardObject.SetActive(true);
 
-        //gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, false);
-        Debug.LogError("Storage door unlocked...! Wait... storage does not exist yet! :D");
+        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, false);
     }
 }
