@@ -19,10 +19,13 @@ public class Player : MonoBehaviour
     public GameObject WarningLeft;
     public GameObject WarningRight;
 
+    public GameObject curHidable;
+
     private void Awake()
     {
         gm = GameManager.Instance;
         iv = transform.GetChild(2).GetComponent<Inventory>();
+
         if (gm == null)
         {
             Debug.Log("Player not linked to Game Manager");
@@ -41,7 +44,7 @@ public class Player : MonoBehaviour
         //! this function replaces the above codes, also fixes a refresh bug where Player Update() does not call
        gm.RefreshPlayerUnpausedState();
 
-        // GetComponent<Player_Movement>().enabled = !hidden;
+        //GetComponent<Player_Movement>().enabled = !hidden;
         if (!playerFainted)
         {
             faintDebugMsg = false;

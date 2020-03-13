@@ -13,8 +13,11 @@ public class Dining_Bowl : Interactable
         pm = gm.puzzleManager;
     }
 
-    void Update()
+    public override void Update()
     {
+
+        base.Update();
+
         //! checks if Dining Puzzle has been completed (purely for Debug)
         if(pm.isDiningPuzzleClear && !pm.diningPuzzleClearMsgTrigger)
         {

@@ -80,6 +80,7 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
         canvasGroup.alpha = 0.6f;
         initPos = rectTransform.anchoredPosition;
+        gm.mouseControl.changeCursor("grab");
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -101,6 +102,8 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 rectTransform.anchoredPosition = initPos;
             }
         }
+
+        gm.mouseControl.changeCursor("item");
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -121,13 +124,13 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerEnter(PointerEventData eventData)
     {
 
-        mc.changeCursor("item");
+        //mc.changeCursor("item");
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
 
-        mc.exitCursor();
+        //mc.exitCursor();
     }
 }

@@ -75,6 +75,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Lights")]
     public Light2D GlobalLight;
+    public bool debugLight;
+    public float debugLightIntensity = 1;
 
     [Header("Camera Components")]
     public Camera mainCamera;
@@ -97,6 +99,14 @@ public class GameManager : MonoBehaviour
         else
         {
             thisInstance = this;
+        }
+    }
+
+    private void Start()
+    {
+        if (debugLight)
+        {
+            GlobalLight.intensity = debugLightIntensity;
         }
     }
 

@@ -66,76 +66,85 @@ public class Player_Movement : MonoBehaviour
                 //Get waypoint
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (GetComponent<Player_Interactable>().CheckForInteractables())
+                    if (gm.player.hidden)
                     {
-                        haveWayPoint = false;
-                        enRoute = false;
-                        sprint = false;
+
+                        gm.player.curHidable.GetComponent<Hidable>().Unhide();
+
                     }
                     else
                     {
-                        //Get target position of the mouse
-                        targetPos = gm.mouseControl.target;
-                        Debug.Log(targetPos);
-
-                        if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
+                        if (GetComponent<Player_Interactable>().CheckForInteractables())
                         {
-                            waypointPos = targetPos;
-                            haveWayPoint = true;
-                            enRoute = true;
-
+                            haveWayPoint = false;
+                            enRoute = false;
+                            sprint = false;
                         }
                         else
                         {
-                            haveWayPoint = false;
-                        }
+                            //Get target position of the mouse
+                            targetPos = gm.mouseControl.target;
+                            Debug.Log(targetPos);
 
-                        if (haveWayPoint)
-                        {
-                            //Sprint Volunteering
-                            /* if (!sprint && !sprintOnCooldown)
-                             {
-                                 if (sprintMouseDelayTimer < sprintMouseDelay)
-                                 {
-
-                                     sprintMouseDelayTimer += Time.fixedDeltaTime;
-
-                                 }
-                                 else
-                                 {
-                                     sprintMouseDelayTimer = 0;
-                                     sprint = true;
-                                 }
-                             }*/
-
-                            // contexual running
-                            if (GameObject.FindGameObjectWithTag("Enemy"))
+                            if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                             {
-                                if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<CarrotMain>().anima.GetBool("isChase") == true)
-                                {
-                                    staminaRemaining = stamina;
-                                    sprint = true;
-                                }
-
-                            }
-
-                            //Change direction
-                            if (waypointPos.x < transform.position.x)
-                            {
-                                transform.rotation = Quaternion.Euler(0, 180, 0);
-                                direction = -1;
+                                waypointPos = targetPos;
+                                haveWayPoint = true;
+                                enRoute = true;
 
                             }
                             else
                             {
-                                transform.rotation = Quaternion.Euler(0, 0, 0);
-                                direction = 1;
+                                haveWayPoint = false;
                             }
-                        }
-                        else
-                        {
-                            if (sprint) sprint = false;
-                            sprintMouseDelayTimer = 0;
+
+                            if (haveWayPoint)
+                            {
+                                //Sprint Volunteering
+                                /* if (!sprint && !sprintOnCooldown)
+                                 {
+                                     if (sprintMouseDelayTimer < sprintMouseDelay)
+                                     {
+
+                                         sprintMouseDelayTimer += Time.fixedDeltaTime;
+
+                                     }
+                                     else
+                                     {
+                                         sprintMouseDelayTimer = 0;
+                                         sprint = true;
+                                     }
+                                 }*/
+
+                                // contexual running
+                                if (GameObject.FindGameObjectWithTag("Enemy"))
+                                {
+                                    if (GameObject.FindGameObjectWithTag("Enemy").GetComponent<CarrotMain>().anima.GetBool("isChase") == true)
+                                    {
+                                        staminaRemaining = stamina;
+                                        sprint = true;
+                                    }
+
+                                }
+
+                                //Change direction
+                                if (waypointPos.x < transform.position.x)
+                                {
+                                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                                    direction = -1;
+
+                                }
+                                else
+                                {
+                                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                                    direction = 1;
+                                }
+                            }
+                            else
+                            {
+                                if (sprint) sprint = false;
+                                sprintMouseDelayTimer = 0;
+                            }
                         }
                     }
                 }

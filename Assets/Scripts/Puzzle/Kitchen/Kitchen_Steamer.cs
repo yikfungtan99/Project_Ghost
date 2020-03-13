@@ -14,8 +14,11 @@ public class Kitchen_Steamer : Interactable
         pm = gm.puzzleManager;
     }
     
-    void Update()
+    public override void Update()
     {
+
+        base.Update();
+
         //! enable kitchen puzzle only if dining puzzle has been completed prior
         if(pm.isDiningPuzzleClear)
         {

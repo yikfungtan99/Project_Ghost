@@ -83,26 +83,18 @@ public class Player_Interactable : MonoBehaviour
                                 mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
                             }
                         }
-                        else if (mouseHit.collider.gameObject.tag != "Hiding_Spot")
-                        {
-                            foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
-                            {
-                                fooObj.GetComponent<Hidable>().Unhide();
-                            }
-                            mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
-                        }
                         else
                         {
 
                             mouseHit.collider.gameObject.GetComponent<Interactable>().Interact();
 
                         }
-                        
+
                         onInteractable = true;
                     }
 
                 }
-                
+
                 else
                 {
                     if (targetOnInteractable)
@@ -112,15 +104,7 @@ public class Player_Interactable : MonoBehaviour
 
                 }
             }
-            else
-            {
-                foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
-                {
-                    fooObj.GetComponent<Hidable>().Unhide();
-                }
-            }
-           
-
+          
 
         }
 

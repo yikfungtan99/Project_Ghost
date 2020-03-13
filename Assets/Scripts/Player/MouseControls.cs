@@ -9,6 +9,7 @@ public class MouseControls : MonoBehaviour
     public Texture2D cursorOnInteract;
     public Texture2D cursorOnDoor;
     public Texture2D cursorOnInventoryItem;
+    public Texture2D cursorDrag;
 
     private GameManager gm;
     private Camera cam;
@@ -68,11 +69,13 @@ public class MouseControls : MonoBehaviour
                 cursorToSwitch = cursorOnInventoryItem;
                 break;
 
+            case "grab":
+                cursorToSwitch = cursorDrag;
+                break;
+
         }
 
-
-        //Cursor.SetCursor(cursorToSwitch, new Vector2(cursorToSwitch.width/2 , cursorToSwitch.height/2), CursorMode.Auto);
-        Cursor.SetCursor(cursorToSwitch, new Vector2(0,0), CursorMode.Auto);
+        Cursor.SetCursor(cursorToSwitch, new Vector2(cursorToSwitch.width/2, cursorToSwitch.height / 2), CursorMode.Auto);
 
     }
 

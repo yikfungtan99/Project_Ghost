@@ -6,6 +6,7 @@ public class Death_Bowl : Dining_Bowl
 {
     public override void Interact()
     {
+
         Debug.Log("Clickin Death bowl");
 
         CheckForSpoon();

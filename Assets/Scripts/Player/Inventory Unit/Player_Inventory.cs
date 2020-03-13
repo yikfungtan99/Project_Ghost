@@ -45,10 +45,12 @@ public class Player_Inventory : MonoBehaviour
         if (inventoryOn)
         {
             inventoryOn = false;
+            gm.mouseControl.exitCursor();
         }
         else
         {
             inventoryOn = true;
+            gm.mouseControl.changeCursor("item");
         }
 
         inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);

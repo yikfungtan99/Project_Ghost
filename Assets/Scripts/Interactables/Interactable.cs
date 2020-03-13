@@ -132,7 +132,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
