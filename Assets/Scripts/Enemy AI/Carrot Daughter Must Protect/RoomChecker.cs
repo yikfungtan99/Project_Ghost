@@ -27,7 +27,7 @@ public class RoomChecker : MonoBehaviour
             else
             {
 
-                Debug.LogError("WARNING NO TRIGGER IN THIS ROOM IGNORING TRIGGER");
+                Debug.LogWarning("WARNING NO TRIGGER IN THIS ROOM IGNORING TRIGGER");
 
             }
             

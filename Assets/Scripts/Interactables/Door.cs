@@ -59,7 +59,7 @@ public class Door : Interactable
     public void TryToUnlock()
     {
         //! the repitition is a template only,hoping that there will be custom monologue for each door
-        if(GatewayIsLocked(gm.doorHorizontalDiningToKitchen))
+        if(GatewayIsLocked(gm.doorHorizontalDiningToHall4))
         {
             UpdateMonologue(-1, "");
         }
@@ -67,7 +67,7 @@ public class Door : Interactable
         {
             UpdateMonologue(-1, "");
         }
-        if(GatewayIsLocked(gm.doorVerticalLivingToLounge))
+        if(GatewayIsLocked(gm.doorVerticalLivingToHall2))
         {
             UpdateMonologue(-1, "");
         }

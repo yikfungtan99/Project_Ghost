@@ -31,7 +31,7 @@ public class Safe_Bowl : Dining_Bowl
 
             pm.UpdatePuzzleCompleteMonologue(1, "");
 
-            gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToKitchen, false);
+            gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToHall4, false);
         }
     }
 }

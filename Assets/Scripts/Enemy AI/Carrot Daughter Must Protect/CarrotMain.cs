@@ -48,6 +48,7 @@ public class CarrotMain : MonoBehaviour
     {
 
         anima = GetComponent<Animator>();
+        ghostMan = GameManager.Instance.ghostManager;
 
     }
 

@@ -51,11 +51,11 @@ public class PuzzleManager : MonoBehaviour
 
         //! Dining Puzzle Settings
         spoonTarget = null;
-        gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToKitchen, true);
+        gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToHall4, true);
 
         //! Kitchen Puzzle Settings
         disableKitchenPuzzle = true;
-        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToLounge, true);
+        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToHall2, true);
         gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalKitchenToToilet, true);
 
         //! Lounge Puzzle Settings

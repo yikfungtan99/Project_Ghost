@@ -47,7 +47,7 @@ public class Trigger : MonoBehaviour
              
                     if (!ghostTeleporting)
                     {
-                        StartCoroutine(CountDown(countDownTime));
+                        StartCoroutine(CountDownTrigger(countDownTime));
                         Warning();
 
                     }
@@ -81,7 +81,7 @@ public class Trigger : MonoBehaviour
         }
     }
 
-    IEnumerator CountDown(int countDownTime)
+    IEnumerator CountDownTrigger(int countDownTime)
     {
         ghostTeleporting = true;
 
@@ -93,11 +93,12 @@ public class Trigger : MonoBehaviour
         if(!isDisabled)
         {
             Debug.Log("FUCKING HELL");
-            gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
-            gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
+            //gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
+            //gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
             gm.ghostManager.currentDoor = door[doorNumber].transform;
+            Debug.Log("1");
             gm.carrotMain.TeleportTrigger();
-            
+            Debug.Log("2");
         }
         
         isDisabled = true;

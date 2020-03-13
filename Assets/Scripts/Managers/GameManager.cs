@@ -65,17 +65,21 @@ public class GameManager : MonoBehaviour
     [Header("Literally Just Doors")]
     public Door doorScript;
     public GameObject doorHorizontalOutsideToMain;
+    public GameObject doorHorizontalMainToCentral;
     public GameObject doorVerticalMainToAltar;
     public GameObject doorVerticalMainToStorage;
-    public GameObject doorHorizontalMainToCentral;
     public GameObject doorHorizontalCentralToLiving;
-    public GameObject doorVerticalLivingToLounge;
-    public GameObject doorVerticalLivingToBridal;
-    public GameObject doorHorizontalLivingToDining;
-    public GameObject doorHorizontalDiningToKitchen;
+    public GameObject doorHorizontalLivingToHall3;
+    public GameObject doorVerticalLivingToHall2;
+    public GameObject doorVerticalLivingToHall1;
+    public GameObject doorHorizontalHall3ToDining;
+    public GameObject doorHorizontalHall2ToLounge;
+    public GameObject doorVerticalHall1ToBridal;
+    public GameObject doorHorizontalDiningToHall4;
+    public GameObject doorHorizontalHall4ToKitchen;
     public GameObject doorVerticalKitchenToToilet;
-    public GameObject doorHorizontalLoungeToToilet;
-
+    public GameObject doorHorizontalToiletToLounge;
+    
     [Header("Lights")]
     public Light2D GlobalLight;
     public bool debugLight;

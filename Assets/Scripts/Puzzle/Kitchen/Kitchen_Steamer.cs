@@ -165,7 +165,7 @@ public class Kitchen_Steamer : Interactable
         pm.disableKitchenPuzzle = true;
         pm.isKitchenPuzzleClear = true;
 
-        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToLounge, false);
+        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToHall2, false);
         gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalKitchenToToilet, false);
 
         if(!pm.kitchenPuzzleClearMsgTrigger)
