@@ -5,8 +5,9 @@ using UnityEngine.EventSystems;
 
 public class HoldPanel : MonoBehaviour, IDropHandler
 {
-
     private Inventory iv;
+    private bool keyDone;
+    private bool lighterDone;
 
     private void Start()
     {
@@ -35,6 +36,28 @@ public class HoldPanel : MonoBehaviour, IDropHandler
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
 
                 eventData.pointerDrag.transform.SetParent(transform);
+
+                if (!GameManager.Instance.tutorialComplete)
+                {
+                    if(transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "housekey")
+                    {
+                       
+                        GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Door");
+                        keyDone = true;
+                    }
+
+                    if (keyDone)
+                    {
+                        if (transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
+                        {
+                            Debug.Log("DE");
+                            GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Lighter");
+                            lighterDone = true;
+                        }
+                    }
+                }
+                
+
             }
         }
     }

@@ -81,15 +81,15 @@ public class Door : Interactable
         }
         if (GatewayIsLocked(gm.doorHorizontalOutsideToMain))
         {
-            gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Next");
+            Debug.Log("aa");
+            gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Bag");
             gm.playerInventory.firstTime = true;
 
             if (CheckHoldSlot())
             {
-
+                //gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Next");
                 SetIsLockedOnDoor(this.transform.root.gameObject, false);
-                gm.TutorialNavi.gameObject.SetActive(false);
-                
+
                 UpdateMonologue(2, "");
             }
             else
@@ -109,7 +109,7 @@ public class Door : Interactable
         if (gm.playerInventory.firstTime)
         {
 
-            gm.playerInventory.firstTime = false;
+            gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Bag1");
 
         }
 

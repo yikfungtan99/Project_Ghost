@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
 
     public Tutorial TutorialNavi;
     public Animator BagAnim;
+    public Animator FadeInOutAnim;
+    public bool tutorialFirst = false;
+    public bool tutorialComplete = false;
+    public bool tutorialSleep = false;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
     public GameObject ghostMain;
@@ -150,4 +154,19 @@ public class GameManager : MonoBehaviour
         Debug.Log(gamePaused);
         gamePaused = statement;
     }
+
+    public void StartGameScene()
+    {
+
+        Debug.Log("Next Scene");
+
+    }
+
+    public void TutorialGhostTrigger(bool onOff)
+    {
+
+        ghostMain.SetActive(onOff);
+
+    }
+
 }
