@@ -108,8 +108,6 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("x: " + iv.inventorySafeArea.x);
-        Debug.Log("y: " + iv.inventorySafeArea.y);
 
         if (onHold && player.inventoryOn)
         {

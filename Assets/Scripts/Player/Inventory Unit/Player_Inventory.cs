@@ -7,6 +7,8 @@ public class Player_Inventory : MonoBehaviour
     private GameManager gm;
     public GameObject inventory;
     public bool inventoryOn = false;
+    public bool firstTime = false;
+    public GameObject hand;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,8 @@ public class Player_Inventory : MonoBehaviour
                 {
                     ToggleInventory();
                     GameManager.Instance.player.inventoryOn = inventoryOn;
+                    gm.BagAnim.GetComponent<Animator>().SetTrigger("Bag Tutorial");
+                    hand.gameObject.SetActive(firstTime);
                 }
 
             }

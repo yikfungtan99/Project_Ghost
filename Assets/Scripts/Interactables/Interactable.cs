@@ -85,37 +85,31 @@ public class Interactable : MonoBehaviour
 
     }
 
-    protected void CheckHoldSlot()
+    protected bool CheckHoldSlot()
     {
 
-        if (GameObject.Find("Player"))
+        Transform holdPanel = gm.holdPanel.gameObject.transform;
+
+        if (holdPanel.childCount != 0)
         {
 
-            Transform holdPanel = GameObject.Find("Player").transform.GetChild(2).GetChild(1);
-
-            if (holdPanel.childCount != 0)
+            if (holdPanel.GetChild(0).GetComponent<Item_Inventory>().itemName == itemName)
             {
 
-                if (holdPanel.GetChild(0).GetComponent<Item_Inventory>().itemName == itemName)
-                {
-
-                    GameObject.Find("Win").transform.GetChild(0).gameObject.SetActive(true);
-                    Time.timeScale = 0;
-
-                }
-                else
-                {
-                    UpdateMonologue(-1, "");
-                }
+                return true;
 
             }
             else
             {
-
-                UpdateMonologue(-1, "");
-
+                return false;
             }
+
         }
+        else
+        {
+            return false;
+        }
+
 
     }
 

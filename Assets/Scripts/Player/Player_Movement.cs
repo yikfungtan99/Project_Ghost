@@ -84,7 +84,6 @@ public class Player_Movement : MonoBehaviour
                         {
                             //Get target position of the mouse
                             targetPos = gm.mouseControl.target;
-                            Debug.Log(targetPos);
 
                             if (targetPos.x - transform.position.x < -safeArea || targetPos.x - transform.position.x > safeArea)
                             {
