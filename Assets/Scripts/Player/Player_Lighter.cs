@@ -79,6 +79,12 @@ public class Player_Lighter : MonoBehaviour
         if(hit == rng)
         {
             lighterOn = true;
+            if (!gm.tutorialComplete)
+            {
+                gm.tutorialComplete = true;
+                gm.TutorialNavi.gameObject.SetActive(false);
+                gm.playerInventory.firstTime = false;
+            }
             triesCounter = difficulty;
 
         }

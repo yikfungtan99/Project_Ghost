@@ -195,7 +195,7 @@ public class Player_Movement : MonoBehaviour
                 if (!randomized)
                 {
                     randomized = true;
-                    transform.GetComponent<Player>().iv.RandomizePosition();
+                    gm.inventory.RandomizePosition();
                 }
                 if (staminaRemaining > 0)
                 {
