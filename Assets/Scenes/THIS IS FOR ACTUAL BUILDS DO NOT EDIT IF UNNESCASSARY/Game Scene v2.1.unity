@@ -38551,6 +38551,46 @@ PrefabInstance:
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[1].name
+      value: Samiu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[1].description
+      value: test for array
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[1].audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[1].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[0].isPlaying
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: inverseTheSpaceTimeContinuum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: inverseSpaceTimeContinuum
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

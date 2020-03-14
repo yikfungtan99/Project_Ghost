@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &934325990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934325991}
+  m_Layer: 0
+  m_Name: Audio Source Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934325991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934325990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3351820602699550236}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3351820602699550238
 GameObject:
   m_ObjectHideFlags: 0
@@ -27,7 +57,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5507236, y: -12.971297, z: -684.36005}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 934325991}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43,4 +74,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde340019ef15134bbfc18d5119ce92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioList: []
+  adjustIn_GameAudioThruInspector: 0
+  audioList:
+  - name: Test Theme
+    description: Played when test game is started
+    audioClip: {fileID: 8300000, guid: bd7a2357b30cecb41b5f9427645d3c5c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeTimeInSeconds: 5
+    isPlaying: 0
+    isFading: 0
+    audioSource: {fileID: 0}
+  enableEditor: 1
