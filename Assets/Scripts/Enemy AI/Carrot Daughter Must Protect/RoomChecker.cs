@@ -30,6 +30,7 @@ public class RoomChecker : MonoBehaviour
             {
 
                 trigger.GetComponent<Trigger>().canAutoRecover = false;
+                trigger.GetComponent<Trigger>().isDisabled = true;
 
             }
             else

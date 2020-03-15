@@ -19,6 +19,12 @@ public class Warning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(gm.playerObject.transform.position.x+xOffset, gm.playerObject.transform.position.y+ yOffset);
+        if (gm.playerObject)
+        {
+
+            transform.position = new Vector3(gm.playerObject.transform.position.x + xOffset, gm.playerObject.transform.position.y + yOffset);
+
+        }
+       
     }
 }
