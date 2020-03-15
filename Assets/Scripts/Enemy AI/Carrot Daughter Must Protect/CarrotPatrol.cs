@@ -50,89 +50,106 @@ public class CarrotPatrol : StateMachineBehaviour
 
         //Debug.Log(heading);
 
-        if (!mainGhost.canChangeRoom)
+        if (!mainGhost.stopMove)
         {
-            //Get All the points
-            if (mainGhost.patrolSpots != null)
+            if (!mainGhost.canChangeRoom)
             {
-                for (int i = 0; i < mainGhost.patrolSpots.Length; i++)
+                //Get All the points
+                if (mainGhost.patrolSpots != null)
                 {
+                    for (int i = 0; i < mainGhost.patrolSpots.Length; i++)
+                    {
 
-                    patrolSpots[i] = mainGhost.patrolSpots[i];
+                        patrolSpots[i] = mainGhost.patrolSpots[i];
+
+                    }
 
                 }
 
-            }
 
-            //Normal Patrol
-            if (patrolSpots[0] != null)
-            {
-                //DebugHUD
-                if (mainGhost.showDebug && mainGhost.debug)
+                //Normal Patrol
+                if (patrolSpots[0] != null)
                 {
-                    mainGhost.debug.text = "Distance: " + Vector2.Distance(transform.position, patrolSpots[heading].localPosition).ToString("####0.00") + " Heading Spot: " + patrolSpots[heading].position;
+                    //DebugHUD
+                    if (mainGhost.showDebug && mainGhost.debug)
+                    {
+                        mainGhost.debug.text = "Distance: " + Vector2.Distance(transform.position, patrolSpots[heading].localPosition).ToString("####0.00") + " Heading Spot: " + patrolSpots[heading].position;
                         
+                    }
+
+                    //Debug.Log(patrolSpots[heading].position);
+
+                    if (patrolSpots[heading].position.x > transform.position.x)
+                    {
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                        transform.position = new Vector2(transform.position.x + (moveSpeed * Time.deltaTime), transform.position.y);
+
+                    }
+
+                    if (patrolSpots[heading].position.x < transform.position.x)
+                    {
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                        transform.position = new Vector2(transform.position.x - (moveSpeed * Time.deltaTime), transform.position.y);
+
+                    }
+
+                    //if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 1f)
+                   // Debug.Log(DistanceBetweenX(transform.position, patrolSpots[heading].position));
+
+                    if(DistanceBetweenX(transform.position, patrolSpots[heading].position) < 1f)
+                    {
+                        if (heading == 0)
+                        {
+
+                            heading = 1;
+
+                        }
+                        else
+                        {
+
+                            heading = 0;
+
+                        }
+
+                    }
+
                 }
+         
+            }
+            else
+            {
 
-                //Debug.Log(patrolSpots[heading].position);
-
-                if (patrolSpots[heading].position.x > transform.position.x)
-                {
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                    transform.position = new Vector2(transform.position.x + (moveSpeed * Time.deltaTime), transform.position.y);
-
-                }
-
-                if (patrolSpots[heading].position.x < transform.position.x)
+                //Head Towards the door
+                if(mainGhost.doorToUse.position.x < transform.position.x)
                 {
                     transform.rotation = Quaternion.Euler(0, 180, 0);
-                    transform.position = new Vector2(transform.position.x - (moveSpeed * Time.deltaTime), transform.position.y);
+                    transform.position = new Vector2(transform.position.x - (mainGhost.chaseSpeed * Time.deltaTime), transform.position.y);
 
                 }
-
-                //if (Vector2.Distance(transform.position, patrolSpots[heading].position) < 1f)
-               // Debug.Log(DistanceBetweenX(transform.position, patrolSpots[heading].position));
-
-                if(DistanceBetweenX(transform.position, patrolSpots[heading].position) < 1f)
+                else if(mainGhost.doorToUse.position.x > transform.position.x)
                 {
-                    if (heading == 0)
-                    {
-
-                        heading = 1;
-
-                    }
-                    else
-                    {
-
-                        heading = 0;
-
-                    }
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    transform.position = new Vector2(transform.position.x + (mainGhost.chaseSpeed * Time.deltaTime), transform.position.y);
 
                 }
 
             }
-         
+
         }
         else
         {
-
-            //Head Towards the door
-            if(mainGhost.doorToUse.position.x < transform.position.x)
+            //Set to StaySpot
+            if (mainGhost.curRoom.staySpots)
             {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-                transform.position = new Vector2(transform.position.x - (mainGhost.chaseSpeed * Time.deltaTime), transform.position.y);
-
-            }
-            else if(mainGhost.doorToUse.position.x > transform.position.x)
-            {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-                transform.position = new Vector2(transform.position.x + (mainGhost.chaseSpeed * Time.deltaTime), transform.position.y);
-
+                if (!mainGhost.isCalled)
+                {
+                    mainGhost.transform.position = new Vector2(mainGhost.curRoom.staySpots.position.x, mainGhost.transform.position.y);
+                }
             }
 
         }
-        
-        
+
+
 
         /*  Jin
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, moveSpots[randomspot].position, speed * Time.deltaTime);

@@ -10,8 +10,15 @@ public class Trigger : MonoBehaviour
     public int countDownTime;
     public Transform[] door;
     public int doorNumber;
-   
+
+    private float chance = 0;
+    public float cdTime = 1;
     
+    public bool disableAutoRecover;
+
+    [HideInInspector]
+    public bool canAutoRecover;
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -20,16 +27,6 @@ public class Trigger : MonoBehaviour
         
     }
 
-    void Start()
-    {
-        
-    }
-   
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter2D(Collider2D col)
     {
         ChanceToTeleportGhost(col);
@@ -97,12 +94,42 @@ public class Trigger : MonoBehaviour
             //gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
             gm.ghostManager.currentDoor = door[doorNumber].transform;
             Debug.Log("1");
-            gm.carrotMain.TeleportTrigger();
+
+            if (chance == Random.Range(0,2))
+            {
+
+                gm.carrotMain.TeleportTrigger();
+                
+
+            }
+            else
+            {
+
+                Debug.Log("No Tele");
+                
+
+            }
+
+            
             Debug.Log("2");
         }
         
         isDisabled = true;
         ghostTeleporting = false;
+
+        if (canAutoRecover && !disableAutoRecover)
+        {
+            StartCoroutine(triggerAutoRecover(cdTime));
+        }
+    }
+
+    IEnumerator triggerAutoRecover(float recoverCD)
+    {
+
+        yield return new WaitForSeconds(recoverCD);
+        isDisabled = false;
+        Debug.Log("Recovered");
+
     }
 
 

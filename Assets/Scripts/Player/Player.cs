@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
 
     public GameObject curHidable;
 
+    public RoomChecker curRoom;
+
     private void Awake()
     {
         gm = GameManager.Instance;
