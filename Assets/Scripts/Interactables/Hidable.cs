@@ -44,6 +44,8 @@ public class Hidable : Interactable
     public void Unhide()
     {
 
+        Debug.Log(initY);
+
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
         player.GetComponent<Player>().hidden = false;
         player.layer = LayerMask.NameToLayer("Player");

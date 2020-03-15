@@ -47,6 +47,9 @@ public class CarrotMain : MonoBehaviour
     public bool stopMove = false;
 
     public bool isCalled = false;
+
+    public int vanishChance = 0;
+    private bool needNewNumber = false;
     
     // Start is called before the first frame update
     void Start()
@@ -55,6 +58,9 @@ public class CarrotMain : MonoBehaviour
         anima = GetComponent<Animator>();
         ghostMan = GameManager.Instance.ghostManager;
 
+        vanishChance = Random.Range(0, 2);
+
+        Debug.Log(vanishChance);
     }
 
     // Update is called once per frame
@@ -67,8 +73,16 @@ public class CarrotMain : MonoBehaviour
             {
                 if (!curRoom.playerInRoom && !canChangeRoom)
                 {
-
                     stopMove = true;
+                    needNewNumber = true;
+
+                    if (vanishChance == 0 && needNewNumber)
+                    {
+
+                        vanishChance = Random.Range(0, 2);
+                        transform.position = new Vector2(0, 0);
+                        needNewNumber = false;
+                    }
 
                 }
                 else
@@ -85,12 +99,6 @@ public class CarrotMain : MonoBehaviour
 
             }
             
-
-        }
-        else
-        {
-
-            Debug.LogError("Ghost Current Room not Found");
 
         }
 
@@ -239,10 +247,15 @@ public class CarrotMain : MonoBehaviour
                 anima.SetBool("isIdle", true);
 
                 this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+
+                GameManager.Instance.player.curHidable.GetComponent<Hidable>().Unhide();
+
+                /*
                 foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("Hiding_Spot"))
                 {
                     fooObj.GetComponent<Hidable>().Unhide();
                 }
+                */
 
                 StartCoroutine(EnemyWake(DiscoverPlayerStunTime));
             }
