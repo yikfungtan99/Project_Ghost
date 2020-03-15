@@ -90,8 +90,8 @@ public class Trigger : MonoBehaviour
         if(!isDisabled)
         {
             Debug.Log("FUCKING HELL");
-            //gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
-            //gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
+            gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
+            gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
             gm.ghostManager.currentDoor = door[doorNumber].transform;
             Debug.Log("1");
 
