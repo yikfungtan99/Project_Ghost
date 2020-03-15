@@ -7842,24 +7842,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269100807}
   m_CullTransparentMesh: 0
---- !u!1 &272347215 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2606080081073801692, guid: dcfdbc4d0098af14d80a097a056253a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7875383876801890628}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &272347219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272347215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f0a45a585f10fd4eb495745a3c8cc9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &282038641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1254838575500850620, guid: f6cbc8dc500d14f4db51bda5aa17643c,
@@ -37588,7 +37570,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -37612,7 +37594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.81, y: -60.430004, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52184,21 +52166,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2732268959368789291, guid: dcfdbc4d0098af14d80a097a056253a5,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5747692314927770139, guid: dcfdbc4d0098af14d80a097a056253a5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.304
-      objectReference: {fileID: 0}
-    - target: {fileID: 5747692314927770139, guid: dcfdbc4d0098af14d80a097a056253a5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.428
-      objectReference: {fileID: 0}
     - target: {fileID: 6634660331999621313, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: m_Name
@@ -52269,16 +52236,6 @@ PrefabInstance:
       propertyPath: WarningRight
       value: 
       objectReference: {fileID: 634345073}
-    - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
-        type: 3}
-      propertyPath: sprintSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8548607295132865385, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: hand

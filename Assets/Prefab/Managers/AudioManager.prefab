@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde340019ef15134bbfc18d5119ce92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adjustIn_GameAudioThruInspector: 0
+  adjustIn_GameAudioThruInspector: 1
   audioList:
   - name: Test Theme
     description: Played when test game is started
@@ -82,8 +82,193 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
-    defFadeTimeInSeconds: 5
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
     isPlaying: 0
     isFading: 0
+    isPaused: 0
+    triggerOnce: 0
     audioSource: {fileID: 0}
-  enableEditor: 1
+  - name: foot step 1
+    description: Player footstep sequence
+    audioClip: {fileID: 8300000, guid: e7a2a70578432ea42b854d4f5668b66f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 0
+    defFadeOutSeconds: 0
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: foot step 2
+    description: Player footstep sequence
+    audioClip: {fileID: 8300000, guid: fc36a5ac23d5a094099452f3cbd2f09e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 0
+    defFadeOutSeconds: 0
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: lighter flick single
+    description: when trying to turn on lighter
+    audioClip: {fileID: 8300000, guid: 903a730f2fa1bde4286b77ef94e0c8ce, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 0
+    defFadeOutSeconds: 0
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: lighter light up
+    description: played when player lighter lights up (to produce light)
+    audioClip: {fileID: 8300000, guid: 1e20aa5496e9c1a4fa296cbd1e372b46, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 0
+    defFadeOutSeconds: 0
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: heart beating
+    description: played when player hides in hiding spot
+    audioClip: {fileID: 8300000, guid: faa255aa392c1aa499f0520a667a6616, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: hiding door
+    description: played when player hides or unhides from a hiding spot
+    audioClip: {fileID: 8300000, guid: a636ec4e75129b24b9ba5cfd28685a9b, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: open bag
+    description: played when inventory is opened
+    audioClip: {fileID: 8300000, guid: 2c2a34add91ef2b42b7682186b57597c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: close bag
+    description: played when inventory is closed
+    audioClip: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: obtain item
+    description: played when player obtains item into inventory
+    audioClip: {fileID: 8300000, guid: 625520e12892eea4098799f65f5917cb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: use red cloth
+    description: played when a mirror is covered
+    audioClip: {fileID: 8300000, guid: 0a4e123bfcdc61241888bcfa1b7f7394, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: place down item
+    description: played when an item is placed into the world by the player
+    audioClip: {fileID: 8300000, guid: 35c37339c2dfb6645980edfaf619107a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: insert ingredient
+    description: played when ingredient is put in kitchen steamer
+    audioClip: {fileID: 8300000, guid: 448293c706416a3428ca8c4833547d07, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: steamer sound
+    description: played when all ingredients are inside the steamer & is making kuih
+    audioClip: {fileID: 8300000, guid: 14887ac96ce9d214fa91f34b597c73fd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: normal door
+    description: played when player goes to another room via door that is not locked
+    audioClip: {fileID: 8300000, guid: eb51275a925d34c428cd5f4888c2ac60, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  inverseSpaceTimeContinuum: 1

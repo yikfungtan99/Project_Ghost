@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303363456978005401}
   m_LocalRotation: {x: -1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.304, y: 0.428, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1970429939666082963}
@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2618323481540580113}
   - component: {fileID: 2732268959368789291}
   - component: {fileID: 690449684709056813}
+  - component: {fileID: 272347219}
   m_Layer: 0
   m_Name: s_player
   m_TagString: Untagged
@@ -133,6 +134,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &272347219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606080081073801692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0a45a585f10fd4eb495745a3c8cc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2875503981243091210
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +358,9 @@ MonoBehaviour:
   lighterOn: 0
   WarningLeft: {fileID: 0}
   WarningRight: {fileID: 0}
+  curHidable: {fileID: 0}
+  curRoom: {fileID: 0}
+  warningTime: 3
 --- !u!114 &8358413775741551711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +379,7 @@ MonoBehaviour:
   haveWayPoint: 0
   moveSpeed: 3
   sprintMouseDelay: 0.45
-  sprintSpeed: 2
+  sprintSpeed: 4
   stamina: 1
 --- !u!114 &8548607295132865385
 MonoBehaviour:
@@ -379,6 +395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
   inventoryOn: 0
+  firstTime: 0
+  hand: {fileID: 0}
 --- !u!114 &2469783364425805422
 MonoBehaviour:
   m_ObjectHideFlags: 0
