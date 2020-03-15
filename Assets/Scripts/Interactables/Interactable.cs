@@ -49,6 +49,14 @@ public class Interactable : MonoBehaviour
             
 
         }
+
+        if (GetComponent<pocTrigger>())
+        {
+
+            GetComponent<pocTrigger>().ActivateTrigger();
+
+        }
+
     }
 
     public virtual void UpdateCursor()

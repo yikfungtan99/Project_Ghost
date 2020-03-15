@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class pocTrigger : MonoBehaviour
 {
+    public GameObject roomTrigger;
+
     public void ActivateTrigger()
     {
-
-        GameObject.Find("Enemy").GetComponent<MainGhost>().enabled = true;
-
+        roomTrigger.GetComponent<Trigger>().ChanceToTeleportGhost(true, true);
     }
 }

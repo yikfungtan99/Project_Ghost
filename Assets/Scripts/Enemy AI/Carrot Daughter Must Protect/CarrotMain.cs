@@ -7,7 +7,7 @@ using TMPro;
 
 public class CarrotMain : MonoBehaviour
 {
-
+    private GameManager gm;
     public float patrolSpeed = 1;
     public float chaseSpeed = 3;
     public Transform[] patrolSpots = new Transform[2];
@@ -60,7 +60,9 @@ public class CarrotMain : MonoBehaviour
 
         vanishChance = Random.Range(0, 2);
 
-        Debug.Log(vanishChance);
+        gm = GameManager.Instance;
+
+        //Debug.Log(vanishChance);
     }
 
     // Update is called once per frame
@@ -282,6 +284,7 @@ public class CarrotMain : MonoBehaviour
         {
             isCalled = true;
             transform.position = new Vector3(ghostMan.GetComponent<GhostManager>().currentDoor.GetChild(0).position.x, ghostMan.GetComponent<GhostManager>().currentDoor.GetChild(0).position.y, 0);
+
             StartCoroutine(stopMoveDelay());
         }
 

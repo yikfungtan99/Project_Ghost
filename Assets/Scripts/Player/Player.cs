@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
 
     public RoomChecker curRoom;
 
+    public float warningTime = 3f;
+
     private void Awake()
     {
         gm = GameManager.Instance;
@@ -68,9 +70,4 @@ public class Player : MonoBehaviour
 
     }//End Update
 
-
-
-   
-
-    
 }

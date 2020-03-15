@@ -29,36 +29,41 @@ public class Trigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        ChanceToTeleportGhost(col);
+
+        if(col.gameObject == gm.playerObject)
+        {
+            ChanceToTeleportGhost(false, false);
+        }
+       
     }
 
-    private void ChanceToTeleportGhost(Collider2D collider)
+    public void ChanceToTeleportGhost(bool ignoreDisable, bool hundredPercent)
     {
-        if (collider.gameObject == gm.playerObject)
+
+        if (!isDisabled || ignoreDisable)
         {
-            if (!isDisabled)
-            {
-                gm.ghostManager.currentMirror = transform;
-                Debug.Log("Whoosh! You walked past the spot!");
+
+            gm.ghostManager.currentMirror = transform;
+            Debug.Log("Whoosh! You walked past the spot!");
 
              
-                    if (!ghostTeleporting)
-                    {
-                        StartCoroutine(CountDownTrigger(countDownTime));
-                        Warning();
+                if (!ghostTeleporting)
+                {
+                    StartCoroutine(CountDownTrigger(countDownTime, hundredPercent));
+                        
 
-                    }
-                    else
-                    {
-                        Debug.Log("Ghost is already teleporting!");
-                    }
+                }
+                else
+                {
+                    Debug.Log("Ghost is already teleporting!");
+                }
 
-            }
-            else
-            {
-                Debug.Log("Spot disable");
-            }
         }
+        else
+        {
+            Debug.Log("Spot disable");
+        }
+
 
     }
 
@@ -76,9 +81,20 @@ public class Trigger : MonoBehaviour
             Debug.Log("RIGHT!");
             gm.playerObject.GetComponent<Player>().WarningRight.SetActive(true);
         }
+
+        StartCoroutine(WarningDisable());
     }
 
-    IEnumerator CountDownTrigger(int countDownTime)
+    IEnumerator WarningDisable()
+    {
+        yield return new WaitForSeconds(2);
+        gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
+        gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
+
+    }
+
+
+    IEnumerator CountDownTrigger(int countDownTime, bool hundredPercent)
     {
         ghostTeleporting = true;
 
@@ -87,32 +103,24 @@ public class Trigger : MonoBehaviour
             Debug.Log("Warning! Ghost will teleport to the ROOM in " + i + " second(s)!");
             yield return new WaitForSeconds(1);
         }
-        if(!isDisabled)
+
+        gm.ghostManager.currentDoor = door[doorNumber].transform;
+
+        if (chance == Random.Range(0,2) || hundredPercent)
         {
-            Debug.Log("FUCKING HELL");
-            gm.playerObject.GetComponent<Player>().WarningLeft.SetActive(false);
-            gm.playerObject.GetComponent<Player>().WarningRight.SetActive(false);
-            gm.ghostManager.currentDoor = door[doorNumber].transform;
-            Debug.Log("1");
 
-            if (chance == Random.Range(0,2))
-            {
+            gm.carrotMain.TeleportTrigger();
+            Warning();
 
-                gm.carrotMain.TeleportTrigger();
-                
-
-            }
-            else
-            {
-
-                Debug.Log("No Tele");
-                
-
-            }
-
-            
-            Debug.Log("2");
         }
+        else
+        {
+
+            Debug.Log("No Tele");
+                
+
+        }
+
         
         isDisabled = true;
         ghostTeleporting = false;
