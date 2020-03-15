@@ -42,6 +42,11 @@ public class CarrotMain : MonoBehaviour
     public GhostManager ghostMan;
     RaycastHit2D hitInfo;
     RaycastHit2D LightSeeker;
+
+    public RoomChecker curRoom;
+    public bool stopMove = false;
+
+    public bool isCalled = false;
     
     // Start is called before the first frame update
     void Start()
@@ -55,6 +60,41 @@ public class CarrotMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (curRoom)
+        {
+            if (!isCalled)
+            {
+                if (!curRoom.playerInRoom && !canChangeRoom)
+                {
+
+                    stopMove = true;
+
+                }
+                else
+                {
+
+                    stopMove = false;
+
+                }
+            }
+            else
+            {
+
+                stopMove = false;
+
+            }
+            
+
+        }
+        else
+        {
+
+            Debug.LogError("Ghost Current Room not Found");
+
+        }
+
+
         if (debug1 != null)
         {
 
@@ -227,7 +267,9 @@ public class CarrotMain : MonoBehaviour
 
         if (anima.GetBool("isPatrol") == true || anima.GetBool("isLight") == true)
         {
+            isCalled = true;
             transform.position = new Vector3(ghostMan.GetComponent<GhostManager>().currentDoor.GetChild(0).position.x, ghostMan.GetComponent<GhostManager>().currentDoor.GetChild(0).position.y, 0);
+            StartCoroutine(stopMoveDelay());
         }
 
     }
@@ -236,7 +278,9 @@ public class CarrotMain : MonoBehaviour
     {
         if (anima.GetBool("isPatrol") == true || anima.GetBool("isLight") == true)
         {
+            isCalled = true;
             transform.position = ghostMan.GetComponent<GhostManager>().currentMirror.position;
+            StartCoroutine(stopMoveDelay());
         }
 
     }
@@ -251,6 +295,12 @@ public class CarrotMain : MonoBehaviour
 
         }
 
+    }
+
+    IEnumerator stopMoveDelay()
+    {
+        yield return new WaitForSeconds(3);
+        isCalled = false;
     }
 
 }

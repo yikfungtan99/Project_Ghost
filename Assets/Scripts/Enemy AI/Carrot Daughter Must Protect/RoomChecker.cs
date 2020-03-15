@@ -8,10 +8,38 @@ public class RoomChecker : MonoBehaviour
     public Transform[] patrolSpots;
     public GameObject trigger;
 
+    public bool ghostInRoom = false;
+    public bool playerInRoom = false;
+
+    public Transform staySpots;
+
     private void Awake()
     {
 
         mainGhost = GameManager.Instance.carrotMain;
+
+    }
+
+    private void Update()
+    {
+
+        if (trigger)
+        {
+
+            if(ghostInRoom && playerInRoom)
+            {
+
+                trigger.GetComponent<Trigger>().canAutoRecover = false;
+
+            }
+            else
+            {
+
+                trigger.GetComponent<Trigger>().canAutoRecover = true;
+
+            }
+
+        }
 
     }
 
@@ -20,7 +48,10 @@ public class RoomChecker : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            if(trigger != null)
+
+            mainGhost.curRoom = this;
+
+            if (trigger != null)
             {
                 trigger.GetComponent<Trigger>().isDisabled = true;
             }
@@ -54,6 +85,13 @@ public class RoomChecker : MonoBehaviour
 
         }
 
+        if (collision.CompareTag("Player"))
+        {
+
+            GameManager.Instance.player.curRoom = this;
+
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -61,6 +99,9 @@ public class RoomChecker : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
+
+            ghostInRoom = false;
+
             if (trigger)
             {
                 trigger.GetComponent<Trigger>().isDisabled = false;
@@ -72,41 +113,35 @@ public class RoomChecker : MonoBehaviour
 
             }
 
+        }
+
+        if (collision.CompareTag("Player"))
+        {
+
+            playerInRoom = false;
 
         }
 
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
 
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
+        if (collision.CompareTag("Enemy"))
+        {
 
-    //    Debug.Log("Something has entered");
-
-    //    if (collision.CompareTag("Enemy"))
-    //    {
-    //        Debug.Log("Detected Ghost");
-    //        for (int i = 0; i < patrolSpots.Length; i++)
-    //        {
-    //            if (mainGhost)
-    //            {
-    //                if (i < 2)
-    //                {
-    //                    mainGhost.patrolSpots[i] = patrolSpots[i];
-    //                }
-
-    //            }
-    //            else
-    //            {
-
-    //                Debug.Log("Can't Find MainGhost");
-
-    //            }
+            ghostInRoom = true;
 
 
-    //        }
+        }
 
-    //    }
+        if (collision.CompareTag("Player"))
+        {
 
-    //}
+            playerInRoom = true;
+           
+
+        }
+
+    }
 }

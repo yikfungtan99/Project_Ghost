@@ -194,6 +194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpots: []
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!4 &30394250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7500036770378417622, guid: 7cba80a17561b164abf5651f9fe10b04,
@@ -1193,7 +1196,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114386467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8880,6 +8883,9 @@ MonoBehaviour:
   - {fileID: 83544038}
   - {fileID: 888020}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!60 &389213311 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
@@ -10672,6 +10678,9 @@ MonoBehaviour:
   - {fileID: 1026952893}
   - {fileID: 784743760}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!60 &518007252 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
@@ -11084,6 +11093,9 @@ MonoBehaviour:
   - {fileID: 1568633146}
   - {fileID: 1175120887}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!1 &553219093
 GameObject:
   m_ObjectHideFlags: 0
@@ -15496,7 +15508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860753627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.08, y: -4.25, z: -105.39411}
+  m_LocalPosition: {x: -9.08, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035613271}
@@ -15546,6 +15558,9 @@ MonoBehaviour:
   door:
   - {fileID: 198423586}
   doorNumber: 0
+  cdTime: 1
+  disableAutoRecover: 0
+  canAutoRecover: 0
 --- !u!1 &874462416
 GameObject:
   m_ObjectHideFlags: 0
@@ -16547,6 +16562,9 @@ MonoBehaviour:
   door:
   - {fileID: 2002902112}
   doorNumber: 0
+  cdTime: 1
+  disableAutoRecover: 0
+  canAutoRecover: 0
 --- !u!4 &939384226
 Transform:
   m_ObjectHideFlags: 0
@@ -16555,7 +16573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939384223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.83, y: -3.6, z: -105.39411}
+  m_LocalPosition: {x: -4.83, y: -3.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 547780641}
@@ -22332,6 +22350,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpots: []
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!1 &1040313836
 GameObject:
   m_ObjectHideFlags: 0
@@ -22557,6 +22578,9 @@ MonoBehaviour:
   - {fileID: 214535201}
   - {fileID: 1188476067}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!60 &1057613422 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
@@ -23270,6 +23294,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1116143823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116143824}
+  m_Layer: 0
+  m_Name: StaySpots
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1116143824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116143823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.699999, y: -2.1599998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1653622321}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116595875
 GameObject:
   m_ObjectHideFlags: 3
@@ -24500,7 +24554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1169387287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26353,7 +26407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1276526045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26881,7 +26935,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324582569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.99, y: -3.24, z: -105.39411}
+  m_LocalPosition: {x: -9.99, y: -3.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1772704043}
@@ -26931,6 +26985,9 @@ MonoBehaviour:
   door:
   - {fileID: 885797407}
   doorNumber: 0
+  cdTime: 1
+  disableAutoRecover: 0
+  canAutoRecover: 0
 --- !u!1 &1325185025
 GameObject:
   m_ObjectHideFlags: 0
@@ -27275,6 +27332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpots: []
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!1 &1339603357
 GameObject:
   m_ObjectHideFlags: 0
@@ -27744,7 +27804,7 @@ PrefabInstance:
     - target: {fileID: 2988962845036739218, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be689a28e32874fa113488ab0dab12, type: 3}
@@ -28015,6 +28075,9 @@ MonoBehaviour:
   - {fileID: 1294421368}
   - {fileID: 1286956941}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!60 &1404950562 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
@@ -28894,6 +28957,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpots: []
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!4 &1484823936 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7500036770378417622, guid: 7cba80a17561b164abf5651f9fe10b04,
@@ -29716,7 +29782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564489420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6, y: -4.25, z: -105.39411}
+  m_LocalPosition: {x: 0.6, y: -4.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035613271}
@@ -29766,6 +29832,9 @@ MonoBehaviour:
   door:
   - {fileID: 2032106849}
   doorNumber: 0
+  cdTime: 1
+  disableAutoRecover: 0
+  canAutoRecover: 0
 --- !u!1 &1566039815
 GameObject:
   m_ObjectHideFlags: 0
@@ -31256,6 +31325,9 @@ MonoBehaviour:
   - {fileID: 1709217009}
   - {fileID: 1064472476}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!60 &1645378000 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
@@ -31667,6 +31739,9 @@ MonoBehaviour:
   - {fileID: 1506673536}
   - {fileID: 1595657434}
   trigger: {fileID: 1802967930}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 1116143824}
 --- !u!1 &1658497528
 GameObject:
   m_ObjectHideFlags: 0
@@ -36612,6 +36687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cursed mirror
       objectReference: {fileID: 0}
+    - target: {fileID: 1254838575500850623, guid: f6cbc8dc500d14f4db51bda5aa17643c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cbc8dc500d14f4db51bda5aa17643c, type: 3}
 --- !u!1 &1666924657
@@ -37319,7 +37399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7233353, y: -31.263565, z: -10}
+  m_LocalPosition: {x: 35.81, y: -60.430004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38840,6 +38920,9 @@ MonoBehaviour:
   - {fileID: 386974898}
   - {fileID: 87162743}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!1001 &1793665821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39016,6 +39099,9 @@ MonoBehaviour:
   door:
   - {fileID: 1678102115}
   doorNumber: 0
+  cdTime: 1
+  disableAutoRecover: 0
+  canAutoRecover: 0
 --- !u!4 &1802967933
 Transform:
   m_ObjectHideFlags: 0
@@ -39024,7 +39110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802967930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.46, y: -2.86, z: -105.39411}
+  m_LocalPosition: {x: -7.46, y: -2.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1653622321}
@@ -40582,7 +40668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948933250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.76, y: -3.76, z: -105.39411}
+  m_LocalPosition: {x: -6.2, y: -3.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2092711538}
@@ -40632,6 +40718,9 @@ MonoBehaviour:
   door:
   - {fileID: 836528737}
   doorNumber: 0
+  cdTime: 1
+  disableAutoRecover: 0
+  canAutoRecover: 1
 --- !u!1 &1960934677
 GameObject:
   m_ObjectHideFlags: 3
@@ -47018,6 +47107,9 @@ MonoBehaviour:
   - {fileID: 1969707018}
   - {fileID: 378340748}
   trigger: {fileID: 0}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!60 &2072295370 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
@@ -47455,8 +47547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea39bffada2cdf64dac82236f94164ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpots: []
-  trigger: {fileID: 0}
+  patrolSpots:
+  - {fileID: 974954769}
+  - {fileID: 479566016}
+  trigger: {fileID: 1948933250}
+  ghostInRoom: 0
+  playerInRoom: 0
+  staySpots: {fileID: 0}
 --- !u!1 &2092850542
 GameObject:
   m_ObjectHideFlags: 0
@@ -51317,7 +51414,7 @@ PrefabInstance:
     - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
