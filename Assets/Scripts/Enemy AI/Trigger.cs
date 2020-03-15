@@ -103,26 +103,24 @@ public class Trigger : MonoBehaviour
             Debug.Log("Warning! Ghost will teleport to the ROOM in " + i + " second(s)!");
             yield return new WaitForSeconds(1);
         }
-        if(!isDisabled)
+
+        gm.ghostManager.currentDoor = door[doorNumber].transform;
+
+        if (chance == Random.Range(0,2) || hundredPercent)
         {
 
-            gm.ghostManager.currentDoor = door[doorNumber].transform;
+            gm.carrotMain.TeleportTrigger();
+            Warning();
 
-            if (chance == Random.Range(0,2) || hundredPercent)
-            {
+        }
+        else
+        {
 
-                gm.carrotMain.TeleportTrigger();
-                Warning();
-
-            }
-            else
-            {
-
-                Debug.Log("No Tele");
+            Debug.Log("No Tele");
                 
 
-            }
         }
+
         
         isDisabled = true;
         ghostTeleporting = false;
