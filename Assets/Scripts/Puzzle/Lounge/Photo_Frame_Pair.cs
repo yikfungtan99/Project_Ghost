@@ -35,6 +35,8 @@ public class Photo_Frame_Pair : Lounge_Pairs
             //! This checks if player has the correct item in the hold panel
             if (currentHeldItem.GetComponent<Item_Inventory>().itemName == pm.photoframeRequiredName)
             {
+                UpdateAudio(1);
+
                 Destroy(currentHeldItem);
 
                 spriteRenderer.enabled = true;

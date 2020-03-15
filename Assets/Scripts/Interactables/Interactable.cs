@@ -126,6 +126,11 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    public virtual void UpdateAudio(int index)
+    {
+
+    }
+
     public virtual void Update()
     {
         for (int i = 0; i < transform.childCount; i++)

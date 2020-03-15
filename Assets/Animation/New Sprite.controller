@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
-  speed: 5
+  chaseSpeed: 0
 --- !u!1102 &6621510826272263153
 AnimatorState:
   serializedVersion: 5

@@ -29,9 +29,20 @@ public class Safe_Bowl : Dining_Bowl
 
             gm.inventory.ObtainItem("zinc key");
 
+            UpdateAudio(1);
             pm.UpdatePuzzleCompleteMonologue(1, "");
 
             gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToHall4, false);
+        }
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.PlayAudio("place down item");
+                break;
         }
     }
 }

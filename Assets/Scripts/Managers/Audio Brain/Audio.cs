@@ -8,6 +8,7 @@ public class Audio
     public string name;
 
     //! Description of what the audioclip is being used for
+    [TextArea(0, 3)]
     public string description;
 
     //! Storage for an audioclip
@@ -25,11 +26,9 @@ public class Audio
     public float defFadeInSeconds;
     public float defFadeOutSeconds;
 
-    [HideInInspector]
     public bool isPlaying;
     [HideInInspector]
     public bool isFading;
-    [HideInInspector]
     public bool isPaused;
     [HideInInspector]
     public bool triggerOnce;

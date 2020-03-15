@@ -52,6 +52,7 @@ public class Mirror_Interactable : Interactable
 
             if (heldItem.GetComponent<Item_Inventory>().itemName == "red cloth")
             {
+                UpdateAudio(1);
                 isDisabled = true;
 
                 Destroy(heldItem);
@@ -135,6 +136,16 @@ public class Mirror_Interactable : Interactable
         {
             Debug.Log("Carrot is disabled");
             return;
+        }
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.ForcePlayAudio("use red cloth");
+                break;
         }
     }
 }

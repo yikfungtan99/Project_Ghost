@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
         }
 
         //! Retain audio manager upon loading new scene
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         //! Assign audio variables to a new AudioSource component for each registered audioclip
         foreach (Audio a in audioList)
@@ -47,6 +47,7 @@ public class AudioManager : MonoBehaviour
             a.isFading = false;
             a.isPaused = false;
             a.triggerOnce = false;
+            ForceStopAudio(a.name);
         }
     }
 
@@ -70,15 +71,18 @@ public class AudioManager : MonoBehaviour
             }
 
             //! barrier to update all other variables
-            if (!adjustIn_GameAudioThruInspector)
+            if (adjustIn_GameAudioThruInspector)
             {
-                break;
-            }
+                if(a.isFading)
+                {
+                    continue;
+                }
 
-            a.audioSource.clip = a.audioClip;
-            a.audioSource.volume = a.volume;
-            a.audioSource.pitch = a.pitch;
-            a.audioSource.loop = a.loop;
+                a.audioSource.clip = a.audioClip;
+                a.audioSource.volume = a.volume;
+                a.audioSource.pitch = a.pitch;
+                a.audioSource.loop = a.loop;
+            }
         }
     }
 
@@ -140,6 +144,43 @@ public class AudioManager : MonoBehaviour
             a.isPaused = false;
         }
         a.isPlaying = false;
+        a.audioSource.Stop();
+    }
+
+    public void ForcePlayAudio(string searchName)
+    {
+        //! Searching for equivalent audio name to identify and play
+        Audio a = Array.Find(audioList, audio => audio.name == searchName);
+
+        //! In case audio name cannot be identified
+        if (a == null)
+        {
+            Debug.LogWarning("Audio: " + searchName + " cannot be found to Play!");
+            return;
+        }
+
+        Debug.Log("Now Playing Audio: " + searchName + "!");
+        a.triggerOnce = false;
+        a.isPlaying = true;
+        a.audioSource.volume = 1f;
+        a.audioSource.Play();
+    }
+
+    public void ForceStopAudio(string searchName)
+    {
+        //! Searching for equivalent audio name to identify and play
+        Audio a = Array.Find(audioList, audio => audio.name == searchName);
+
+        //! In case audio name cannot be identified
+        if (a == null)
+        {
+            Debug.LogWarning("Audio: " + searchName + " cannot be found to Stop!");
+            return;
+        }
+
+        a.isPaused = false;
+        a.isPlaying = false;
+        a.audioSource.UnPause();
         a.audioSource.Stop();
     }
 

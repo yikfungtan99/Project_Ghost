@@ -153,20 +153,6 @@ public class Door : Interactable
 
     }
 
-    private void Update()
-    {
-        /*
-        if (isClosed)
-        {
-            GetComponent<BoxCollider2D>().enabled = true;
-        }
-        else
-        {
-            GetComponent<BoxCollider2D>().enabled = false;
-        }
-        */
-    }
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         //! For left right doors
@@ -221,6 +207,7 @@ public class Door : Interactable
         }
         else if(isClosed)
         {
+            UpdateAudio(1);
             Open();
         }
     }
@@ -295,6 +282,16 @@ public class Door : Interactable
                 break;
             case 2:
                 gm.monologueManager.DisplaySentence(23);
+                break;
+        }
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.ForcePlayAudio("normal door");
                 break;
         }
     }

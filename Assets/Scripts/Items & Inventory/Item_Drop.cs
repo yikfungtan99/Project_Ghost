@@ -32,6 +32,7 @@ public class Item_Drop : Interactable
         inventory.GetComponent<Inventory>().RandomizePosition();
 
         UpdateMonologue(-1, itemName);
+        UpdateAudio(1);
 
         Destroy(gameObject);
     }
@@ -43,6 +44,16 @@ public class Item_Drop : Interactable
             gm.monologueManager.DisplayPickUpSentence(itemName, false);
 
             return;
+        }
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.ForcePlayAudio("obtain item");
+                break;
         }
     }
 }

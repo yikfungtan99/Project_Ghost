@@ -102,6 +102,8 @@ public class Kitchen_Steamer : Interactable
             {
                 Destroy(currentHeldItem);
 
+                UpdateAudio(1);
+
                 UpdateMonologue(3, "");
 
                 pm.sequenceCount += 1;
@@ -122,6 +124,7 @@ public class Kitchen_Steamer : Interactable
     IEnumerator MakingKuihCountDown()
     {
         pm.disableKitchenPuzzle = true;
+        UpdateAudio(2);
 
         for (int i = pm.makingKuihCountDownTime; i > 0; i--)
         {
@@ -130,6 +133,7 @@ public class Kitchen_Steamer : Interactable
         }
         Debug.Log("Ding! Ding! Something smells good.");
 
+        UpdateAudio(3);
         UpdateMonologue(5, "");
 
         pm.disableKitchenPuzzle = false;
@@ -154,6 +158,22 @@ public class Kitchen_Steamer : Interactable
                 break;
             case 5:
                 gm.monologueManager.DisplaySentence(21);
+                break;
+        }
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.PlayAudio("insert ingredient");
+                break;
+            case 2:
+                gm.audioManager.FadeInAudio("steamer sound", 0);
+                break;
+            case 3:
+                gm.audioManager.FadeOutAudio("steamer sound", 0);
                 break;
         }
     }

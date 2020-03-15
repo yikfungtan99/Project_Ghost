@@ -28,7 +28,8 @@ public class Hidable : Interactable
 
     public void Hide()
     {
-
+        UpdateAudio(1);
+        UpdateAudio(2);
         initY = player.transform.position.y;
         player.GetComponent<Player_Movement>().enabled = false;
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
@@ -43,7 +44,8 @@ public class Hidable : Interactable
 
     public void Unhide()
     {
-
+        UpdateAudio(3);
+        UpdateAudio(2);
         Debug.Log(initY);
 
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
@@ -56,5 +58,21 @@ public class Hidable : Interactable
         gm.GlobalLight.intensity = initDark;
 
         transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.FadeInAudio("heart beating", 0f);
+                break;
+            case 2:
+                gm.audioManager.PlayAudio("hiding door");
+                break;
+            case 3:
+                gm.audioManager.ForceStopAudio("heart beating");
+                break;
+        }
     }
 }

@@ -43,6 +43,7 @@ public class Player_Lighter : MonoBehaviour
 
                     if (!lighterOn)
                     {
+                        UpdateAudio(1);
                         TurnLighterOn(triesCounter);
                     }
                 }
@@ -78,6 +79,7 @@ public class Player_Lighter : MonoBehaviour
 
         if(hit == rng)
         {
+            UpdateAudio(2);
             lighterOn = true;
             if (!gm.tutorialComplete)
             {
@@ -104,6 +106,19 @@ public class Player_Lighter : MonoBehaviour
         if(!lighterOn)
         {
             playMonologueOnce = false;
+        }
+    }
+
+    void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.PlayAudio("lighter flick single");
+                break;
+            case 2:
+                gm.audioManager.PlayAudio("lighter light up");
+                break;
         }
     }
 }

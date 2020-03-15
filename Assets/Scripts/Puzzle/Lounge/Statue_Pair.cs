@@ -36,6 +36,8 @@ public class Statue_Pair : Lounge_Pairs
             //! This checks if player has the correct item in the hold panel
             if(currentHeldItem.GetComponent<Item_Inventory>().itemName == pm.loungeStatueRequiredName)
             {
+                UpdateAudio(1);
+
                 Destroy(currentHeldItem);
 
                 spriteRenderer.enabled = true;

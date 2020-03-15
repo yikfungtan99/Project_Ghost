@@ -7842,6 +7842,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269100807}
   m_CullTransparentMesh: 0
+--- !u!1 &272347215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2606080081073801692, guid: dcfdbc4d0098af14d80a097a056253a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7875383876801890628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &272347219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272347215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0a45a585f10fd4eb495745a3c8cc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &282038641 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1254838575500850620, guid: f6cbc8dc500d14f4db51bda5aa17643c,
@@ -27904,7 +27922,7 @@ PrefabInstance:
     - target: {fileID: 2988962845036739218, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be689a28e32874fa113488ab0dab12, type: 3}
@@ -36885,7 +36903,7 @@ PrefabInstance:
     - target: {fileID: 1254838575500850623, guid: f6cbc8dc500d14f4db51bda5aa17643c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cbc8dc500d14f4db51bda5aa17643c, type: 3}
@@ -39188,23 +39206,23 @@ PrefabInstance:
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.size
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.data[1].name
-      value: Samiu
+      value: foot step 1
       objectReference: {fileID: 0}
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.data[1].description
-      value: test for array
+      value: Player footstep sequence
       objectReference: {fileID: 0}
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.data[1].audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: e7a2a70578432ea42b854d4f5668b66f, type: 3}
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.data[1].volume
@@ -39218,7 +39236,7 @@ PrefabInstance:
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
       propertyPath: audioList.Array.data[0].isPlaying
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
         type: 3}
@@ -39229,6 +39247,641 @@ PrefabInstance:
         type: 3}
       propertyPath: inverseSpaceTimeContinuum
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[2].name
+      value: foot step 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[2].description
+      value: Player footstep sequence
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[2].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fc36a5ac23d5a094099452f3cbd2f09e, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[3].name
+      value: lighter flick single
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[3].description
+      value: when trying to turn on lighter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[3].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 903a730f2fa1bde4286b77ef94e0c8ce, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[4].name
+      value: lighter light up
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[4].description
+      value: played when player lighter lights up (to produce light)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[4].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1e20aa5496e9c1a4fa296cbd1e372b46, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].name
+      value: heart beating
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].description
+      value: played when player hides in hiding spot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: faa255aa392c1aa499f0520a667a6616, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[5].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].name
+      value: hiding door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].description
+      value: played when player hides or unhides from a hiding spot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a636ec4e75129b24b9ba5cfd28685a9b, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[6].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: adjustIn_GameAudioThruInspector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].name
+      value: open bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].description
+      value: played when inventory is opened
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c2a34add91ef2b42b7682186b57597c, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[7].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].name
+      value: close bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].description
+      value: played when inventory is closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[8].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].name
+      value: obtain item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].description
+      value: played when player obtains item into inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 625520e12892eea4098799f65f5917cb, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[9].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].name
+      value: use red cloth
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].description
+      value: played when a mirror is covered
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a4e123bfcdc61241888bcfa1b7f7394, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[10].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].name
+      value: place down item
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].description
+      value: played when an item is placed into the world by the player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 35c37339c2dfb6645980edfaf619107a, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[11].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].name
+      value: insert ingredient
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].description
+      value: played when ingredient is put in kitchen steamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 448293c706416a3428ca8c4833547d07, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[12].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].name
+      value: steamer sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].description
+      value: played when all ingredients are inside the steamer & is making kuih
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14887ac96ce9d214fa91f34b597c73fd, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].defFadeInSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].defFadeOutSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].name
+      value: normal door
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].description
+      value: played when player goes to another room via door that is not locked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb51275a925d34c428cd5f4888c2ac60, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].defFadeInSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].defFadeOutSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].name
+      value: close bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].description
+      value: played when inventory is closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[15].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].name
+      value: close bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].description
+      value: played when inventory is closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[16].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].name
+      value: close bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].description
+      value: played when inventory is closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[17].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].name
+      value: close bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].description
+      value: played when inventory is closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[18].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].name
+      value: close bag
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].description
+      value: played when inventory is closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b1075f25c523fc9459af3d6f47cfe7a8, type: 3}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].defFadeInSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[19].defFadeOutSeconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[13].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[0].defFadeInSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[0].defFadeOutSeconds
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3351820602699550239, guid: fafa1b1a51b9b5f44978a70317693495,
+        type: 3}
+      propertyPath: audioList.Array.data[14].loop
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafa1b1a51b9b5f44978a70317693495, type: 3}

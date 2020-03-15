@@ -48,16 +48,31 @@ public class Player_Inventory : MonoBehaviour
     {
         if (inventoryOn)
         {
+            UpdateAudio(2);
             inventoryOn = false;
             gm.mouseControl.exitCursor();
         }
         else
         {
+            UpdateAudio(1);
             inventoryOn = true;
             gm.mouseControl.changeCursor("item");
         }
 
         inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
 
+    }
+
+    void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.PlayAudio("open bag");
+                break;
+            case 2:
+                gm.audioManager.PlayAudio("close bag");
+                break;
+        }
     }
 }

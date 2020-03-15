@@ -17,8 +17,10 @@ public class Lounge_Pairs : Interactable
         pm.rewardObject.SetActive(false);
     }
     
-    void Update()
+    public override void Update()
     {
+        base.Update();
+
         if (pm.isLoungePuzzleClear)
         {
             return;
@@ -69,5 +71,15 @@ public class Lounge_Pairs : Interactable
         pm.rewardObject.SetActive(true);
 
         gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, false);
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.PlayAudio("place down item");
+                break;
+        }
     }
 }
