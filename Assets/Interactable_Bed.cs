@@ -27,6 +27,7 @@ public class Interactable_Bed : Interactable
         base.Interact();
 
         TutorialFadeInOut();
+        gm.playerCheckpointPosition = new Vector2(transform.position.x, gm.player.transform.position.y);
 
     }
 
@@ -35,8 +36,6 @@ public class Interactable_Bed : Interactable
 
         if (ableToSleep)
         {
-            
-
             for (int i = 0; i < TriggersToSet.Length; i++)
             {
 

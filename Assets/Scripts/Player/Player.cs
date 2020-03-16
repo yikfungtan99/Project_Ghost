@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     [HideInInspector]
     public GameManager gm;
-    public Transform respawnPoint;
     public Inventory iv;
     public bool hidden;
     public bool playerFainted;
@@ -24,6 +23,8 @@ public class Player : MonoBehaviour
     public RoomChecker curRoom;
 
     public float warningTime = 3f;
+
+    public bool isDead = false;
 
     private void Awake()
     {
@@ -69,5 +70,19 @@ public class Player : MonoBehaviour
         }
 
     }//End Update
+
+    public void Death()
+    {
+
+        isDead = true;
+        gameObject.SetActive(false);
+
+        int child = GameObject.Find("DeathCanvas").transform.childCount;
+        for (int i = 0; i < child; i++)
+        {
+            GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(true);
+        }
+
+    }
 
 }

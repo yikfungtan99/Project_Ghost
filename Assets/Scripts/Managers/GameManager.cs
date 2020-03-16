@@ -103,6 +103,9 @@ public class GameManager : MonoBehaviour
     [Header("Global Game Variables")]
     public bool gamePaused = false;
 
+    [Header("Save")]
+    public Vector2 playerCheckpointPosition;
+
     private void Awake()
     {
         //! first check if got singleton duplicate (purge all clones)
