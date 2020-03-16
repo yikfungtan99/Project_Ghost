@@ -10,6 +10,8 @@ public class Player_Inventory : MonoBehaviour
     public bool firstTime = false;
     public GameObject hand;
 
+    public float bagDelayTime = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,18 +50,31 @@ public class Player_Inventory : MonoBehaviour
     {
         if (inventoryOn)
         {
+            
             UpdateAudio(2);
             inventoryOn = false;
             gm.mouseControl.exitCursor();
+            inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
+
         }
         else
         {
             UpdateAudio(1);
-            inventoryOn = true;
             gm.mouseControl.changeCursor("item");
-        }
+            gm.playerObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Bag");
+            
+            StartCoroutine(BagDelay(bagDelayTime));
 
-        inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
+
+        }
+    }
+
+    IEnumerator BagDelay(float delay)
+    {
+        inventoryOn = true;
+        yield return new WaitForSeconds(delay);
+        
+        inventory.transform.GetChild(0).gameObject.SetActive(true);
 
     }
 
