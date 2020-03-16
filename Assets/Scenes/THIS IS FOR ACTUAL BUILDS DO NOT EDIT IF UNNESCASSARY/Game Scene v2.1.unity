@@ -30317,8 +30317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea39bffada2cdf64dac82236f94164ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpots: []
-  trigger: {fileID: 0}
+  patrolSpots:
+  - {fileID: 1526361795}
+  - {fileID: 146658380}
+  trigger: {fileID: 860753627}
   ghostInRoom: 0
   playerInRoom: 0
   staySpots: {fileID: 0}

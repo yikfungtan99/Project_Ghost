@@ -6,12 +6,14 @@ public class Kitchen_Steamer : Interactable
 {
     protected PuzzleManager pm;
     protected GameObject currentHeldItem;
-    
+    private bool triggerOnce = false;
+
     public override void Awake()
     {
         base.Awake();
 
         pm = gm.puzzleManager;
+        triggerOnce = false;
     }
     
     public override void Update()
@@ -108,8 +110,9 @@ public class Kitchen_Steamer : Interactable
 
                 pm.sequenceCount += 1;
 
-                if (GetComponent<pocTrigger>())
+                if (GetComponent<pocTrigger>() && !triggerOnce)
                 {
+                    triggerOnce = true;
                     GetComponent<pocTrigger>().ActivateTrigger();
                 }
             }
