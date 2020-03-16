@@ -30,6 +30,9 @@ EditorBuildSettings:
       Scenev2.unity
     guid: 83bb49359bea59b4495041575abe5979
   - enabled: 1
+    path: Assets/Scenes/MainMenuIGuess.unity
+    guid: eb22bf1934f6eee46a2dac00a19447eb
+  - enabled: 1
     path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Tutorial
       Scene.unity
     guid: 7f016b93bf900224099c9b6856939a9d
