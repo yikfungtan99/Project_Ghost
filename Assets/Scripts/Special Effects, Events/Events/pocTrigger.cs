@@ -8,6 +8,7 @@ public class pocTrigger : MonoBehaviour
 
     public void ActivateTrigger()
     {
+        
         GameManager.Instance.audioManager.PlayAudio("ghost trigger");
         roomTrigger.GetComponent<Trigger>().ChanceToTeleportGhost(true, true);
     }

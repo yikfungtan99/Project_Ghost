@@ -49,7 +49,7 @@ public class Trigger : MonoBehaviour
     public void ChanceToTeleportGhost(bool ignoreDisable, bool hundredPercent)
     {
 
-        if (!isDisabled)
+        if (!isDisabled||ignoreDisable==true)
         {
             
 
