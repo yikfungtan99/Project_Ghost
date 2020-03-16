@@ -70,3 +70,11 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: 401b44eab28e7f34197a5ad2123641a3, type: 3}
   - itemName: kuih
     itemSprite: {fileID: 21300000, guid: c4088ecf2b54c58448b7e561ad5868e6, type: 3}
+  - itemName: comb
+    itemSprite: {fileID: 21300000, guid: 1464e936212d2d048877c13d3ee634e1, type: 3}
+  - itemName: empty photo frame
+    itemSprite: {fileID: 21300000, guid: a993b75cf7e57b447a70adf73f282ce7, type: 3}
+  - itemName: lounge statue
+    itemSprite: {fileID: 21300000, guid: 3c2f12f32b959ce4da270cc82a38553d, type: 3}
+  - itemName: housekey
+    itemSprite: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada, type: 3}

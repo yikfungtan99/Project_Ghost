@@ -40,8 +40,9 @@ public class Trigger : MonoBehaviour
     public void ChanceToTeleportGhost(bool ignoreDisable, bool hundredPercent)
     {
 
-        if (!isDisabled || ignoreDisable)
+        if (!isDisabled)
         {
+            UpdateAudio(1);
 
             gm.ghostManager.currentMirror = transform;
             Debug.Log("Whoosh! You walked past the spot!");
@@ -140,5 +141,13 @@ public class Trigger : MonoBehaviour
 
     }
 
-
+    void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.PlayAudio("ghost trigger");
+                break;
+        }
+    }
 }
