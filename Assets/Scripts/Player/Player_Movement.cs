@@ -56,8 +56,6 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(rb.velocity.x);
-
         if(!GameManager.Instance.gamePaused)
         {
             if (pressedButton)
@@ -102,22 +100,7 @@ public class Player_Movement : MonoBehaviour
 
                             if (haveWayPoint)
                             {
-                                //Sprint Volunteering
-                                /* if (!sprint && !sprintOnCooldown)
-                                 {
-                                     if (sprintMouseDelayTimer < sprintMouseDelay)
-                                     {
-
-                                         sprintMouseDelayTimer += Time.fixedDeltaTime;
-
-                                     }
-                                     else
-                                     {
-                                         sprintMouseDelayTimer = 0;
-                                         sprint = true;
-                                     }
-                                 }*/
-
+                           
                                 // contexual running
                                 if (GameObject.FindGameObjectWithTag("Enemy"))
                                 {
@@ -125,6 +108,7 @@ public class Player_Movement : MonoBehaviour
                                     {
                                         staminaRemaining = stamina;
                                         sprint = true;
+
                                     }
 
                                 }
@@ -262,7 +246,12 @@ public class Player_Movement : MonoBehaviour
             {
                 anim.SetBool("Move", false);
             }
+
+            anim.SetBool("Run", sprint);
+
         }
+
+
     }
 
     public void CheckButton()

@@ -7,49 +7,83 @@ public class Tutorial_Triggers : MonoBehaviour
 
     public bool isEnabled = false;
     public bool isCanceler = false;
+    public bool final = false;
+
+    public bool isDisabled = false;
+
+    public bool ready = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isCanceler) {
+        if (!final)
+        {
 
-            if(GameManager.Instance.TutorialNavi.gameObject)
+            if (isCanceler)
             {
 
-                GameManager.Instance.TutorialNavi.gameObject.SetActive(false);
-                GameManager.Instance.playerInventory.firstTime = false;
+                if (GameManager.Instance.TutorialNavi.gameObject)
+                {
+
+                    GameManager.Instance.TutorialNavi.gameObject.SetActive(false);
+                    GameManager.Instance.playerInventory.firstTime = false;
+
+                }
 
             }
+            else
+            {
+                if (isEnabled)
+                {
+                    if (collision.GetComponent<Player>())
+                    {
+                        if (GameManager.Instance.tutorialSleep)
+                        {
 
+                            GameManager.Instance.TutorialGhostTrigger(true);
+
+                            GameManager.Instance.TutorialNavi.gameObject.SetActive(true);
+
+                            GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Hide");
+
+                        }
+                        else
+                        {
+                            GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Door");
+
+                        }
+
+                        isEnabled = false;
+
+                    }
+                }
+            }
+            
+            
         }
         else
         {
-            if (isEnabled)
+
+            if (collision.CompareTag("Enemy"))
             {
-                if (collision.GetComponent<Player>())
+
+                if (ready)
                 {
-                    if (GameManager.Instance.tutorialSleep)
+
+                    if (!GameManager.Instance.player.isDead)
                     {
 
-                        GameManager.Instance.TutorialGhostTrigger(true);
-
-                        GameManager.Instance.TutorialNavi.gameObject.SetActive(true);
-
-                        GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Hide");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
 
                     }
-                    else
-                    {
-                        GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Door");
-
-                    }
-
-                    Destroy(this.gameObject);
-
+                    //play door sound here
+                        
                 }
+
             }
+
         }
-       
-       
+
+
 
     }
 

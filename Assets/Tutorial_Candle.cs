@@ -12,6 +12,7 @@ public class Tutorial_Candle : Interactable
     public Sprite spriteNotLit;
 
     public Interactable_Bed bed;
+    public Tutorial_Triggers readyTrigger;
 
     public override void Interact()
     {
@@ -74,7 +75,8 @@ public class Tutorial_Candle : Interactable
 
                 GetComponent<SpriteRenderer>().sprite = spriteNotLit;
                 transform.GetChild(0).gameObject.SetActive(isLit);
-                StartCoroutine(DisableGhost());
+                readyTrigger.ready = true;
+                //StartCoroutine(DisableGhost());
 
             }
         }
