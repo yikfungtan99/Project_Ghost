@@ -78,3 +78,9 @@ MonoBehaviour:
     itemSprite: {fileID: 21300000, guid: 3c2f12f32b959ce4da270cc82a38553d, type: 3}
   - itemName: housekey
     itemSprite: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada, type: 3}
+  - itemName: razor
+    itemSprite: {fileID: 21300000, guid: f8bedfcdb9bef7b46b7db5aedf178bc4, type: 3}
+  - itemName: red thread
+    itemSprite: {fileID: 21300000, guid: d3bb61bad37ccdb45810d54f9f5dbfcb, type: 3}
+  - itemName: scissors
+    itemSprite: {fileID: 21300000, guid: e3addfacd58a87d4ea625eb2416f518b, type: 3}

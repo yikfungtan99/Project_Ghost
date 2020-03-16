@@ -27,12 +27,10 @@ public class Safe_Bowl : Dining_Bowl
                 Destroy(pm.spoonTarget);
             }
 
-            gm.inventory.ObtainItem("zinc key");
+            gm.inventory.ObtainItem("scissors");
 
             UpdateAudio(1);
             pm.UpdatePuzzleCompleteMonologue(1, "");
-
-            gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToHall4, false);
         }
     }
 

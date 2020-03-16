@@ -52,26 +52,77 @@ public class Door : Interactable
         //! the repitition is a template only,hoping that there will be custom monologue for each door
         if(GatewayIsLocked(gm.doorHorizontalDiningToHall4))
         {
-            UpdateAudio(2);
-            UpdateMonologue(1, "");
+            if (gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "scissors")
+            {
+                gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToHall4, false);
+                gm.doorHorizontalDiningToHall4.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+                UpdateAudio(3);
+                UpdateMonologue(4, "");
+            }
+            else
+            {
+                UpdateAudio(2);
+                UpdateMonologue(3, "");
+            }
             Debug.Log("Dining to Hall4");
         }
         if(GatewayIsLocked(gm.doorVerticalKitchenToToilet))
         {
-            UpdateAudio(2);
-            UpdateMonologue(1, "");
+            if(gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "razor")
+            {
+                gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToHall2, false);
+                gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalKitchenToToilet, false);
+                gm.doorVerticalLivingToHall2.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                gm.doorVerticalKitchenToToilet.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+                UpdateAudio(3);
+                UpdateMonologue(6, "");
+            }
+            else
+            {
+                UpdateAudio(2);
+                UpdateMonologue(5, "");
+                //! hint at cooking food to unlock door
+            }
             Debug.Log("Kitchen to Toilet");
         }
         if(GatewayIsLocked(gm.doorVerticalLivingToHall2))
         {
-            UpdateAudio(2);
-            UpdateMonologue(1, "");
+            if (gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "razor")
+            {
+                gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToHall2, false);
+                gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalKitchenToToilet, false);
+                gm.doorVerticalLivingToHall2.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                gm.doorVerticalKitchenToToilet.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+                UpdateAudio(3);
+                UpdateMonologue(6, "");
+            }
+            else
+            {
+                UpdateAudio(2);
+                UpdateMonologue(5, "");
+                //! hint at cooking food to unlock door
+            }
             Debug.Log("Living to Hall2");
         }
         if (GatewayIsLocked(gm.doorVerticalMainToStorage))
         {
-            UpdateAudio(2);
-            UpdateMonologue(1, "");
+            if (gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "comb")
+            {
+                gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, false);
+                gm.doorVerticalMainToStorage.transform.GetChild(1).GetChild(1).gameObject.SetActive(false);
+
+                UpdateAudio(3);
+                UpdateMonologue(8, "");
+            }
+            else
+            {
+                UpdateAudio(2);
+                UpdateMonologue(7, "");
+                //! hint at symmetry to unlock door
+            }
             Debug.Log("Main to Storage");
         }
         if (GatewayIsLocked(gm.doorHorizontalOutsideToMain))
@@ -278,11 +329,29 @@ public class Door : Interactable
     {
         switch(displayIndex)
         {
-            case 1:
+            case 1: //! click on locked door (shaking door knob)
                 gm.monologueManager.DisplaySentence(22);
                 break;
-            case 2:
+            case 2: //! unlocking the door
                 gm.monologueManager.DisplaySentence(23);
+                break;
+            case 3: //! ghost blocks door to kitchen
+                gm.monologueManager.DisplaySentence(28);
+                break;
+            case 4: //! unblock door to kitchen
+                gm.monologueManager.DisplaySentence(29);
+                break;
+            case 5: //! ghost blocks door to lounge
+                gm.monologueManager.DisplaySentence(30);
+                break;
+            case 6: //! unblock door to lounge
+                gm.monologueManager.DisplaySentence(31);
+                break;
+            case 7: //! ghost blocks door to storage
+                gm.monologueManager.DisplaySentence(32);
+                break;
+            case 8: //! unblock door to storage
+                gm.monologueManager.DisplaySentence(33);
                 break;
         }
     }

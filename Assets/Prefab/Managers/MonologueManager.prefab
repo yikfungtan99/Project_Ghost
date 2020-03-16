@@ -166,9 +166,74 @@ MonoBehaviour:
     sentenceText: It is locked... What should I do?
     cooldown: 3
     cooldownCounter: 0
+  - description: '[23] Unlock front door from outside (item click)'
+    index: 23
+    sentenceText: This key has not been used in years, but it can still unlock this
+      door.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[24] KitchenPuzzle: altar comment without kuih (click)'
+    index: 24
+    sentenceText: I remember a diety that gives protection to families when you give
+      it offerings, the idol still stares into my eyes after all these years.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[25] KitchenPuzzle: giving altar wrong item (item click)'
+    index: 25
+    sentenceText: I do not think this is what a diety might want to feast on...
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[26] KitchenPuzzle: giving altar right item (item click)'
+    index: 26
+    sentenceText: The kuih is consumed by the altar! But a shiny object appears on
+      the statue's feet??
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[27] KitchenPuzzle: altar gives key item (click)'
+    index: 27
+    sentenceText: There is a sharp bladed razor lying on the statue base. Maybe I
+      can use it for something?
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[28] Locked door: hint to complete Dining Puzzle first (click)'
+    index: 28
+    sentenceText: 'A shadow says: "Passage through me requires a tool that symbolises
+      unity, it cannot work without its components helping each other."'
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[29] Unlock door: use scissors to unlock door (item click)'
+    index: 29
+    sentenceText: 'The shadow disappears: "The scissors, alike a bonded couple, cuts
+      through all obstacles..."'
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[30] Locked door: hint to complete Kitchen Puzzle first (click)'
+    index: 30
+    sentenceText: 'A shadow says: "Show me a tool as keen as one''s senses for safety!
+      A blade to protect and not to kill.'
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[31] Unlock door: use razor to unlock door (item click)'
+    index: 31
+    sentenceText: 'The shadow disperses: "A razor signifies safety through all odds...
+      unless the danger is yourself."'
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[32] Locked door: hint to complete Lounge Puzzle first (click)'
+    index: 32
+    sentenceText: 'A shadow says: "Present a tool which straightens lines that go
+      astray, a regulator that dispells bad luck to allow space for good ones to blossom."'
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[33] Unlock door: use comb to unlock door (item click)'
+    index: 33
+    sentenceText: 'The shadow vanishes: "A comb that combs one''s hair invites the
+      blessings of many generations..."'
+    cooldown: 3
+    cooldownCounter: 0
   typingSpeed: 0.01
   isSentenceDrawn: 0
   showMonologue: 0
-  showMonologueTimer: 2.5
+  showMonologueTimer: 3
   itemDisplayCooldown: 1
   itemDisplayCooldownCounter: 0

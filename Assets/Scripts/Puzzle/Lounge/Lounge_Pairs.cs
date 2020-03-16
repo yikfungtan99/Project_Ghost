@@ -69,8 +69,6 @@ public class Lounge_Pairs : Interactable
         pm.UpdatePuzzleCompleteMonologue(3, "");
 
         pm.rewardObject.SetActive(true);
-
-        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalMainToStorage, false);
     }
 
     public override void UpdateAudio(int index)

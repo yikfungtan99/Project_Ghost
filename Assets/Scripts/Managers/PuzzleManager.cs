@@ -17,6 +17,7 @@ public class PuzzleManager : MonoBehaviour
 
     [Header("Kitchen Puzzle")]
     public Kitchen_Steamer kitchenSteamer;
+    public GameObject kitchenGodAltar;
     public string firstIngredientRequiredName;
     public string secondIngredientRequiredName;
     public string thirdIngredientRequiredName;
@@ -25,8 +26,10 @@ public class PuzzleManager : MonoBehaviour
     public bool disableKitchenPuzzle = true;
     public bool isSteamerMakingKuih = false;
     public bool isKuihReady = false;
+    public bool isKitchenGodEnabled = false;
     public int sequenceCount = 0;
     public string targetIngredient;
+    public string kitchenGodItemRequiredName;
     public bool makingKuihOnce = false;
     public bool kitchenPuzzleClearMsgTrigger = false;
     public int makingKuihCountDownTime;
