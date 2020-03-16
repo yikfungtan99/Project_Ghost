@@ -10,7 +10,7 @@ public class Trigger : MonoBehaviour
     public int countDownTime;
     public Transform[] door;
     public int doorNumber;
-
+    private float randomChance;
     private float chance = 0;
     public float cdTime = 1;
     
@@ -106,7 +106,14 @@ public class Trigger : MonoBehaviour
 
     IEnumerator CountDownTrigger(int countDownTime, bool hundredPercent)
     {
+        
         ghostTeleporting = true;
+        randomChance = Random.Range(0, 2);
+        if(chance==randomChance || hundredPercent)
+        {
+            UpdateAudio(1);
+            Warning();
+        }
 
         for (int i = countDownTime; i > 0; i--)
         {
@@ -116,11 +123,11 @@ public class Trigger : MonoBehaviour
 
         gm.ghostManager.currentDoor = door[doorNumber].transform;
 
-        if (chance == Random.Range(0,2) || hundredPercent)
+        if (chance == randomChance || hundredPercent)
         {
-            UpdateAudio(1);
+            
             gm.carrotMain.TeleportTrigger();
-            Warning();
+            //Warning();
 
         }
         else
