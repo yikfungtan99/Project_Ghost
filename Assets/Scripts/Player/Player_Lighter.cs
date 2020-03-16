@@ -13,6 +13,8 @@ public class Player_Lighter : MonoBehaviour
     public int difficulty = 100;
     private int triesCounter;
 
+    private bool firstTime = true;
+
     private void Start()
     {
         triesCounter = difficulty;
@@ -62,9 +64,12 @@ public class Player_Lighter : MonoBehaviour
 
         if(Input.GetAxis("Mouse ScrollWheel") > 0.0f && lighterOn)
         {
+            if (firstTime)
+            {
+                gm.TutorialNavi.UpdateBoard(7);
+            }
 
             lighterOn = false;
-
         }
 
         gm.lighterObject.transform.GetChild(0).gameObject.SetActive(lighterOn);

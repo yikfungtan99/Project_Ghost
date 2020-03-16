@@ -58,6 +58,8 @@ public class DeathLoad : MonoBehaviour
             gm.roomManager.GetComponent<Animator>().Play("Bridal");
 
             transform.GetChild(0).gameObject.SetActive(false);
+
+            gm.TutorialNavi.gameObject.SetActive(false);
             
         }
         else

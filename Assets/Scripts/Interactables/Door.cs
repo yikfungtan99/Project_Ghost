@@ -19,6 +19,8 @@ public class Door : Interactable
     public GameObject linkedDoor;
     private Transform doorSpawnPoint;
 
+    private bool done = false;
+
     private void Start()
     {
         if (gm)
@@ -128,7 +130,13 @@ public class Door : Interactable
         if (GatewayIsLocked(gm.doorHorizontalOutsideToMain))
         {
             Debug.Log("aa");
-            gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Bag");
+
+            if (!done)
+            {
+                gm.TutorialNavi.UpdateBoard(2);
+                done = true;
+            }
+            
             gm.playerInventory.firstTime = true;
 
             if (CheckHoldSlot())
@@ -155,7 +163,7 @@ public class Door : Interactable
 
         if (gm.playerInventory.firstTime)
         {
-            gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Bag1");
+            gm.TutorialNavi.UpdateBoard(5);
         }
 
         if (LeftRight)

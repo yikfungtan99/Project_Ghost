@@ -8,6 +8,7 @@ public class Player_Inventory : MonoBehaviour
     public GameObject inventory;
     public bool inventoryOn = false;
     public bool firstTime = false;
+    public bool secondTime = false;
     public GameObject hand;
 
     public float bagDelayTime = 0.5f;
@@ -36,8 +37,16 @@ public class Player_Inventory : MonoBehaviour
                 if (Input.GetMouseButtonDown(1))
                 {
                     ToggleInventory();
+                    if (firstTime)
+                    {
+                        if (!secondTime)
+                        {
+                            gm.TutorialNavi.UpdateBoard(3);
+                        }
+                        
+                    }
                     GameManager.Instance.player.inventoryOn = inventoryOn;
-                    gm.BagAnim.GetComponent<Animator>().SetTrigger("Bag Tutorial");
+                    
                     hand.gameObject.SetActive(firstTime);
                 }
 

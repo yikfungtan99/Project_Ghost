@@ -14,10 +14,19 @@ public class Tutorial_Candle : Interactable
     public Interactable_Bed bed;
     public Tutorial_Triggers readyTrigger;
 
+    private bool firstTime = true;
+
     public override void Interact()
     {
 
         LightCandle();
+
+        if (firstTime)
+        {
+
+            transform.GetChild(1).gameObject.SetActive(false);
+
+        }
 
     }
 

@@ -42,14 +42,12 @@ public class Tutorial_Triggers : MonoBehaviour
                             GameManager.Instance.TutorialGhostTrigger(true);
 
                             GameManager.Instance.TutorialNavi.gameObject.SetActive(true);
-
-                            GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Hide");
+                            GameManager.Instance.TutorialNavi.UpdateBoard(7);
 
                         }
                         else
                         {
-                            GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Door");
-
+                            GameManager.Instance.TutorialNavi.UpdateBoard(1);
                         }
 
                         isEnabled = false;

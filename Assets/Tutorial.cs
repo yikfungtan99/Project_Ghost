@@ -1,34 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
 
     private GameManager gm;
     public Vector2 Offset;
-    private Animator anim;
-    public Transform closet;
+    public Sprite[] boards;
+    public Image ui;
 
     // Start is called before the first frame update
     void Start()
     {
 
         gm = GameManager.Instance;
-        anim = GetComponent<Animator>();
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (!gm.tutorialSleep)
+
+        transform.position = new Vector2(GameManager.Instance.playerObject.transform.position.x + Offset.x, GameManager.Instance.playerObject.transform.position.y + Offset.y);
+
+    }
+
+    public void UpdateBoard(int num)
+    {
+        if(num == 3)
         {
-            transform.position = new Vector2(gm.playerObject.transform.position.x + Offset.x, gm.playerObject.transform.position.y + Offset.y);
+
+            ui.gameObject.SetActive(true);
+            ui.sprite = boards[num];
+            GetComponent<SpriteRenderer>().sprite = boards[2];
+
         }
         else
         {
-            transform.position = new Vector2(closet.transform.position.x + Offset.x - 1.1f, closet.transform.position.y + Offset.y);
+            Debug.Log(num);
+            GetComponent<SpriteRenderer>().sprite = boards[num];
 
         }
         

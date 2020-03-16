@@ -41,8 +41,10 @@ public class HoldPanel : MonoBehaviour, IDropHandler
                 {
                     if(transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "housekey")
                     {
-                       
-                        GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Door");
+
+                        GameManager.Instance.TutorialNavi.ui.gameObject.SetActive(false);
+                        GameManager.Instance.TutorialNavi.UpdateBoard(4);
+                        GameManager.Instance.playerInventory.firstTime = false;
                         keyDone = true;
                     }
 
@@ -51,7 +53,9 @@ public class HoldPanel : MonoBehaviour, IDropHandler
                         if (transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
                         {
                             Debug.Log("DE");
-                            GameManager.Instance.TutorialNavi.GetComponent<Animator>().SetTrigger("Lighter");
+                            GameManager.Instance.TutorialNavi.ui.gameObject.SetActive(false);
+                            GameManager.Instance.TutorialNavi.UpdateBoard(6);
+                            GameManager.Instance.playerInventory.secondTime = true;
                             lighterDone = true;
                         }
                     }
