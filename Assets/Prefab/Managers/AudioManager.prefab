@@ -156,8 +156,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: hiding door
     description: played when player hides or unhides from a hiding spot
-    audioClip: {fileID: 8300000, guid: a636ec4e75129b24b9ba5cfd28685a9b, type: 3}
-    volume: 0.1
+    audioClip: {fileID: 8300000, guid: da3435b58057ecf47901dd33b1f59ca8, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 1
@@ -222,7 +222,7 @@ MonoBehaviour:
   - name: place down item
     description: played when an item is placed into the world by the player
     audioClip: {fileID: 8300000, guid: 35c37339c2dfb6645980edfaf619107a, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 1
@@ -273,8 +273,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: locked door
     description: played when player interacts with a locked door that cannot be unlocked
-    audioClip: {fileID: 8300000, guid: 22c974fc5dd68d84190dba5b95addc2b, type: 3}
-    volume: 0.2
+    audioClip: {fileID: 8300000, guid: 3d853d43256ff8a4cacb17ccef173566, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 2
