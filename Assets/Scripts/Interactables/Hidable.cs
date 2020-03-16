@@ -9,6 +9,9 @@ public class Hidable : Interactable
     public float darkness;
     private float initDark;
     private float initY;
+    public float cdTime;
+    private float cdCount;
+    private bool isUsable=true;
 
     // Start is called before the first frame update
     public void Start()
@@ -16,13 +19,37 @@ public class Hidable : Interactable
         player = gm.playerObject;
         initDark = gm.GlobalLight.intensity;
         transform.GetChild(0).GetComponent<Light2D>().intensity = initDark;
+        cdCount = 0;
+        cdTime = 2;
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if(!isUsable)
+        {
+            cdCount += Time.deltaTime;
+
+            if (cdCount >= cdTime)
+            {
+                cdCount = 0;
+                isUsable = true;
+            }
+        }
+        
+
     }
 
     public override void Interact()
     {
-        base.Interact();
+        if(isUsable==true)
+        {
+            base.Interact();
 
-        Hide();
+            Hide();
+        }
+        
 
     }
 
@@ -44,6 +71,7 @@ public class Hidable : Interactable
 
     public void Unhide()
     {
+        isUsable = false;
         UpdateAudio(3);
         UpdateAudio(2);
         Debug.Log(initY);
