@@ -30,9 +30,18 @@ public class Trigger : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
 
+        
         if(col.gameObject == gm.playerObject)
         {
-            ChanceToTeleportGhost(false, false);
+            if (this.CompareTag("StorageRoomTrigger"))
+            {
+                ChanceToTeleportGhost(false, true);
+            }
+            else
+            {
+                ChanceToTeleportGhost(false, false);
+            }
+            
         }
        
     }
