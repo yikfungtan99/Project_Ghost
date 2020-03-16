@@ -13,8 +13,9 @@ public class CarrotChase : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameManager.Instance.audioManager.PlayAudio("ghost chase");
        
-        ghost = animator.GetComponent<CarrotMain >();
+        ghost = animator.GetComponent<CarrotMain>();
         playerPos = GameManager.Instance.playerObject.transform;
         transform = animator.transform;
         chaseSpeed = ghost.chaseSpeed;

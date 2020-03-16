@@ -357,8 +357,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 968dfb7502eeffa4fbe9070b5f4ad2c9, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 0
-    defFadeInSeconds: 2
+    loop: 1
+    defFadeInSeconds: 3
     defFadeOutSeconds: 2
     isPlaying: 0
     isFading: 0
@@ -381,7 +381,20 @@ MonoBehaviour:
   - name: ghost trigger
     description: played when a candle is lit by the player
     audioClip: {fileID: 8300000, guid: 4b4132cb17a5d80468c6da03b6f6a7bf, type: 3}
-    volume: 0.4
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: ghost detected
+    description: played when players detects a ghost spawning from a trigger
+    audioClip: {fileID: 8300000, guid: ddd3a2d61df0b164089941e22d4a6027, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 2

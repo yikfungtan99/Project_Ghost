@@ -13,6 +13,8 @@ public class RoomChecker : MonoBehaviour
 
     public Transform staySpots;
 
+    private bool triggerOnce;
+
     private void Awake()
     {
 
@@ -22,25 +24,23 @@ public class RoomChecker : MonoBehaviour
 
     private void Update()
     {
-
-        if (trigger)
+        if (ghostInRoom && playerInRoom)
         {
-
-            if(ghostInRoom && playerInRoom)
+            if (trigger)
             {
-
                 trigger.GetComponent<Trigger>().canAutoRecover = false;
                 trigger.GetComponent<Trigger>().isDisabled = true;
-
-            }
-            else
-            {
-
-                trigger.GetComponent<Trigger>().canAutoRecover = true;
-
             }
 
         }
+        else
+        {
+            if (trigger)
+            {
+                trigger.GetComponent<Trigger>().canAutoRecover = true;
+            }
+        }
+
 
     }
 
@@ -83,7 +83,6 @@ public class RoomChecker : MonoBehaviour
 
 
             }
-
         }
 
         if (collision.CompareTag("Player"))
@@ -123,6 +122,11 @@ public class RoomChecker : MonoBehaviour
 
         }
 
+        if (!ghostInRoom || !playerInRoom)
+        {
+            triggerOnce = false;
+            UpdateAudio(2);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -144,5 +148,23 @@ public class RoomChecker : MonoBehaviour
 
         }
 
+        if ((ghostInRoom && playerInRoom) && !triggerOnce)
+        {
+            triggerOnce = true;
+            UpdateAudio(1);
+        }
+    }
+
+    void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                GameManager.Instance.audioManager.FadeInAudio("ghost passive", 0);
+                break;
+            case 2:
+                GameManager.Instance.audioManager.ForceStopAudio("ghost passive");
+                break;
+        }
     }
 }

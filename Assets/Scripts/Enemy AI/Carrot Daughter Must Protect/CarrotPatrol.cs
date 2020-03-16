@@ -23,7 +23,6 @@ public class CarrotPatrol : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
         
         //Initialize everything
         mainGhost = animator.gameObject.GetComponent<CarrotMain>();
