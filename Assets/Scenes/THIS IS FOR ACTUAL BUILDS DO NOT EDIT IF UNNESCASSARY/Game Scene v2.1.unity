@@ -38238,7 +38238,7 @@ PrefabInstance:
     - target: {fileID: 1254838575500850623, guid: f6cbc8dc500d14f4db51bda5aa17643c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cbc8dc500d14f4db51bda5aa17643c, type: 3}
@@ -50671,55 +50671,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.size
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[13].itemName
-      value: comb
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[13].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1464e936212d2d048877c13d3ee634e1,
-        type: 3}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[14].itemName
-      value: empty photo frame
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[14].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a993b75cf7e57b447a70adf73f282ce7,
-        type: 3}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[15].itemName
-      value: lounge statue
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[15].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3c2f12f32b959ce4da270cc82a38553d,
-        type: 3}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[16].itemName
-      value: housekey
-      objectReference: {fileID: 0}
-    - target: {fileID: 7189136440494755499, guid: 16416b716eaaf464e8c378b1c317f48f,
-        type: 3}
-      propertyPath: items.Array.data[16].itemSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16416b716eaaf464e8c378b1c317f48f, type: 3}
 --- !u!1 &1703098652734556141
