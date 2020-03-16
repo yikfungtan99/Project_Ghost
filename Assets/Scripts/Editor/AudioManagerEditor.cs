@@ -84,6 +84,8 @@ public class AudioManagerEditor : Editor
         }
 
         EditorGUILayout.Space();
+        EditorGUILayout.Space();
+        EditorGUILayout.Space();
         if(GUILayout.Button("Stop All Audio from Editor"))
         {
             if(am.audioList[audioIndex1].isPlaying)
@@ -97,6 +99,23 @@ public class AudioManagerEditor : Editor
             if(am.audioList[audioIndex3].isPlaying)
             {
                 am.StopAudio(am.audioList[audioIndex3].name);
+            }
+        }
+
+        EditorGUILayout.Space();
+        if (GUILayout.Button("Force Stop All Audio from Editor"))
+        {
+            if (am.audioList[audioIndex1].isPlaying)
+            {
+                am.ForceStopAudio(am.audioList[audioIndex1].name);
+            }
+            if (am.audioList[audioIndex2].isPlaying)
+            {
+                am.ForceStopAudio(am.audioList[audioIndex2].name);
+            }
+            if (am.audioList[audioIndex3].isPlaying)
+            {
+                am.ForceStopAudio(am.audioList[audioIndex3].name);
             }
         }
     }

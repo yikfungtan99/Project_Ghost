@@ -21,29 +21,20 @@ public class Door : Interactable
 
     private void Start()
     {
-
         if (gm)
         {
-
             rm = gm.roomManager;
-
         }
         else
         {
-
             Debug.Log("Cant find gameManager");
-
         }
-
-        
 
         player = gm.playerObject;
 
         if(linkedDoor == null)
         {
-
             Debug.LogError(gameObject.name + " have missing door connection!!!");
-
         }
         else
         {
@@ -61,21 +52,25 @@ public class Door : Interactable
         //! the repitition is a template only,hoping that there will be custom monologue for each door
         if(GatewayIsLocked(gm.doorHorizontalDiningToHall4))
         {
+            UpdateAudio(2);
             UpdateMonologue(1, "");
             Debug.Log("Dining to Hall4");
         }
         if(GatewayIsLocked(gm.doorVerticalKitchenToToilet))
         {
+            UpdateAudio(2);
             UpdateMonologue(1, "");
             Debug.Log("Kitchen to Toilet");
         }
         if(GatewayIsLocked(gm.doorVerticalLivingToHall2))
         {
+            UpdateAudio(2);
             UpdateMonologue(1, "");
             Debug.Log("Living to Hall2");
         }
         if (GatewayIsLocked(gm.doorVerticalMainToStorage))
         {
+            UpdateAudio(2);
             UpdateMonologue(1, "");
             Debug.Log("Main to Storage");
         }
@@ -90,10 +85,12 @@ public class Door : Interactable
                 //gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Next");
                 SetIsLockedOnDoor(this.transform.root.gameObject, false);
 
+                UpdateAudio(3);
                 UpdateMonologue(2, "");
             }
             else
             {
+                UpdateAudio(2);
                 UpdateMonologue(1, "");
                 Debug.Log("Outside to Main");
             }
@@ -103,14 +100,11 @@ public class Door : Interactable
 
     public void Open()
     {
-
         isClosed = false;
 
         if (gm.playerInventory.firstTime)
         {
-
             gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Bag1");
-
         }
 
         if (LeftRight)
@@ -125,7 +119,6 @@ public class Door : Interactable
                 rm.SwitchRoom("Right", transform);
                 player.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-
         }
         else if (UpDown)
         {
@@ -137,13 +130,21 @@ public class Door : Interactable
             {
                 rm.SwitchRoom("Up", transform);
             }
-
         }
 
         player.transform.position = doorSpawnPoint.position;
 
-        StartCoroutine(AutoClose(1.0f));
+        //! this checks doors to change ambience when needed
+        if(transform == gm.doorVerticalHall1ToBridal.transform.GetChild(1).transform)
+        {
+            UpdateAudio(5);
+        }
+        else
+        {
+            UpdateAudio(4);
+        }
 
+        StartCoroutine(AutoClose(1.0f));
     }
 
     public void Closed()
@@ -292,6 +293,24 @@ public class Door : Interactable
         {
             case 1:
                 gm.audioManager.ForcePlayAudio("normal door");
+                break;
+            case 2:
+                gm.audioManager.ForcePlayAudio("locked door");
+                break;
+            case 3:
+                gm.audioManager.PlayAudio("unlock door");
+                break;
+            case 4:
+                //! first force stop all other potential ambience playing
+                gm.audioManager.ForceStopAudio("disquiet ambience");
+
+                gm.audioManager.FadeInAudio("normal ambience", 0);
+                break;
+            case 5:
+                //! first force stop all other potential ambience playing
+                gm.audioManager.ForceStopAudio("normal ambience");
+
+                gm.audioManager.FadeInAudio("disquiet ambience", 0);
                 break;
         }
     }

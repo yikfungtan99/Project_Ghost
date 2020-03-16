@@ -54,7 +54,9 @@ public class AudioManager : MonoBehaviour
     //! Only use this when an audioclip is to be played at the start of game (i.e. BGM theme)
     void Start()
     {
-        //PlayAudio("Test Theme");
+        //! Fade in this ambience when player starts in bridal bedroom (code may change later)
+        FadeInAudio("disquiet ambience", 0);
+
     }
 
     private void Update()
@@ -278,6 +280,11 @@ public class AudioManager : MonoBehaviour
         //! decrease volume by fadeAmount until it is 0
         while (a.audioSource.volume > 0.01f)
         {
+            if(!a.isPlaying)
+            {
+                break;
+            }
+
             a.audioSource.volume -= Time.deltaTime / fadeAmount;
             yield return null;
         }
@@ -301,6 +308,11 @@ public class AudioManager : MonoBehaviour
         //! increase volume by fadeAmount until it is 0
         while (a.audioSource.volume < 0.99f)
         {
+            if (!a.isPlaying)
+            {
+                break;
+            }
+
             a.audioSource.volume += Time.deltaTime / fadeAmount;
             yield return null;
         }

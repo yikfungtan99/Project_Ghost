@@ -271,4 +271,72 @@ MonoBehaviour:
     isPaused: 0
     triggerOnce: 0
     audioSource: {fileID: 0}
+  - name: locked door
+    description: played when player interacts with a locked door that cannot be unlocked
+    audioClip: {fileID: 8300000, guid: 22c974fc5dd68d84190dba5b95addc2b, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: unlock door
+    description: played when player interacts with a locked door and unlocks it
+    audioClip: {fileID: 8300000, guid: 08acafa939cebda4ebaaf2cc287cac84, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: talisman bind
+    description: played when ghost is stunned by the talisman
+    audioClip: {fileID: 8300000, guid: 81de720b921ad864db3a02c77ac842a6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: normal ambience
+    description: played as default ambience throughout the game until a special event
+      happens to cause another ambience to play
+    audioClip: {fileID: 8300000, guid: d76a041bf715a9d478bc8d03811fa5e8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: disquiet ambience
+    description: played as a disquieting ambience to make players feel the contrast
+      of 'something might happen' to create suspense in comparison to the normal ambience
+      sound.
+    audioClip: {fileID: 8300000, guid: 6385c0fea6de78f4cae14aa82e043d10, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    defFadeInSeconds: 2
+    defFadeOutSeconds: 2
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
   inverseSpaceTimeContinuum: 1
