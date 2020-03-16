@@ -50,6 +50,7 @@ MonoBehaviour:
   diningForewarnPlayer: 0
   diningPuzzleClearMsgTrigger: 0
   kitchenSteamer: {fileID: 0}
+  kitchenGodAltar: {fileID: 0}
   firstIngredientRequiredName: flour
   secondIngredientRequiredName: sugar
   thirdIngredientRequiredName: baking soda
@@ -58,19 +59,21 @@ MonoBehaviour:
   disableKitchenPuzzle: 1
   isSteamerMakingKuih: 0
   isKuihReady: 0
+  isKitchenGodEnabled: 0
   sequenceCount: 0
   targetIngredient: 
+  kitchenGodItemRequiredName: kuih
   makingKuihOnce: 0
   kitchenPuzzleClearMsgTrigger: 0
   makingKuihCountDownTime: 5
   loungePairs: {fileID: 0}
-  stoneStatueRequiredName: stone statue
+  loungeStatueRequiredName: lounge statue
   photoframeRequiredName: empty photo frame
   loungePuzzleCompletionRewardSpawnDelay: 5
   rewardObject: {fileID: 0}
   isLoungePuzzleClear: 0
   disableLoungePuzzle: 1
-  isStoneStatuePairComplete: 0
+  isStatuePairComplete: 0
   isCursedMirrorPairComplete: 0
   isPhotoFramePairComplete: 0
   loungePuzzleClearMsgTrigger: 0

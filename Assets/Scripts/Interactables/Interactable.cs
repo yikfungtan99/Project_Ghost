@@ -52,7 +52,10 @@ public class Interactable : MonoBehaviour
 
         if (GetComponent<pocTrigger>())
         {
-
+            if(GetComponent<Kitchen_Steamer>())
+            {
+                return;
+            }
             GetComponent<pocTrigger>().ActivateTrigger();
 
         }
