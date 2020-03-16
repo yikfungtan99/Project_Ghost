@@ -55,6 +55,9 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Debug.Log(rb.velocity.x);
+
         if(!GameManager.Instance.gamePaused)
         {
             if (pressedButton)
@@ -218,10 +221,6 @@ public class Player_Movement : MonoBehaviour
             //Move to target now
             if (enRoute)
             {
-
-                
-
-
                 if (direction > 0 && transform.position.x > waypointPos.x)
                 {
                     enRoute = false;

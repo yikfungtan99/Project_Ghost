@@ -42,7 +42,7 @@ public class Trigger : MonoBehaviour
 
         if (!isDisabled)
         {
-            UpdateAudio(1);
+            
 
             gm.ghostManager.currentMirror = transform;
             Debug.Log("Whoosh! You walked past the spot!");
@@ -51,7 +51,7 @@ public class Trigger : MonoBehaviour
                 if (!ghostTeleporting)
                 {
                     StartCoroutine(CountDownTrigger(countDownTime, hundredPercent));
-                        
+                    
 
                 }
                 else
@@ -109,7 +109,7 @@ public class Trigger : MonoBehaviour
 
         if (chance == Random.Range(0,2) || hundredPercent)
         {
-
+            UpdateAudio(1);
             gm.carrotMain.TeleportTrigger();
             Warning();
 
