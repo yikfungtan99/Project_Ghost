@@ -140,15 +140,20 @@ public class CarrotPatrol : StateMachineBehaviour
         else
         {
             //Set to StaySpot
-            if (mainGhost.curRoom.staySpots)
+
+            if (!mainGhost.inTutorial)
             {
-                if (!mainGhost.isCalled)
+                if (mainGhost.curRoom.staySpots)
                 {
+                    if (!mainGhost.isCalled)
+                    {
 
-                    mainGhost.transform.position = new Vector2(mainGhost.curRoom.staySpots.position.x, mainGhost.transform.position.y);
+                        mainGhost.transform.position = new Vector2(mainGhost.curRoom.staySpots.position.x, mainGhost.transform.position.y);
 
-                    
+
+                    }
                 }
+
             }
 
         }

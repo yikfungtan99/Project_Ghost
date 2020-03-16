@@ -6728,6 +6728,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &161123174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4249755109875575237, guid: 1419b3fbd29ec454a99c819981e3f54c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1651167199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &161321582
 GameObject:
   m_ObjectHideFlags: 0
@@ -27424,6 +27430,11 @@ PrefabInstance:
       propertyPath: detectRange
       value: 5.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2988962845036739214, guid: d9be689a28e32874fa113488ab0dab12,
+        type: 3}
+      propertyPath: isCalled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2988962845036739215, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31421,6 +31432,10 @@ PrefabInstance:
       propertyPath: tutorialComplete
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
+      propertyPath: roomManagerObject
+      value: 
+      objectReference: {fileID: 161123174}
     - target: {fileID: 5123675646716434253, guid: 1419b3fbd29ec454a99c819981e3f54c,
         type: 3}
       propertyPath: m_LocalPosition.x

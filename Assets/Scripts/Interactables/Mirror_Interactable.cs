@@ -74,6 +74,8 @@ public class Mirror_Interactable : Interactable
         {
             if (collider.gameObject == gm.playerObject)
             {
+                UpdateAudio(2);
+
                 gm.ghostManager.currentMirror = transform;
                 Debug.Log("Whoosh! You walked past the mirror.");
 
@@ -145,6 +147,9 @@ public class Mirror_Interactable : Interactable
         {
             case 1:
                 gm.audioManager.ForcePlayAudio("use red cloth");
+                break;
+            case 2:
+                gm.audioManager.PlayAudio("ghost trigger");
                 break;
         }
     }

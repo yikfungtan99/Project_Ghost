@@ -32,6 +32,7 @@ public class Candle : Interactable
 
         transform.GetChild(0).gameObject.SetActive(isLit);
 
+        UpdateAudio(1);
         UpdateMonologue(-1, "");
     }
 
@@ -86,6 +87,16 @@ public class Candle : Interactable
         if(!isLit)
         {
             playMonologueOnce = false;
+        }
+    }
+
+    public override void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1:
+                gm.audioManager.ForcePlayAudio("candle flame");
+                break;
         }
     }
 }
