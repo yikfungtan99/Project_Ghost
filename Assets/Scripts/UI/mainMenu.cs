@@ -10,12 +10,12 @@ public class mainMenu : MonoBehaviour
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        //SceneManager.LoadScene(0);
     }
 
     public void QuitButton()
     {
-
+        Debug.Log("Quit game");
         Application.Quit();
 
     }
