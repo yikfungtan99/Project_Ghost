@@ -216,6 +216,8 @@ public class CarrotMain : MonoBehaviour
                 {
                     if (anima.GetBool("isIdle") == false)
                     {
+                        gm.audioManager.PlayAudio("talisman bind");
+
                         anima.SetBool("isPatrol", false);
                         anima.SetBool("isChase", false);
                         anima.SetBool("isIdle", true);
