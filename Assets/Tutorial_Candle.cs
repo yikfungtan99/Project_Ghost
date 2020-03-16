@@ -98,7 +98,10 @@ public class Tutorial_Candle : Interactable
 
         yield return new WaitForSeconds(1);    //Wait one frame
         gm.TutorialGhostTrigger(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
+        if (!gm.player.isDead)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

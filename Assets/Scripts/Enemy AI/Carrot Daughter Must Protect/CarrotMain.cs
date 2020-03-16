@@ -50,6 +50,8 @@ public class CarrotMain : MonoBehaviour
 
     public int vanishChance = 0;
     private bool needNewNumber = false;
+
+    public bool inTutorial = false;
     
     // Start is called before the first frame update
     void Start()
@@ -68,7 +70,6 @@ public class CarrotMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (curRoom)
         {
             if (!isCalled)
@@ -229,15 +230,7 @@ public class CarrotMain : MonoBehaviour
                 else
                 {
 
-
-                    Destroy(GameObject.FindGameObjectWithTag("Player"));
-
-                    int child = GameObject.Find("DeathCanvas").transform.childCount;
-                    for (int i = 0; i < child; i++)
-                    {
-                        GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(true);
-                    }
-
+                    collision.gameObject.GetComponent<Player>().Death();
 
                 }
             }
