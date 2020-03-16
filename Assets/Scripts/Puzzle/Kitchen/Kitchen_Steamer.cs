@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Kitchen_Steamer : Interactable
 {
-    private PuzzleManager pm;
-    private GameObject currentHeldItem;
+    protected PuzzleManager pm;
+    protected GameObject currentHeldItem;
     
     public override void Awake()
     {
@@ -48,7 +48,7 @@ public class Kitchen_Steamer : Interactable
                 pm.isSteamerMakingKuih = true;
                 break;
             case 5:
-                SetPuzzleCompletion();
+                pm.isKitchenGodEnabled = true;
                 break;
         }
 
@@ -107,6 +107,11 @@ public class Kitchen_Steamer : Interactable
                 UpdateMonologue(3, "");
 
                 pm.sequenceCount += 1;
+
+                if (GetComponent<pocTrigger>())
+                {
+                    GetComponent<pocTrigger>().ActivateTrigger();
+                }
             }
             else
             {
@@ -175,24 +180,6 @@ public class Kitchen_Steamer : Interactable
             case 3:
                 gm.audioManager.FadeOutAudio("steamer sound", 0);
                 break;
-        }
-    }
-
-    private void SetPuzzleCompletion()
-    {
-        pm.targetIngredient = "";
-        pm.isSteamerMakingKuih = false;
-        pm.disableKitchenPuzzle = true;
-        pm.isKitchenPuzzleClear = true;
-
-        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalLivingToHall2, false);
-        gm.doorScript.SetIsLockedOnDoor(gm.doorVerticalKitchenToToilet, false);
-
-        if(!pm.kitchenPuzzleClearMsgTrigger)
-        {
-            pm.kitchenPuzzleClearMsgTrigger = true;
-
-            Debug.Log("kitchen puzzle clear!");
         }
     }
 }
