@@ -286,8 +286,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: unlock door
     description: played when player interacts with a locked door and unlocks it
-    audioClip: {fileID: 8300000, guid: 08acafa939cebda4ebaaf2cc287cac84, type: 3}
-    volume: 0.5
+    audioClip: {fileID: 8300000, guid: 7c9f630dfc24a5647a6e676c4a5fb0ca, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 2
@@ -299,8 +299,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: talisman bind
     description: played when ghost is stunned by the talisman
-    audioClip: {fileID: 8300000, guid: 81de720b921ad864db3a02c77ac842a6, type: 3}
-    volume: 0.5
+    audioClip: {fileID: 8300000, guid: 5a12a99e00cce184fbe7992a25700a27, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 2
@@ -313,8 +313,8 @@ MonoBehaviour:
   - name: normal ambience
     description: played as default ambience throughout the game until a special event
       happens to cause another ambience to play
-    audioClip: {fileID: 8300000, guid: d76a041bf715a9d478bc8d03811fa5e8, type: 3}
-    volume: 0.5
+    audioClip: {fileID: 8300000, guid: 0baef4e2ea99db0459ce27dcb192b983, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     defFadeInSeconds: 2
@@ -341,8 +341,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: ghost chase
     description: played when ghost start to chase the player
-    audioClip: {fileID: 8300000, guid: c48e1d401a6e3ae4686a2d9a7c10bfb8, type: 3}
-    volume: 0.4
+    audioClip: {fileID: 8300000, guid: dd8b75fd667b01d4695e4300e276e032, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 2
@@ -354,8 +354,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: ghost passive
     description: played when ghost is in the same room as the player and is not chasing
-    audioClip: {fileID: 8300000, guid: 968dfb7502eeffa4fbe9070b5f4ad2c9, type: 3}
-    volume: 0.5
+    audioClip: {fileID: 8300000, guid: 931665d1c7dc7af49b7a9a8abe6988b6, type: 3}
+    volume: 1
     pitch: 1
     loop: 1
     defFadeInSeconds: 3
@@ -380,8 +380,8 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: ghost trigger
     description: played when a candle is lit by the player
-    audioClip: {fileID: 8300000, guid: 4b4132cb17a5d80468c6da03b6f6a7bf, type: 3}
-    volume: 0.2
+    audioClip: {fileID: 8300000, guid: 7e44f5c3722395247bbc62057a0395d1, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     defFadeInSeconds: 2
@@ -393,7 +393,7 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: ghost detected
     description: played when players detects a ghost spawning from a trigger
-    audioClip: {fileID: 8300000, guid: ddd3a2d61df0b164089941e22d4a6027, type: 3}
+    audioClip: {fileID: 8300000, guid: 3605be06ff02fa4459edcdb4142d4594, type: 3}
     volume: 1
     pitch: 1
     loop: 0

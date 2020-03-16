@@ -384,4 +384,15 @@ public class AudioManager : MonoBehaviour
         a.isPaused = false;
         a.audioSource.UnPause();
     }
+    
+    public void UpdateAllVolume(float newVolume)
+    {
+        if(newVolume >= 0f && newVolume <= 1f)
+        {
+            foreach (Audio a in audioList)
+            {
+                a.audioSource.volume = newVolume;
+            }
+        }
+    }
 }
