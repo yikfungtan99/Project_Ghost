@@ -24,6 +24,7 @@ public class CarrotPatrol : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
+        
         //Initialize everything
         mainGhost = animator.gameObject.GetComponent<CarrotMain>();
         
