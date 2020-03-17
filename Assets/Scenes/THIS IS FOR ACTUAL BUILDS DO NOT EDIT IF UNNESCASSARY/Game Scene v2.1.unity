@@ -569,12 +569,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 2128204444}
   - {fileID: 1342752198}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 10
   disableAutoRecover: 1
   canAutoRecover: 0
 --- !u!4 &46139271
@@ -11742,12 +11742,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 2094120177}
   - {fileID: 1786227226}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 12
   disableAutoRecover: 1
   canAutoRecover: 0
 --- !u!4 &472839689
@@ -12917,12 +12917,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 169947356}
   - {fileID: 1198747264}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 12
   disableAutoRecover: 1
   canAutoRecover: 0
 --- !u!1001 &526984473
@@ -14882,12 +14882,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 1614675289}
   - {fileID: 2147239759}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 12
   disableAutoRecover: 1
   canAutoRecover: 0
 --- !u!1001 &634438021
@@ -18836,11 +18836,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 1325832338}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 8
   disableAutoRecover: 1
   canAutoRecover: 0
 --- !u!1 &874462416
@@ -19874,11 +19874,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 2002902112}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 45
   disableAutoRecover: 0
   canAutoRecover: 0
 --- !u!4 &939384226
@@ -28928,7 +28928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1169387287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28963,7 +28963,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169387286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.6, y: -45.58, z: -10}
+  m_LocalPosition: {x: 33.23, y: -60.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1960934678}
@@ -31091,7 +31091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276526044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.035017, y: -44.734, z: -10}
+  m_LocalPosition: {x: 33.795506, y: -59.784, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 740755542}
@@ -31743,11 +31743,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 885797407}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 14
   disableAutoRecover: 0
   canAutoRecover: 0
 --- !u!1 &1325185025
@@ -32031,7 +32031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 1108883264}
   doorNumber: 0
@@ -34924,11 +34924,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 2032106849}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 10
   disableAutoRecover: 0
   canAutoRecover: 0
 --- !u!1 &1566039815
@@ -42554,7 +42554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.205143, y: -44.980515, z: -10}
+  m_LocalPosition: {x: 33.23, y: -60.43, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43414,12 +43414,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 1872676453}
   - {fileID: 1034295116}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 12
   disableAutoRecover: 1
   canAutoRecover: 0
 --- !u!4 &1738978143
@@ -43878,12 +43878,12 @@ PrefabInstance:
     - target: {fileID: 1998747029963930398, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.37
+      value: 38.67
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930398, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.3
+      value: -38.55
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930398, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -44476,11 +44476,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 0
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 1678102115}
   doorNumber: 0
-  cdTime: 1
+  cdTime: 15
   disableAutoRecover: 0
   canAutoRecover: 0
 --- !u!4 &1802967933
@@ -45793,7 +45793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1907144303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46580,7 +46580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDisabled: 1
   ghostTeleporting: 0
-  countDownTime: 1
+  countDownTime: 1.75
   door:
   - {fileID: 836528737}
   doorNumber: 0
@@ -61932,12 +61932,12 @@ PrefabInstance:
     - target: {fileID: 6634660331999621316, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.6
+      value: 33.23
       objectReference: {fileID: 0}
     - target: {fileID: 6634660331999621316, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -45.58
+      value: -60.63
       objectReference: {fileID: 0}
     - target: {fileID: 6634660331999621316, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
