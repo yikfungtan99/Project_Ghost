@@ -162,7 +162,10 @@ public class Trigger : MonoBehaviour
         switch(index)
         {
             case 1:
-                gm.audioManager.PlayAudio("ghost trigger");
+                if(!gm.inTutorial)
+                {
+                    gm.audioManager.PlayAudio("ghost trigger");
+                }
                 break;
         }
     }
