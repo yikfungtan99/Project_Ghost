@@ -32,31 +32,36 @@ public class NotePickUp : Interactable
 
     public override void Interact()
     {
-            base.Interact();
-            NoteCount += 1;
-            Debug.Log(NoteCount);
-            Destroy(gameObject);
-            Debug.Log("Note picked up");
+        base.Interact();
+        NoteCount += 1;
+        Debug.Log(NoteCount);
+        Destroy(gameObject);
+        Debug.Log("Note picked up");
 
-            if (NoteCount == 1)
+        if (NoteCount == 1)
+        {
+            Note1PickedUp = true;
+          
+            Debug.Log("Note1 has been picked up");
+            UpdateMonologue();
+        }
+        if (NoteCount == 2)
+        {
+            Note2PickedUp = true;
+            Note3PickedUp = true;
+            Note4PickedUp = true;
+            Debug.Log("Note2 has been picked up");
+            UpdateMonologue();
+        }
+        if (NoteCount == 3)
             {
-                Note1PickedUp = true;
-                Debug.Log("Note1 has been picked up");
+            Note5PickedUp = true;
+            Note6PickedUp = true;
+            
+            Debug.Log("Note3 has been picked up");
                 UpdateMonologue();
             }
-            if (NoteCount == 2)
-            {
-                Note2PickedUp = true;
-                Debug.Log("Note2 has been picked up");
-                UpdateMonologue();
-            }
-            if (NoteCount == 3)
-            {
-                Note3PickedUp = true;
-                Debug.Log("Note3 has been picked up");
-                UpdateMonologue();
-            }
-            if (NoteCount == 4)
+          /*  if (NoteCount == 4)
             {
                 Note4PickedUp = true;
                 Debug.Log("Note4 has been picked up");
@@ -85,7 +90,7 @@ public class NotePickUp : Interactable
                 Note8PickedUp = true;
                 Debug.Log("Note8 has been picked up");
                 UpdateMonologue();
-            }
+            }*/
     }
    
     void UpdateMonologue()
