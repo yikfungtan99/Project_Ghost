@@ -404,17 +404,4 @@ MonoBehaviour:
     isPaused: 0
     triggerOnce: 0
     audioSource: {fileID: 0}
-  - name: ghost door ambience
-    description: played when player walks past a blocked/locked door
-    audioClip: {fileID: 8300000, guid: e4b8d66a3e09ca44abd5194bbea28c85, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 1
-    defFadeInSeconds: 1
-    defFadeOutSeconds: 1
-    isPlaying: 0
-    isFading: 0
-    isPaused: 0
-    triggerOnce: 0
-    audioSource: {fileID: 0}
   inverseSpaceTimeContinuum: 1
