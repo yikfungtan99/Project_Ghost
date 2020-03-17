@@ -53,9 +53,7 @@ public class Interactable_Bed : Interactable
         }
         else
         {
-            //Insert Monologue Here
-            Debug.Log("I should light up the candle");
-
+            UpdateMonologue(1);
         }
 
     }
@@ -73,4 +71,13 @@ public class Interactable_Bed : Interactable
         
     }
 
+    void UpdateMonologue(int displayIndex)
+    {
+        switch(displayIndex)
+        {
+            case 1: //! prompt player to light candle before sleeping
+                gm.monologueManager.DisplaySentence(35);
+                break;
+        }
+    }
 }

@@ -231,6 +231,21 @@ MonoBehaviour:
       blessings of many generations..."'
     cooldown: 3
     cooldownCounter: 0
+  - description: '[34] Tutorial: prompt player to sleep'
+    index: 34
+    sentenceText: I'm quite worn from my drive here. Should get some sleep.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[35] Tutorial: prompt player to light candle (before sleeping)'
+    index: 35
+    sentenceText: I can't sleep without a nightlight... Lighting a candle will do.
+    cooldown: 3
+    cooldownCounter: 0
+  - description: '[36] Tutorial: prompt player to go out of bedroom after sleep'
+    index: 36
+    sentenceText: What was that? I think I just heard something outside the door...?
+    cooldown: 3
+    cooldownCounter: 0
   typingSpeed: 0.01
   isSentenceDrawn: 0
   showMonologue: 0

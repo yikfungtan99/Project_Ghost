@@ -21,7 +21,8 @@ public class Tutorial_Triggers : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                Debug.Log("I need to sleeo");//MONOLOG HERE
+                promptSleep = false;
+                UpdateMonologue(1);
             }
         }
         else
@@ -84,8 +85,9 @@ public class Tutorial_Triggers : MonoBehaviour
                             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
 
                         }
-                        //play door sound here
 
+                        //play door sound here
+                        StartCoroutine(UpdateMonologueAfterWaitSeconds(2, 4));
                     }
 
                 }
@@ -96,4 +98,35 @@ public class Tutorial_Triggers : MonoBehaviour
 
     }
 
+    IEnumerator UpdateMonologueAfterWaitSeconds(int displayIndex, int seconds)
+    {
+        for (int i = seconds; i > 0; i--)
+        {
+            yield return new WaitForSeconds(1);
+        }
+        UpdateMonologue(displayIndex);
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        switch(displayIndex)
+        {
+            case 1: //! prompt player to sleep
+                GameManager.Instance.monologueManager.DisplaySentence(34);
+                break;
+            case 2: //! prompt player to leave bedroom after sleep
+                GameManager.Instance.monologueManager.DisplaySentence(36);
+                break;
+        }
+    }
+
+    void UpdateAudio(int index)
+    {
+        switch(index)
+        {
+            case 1: //! play some eerie/unknown door sound things (to hint at ghost presence)
+
+                break;
+        }
+    }
 }
