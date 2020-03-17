@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  LightSpeed: 5
+  LightSpeed: 3
 --- !u!1101 &-822811741679845538
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
