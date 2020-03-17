@@ -68,7 +68,7 @@ public class Interactable_Bed : Interactable
         ableToSleep = false;
         FadeInOut.SetActive(false);
         gm.tutorialSleep = true;
-        
+        UpdateMonologue(2);
     }
 
     void UpdateMonologue(int displayIndex)
@@ -77,6 +77,9 @@ public class Interactable_Bed : Interactable
         {
             case 1: //! prompt player to light candle before sleeping
                 gm.monologueManager.DisplaySentence(35);
+                break;
+            case 2: //! prompt player to leave bedroom after sleep
+                GameManager.Instance.monologueManager.DisplaySentence(36);
                 break;
         }
     }

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7109,7 +7109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &183130341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25771,7 +25771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1276526045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31267,7 +31267,7 @@ PrefabInstance:
     - target: {fileID: 1254838575500850611, guid: f6cbc8dc500d14f4db51bda5aa17643c,
         type: 3}
       propertyPath: isDisabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1254838575500850611, guid: f6cbc8dc500d14f4db51bda5aa17643c,
         type: 3}
@@ -31333,6 +31333,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cursed mirror
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254838575500850623, guid: f6cbc8dc500d14f4db51bda5aa17643c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6cbc8dc500d14f4db51bda5aa17643c, type: 3}
@@ -32040,7 +32045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9466686, y: -30.873999, z: -10}
+  m_LocalPosition: {x: -28.806667, y: -31.209997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
