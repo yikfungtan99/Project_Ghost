@@ -48,6 +48,8 @@ public class PuzzleManager : MonoBehaviour
     public bool isPhotoFramePairComplete = false;
     public bool loungePuzzleClearMsgTrigger = false;
 
+    public string stairsItemRequiredName;
+
     private void Awake()
     {
         gm = GameManager.Instance;
