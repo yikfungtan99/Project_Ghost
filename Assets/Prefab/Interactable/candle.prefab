@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4928372338412585961}
   - component: {fileID: 5040786520374280018}
   m_Layer: 8
-  m_Name: Candle
+  m_Name: candle
   m_TagString: Candle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.8, y: 7.2}
+  m_Size: {x: 14, y: 16.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,7 +102,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 14, y: 16.73}
-    newSize: {x: 12.8, y: 7.2}
+    newSize: {x: 14, y: 16.73}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

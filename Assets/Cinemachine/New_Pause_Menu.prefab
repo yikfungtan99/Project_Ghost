@@ -6556,7 +6556,7 @@ GameObject:
   - component: {fileID: 8812354927271099160}
   - component: {fileID: 8812354927271099161}
   m_Layer: 5
-  m_Name: New Pause Menu
+  m_Name: New_Pause_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6665,12 +6665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa81312a59dd3b442b27e8b075ac9878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
-  itemGiver: 0
-  itemName: 
-  charges: 0
+  pauseMenuUI: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!114 &8812354927271099161
 MonoBehaviour:
   m_ObjectHideFlags: 0
