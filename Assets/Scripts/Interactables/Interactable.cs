@@ -52,7 +52,7 @@ public class Interactable : MonoBehaviour
 
         if (GetComponent<pocTrigger>())
         {
-            if(GetComponent<Kitchen_Steamer>())
+            if(GetComponent<Kitchen_Steamer>() || GetComponent<Death_Bowl>())
             {
                 return;
             }
