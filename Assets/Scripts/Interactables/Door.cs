@@ -218,6 +218,14 @@ public class Door : Interactable
         //! For left right doors
         if(col.gameObject == gm.playerObject)
         {
+            if(transform.parent.gameObject == gm.doorHorizontalDiningToHall4
+                || transform.parent.gameObject == gm.doorVerticalKitchenToToilet 
+                || transform.parent.gameObject == gm.doorVerticalLivingToHall2 
+                || transform.parent.gameObject == gm.doorVerticalMainToStorage)
+            {
+                UpdateAudio(6);
+            }
+
             Interact();
         }
 
@@ -240,6 +248,17 @@ public class Door : Interactable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject == gm.playerObject)
+        {
+            if (transform.parent.gameObject == gm.doorHorizontalDiningToHall4
+                || transform.parent.gameObject == gm.doorVerticalKitchenToToilet
+                || transform.parent.gameObject == gm.doorVerticalLivingToHall2
+                || transform.parent.gameObject == gm.doorVerticalMainToStorage)
+            {
+                UpdateAudio(6);
+            }
+        }
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
@@ -255,6 +274,34 @@ public class Door : Interactable
             }
         }
 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == gm.playerObject)
+        {
+            if (transform.parent.gameObject == gm.doorHorizontalDiningToHall4
+                || transform.parent.gameObject == gm.doorVerticalKitchenToToilet
+                || transform.parent.gameObject == gm.doorVerticalLivingToHall2
+                || transform.parent.gameObject == gm.doorVerticalMainToStorage)
+            {
+                UpdateAudio(7);
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject == gm.playerObject)
+        {
+            if (transform.parent.gameObject == gm.doorHorizontalDiningToHall4
+                || transform.parent.gameObject == gm.doorVerticalKitchenToToilet
+                || transform.parent.gameObject == gm.doorVerticalLivingToHall2
+                || transform.parent.gameObject == gm.doorVerticalMainToStorage)
+            {
+                UpdateAudio(7);
+            }
+        }
     }
 
     public override void Interact()
@@ -388,6 +435,13 @@ public class Door : Interactable
                 gm.audioManager.ForceStopAudio("normal ambience");
 
                 gm.audioManager.FadeInAudio("disquiet ambience", 0);
+                break;
+            case 6: //! start ghost door ambience
+                gm.audioManager.PlayAudio("ghost door ambience");
+                break;
+            case 7: //! stop ghost door ambience
+                //gm.audioManager.ForceStopAudio("ghost door ambience");
+                gm.audioManager.FadeOutAudio("ghost door ambience", 0);
                 break;
         }
     }
