@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1111,6 +1111,7 @@ GameObject:
   - component: {fileID: 85313817}
   - component: {fileID: 85313819}
   - component: {fileID: 85313818}
+  - component: {fileID: 85313820}
   m_Layer: 8
   m_Name: rice bowl 2
   m_TagString: Untagged
@@ -1132,7 +1133,7 @@ Transform:
   - {fileID: 1695417820}
   - {fileID: 30394250}
   m_Father: {fileID: 591380089}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &85313817
 SpriteRenderer:
@@ -1228,6 +1229,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.46}
   m_EdgeRadius: 0
+--- !u!114 &85313820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85313815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0e69a515fc7994ea60588513da8859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomTrigger: {fileID: 46139268}
 --- !u!1 &87162742
 GameObject:
   m_ObjectHideFlags: 0
@@ -10156,7 +10170,7 @@ Transform:
   m_Children:
   - {fileID: 489178063}
   m_Father: {fileID: 591380089}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &377994141
 SpriteRenderer:
@@ -14448,10 +14462,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1380657448}
   - {fileID: 85313816}
   - {fileID: 377994140}
   - {fileID: 1255848726}
-  - {fileID: 1380657448}
   m_Father: {fileID: 402448931}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15271,12 +15285,22 @@ PrefabInstance:
     - target: {fileID: 7067107734222096418, guid: bb50755510f5c53429ac091384858fc4,
         type: 3}
       propertyPath: m_Offset.y
-      value: -1.5179746
+      value: -1.3902242
       objectReference: {fileID: 0}
     - target: {fileID: 7067107734222096418, guid: bb50755510f5c53429ac091384858fc4,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.9340509
+      value: 1.1895517
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067107734222096418, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067107734222096418, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
         type: 3}
@@ -30757,6 +30781,7 @@ GameObject:
   - component: {fileID: 1255848727}
   - component: {fileID: 1255848729}
   - component: {fileID: 1255848728}
+  - component: {fileID: 1255848730}
   m_Layer: 8
   m_Name: rice bowl 4
   m_TagString: Untagged
@@ -30777,7 +30802,7 @@ Transform:
   m_Children:
   - {fileID: 1883700697}
   m_Father: {fileID: 591380089}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1255848727
 SpriteRenderer:
@@ -30873,6 +30898,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.46}
   m_EdgeRadius: 0
+--- !u!114 &1255848730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255848725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0e69a515fc7994ea60588513da8859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomTrigger: {fileID: 46139268}
 --- !u!1 &1264030678
 GameObject:
   m_ObjectHideFlags: 0
@@ -33055,6 +33093,7 @@ GameObject:
   - component: {fileID: 1380657451}
   - component: {fileID: 1380657450}
   - component: {fileID: 1380657449}
+  - component: {fileID: 1380657452}
   m_Layer: 8
   m_Name: rice bowl 1
   m_TagString: Untagged
@@ -33075,7 +33114,7 @@ Transform:
   m_Children:
   - {fileID: 1279050173}
   m_Father: {fileID: 591380089}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1380657449
 MonoBehaviour:
@@ -33171,6 +33210,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1380657452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380657447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0e69a515fc7994ea60588513da8859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomTrigger: {fileID: 46139268}
 --- !u!1001 &1383794012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42938,7 +42990,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -42962,7 +43014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7217293, y: -31.263565, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

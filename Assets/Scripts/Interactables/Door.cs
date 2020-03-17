@@ -64,8 +64,15 @@ public class Door : Interactable
             }
             else
             {
+                if(!gm.inTutorial)
+                {
+                    UpdateMonologue(3, "");
+                }
+                else
+                {
+                    UpdateMonologue(1, "");
+                }
                 UpdateAudio(2);
-                UpdateMonologue(3, "");
             }
             Debug.Log("Dining to Hall4");
         }
@@ -83,9 +90,15 @@ public class Door : Interactable
             }
             else
             {
+                if (!gm.inTutorial)
+                {
+                    UpdateMonologue(5, "");
+                }
+                else
+                {
+                    UpdateMonologue(1, "");
+                }
                 UpdateAudio(2);
-                UpdateMonologue(5, "");
-                //! hint at cooking food to unlock door
             }
             Debug.Log("Kitchen to Toilet");
         }
@@ -103,9 +116,15 @@ public class Door : Interactable
             }
             else
             {
+                if (!gm.inTutorial)
+                {
+                    UpdateMonologue(5, "");
+                }
+                else
+                {
+                    UpdateMonologue(1, "");
+                }
                 UpdateAudio(2);
-                UpdateMonologue(5, "");
-                //! hint at cooking food to unlock door
             }
             Debug.Log("Living to Hall2");
         }
@@ -121,9 +140,15 @@ public class Door : Interactable
             }
             else
             {
+                if (!gm.inTutorial)
+                {
+                    UpdateMonologue(7, "");
+                }
+                else
+                {
+                    UpdateMonologue(1, "");
+                }
                 UpdateAudio(2);
-                UpdateMonologue(7, "");
-                //! hint at symmetry to unlock door
             }
             Debug.Log("Main to Storage");
         }
@@ -308,6 +333,11 @@ public class Door : Interactable
     {
         base.Interact();
 
+        if(!gm.inTutorial)
+        {
+            SetIsLockedOnDoor(gm.doorHorizontalOutsideToMain, true);
+        }
+
         if (isLocked)
         {
             TryToUnlock();
@@ -440,11 +470,17 @@ public class Door : Interactable
                 gm.audioManager.FadeInAudio("disquiet ambience", 0);
                 break;
             case 6: //! start ghost door ambience
-                gm.audioManager.PlayAudio("ghost door ambience");
+                if(!gm.inTutorial)
+                {
+                    gm.audioManager.PlayAudio("ghost door ambience");
+                }
                 break;
             case 7: //! stop ghost door ambience
-                //gm.audioManager.ForceStopAudio("ghost door ambience");
-                gm.audioManager.FadeOutAudio("ghost door ambience", 0);
+                if (!gm.inTutorial)
+                {
+                    //gm.audioManager.ForceStopAudio("ghost door ambience");
+                    gm.audioManager.FadeOutAudio("ghost door ambience", 0);
+                }
                 break;
         }
     }
