@@ -7,7 +7,7 @@ public class Trigger : MonoBehaviour
     protected GameManager gm;
     public bool isDisabled = false;
     public bool ghostTeleporting = false;
-    public int countDownTime;
+    public float countDownTime;
     public Transform[] door;
     public int doorNumber;
     private float randomChance;
@@ -104,7 +104,7 @@ public class Trigger : MonoBehaviour
     }
 
 
-    IEnumerator CountDownTrigger(int countDownTime, bool hundredPercent)
+    IEnumerator CountDownTrigger(float countDownTime, bool hundredPercent)
     {
         
         ghostTeleporting = true;
@@ -115,7 +115,7 @@ public class Trigger : MonoBehaviour
             Warning();
         }
 
-        for (int i = countDownTime; i > 0; i--)
+        for (float i = countDownTime; i > 0; i--)
         {
             Debug.Log("Warning! Ghost will teleport to the ROOM in " + i + " second(s)!");
             yield return new WaitForSeconds(1);
