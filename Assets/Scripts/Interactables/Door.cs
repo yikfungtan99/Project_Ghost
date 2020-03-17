@@ -406,7 +406,10 @@ public class Door : Interactable
                 gm.monologueManager.DisplaySentence(32);
                 break;
             case 8: //! unblock door to storage
-                gm.monologueManager.DisplaySentence(33);
+                if (!gm.inTutorial)
+                {
+                    gm.monologueManager.DisplaySentence(33);
+                }
                 break;
         }
     }
