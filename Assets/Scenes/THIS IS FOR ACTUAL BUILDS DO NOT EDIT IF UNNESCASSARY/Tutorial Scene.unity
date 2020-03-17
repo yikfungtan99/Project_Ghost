@@ -30881,7 +30881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: debugLightIntensity
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 39947229, guid: 1419b3fbd29ec454a99c819981e3f54c, type: 3}
       propertyPath: storageRoom
@@ -32051,7 +32051,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -32075,7 +32075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -28.806667, y: -31.209997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
