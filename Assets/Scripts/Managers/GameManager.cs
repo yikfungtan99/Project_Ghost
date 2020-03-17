@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour
     public Tutorial TutorialNavi;
     public Animator BagAnim;
     public Animator FadeInOutAnim;
+
+    public bool inTutorial = false;
+
     public bool tutorialFirst = false;
     public bool tutorialComplete = false;
     public bool tutorialSleep = false;

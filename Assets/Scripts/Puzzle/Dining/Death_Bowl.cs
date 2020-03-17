@@ -21,17 +21,9 @@ public class Death_Bowl : Dining_Bowl
         {
             pm.disableDiningPuzzle = true;
 
-            //! Make player faint
-            gm.player.playerFainted = true;
-
-            Destroy(gm.playerObject); // <- this has to be changed or the player reference will be lost lol
-            
-
-            //! need to wait for Master UI Canvas to be implemented before optimising the codes below
-            int child = GameObject.Find("DeathCanvas").transform.childCount;
-            for (int i = 0; i < child; i++)
+            if (GetComponent<pocTrigger>())
             {
-                GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(true);
+                GetComponent<pocTrigger>().ActivateTrigger();
             }
         }
     }
