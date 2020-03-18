@@ -128,6 +128,11 @@ public class Door : Interactable
             }
             Debug.Log("Living to Hall2");
         }
+        if(GatewayIsLocked(gm.doorHorizontalLivingToHall3))
+        {
+            UpdateAudio(2);
+            UpdateMonologue(1, "");
+        }
         if (GatewayIsLocked(gm.doorVerticalMainToStorage))
         {
             if (gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "comb")

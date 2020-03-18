@@ -246,6 +246,13 @@ MonoBehaviour:
     sentenceText: What was that? I think I just heard something outside the door...?
     cooldown: 3
     cooldownCounter: 0
+  - description: '[37] Locked stairwell: hint player to obtain red thread from storage
+      (click)'
+    index: 37
+    sentenceText: 'A shadow says: "Obtain an item that is a mender of tears and rifts,
+      a coil that brings forth reunion."'
+    cooldown: 3
+    cooldownCounter: 0
   typingSpeed: 0.01
   isSentenceDrawn: 0
   showMonologue: 0
