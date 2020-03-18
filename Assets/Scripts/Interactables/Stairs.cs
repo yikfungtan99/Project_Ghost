@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stairs : Interactable
 {
@@ -51,6 +52,8 @@ public class Stairs : Interactable
                 doorBlocker.SetActive(false);
 
                 //! show win screen here
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
             }
             else
             {
