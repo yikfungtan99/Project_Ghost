@@ -40,4 +40,7 @@ EditorBuildSettings:
     path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Game
       Scene v2.1.unity
     guid: f0db274fc3c49254d9d2bf0ccddf330f
+  - enabled: 1
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Win.unity
+    guid: ad1aa22100eb1334282db1e84b0dc064
   m_configObjects: {}
