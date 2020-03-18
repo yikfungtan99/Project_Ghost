@@ -148,7 +148,26 @@ public class Interactable : MonoBehaviour
         {
             if (GetComponentInChildren<ParticleSystem>(true))
             {
-                GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+                if (itemGiver)
+                {
+
+                    if(charges > 0)
+                    {
+
+                        GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+
+                    }
+                    else
+                    {
+                        GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
+                    }
+
+                }
+                else
+                {
+                    GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+                }
+                
             }
         }
     }

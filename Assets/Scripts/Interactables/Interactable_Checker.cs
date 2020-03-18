@@ -19,9 +19,24 @@ public class Interactable_Checker : MonoBehaviour
 
                 if (interactable[i].gameObject.GetComponent<Interactable>())
                 {
+                    if (interactable[i].gameObject.GetComponent<Candle>())
+                    {
 
-                    interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+                        if (!interactable[i].gameObject.GetComponent<Candle>().isLit)
+                        {
 
+                            interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                        }
+
+                    }
+                    else
+                    {
+
+                        interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                    }
+                    
                 }
 
             }

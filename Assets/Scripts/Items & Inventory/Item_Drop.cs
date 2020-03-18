@@ -12,7 +12,18 @@ public class Item_Drop : Interactable
     void Start()
     {
         il = gm.itemLibrary.GetComponent<ItemLibrary>();
-        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = il.GetSprite(itemName);
+
+        if (transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>())
+        {
+            transform.GetChild(1).gameObject.GetComponent<SpriteRenderer>().sprite = il.GetSprite(itemName);
+        }
+        else
+        {
+
+            Debug.Log(gameObject.name + ": cannot update sprite, sprite gameobject not found");
+
+        }
+        
     }
 
     public override void Interact()

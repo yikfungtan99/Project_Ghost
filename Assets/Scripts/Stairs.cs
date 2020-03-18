@@ -14,7 +14,7 @@ public class Stairs : Interactable
         base.Awake();
 
         pm = gm.puzzleManager;
-        doorBlocker = transform.GetChild(0).gameObject;
+        doorBlocker = transform.GetChild(1).gameObject;
 
         triggerOnce = false;
     }

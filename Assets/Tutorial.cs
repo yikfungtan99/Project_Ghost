@@ -28,21 +28,23 @@ public class Tutorial : MonoBehaviour
 
     public void UpdateBoard(int num)
     {
-        if(num == 3)
+        if (GameManager.Instance.inTutorial)
         {
+            if (num == 3)
+            {
 
-            ui.gameObject.SetActive(true);
-            ui.sprite = boards[num];
-            GetComponent<SpriteRenderer>().sprite = boards[2];
+                ui.gameObject.SetActive(true);
+                ui.sprite = boards[num];
+                GetComponent<SpriteRenderer>().sprite = boards[2];
 
+            }
+            else
+            {
+                Debug.Log(num);
+                GetComponent<SpriteRenderer>().sprite = boards[num];
+
+            }
         }
-        else
-        {
-            Debug.Log(num);
-            GetComponent<SpriteRenderer>().sprite = boards[num];
-
-        }
-        
 
     }
 }

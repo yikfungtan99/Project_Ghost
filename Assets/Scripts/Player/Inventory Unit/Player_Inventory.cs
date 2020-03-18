@@ -46,8 +46,12 @@ public class Player_Inventory : MonoBehaviour
                         
                     }
                     GameManager.Instance.player.inventoryOn = inventoryOn;
+
+                    if (GameManager.Instance.inTutorial)
+                    {
+                        hand.gameObject.SetActive(firstTime);
+                    }
                     
-                    hand.gameObject.SetActive(firstTime);
                 }
 
             }
