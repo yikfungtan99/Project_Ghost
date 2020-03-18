@@ -70,7 +70,7 @@ public class Stairs : Interactable
         switch(displayIndex)
         {
             case 1: //! ghost block to stairs tells player something is missing
-
+                gm.monologueManager.DisplaySentence(37);
                 break;
         }
     }
