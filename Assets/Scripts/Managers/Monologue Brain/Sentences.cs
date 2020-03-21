@@ -21,6 +21,6 @@ public class Sentences
     public float displayMonologueTimer = 3f;
     [ReadOnly]
     public float displayMonologueTimerCounter;
-
+    [ReadOnly]
     public bool displayMonologue = false;
 }
