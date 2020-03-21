@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     [Tooltip("Adjust audio -while playing- through the inspector editor")]
     public bool adjustIn_GameAudioThruInspector = false;
 
+    public AudioMixerGroup audioMixer;
+
     [Header("Audio")]
     public Audio[] audioList;
 
@@ -37,6 +39,7 @@ public class AudioManager : MonoBehaviour
         {
             a.audioSource = transform.GetChild(0).gameObject.AddComponent<AudioSource>();
 
+            a.audioSource.outputAudioMixerGroup = audioMixer;
             a.audioSource.clip = a.audioClip;
             a.audioSource.volume = a.volume;
             a.audioSource.pitch = a.pitch;
@@ -383,16 +386,5 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Audio: " + searchName + " is now Unpaused!");
         a.isPaused = false;
         a.audioSource.UnPause();
-    }
-    
-    public void UpdateAllVolume(float newVolume)
-    {
-        if(newVolume >= 0f && newVolume <= 1f)
-        {
-            foreach (Audio a in audioList)
-            {
-                a.audioSource.volume = newVolume;
-            }
-        }
     }
 }
