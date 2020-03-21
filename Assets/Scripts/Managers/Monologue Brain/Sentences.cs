@@ -16,8 +16,11 @@ public class Sentences
     [TextArea(0, 3)]
     public string sentenceText;
 
-    //! cooldown time for text to be called it (in the case that it is spammed)
-    [Tooltip("Cooldown before the same line of Monologue text is displayed twice in a row.")]
-    public float cooldown = 3f;
-    public float cooldownCounter;
+    //! custom display time for each sentence before disappearing and put on cooldown
+    [Tooltip("Custom display time for each Monologue sentence in the screen before disappearing and put on cooldown.")]
+    public float displayMonologueTimer = 3f;
+    [ReadOnly]
+    public float displayMonologueTimerCounter;
+
+    public bool displayMonologue = false;
 }

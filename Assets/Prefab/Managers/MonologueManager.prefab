@@ -48,214 +48,250 @@ MonoBehaviour:
   - description: '[0] When player lighter is lit'
     index: 0
     sentenceText: Lighter flame sparks into life.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[1] When player lights a candle'
     index: 1
     sentenceText: Candle is lit by the shared flame.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[2] no key click door to escape mansion'
     index: 2
     sentenceText: The door is locked, the key to unlock it is missing...
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[3] When player picks up a note'
     index: 3
     sentenceText: A piece of torn paper? Might be useful.
-    cooldown: 3
-    cooldownCounter: 0
-  - description: '[4] (Generic) When picking any object into inventory'
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[4] (Generic) When putting any object into inventory'
     index: 4
-    sentenceText: Item has been added into the bag.
-    cooldown: 1
-    cooldownCounter: 0
+    sentenceText: 
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[5] DiningPuzzle: (no spoon click)'
     index: 5
     sentenceText: Some bowls filled with rice, could scoop one up with a spoon.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[6] DiningPuzzle: (spoon click, forewarn)'
     index: 6
     sentenceText: I feel that I'll have to be a little more cautious...
-    cooldown: 1
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[7] DiningPuzzle: (puzzle completed)'
     index: 7
     sentenceText: An item was hidden within the bowl of rice!
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[8] Clicking statue to get talisman'
     index: 8
     sentenceText: Picked up the 1 Talisman laying near the statue foot.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[9] KitchenPuzzle: (no item click)'
     index: 9
     sentenceText: A steamer? I might have remembered seeing these in one of the notes
       I picked up. Could I make something with it?
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[10] KitchenPuzzle: wrong ingredient (item click)'
     index: 10
     sentenceText: I feel compelled to think that I should not put this in just yet.
       I should check the recipe again.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[11] KitchenPuzzle: correct ingredient (item click)'
     index: 11
     sentenceText: That feels right, I wonder what am I making...
-    cooldown: 0
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[12] KitchenPuzzle: all ingredients gathered'
     index: 12
     sentenceText: That's all of it... ! I think I hear something coming!
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[13] KitchenPuzzle: kuih is finally made (no item click)'
     index: 13
     sentenceText: What's this? The steamer has made a piece of kuih in a matter of
       seconds! I wonder if this will be useful somewhere.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[14] LoungePuzzle: missing placable table item (no item click)'
     index: 14
     sentenceText: There seems to be something out of place for this table.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[15] LoungePuzzle: trying to place wrong item (item click)'
     index: 15
     sentenceText: I do not think this is what's missing here.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[16] LoungePuzzle: interacting with mirror (item click; no cloth)'
     index: 16
     sentenceText: The way this mirror is in this room... Something does not feel right
       about it.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[17] LoungePuzzle: stone statue pair formed'
     index: 17
     sentenceText: That's it, two stone statues form a pair!
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[18] LoungePuzzle: empty photo frame pair formed'
     index: 18
     sentenceText: This photo frame perfectly matches with the one at the other end
       of the room.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[19] LoungePuzzle: mirror successfuly covered'
     index: 19
     sentenceText: Now that's one less mirror to worry about...
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[20] LoungePuzzle: reward delivery'
     index: 20
     sentenceText: That sounded like something fell from the ceiling... I should go
       check on it.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[21] KitchenPuzzle: player prompt when kuih is ready to collect'
     index: 21
     sentenceText: Something... smells good.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[22] Locked door (click)'
     index: 22
     sentenceText: It is locked... What should I do?
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[23] Unlock front door from outside (item click)'
     index: 23
     sentenceText: This key has not been used in years, but it can still unlock this
       door.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[24] KitchenPuzzle: altar comment without kuih (click)'
     index: 24
     sentenceText: I remember a diety that gives protection to families when you give
       it offerings, the idol still stares into my eyes after all these years.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[25] KitchenPuzzle: giving altar wrong item (item click)'
     index: 25
     sentenceText: I do not think this is what a diety might want to feast on...
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[26] KitchenPuzzle: giving altar right item (item click)'
     index: 26
     sentenceText: The kuih is consumed by the altar! But a shiny object appears on
       the statue's feet??
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[27] KitchenPuzzle: altar gives key item (click)'
     index: 27
     sentenceText: There is a sharp bladed razor lying on the statue base. Maybe I
       can use it for something?
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[28] Locked door: hint to complete Dining Puzzle first (click)'
     index: 28
     sentenceText: 'A shadow says: "Passage through me requires a tool that symbolises
       unity, it cannot work without its components helping each other."'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[29] Unlock door: use scissors to unlock door (item click)'
     index: 29
     sentenceText: 'The shadow disappears: "The scissors, alike a bonded couple, cuts
       through all obstacles..."'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[30] Locked door: hint to complete Kitchen Puzzle first (click)'
     index: 30
     sentenceText: 'A shadow says: "Show me a tool as keen as one''s senses for safety!
       A blade to protect and not to kill.'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[31] Unlock door: use razor to unlock door (item click)'
     index: 31
     sentenceText: 'The shadow disperses: "A razor signifies safety through all odds...
       unless the danger is yourself."'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[32] Locked door: hint to complete Lounge Puzzle first (click)'
     index: 32
     sentenceText: 'A shadow says: "Present a tool which straightens lines that go
       astray, a regulator that dispells bad luck to allow space for good ones to blossom."'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[33] Unlock door: use comb to unlock door (item click)'
     index: 33
     sentenceText: 'The shadow vanishes: "A comb that combs one''s hair invites the
       blessings of many generations..."'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[34] Tutorial: prompt player to sleep'
     index: 34
     sentenceText: I'm quite worn from my drive here. Should get some sleep.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[35] Tutorial: prompt player to light candle (before sleeping)'
     index: 35
     sentenceText: I can't sleep without a nightlight... Lighting a candle will do.
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[36] Tutorial: prompt player to go out of bedroom after sleep'
     index: 36
     sentenceText: What was that? I think I just heard something outside the door...?
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   - description: '[37] Locked stairwell: hint player to obtain red thread from storage
       (click)'
     index: 37
     sentenceText: 'A shadow says: "Obtain an item that is a mender of tears and rifts,
       a coil that brings forth reunion."'
-    cooldown: 3
-    cooldownCounter: 0
+    displayMonologueTimer: 3
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   typingSpeed: 0.01
+  index: 0
   isSentenceDrawn: 0
-  showMonologue: 0
-  showMonologueTimer: 3
-  itemDisplayCooldown: 1
-  itemDisplayCooldownCounter: 0
+  displayMonologue: 0

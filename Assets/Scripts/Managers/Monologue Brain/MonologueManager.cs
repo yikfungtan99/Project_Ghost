@@ -10,27 +10,18 @@ public class MonologueManager : MonoBehaviour
     [Space(10)]
     [Range(0.01f, 0.1f)]
     public float typingSpeed;
-    
-    private int index;
+
+    private int oldIndex;
+    public int index;
 
     //! variables for coroutine (if needed)
     public bool isSentenceDrawn;
 
     //[HideInInspector]
-    public bool showMonologue = false;
-    public float showMonologueTimer;
-    private float showMonologueTimerCounter;
-
-    public float itemDisplayCooldown;
-    public float itemDisplayCooldownCounter;
+    public bool displayMonologue = false;
 
     void Awake()
     {
-        for(int i=0; i<sentenceList.Length; i++)
-        {
-            sentenceList[i].cooldownCounter = 0;
-        }
-
         textBox.text = "";
         isSentenceDrawn = true;
     }
@@ -38,24 +29,19 @@ public class MonologueManager : MonoBehaviour
     void Start()
     {
         //! default index value
+        oldIndex = -2;
         index = -1;
 
         //! set current timer to set start time
         ResetMonologueTimer();
-
-        //StartCoroutine(Type());
     }
 
     void Update()
     {
-        CountMonologueTimer();
-
-        CountItemDisplayCooldown();
-
-        CountTextCooldown();
+        CountMonologueDisplayTimer();
     }
 
-    //! NOT FOR POC : for coroutine to draw sentence letter by letter
+    //! Coroutine to draw sentence letter by letter, unused as of now
     IEnumerator Type()
     {
         isSentenceDrawn = false;
@@ -65,52 +51,67 @@ public class MonologueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         //! setting cooldown for the current monologue text sentence that has finished to be displayed on screen
-        sentenceList[this.index].cooldownCounter = sentenceList[this.index].cooldown;
+        //sentenceList[this.index].cooldownCounter = sentenceList[this.index].cooldown;
         isSentenceDrawn = true;
     }
 
     void TypeDisplaySentence()
     {
-        sentenceList[this.index].cooldownCounter = sentenceList[this.index].cooldown;
-        textBox.text = sentenceList[this.index].sentenceText;
+        textBox.text = sentenceList[index].sentenceText;
     }
 
     public void DisplayPickUpSentence(string itemName, bool isItemInContainer)
     {
-        if (itemDisplayCooldownCounter == 0)
+        //! for enabling the monologue gameobject
+        if (!CheckIfStillOnDisplay(4))
         {
-            //! for enabling the monologue gameobject
-            showMonologue = true;
-
-            if (showMonologueTimerCounter > 0)
-            {
-                ResetMonologueTimer();
-            }
+            sentenceList[4].displayMonologue = true;
+        }
+        else
+        {
+            sentenceList[oldIndex].displayMonologue = false;
+            sentenceList[4].displayMonologue = true;
         }
 
-        itemDisplayCooldownCounter = itemDisplayCooldown;
-        if(!isItemInContainer)
+        displayMonologue = sentenceList[4].displayMonologue;
+
+        if (sentenceList[4].displayMonologueTimerCounter > 0)
+        {
+            ResetMonologueTimer();
+        }
+
+        //! differentiating whether item picked up comes from any form of container or not
+        if (!isItemInContainer)
         {
             textBox.text = "Picked up one " + itemName + " and put it in the bag.";
+            index = 4;
         }
         else
         {
             textBox.text = "Found one " + itemName + " inside and put it in the bag.";
+            index = 4;
         }
     }
 
     //! public function that can be called anywhere to display sentence in monologue text from given index
     public void DisplaySentence(int index)
     {
-        if(sentenceList[index].cooldownCounter == 0)
+        //! for enabling the monologue gameobject
+        if (!CheckIfStillOnDisplay(index))
         {
-            //! for enabling the monologue gameobject
-            showMonologue = true;
+            sentenceList[index].displayMonologue = true;
+        }
+        else
+        {
+            sentenceList[oldIndex].displayMonologue = false;
+            sentenceList[index].displayMonologue = true;
+        }
 
-            if(showMonologueTimerCounter > 0)
-            {
-                ResetMonologueTimer();
-            }
+        displayMonologue = sentenceList[index].displayMonologue;
+
+        if (sentenceList[index].displayMonologueTimerCounter > 0)
+        {
+            ResetMonologueTimer();
         }
 
         CheckIndexValidity();
@@ -123,70 +124,73 @@ public class MonologueManager : MonoBehaviour
                 this.index = sentenceList[i].index;
             }
         }
-        //StartCoroutine(Type());
+
         TypeDisplaySentence();
     }
 
+    public bool CheckIfStillOnDisplay(int index)
+    {
+        bool isDisplaying = false;
+
+        for (int i = 0; i < sentenceList.Length; i++)
+        {
+            if (index == i)
+            {
+                continue;
+            }
+
+            if (sentenceList[i].displayMonologue)
+            {
+                isDisplaying = true;
+            }
+        }
+
+        return isDisplaying;
+    }
+
     //! monologue timer & enabling textbox code
-    void CountMonologueTimer()
+    void CountMonologueDisplayTimer()
     {
         if(textBox == null)
         {
             return;
         }
 
-        textBox.gameObject.SetActive(showMonologue);
+        textBox.gameObject.SetActive(displayMonologue);
 
-        if (showMonologue && showMonologueTimerCounter > 0)
+        if(oldIndex != index)
         {
-            showMonologueTimerCounter -= Time.deltaTime;
+            oldIndex = index;
         }
-        else
+
+        if (sentenceList[index].displayMonologue && sentenceList[index].displayMonologueTimerCounter > 0)
         {
-            showMonologue = false;
+            sentenceList[index].displayMonologueTimerCounter -= Time.deltaTime;
+        }
+
+        if (sentenceList[index].displayMonologue && sentenceList[index].displayMonologueTimerCounter <= 0)
+        {
+            sentenceList[index].displayMonologue = false;
+            displayMonologue = false;
             ResetMonologueTimer();
-        }
-    }
-
-    void CountItemDisplayCooldown()
-    {
-        if(itemDisplayCooldownCounter > 0)
-        {
-            itemDisplayCooldownCounter -= Time.deltaTime;
-        }
-        if(itemDisplayCooldownCounter <= 0)
-        {
-            itemDisplayCooldownCounter = 0;
-        }
-    }
-
-    //! individual monologue text cooldown
-    void CountTextCooldown()
-    {
-        for (int i=0; i<sentenceList.Length; i++)
-        {
-            if(sentenceList[i].cooldownCounter > 0)
-            {
-                sentenceList[i].cooldownCounter -= Time.deltaTime;
-            }
-            if(sentenceList[i].cooldownCounter <= 0)
-            {
-                sentenceList[i].cooldownCounter = 0;
-            }
         }
     }
 
     private void ResetMonologueTimer()
     {
-        showMonologueTimerCounter = showMonologueTimer;
+        //! the following is a new code used to count each sentence's invidivual displayMonologue timer state which is customisable
+        for (int i = 0; i < sentenceList.Length; i++)
+        {
+            sentenceList[i].displayMonologueTimerCounter = sentenceList[i].displayMonologueTimer;
+        }
     }
 
     private void CheckIndexValidity()
     {
         //! if these criteria are met, a new sentence will not be drawn
-        if (index < 0 || index + 1 > sentenceList.Length || !isSentenceDrawn || sentenceList[index].cooldownCounter > 0)
+        if (index < -1 || index + 1 > sentenceList.Length || !isSentenceDrawn)
         {
-            if (index < 0)
+            if (index < -1)
             {
                 Debug.Log("Sentence index is out of bounds (lower bound error).");
             }
@@ -198,10 +202,6 @@ public class MonologueManager : MonoBehaviour
             {
                 Debug.LogWarning("An attempt to draw more than 1 sentence with function was made.");
             }
-            else if (sentenceList[index].cooldownCounter > 0)
-            {
-                Debug.Log("Sentence of index " + index + " cannot be displayed because it is on cooldown (" + sentenceList[index].cooldownCounter + " second(s) left).");
-            }
             return;
         }
 
@@ -209,13 +209,9 @@ public class MonologueManager : MonoBehaviour
         textBox.text = "";
     }
 
-    //! only for Editor script
+    //! only for MonologueManagerEditor script
     public void DebugFunction()
     {
-        index = 2;
-        if(sentenceList[index].cooldownCounter == 0)
-        {
-            //TypeDisplaySentence();
-        }
+        
     }
 }
