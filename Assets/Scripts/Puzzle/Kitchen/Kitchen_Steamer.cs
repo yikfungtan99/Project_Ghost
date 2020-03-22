@@ -110,7 +110,7 @@ public class Kitchen_Steamer : Interactable
 
                 pm.sequenceCount += 1;
 
-                if (GetComponent<pocTrigger>() && !triggerOnce)
+                if (GetComponent<pocTrigger>() && !triggerOnce && pm.sequenceCount==2)
                 {
                     triggerOnce = true;
                     GetComponent<pocTrigger>().ActivateTrigger();

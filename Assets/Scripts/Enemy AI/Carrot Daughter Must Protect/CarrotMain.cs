@@ -133,10 +133,11 @@ public class CarrotMain : MonoBehaviour
         else if (anima.GetBool("isChase") == true)
         {
             hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, HideLayer);
+            LightSeeker = Physics2D.Raycast(transform.position + new Vector3(0, 1f, 0f), transform.right, LightSeekingRange, NoRayLayer);
         }
         else if (anima.GetBool("isLight") == true)
         {
-           
+            
             LightSeeker = Physics2D.Raycast(transform.position + new Vector3(0, 1f, 0f), transform.right, LightSeekingRange, LightLayer);
         }
 
@@ -180,8 +181,8 @@ public class CarrotMain : MonoBehaviour
             Debug.DrawLine(transform.position + new Vector3(0, 1f, 0f), LightSeeker.point, Color.magenta);
             if (anima.GetBool("isPatrol") == true)
             {
-                
 
+                hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
                 Debug.Log("LightSpotted!");
                 CurrentLight = LightSeeker.collider.GetComponentInParent<Transform>().transform;
                 anima.SetBool("isPatrol", false);

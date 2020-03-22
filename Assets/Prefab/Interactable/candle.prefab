@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1519459656754906608}
   - component: {fileID: 4928372338412585966}
   - component: {fileID: 4928372338412585961}
-  - component: {fileID: 5040786520374280018}
   m_Layer: 8
   m_Name: candle
   m_TagString: Candle
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: ec2fa88f9d021d94abb1228fab035559, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -132,27 +131,6 @@ MonoBehaviour:
   isLit: 0
   spriteLit: {fileID: 21300000, guid: dbb4cf38a8a528f4a818dda4cfea41e8, type: 3}
   spriteNotLit: {fileID: 21300000, guid: ec2fa88f9d021d94abb1228fab035559, type: 3}
---- !u!50 &5040786520374280018
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519459656754906611}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &4928372338553841595
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +143,7 @@ GameObject:
   - component: {fileID: 4928372338553841605}
   - component: {fileID: 4928372338553841604}
   - component: {fileID: 8811155228295395147}
+  - component: {fileID: 2000068615}
   m_Layer: 10
   m_Name: candle_light
   m_TagString: Light
@@ -256,6 +235,23 @@ CapsuleCollider2D:
   m_Offset: {x: -0.21112756, y: 0}
   m_Size: {x: 70.97789, y: 62.8414}
   m_Direction: 0
+--- !u!114 &2000068615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928372338553841595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118f100024c1593498c82654fc4991dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactableOffset: {x: 0, y: 0}
+  interactableSize: {x: 3.82, y: 3.49}
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &3683739977929960600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -322,11 +318,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interactable_particle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7500036770378417623, guid: 7cba80a17561b164abf5651f9fe10b04,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cba80a17561b164abf5651f9fe10b04, type: 3}

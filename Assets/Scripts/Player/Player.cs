@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
             Debug.Log("Player not linked to Game Manager");
         }
 
+        
+
         playerFainted = false;
         faintDebugMsg = false;
     }
@@ -43,11 +45,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         /*GetComponent<Player_Interactable>().enabled = !inventoryOn;
         GetComponent<Player_Movement>().enabled = !inventoryOn;*/
 
         //! this function replaces the above codes, also fixes a refresh bug where Player Update() does not call
-       gm.RefreshPlayerUnpausedState();
+        gm.RefreshPlayerUnpausedState();
 
         //GetComponent<Player_Movement>().enabled = !hidden;
         if (!playerFainted)

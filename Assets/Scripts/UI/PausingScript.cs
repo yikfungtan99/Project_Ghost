@@ -26,6 +26,7 @@ public class PausingScript : MonoBehaviour
 
     public void ToPause()
     {
+        GameManager.Instance.playerMovement.enRoute = false;
         Debug.Log("ToPause()");
         Pause();
     }
@@ -48,6 +49,7 @@ public class PausingScript : MonoBehaviour
     public void QuitGame()
     {
         GameManager.Instance.SetPause(false);
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenuIGuess");
         //Application.Quit();
     }
