@@ -102,6 +102,12 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 rectTransform.anchoredPosition = initPos;
             }
         }
+        else
+        {
+
+            rectTransform.anchoredPosition = new Vector2(0,0);
+
+        }
 
         gm.mouseControl.changeCursor("item");
     }

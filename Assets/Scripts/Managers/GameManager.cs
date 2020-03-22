@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
     public void RefreshPlayerUnpausedState()
     {
         playerMovement.enabled = !playerInventory.inventoryOn;
-        playerInteractable.enabled = !playerInventory.inventoryOn;
+        //playerInteractable.enabled = !playerInventory.inventoryOn;
     }
     
     //! Game Pause Manipulation Functions
