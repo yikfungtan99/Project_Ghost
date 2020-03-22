@@ -32725,7 +32725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29590b505737ef24c94f2d04015caa85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDisabled: 0
+  isDisabled: 1
   ghostTeleporting: 0
   countDownTime: 1.75
   door:
@@ -43353,7 +43353,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -43377,7 +43377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 35.07, y: -60.43, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64386,6 +64386,7 @@ GameObject:
   - component: {fileID: 7618618617419872866}
   - component: {fileID: 8864537300241234074}
   - component: {fileID: 8864537300241234073}
+  - component: {fileID: 8864537300241234075}
   m_Layer: 8
   m_Name: 'cabinet '
   m_TagString: Untagged
@@ -64437,6 +64438,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5485458, y: 1.9675899}
   m_EdgeRadius: 0
+--- !u!114 &8864537300241234075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864537300241234072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0e69a515fc7994ea60588513da8859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomTrigger: {fileID: 1327801968}
 --- !u!4 &8905721724530583504
 Transform:
   m_ObjectHideFlags: 0
