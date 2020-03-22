@@ -75,7 +75,7 @@ public class Player_Movement : MonoBehaviour
                     }
                     else
                     {
-                        if (GetComponent<Player_Interactable>().CheckForInteractables())
+                        if (GetComponentInChildren<Player_Interactable>().CheckForInteractables())
                         {
                             haveWayPoint = false;
                             enRoute = false;

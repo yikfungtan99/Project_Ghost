@@ -37,8 +37,11 @@ public class Hidable : Interactable
                 isUsable = true;
             }
         }
-        
+    }
 
+    public override void UpdateCursor()
+    {
+        gm.mouseControl.changeCursor("hide");
     }
 
     public override void Interact()

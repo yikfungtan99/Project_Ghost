@@ -29,6 +29,16 @@ public class Interactable_Checker : MonoBehaviour
 
                         }
 
+                    }else if (interactable[i].gameObject.GetComponent<Mirror_Interactable>())
+                    {
+
+                        if (!interactable[i].gameObject.GetComponent<Mirror_Interactable>().isDisabled)
+                        {
+
+                            interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                        }
+
                     }
                     else
                     {

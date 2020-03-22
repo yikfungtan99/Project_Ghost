@@ -47,9 +47,42 @@ public class Player_Interactable : MonoBehaviour
 
                     interactable[i].gameObject.GetComponent<Interactable>().inRange = true;
 
+
                     if (transform.GetComponent<Player_Lighter>().lighterOn && !GetComponent<Player>().hidden)
                     {
-                        interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                        if (interactable[i].gameObject.GetComponent<Candle>())
+                        {
+
+                            if (!interactable[i].gameObject.GetComponent<Candle>().isLit)
+                            {
+
+                                interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                            }
+
+                        }
+                        else if (interactable[i].gameObject.GetComponent<Mirror_Interactable>())
+                        {
+
+                            if (!interactable[i].gameObject.GetComponent<Mirror_Interactable>().isDisabled)
+                            {
+
+                                interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                            }
+                            else
+                            {
+                                interactable[i].gameObject.GetComponent<Interactable>().isSeen = false;
+                            }
+
+                        }
+                        else
+                        {
+
+                            interactable[i].gameObject.GetComponent<Interactable>().isSeen = true;
+
+                        }
                     }
 
                 }
