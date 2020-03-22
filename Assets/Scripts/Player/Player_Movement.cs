@@ -58,7 +58,7 @@ public class Player_Movement : MonoBehaviour
     {
         
         distancePandG = Mathf.Abs(this.transform.position.x - gm.ghostMain.transform.position.x);
-        Debug.Log("Distnace of player and ghost"+distancePandG);
+        //Debug.Log("Distnace of player and ghost"+distancePandG);
 
 
         if (!GameManager.Instance.gamePaused)
