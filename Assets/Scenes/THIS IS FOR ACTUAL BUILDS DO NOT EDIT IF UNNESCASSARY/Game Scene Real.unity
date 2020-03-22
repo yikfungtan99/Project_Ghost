@@ -33304,7 +33304,7 @@ PrefabInstance:
     - target: {fileID: 2988962845036739214, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: DiscoverPlayerStunTime
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2988962845036739214, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
