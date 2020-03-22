@@ -271,8 +271,9 @@ public class Door : Interactable
             {
                 if (col.gameObject.GetComponent<CarrotMain>().canChangeRoom)
                 {
-                    //GhostDoorDelay(1, col.gameObject);
-                    EnemyOpen(col.gameObject);
+                    StartCoroutine(GhostDoorDelay(1.5f, col.gameObject));
+                    
+                    //EnemyOpen(col.gameObject);
 
                 }
                 
@@ -301,8 +302,8 @@ public class Door : Interactable
             {
                 if (collision.gameObject.GetComponent<CarrotMain>().canChangeRoom)
                 {
-                   //GhostDoorDelay(1, collision.gameObject);
-                    EnemyOpen(collision.gameObject);
+                    StartCoroutine(GhostDoorDelay(1.5f, collision.gameObject));
+                    // EnemyOpen(collision.gameObject);
 
                 }
 
