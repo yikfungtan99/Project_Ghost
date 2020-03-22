@@ -47,7 +47,9 @@ public class PausingScript : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        GameManager.Instance.SetPause(false);
+        SceneManager.LoadScene("MainMenuIGuess");
+        //Application.Quit();
     }
 
     public void PauseMenuQuitButtonToMainMenu()
