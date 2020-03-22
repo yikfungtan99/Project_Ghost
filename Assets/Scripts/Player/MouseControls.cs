@@ -10,6 +10,7 @@ public class MouseControls : MonoBehaviour
     public Texture2D cursorOnDoor;
     public Texture2D cursorOnInventoryItem;
     public Texture2D cursorDrag;
+    public Texture2D cursorHide;
 
     private GameManager gm;
     private Camera cam;
@@ -71,6 +72,10 @@ public class MouseControls : MonoBehaviour
 
             case "grab":
                 cursorToSwitch = cursorDrag;
+                break;
+
+            case "hide":
+                cursorToSwitch = cursorHide;
                 break;
 
         }
