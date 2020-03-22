@@ -98,19 +98,23 @@ public class CarrotPatrol : StateMachineBehaviour
 
                     if(DistanceBetweenX(transform.position, patrolSpots[heading].position) < 1f)
                     {
-                        if (heading == 0)
+                        if (patrolSpots[1] != null)
                         {
+                            if (heading == 0)
+                            {
 
-                            heading = 1;
+                                heading = 1;
+
+                            }
+                            else
+                            {
+
+                                heading = 0;
+
+                            }
+
 
                         }
-                        else
-                        {
-
-                            heading = 0;
-
-                        }
-
                     }
 
                 }

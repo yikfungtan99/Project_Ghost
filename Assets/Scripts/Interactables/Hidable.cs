@@ -20,7 +20,7 @@ public class Hidable : Interactable
         initDark = gm.GlobalLight.intensity;
         transform.GetChild(0).GetComponent<Light2D>().intensity = initDark;
         cdCount = 0;
-        cdTime = 2;
+        cdTime = 0.5f;
     }
 
     public override void Update()
