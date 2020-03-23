@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.558258, y: -198.17523}
+  m_AnchoredPosition: {x: -137.66281, y: -14.48291}
   m_SizeDelta: {x: 147.4, y: 147.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &793772156504055273
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c63fef737168a42bb37f880a8c6460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: scissors
+  itemName: talisman
   onHold: 0
 --- !u!225 &7144777638729612499
 CanvasGroup:
