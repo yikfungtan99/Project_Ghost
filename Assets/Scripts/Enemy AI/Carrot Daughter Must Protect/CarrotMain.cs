@@ -179,20 +179,26 @@ public class CarrotMain : MonoBehaviour
         if(LightSeeker.collider!=null )
         {
             Debug.DrawLine(transform.position + new Vector3(0, 1f, 0f), LightSeeker.point, Color.magenta);
-            if (anima.GetBool("isPatrol") == true)
+            if (anima.GetBool("isPatrol") == true||anima.GetBool("isLight")==true)
             {
-
-                hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
-                Debug.Log("LightSpotted!");
-                CurrentLight = LightSeeker.collider.GetComponentInParent<Transform>().transform;
-                anima.SetBool("isPatrol", false);
-                anima.SetBool("isLight", true);
 
                 if (LightSeeker.collider.CompareTag("PlayerLight"))
                 {
                     hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, HideLayer);
                     Debug.Log("PlayerLightSpotted!");
                 }
+                else
+                {
+                    hitInfo = Physics2D.Raycast(transform.position, transform.right, detectRange, Layer);
+                    Debug.Log("LightSpotted!");
+                }
+
+                Debug.LogWarning(LightSeeker.collider);
+                CurrentLight = LightSeeker.collider.GetComponentInParent<Transform>().transform;
+                anima.SetBool("isPatrol", false);
+                anima.SetBool("isLight", true);
+
+               
 
             }
             
@@ -200,6 +206,12 @@ public class CarrotMain : MonoBehaviour
         }
         else
         {
+            if(anima.GetBool("isLight")==true)
+            {
+                anima.SetBool("isChase", false);
+                anima.SetBool("isPatrol", true);
+                anima.SetBool("isLight", false);
+            }
             Debug.DrawLine(transform.position + new Vector3(0, 1f, 0f), transform.position + transform.right * LightSeekingRange + new Vector3(0, 1f, 0f), Color.yellow);
         }
 
