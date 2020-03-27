@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Experimental.Rendering.LWRP;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -72,6 +73,9 @@ public class Player_Movement : MonoBehaviour
                 //Get waypoint
                 if (Input.GetMouseButtonDown(0))
                 {
+                    if (EventSystem.current.IsPointerOverGameObject())
+                        return;
+
                     if (gm.player.hidden)
                     {
 
