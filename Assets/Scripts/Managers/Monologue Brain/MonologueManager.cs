@@ -163,6 +163,11 @@ public class MonologueManager : MonoBehaviour
             oldIndex = index;
         }
 
+        if(index == -1)
+        {
+            return;
+        }
+
         if (sentenceList[index].displayMonologue && sentenceList[index].displayMonologueTimerCounter > 0)
         {
             sentenceList[index].displayMonologueTimerCounter -= Time.deltaTime;

@@ -37,6 +37,10 @@ public class MouseControls : MonoBehaviour
 
        // Debug.Log(target);
 
+        if(gm.inCutscene)
+        {
+            return;
+        }
 
         if (!detectInteractable() && !gm.player.inventoryOn)
         {
