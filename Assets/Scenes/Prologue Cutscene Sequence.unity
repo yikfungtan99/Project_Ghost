@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 1702688593}
   - component: {fileID: 1702688595}
   m_Layer: 5
-  m_Name: Cutscene Terminal
+  m_Name: CutsceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -995,49 +995,49 @@ MonoBehaviour:
   fadeInTime: 0.5
   fadeOutTime: 0.2
   sequence:
-  - stillImageBackground: {fileID: 21300000, guid: 0ed3bf364ceb2bb459f64e372edfc2f6,
+  - stillImageBackground: {fileID: 21300000, guid: bd6e6f0bc16e45f4e836dd5289157b44,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 2c78cbb6f319dbf4b87bdf57779b4ac3,
+  - stillImageBackground: {fileID: 21300000, guid: 1f033465b095a4a489a1703b9739680a,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: d1dbddadf6286b64a8593526aa6c0126,
+  - stillImageBackground: {fileID: 21300000, guid: 09f395d3f738b484e8f453e688785a4b,
       type: 3}
-  - stillImageBackground: {fileID: 3383283175440054145, guid: fbd23bcc39a3f474d9023c850e3a6d87,
+  - stillImageBackground: {fileID: 21300000, guid: 74a69ba407764ea4aab7739d11a8cb12,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 3841cfc0d952aec40bdeb99def7f6813,
+  - stillImageBackground: {fileID: 21300000, guid: f68932f7e4689ad43948a7c6e7a2b090,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 37123afe423b8e44a8de644f2962aa12,
+  - stillImageBackground: {fileID: 21300000, guid: 688b6255d688df34bab887607d0f7ee8,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: b68615984f6a8f04bb2802bd97968041,
+  - stillImageBackground: {fileID: 21300000, guid: f6bd5658b20340e40b7b098c656cff26,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: a0cd3005fae6d9948a48c331c3e58daa,
+  - stillImageBackground: {fileID: 21300000, guid: 0a8041907f07e3b488496e9038fa9c4a,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 1bd1add05cb707540ab4be2417d5f3d0,
+  - stillImageBackground: {fileID: 21300000, guid: a936ec658d74b7e40b56199e0f703720,
       type: 3}
-  - stillImageBackground: {fileID: 3084077412511512293, guid: 79f73ac1163855c42808758e18ecad49,
+  - stillImageBackground: {fileID: 21300000, guid: 62c8fc6dcb24e1349b43a8c90f1f236f,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 5380523734109da4fa71f04f71c6e088,
+  - stillImageBackground: {fileID: 21300000, guid: 25a6b436a326bfb4dba942eae7e97146,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 4bb0e4a6796acfa40ad94b6152e4a78a,
+  - stillImageBackground: {fileID: 21300000, guid: 4b5e0bfdf59ba62479b8903ce1d4294d,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 66d5949d9a476d148b68bfbdadc51d42,
+  - stillImageBackground: {fileID: 21300000, guid: fcd78b2b536220e44b036b1450742bb7,
       type: 3}
-  - stillImageBackground: {fileID: -4963094849367320721, guid: 80b31dfc52cf63e48908259694d52fea,
+  - stillImageBackground: {fileID: 21300000, guid: 0ba0697653afb904e8b38b332205b0a1,
       type: 3}
-  - stillImageBackground: {fileID: 132681091853769593, guid: 4f9ec00da8d7ed24fb4d37f1d7059ae7,
+  - stillImageBackground: {fileID: 21300000, guid: b462c36566617404fb4f786889fbcead,
       type: 3}
-  - stillImageBackground: {fileID: -4732650673314186586, guid: ec10244bd71d79a42959b4c04701201f,
+  - stillImageBackground: {fileID: 21300000, guid: 28be5f9e97c665d41a70210616fa1647,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 098ffdefdf4657c4c8310c4482d3a90f,
+  - stillImageBackground: {fileID: 21300000, guid: 5acd3670c3faf024ca2a9e9c43c5e284,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: aba6caaff5490c24e8756f382f80820a,
+  - stillImageBackground: {fileID: 21300000, guid: 1fe3c6f12b662c343b9759d6377fc858,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 044b949975e40f5469f3366df85c5de3,
+  - stillImageBackground: {fileID: 21300000, guid: f6a539a3db68e534091fe50a9d2943f4,
       type: 3}
-  - stillImageBackground: {fileID: -7213199100697274796, guid: 739c00ace3ccf4c45ba4dc01967d9c9d,
+  - stillImageBackground: {fileID: 21300000, guid: aa7f8a5a60e5839478795bd454a4df69,
       type: 3}
-  - stillImageBackground: {fileID: 21300000, guid: 945db83f91b5e4a418228b258860925f,
+  - stillImageBackground: {fileID: 21300000, guid: 0e347983d28fff145abf640732a428f6,
       type: 3}
-  - stillImageBackground: {fileID: -2966271953132963866, guid: 2291d2c683d8bb84982668f6f5d6360f,
+  - stillImageBackground: {fileID: 21300000, guid: 9b7b46f6928da1748ad6094d4abe6257,
       type: 3}
 --- !u!222 &1702688595
 CanvasRenderer:
