@@ -14,12 +14,6 @@ public class Interactable_Bed : Interactable
     {
         base.Update();
 
-        if (ableToSleep)
-        {
-
-            FadeInOut.SetActive(true);
-
-        }
     }
 
     public override void Interact()
@@ -36,6 +30,7 @@ public class Interactable_Bed : Interactable
 
         if (ableToSleep)
         {
+
             for (int i = 0; i < TriggersToSet.Length; i++)
             {
 
@@ -45,6 +40,14 @@ public class Interactable_Bed : Interactable
 
             if (!gm.tutorialSleep)
             {
+
+                if (ableToSleep)
+                {
+
+                    FadeInOut.SetActive(true);
+
+                }
+
                 gm.FadeInOutAnim.SetBool("Go", true);
                 StartCoroutine(Delay(2));
                 

@@ -41,12 +41,15 @@ public class GameManager : MonoBehaviour
     public Player_Lighter playerLighter;
     public GameObject holdPanel;
 
+    [Header("Prologue Cutscene Components")]
+    public CutsceneManager cutsceneManager;
+    public bool inCutscene = false;
+
+    [Header("Tutorial Components")]
     public Tutorial TutorialNavi;
     public Animator BagAnim;
     public Animator FadeInOutAnim;
-
     public bool inTutorial = false;
-
     public bool tutorialFirst = false;
     public bool tutorialComplete = false;
     public bool tutorialSleep = false;
