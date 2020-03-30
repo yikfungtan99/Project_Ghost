@@ -15,9 +15,8 @@ public class JournalManager : MonoBehaviour
 
     public static JournalManager Instance;
 
-    [HideInInspector]
-    public bool[] notePickup = new bool[8];
-
+  //  [HideInInspector]             /////////////////// <--------------------THIS IS PANTANG
+    public bool[] notePickup = new bool[10];  // was 8, changed to 10 to test will work or not; was a failure
     public List<GameObject> pauseMenu = new List<GameObject>();
     public GameObject noteWarning;
     public List<NoteSets> noteList = new List<NoteSets>();
@@ -31,6 +30,7 @@ public class JournalManager : MonoBehaviour
 
     private void Start()
     {
+        //Debug.Log("notePickup.Length: " + notePickup.Length);
         maxNoteCount = 0;
         for (int i = 0; i < noteList.Count; i++)
         {
@@ -100,6 +100,10 @@ public class JournalManager : MonoBehaviour
                 noteList[i].noteBundle[0].SetActive(true);
                 break;
             }
+            else if(i == notePickup.Length - 1)
+            {
+                noteWarning.SetActive(true);
+            }
         }
     }
 
@@ -109,7 +113,7 @@ public class JournalManager : MonoBehaviour
         {
             GameObject cur = FindPage(curIndex);
             GameObject next;
-            if(FindPage(curIndex+1) != null)
+            if(FindPage(curIndex+1) != null) 
             {
                 next = FindPage(curIndex + 1);
                 if (cur != null && next != null)
@@ -121,32 +125,47 @@ public class JournalManager : MonoBehaviour
             }
             else
             {
-                int count = 1;
-                for (int i = curIndex + 1; i < noteList.Count; i++)
+                for (int i = curIndex + 1; i < maxNoteCount; i++) //lesser than maxnotecount to prevent going out of control, 
                 {
-                    for (int j = 0; j < noteList[i].noteBundle.Count; j++)
-                    {
-
-                        if (curIndex + count == i )
+                    for (int j = 0; j < noteList[i].noteBundle.Count; j++)//???
+                    {  
+                      //  Debug.Log("curIdex: " + curIndex);
+                      //  Debug.Log(i);
+                        if (notePickup[i] == true)//got note?
                         {
-                            if (notePickup[i] == true)
+                            next = noteList[i].noteBundle[j].gameObject;//activate next
+                            if (cur != null && next != null)//both current and next got note picked up
                             {
-                                next = noteList[i].noteBundle[j].gameObject;
-                                if (cur != null && next != null)
+                                cur.SetActive(false);//switch off current picture...
+                                next.SetActive(true);//...and go to next picture
+                                for (int k = maxNoteCount; k >= 0; k--)
                                 {
-                                    cur.SetActive(false);
-                                    next.SetActive(true);
-                                    Debug.Log("NextPage called");
+                                    for (int l = noteList[k].noteBundle.Count - 1; l >= 0; l--)
+                                    {
+                                        if (notePickup[k] == true)
+                                        {
+                                            if(i == k && j == l)//no note picked up at next (no note with a greater note index thing is found)
+                                            {
+                                                noteList[k].noteBundle[l].transform.GetChild(0).gameObject.SetActive(false);//to disable the next button
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    if (notePickup[k] == true)
+                                    {
+                                        break;
+                                    }
                                 }
-                                break;
+                                Debug.Log("NextPage called");
                             }
-                            else
-                            {
-                                
-                            }
+                            break;
                         }
-                        count++;
+                        else
+                        {
+
+                        }
                     }
+                    /**/
                     if(notePickup[i] == true)
                     {
                         break;
@@ -166,11 +185,46 @@ public class JournalManager : MonoBehaviour
         if (curIndex != 0)
         {
             GameObject cur = FindPage(curIndex);
-            GameObject prev = FindPage(curIndex - 1);
-            if (cur != null && prev != null)
+            GameObject prev;
+            if (FindPage(curIndex - 1) != null)
             {
-                cur.SetActive(false);
-                prev.SetActive(true);
+                prev = FindPage(curIndex - 1);
+                if (cur != null && prev != null)
+                {
+                    cur.SetActive(false);
+                    prev.SetActive(true);
+                    Debug.Log("NextPage called");
+                }
+            }
+            else
+            {
+                for (int i = curIndex - 1; i >= 0; i--)
+                {
+                    for (int j = 0; j < noteList[i].noteBundle.Count; j++)
+                    {
+                        Debug.Log("curIdex: " + curIndex);
+                        Debug.Log(i);
+                        if (notePickup[i] == true)
+                        {
+                            prev = noteList[i].noteBundle[j].gameObject;
+                            if (cur != null && prev != null)
+                            {
+                                cur.SetActive(false);
+                                prev.SetActive(true);
+                                Debug.Log("NextPage called");
+                            }
+                            break;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    if (notePickup[i] == true)
+                    {
+                        break;
+                    }
+                }
             }
             /*
                 noteListIndividual[curIndex].SetActive(false);

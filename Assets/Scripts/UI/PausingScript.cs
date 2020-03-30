@@ -189,6 +189,8 @@ public class PausingScript : MonoBehaviour
         GetCanvasChild(9).SetActive(false);//NotesMenu6
         GetCanvasChild(10).SetActive(false);//NotesMenu7
         GetCanvasChild(11).SetActive(false);//NotesMenu8
+        GetCanvasChild(12).SetActive(false);//NotesMenu9
+        GetCanvasChild(13).SetActive(false);//NotesMenu10
     }
 
 }

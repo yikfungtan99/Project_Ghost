@@ -20,5 +20,16 @@ public class NotePickup : Interactable
         base.Interact();
         this.gameObject.SetActive(false);
         JournalManager.Instance.PickedUp(noteIndex);
+        UpdateMonologue(1);
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        switch(displayIndex)
+        {
+            case 1:
+                gm.monologueManager.DisplaySentence(3);
+                break;
+        }
     }
 }
