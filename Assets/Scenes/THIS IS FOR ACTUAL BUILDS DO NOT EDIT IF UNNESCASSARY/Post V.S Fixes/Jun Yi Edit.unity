@@ -7235,7 +7235,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note9
+      value: note9(mirror got something inside)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -14120,7 +14120,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note1
+      value: note1(number 4 unlucky)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -17334,7 +17334,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note7
+      value: note7(make kuih)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -20275,7 +20275,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note8
+      value: note8(serve kuih to kitchen god)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -27152,7 +27152,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note5
+      value: note5(diary i see ghost)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -34584,7 +34584,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note10
+      value: note10(which bowl on table puzzle)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -36446,7 +36446,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note4
+      value: note4(symmetry good)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -43483,7 +43483,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note6
+      value: note6(hiding)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -46429,7 +46429,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note3
+      value: note3(table corner)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
@@ -56468,7 +56468,7 @@ PrefabInstance:
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
       propertyPath: m_Name
-      value: note2
+      value: note2(vertical chopsticks)
       objectReference: {fileID: 0}
     - target: {fileID: 1998747029963930396, guid: c91f64faf28d192429a3888e1dcd5855,
         type: 3}
