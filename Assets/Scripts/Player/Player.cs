@@ -64,13 +64,16 @@ public class Player : MonoBehaviour
             Debug.Log("Player has fainted!");
         }
 
+        UpdateHidingHeartbeatPitch();
+
         //! Temporary Debug tool: Instantly revive player character
+        /*
         if(Input.GetKeyDown(KeyCode.Space))
         {
             playerFainted = false;
             faintDebugMsg = false;
             Debug.Log("Player revived");
-        }
+        }*/
 
     }//End Update
 
@@ -88,4 +91,38 @@ public class Player : MonoBehaviour
 
     }
 
+    void UpdateHidingHeartbeatPitch()
+    {
+        if (hidden)
+        {
+            float newPitch;
+
+            if (gm.playerMovement.distancePandG > 0 && gm.playerMovement.distancePandG <= 10)
+            {
+                newPitch = (1.0f / gm.playerMovement.distancePandG) + 1.0f;
+
+                if (newPitch >= 2.0f)
+                {
+                    newPitch = 2.0f;
+                    gm.audioManager.UpdateAudioPitch("heart beating", newPitch);
+                    return;
+                }
+
+                gm.audioManager.UpdateAudioPitch("heart beating", newPitch);
+            }
+            else if (gm.playerMovement.distancePandG == 0)
+            {
+                newPitch = 2.0f;
+                gm.audioManager.UpdateAudioPitch("heart beating", newPitch);
+            }
+            else if(gm.playerMovement.distancePandG > 10)
+            {
+                gm.audioManager.UpdateAudioPitch("heart beating", 1f);
+            }
+        }
+        else if (!hidden)
+        {
+            gm.audioManager.UpdateAudioPitch("heart beating", 1f);
+        }
+    }
 }

@@ -81,6 +81,8 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         canvasGroup.alpha = 0.6f;
         initPos = rectTransform.anchoredPosition;
         gm.mouseControl.changeCursor("grab");
+
+        
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -114,7 +116,7 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
+        UpdateMonologue(itemName);
         if (onHold && player.inventoryOn)
         {
             transform.SetParent(transform.parent.parent.GetChild(0));
@@ -136,5 +138,18 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
 
         //mc.exitCursor();
+    }
+
+    void UpdateMonologue(string itemName)
+    {
+        switch(itemName)
+        {
+            case "lighter":
+                gm.monologueManager.DisplaySentence(38);
+                break;
+            case "red cloth":
+                gm.monologueManager.DisplaySentence(39);
+                break;
+        }
     }
 }

@@ -387,4 +387,30 @@ public class AudioManager : MonoBehaviour
         a.isPaused = false;
         a.audioSource.UnPause();
     }
+
+    public void UpdateAudioPitch(string searchName, float newPitch)
+    {
+        Audio a = Array.Find(audioList, audio => audio.name == searchName);
+
+        if (a == null)
+        {
+            Debug.LogWarning("Audio: " + searchName + " cannot be found to update its Pitch!");
+            return;
+        }
+
+        a.pitch = newPitch;
+    }
+
+    public float ReturnAudioPitch(string searchName)
+    {
+        Audio a = Array.Find(audioList, audio => audio.name == searchName);
+
+        if (a == null)
+        {
+            Debug.LogWarning("Audio: " + searchName + " cannot be found to update its Pitch!");
+            return 0f;
+        }
+
+        return a.pitch;
+    }
 }

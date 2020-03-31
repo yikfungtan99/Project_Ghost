@@ -291,6 +291,20 @@ MonoBehaviour:
     displayMonologueTimer: 3
     displayMonologueTimerCounter: 0
     displayMonologue: 0
+  - description: '[38] Item Description: Lighter'
+    index: 38
+    sentenceText: This is a small light source, could be used to illuminate a tiny
+      area or kindle a candle flame.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[39] Item Description: Red Cloth'
+    index: 39
+    sentenceText: Time has worn the cloth's gloss. Although dusty, it may still be
+      capable of blocking the vision of spirits.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   typingSpeed: 0.01
   index: 0
   isSentenceDrawn: 0

@@ -170,7 +170,7 @@ public class MonologueManager : MonoBehaviour
 
         if (sentenceList[index].displayMonologue && sentenceList[index].displayMonologueTimerCounter > 0)
         {
-            sentenceList[index].displayMonologueTimerCounter -= Time.deltaTime;
+            sentenceList[index].displayMonologueTimerCounter -= Time.unscaledDeltaTime;
         }
 
         if (sentenceList[index].displayMonologue && sentenceList[index].displayMonologueTimerCounter <= 0)
