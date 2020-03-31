@@ -22,7 +22,6 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private Inventory iv;
 
     private GameManager gm;
-    private MouseControls mc;
 
     private void Awake()
     {
@@ -32,7 +31,6 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
         iv = gm.inventory;
-        mc = gm.mouseControl;
         
     }
 
@@ -57,20 +55,16 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private void Update()
     {
 
-        if (onHold)
+        if (player.inventoryOn)
         {
-            if (!player.inventoryOn)
-            {
 
-                gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
 
-                rectTransform.anchoredPosition = new Vector2(0, 0);
 
-            }
-            else
-            {
-                gameObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
-            }
+        }
+        else
+        {
+            gameObject.GetComponent<CanvasGroup>().blocksRaycasts = false;
 
         }
     }

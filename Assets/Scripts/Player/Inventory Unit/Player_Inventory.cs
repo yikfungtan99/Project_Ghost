@@ -45,7 +45,7 @@ public class Player_Inventory : MonoBehaviour
                         }
                         
                     }
-                    GameManager.Instance.player.inventoryOn = inventoryOn;
+                    
 
                     if (GameManager.Instance.inTutorial)
                     {
@@ -63,15 +63,20 @@ public class Player_Inventory : MonoBehaviour
     {
         if (inventoryOn)
         {
-            
+            GameManager.Instance.playerMovement.enabled = true;
+            GameManager.Instance.playerInteractable.enabled = true;
             UpdateAudio(2);
             inventoryOn = false;
             gm.mouseControl.exitCursor();
             inventory.transform.GetChild(0).gameObject.SetActive(inventoryOn);
 
+            GameManager.Instance.player.inventoryOn = false;
+
         }
         else
         {
+            GameManager.Instance.playerMovement.enabled = false;
+            GameManager.Instance.playerInteractable.enabled = false;
             UpdateAudio(1);
             gm.mouseControl.changeCursor("item");
             gm.playerObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Bag");
@@ -84,11 +89,11 @@ public class Player_Inventory : MonoBehaviour
 
     IEnumerator BagDelay(float delay)
     {
-        inventoryOn = true;
-        yield return new WaitForSeconds(delay);
         
+        yield return new WaitForSeconds(delay);
+        inventoryOn = true;
         inventory.transform.GetChild(0).gameObject.SetActive(true);
-
+        GameManager.Instance.player.inventoryOn = true;
     }
 
     void UpdateAudio(int index)

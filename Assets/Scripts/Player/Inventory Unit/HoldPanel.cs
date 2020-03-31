@@ -32,10 +32,9 @@ public class HoldPanel : MonoBehaviour, IDropHandler
 
                 }
 
+                eventData.pointerDrag.transform.SetParent(transform);
                 eventData.pointerDrag.GetComponent<Item_Inventory>().onHold = true;
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-
-                eventData.pointerDrag.transform.SetParent(transform);
 
                 if (!GameManager.Instance.tutorialComplete)
                 {
