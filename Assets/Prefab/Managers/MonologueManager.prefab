@@ -305,6 +305,13 @@ MonoBehaviour:
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0
+  - description: '[40] Grandfather Clock Desc (click)'
+    index: 40
+    sentenceText: Huh, I remember this clock since I last stayed here... Mom and Dad
+      really did love their antiques.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   typingSpeed: 0.01
   index: 0
   isSentenceDrawn: 0
