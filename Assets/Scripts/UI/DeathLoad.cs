@@ -64,8 +64,17 @@ public class DeathLoad : MonoBehaviour
         }
         else
         {
+            gm.playerObject.SetActive(true);
+            gm.playerObject.GetComponent<Transform>().position = gm.playerMovement.savedLocation.position;
+            gm.player.isDead = false;
+            
 
-            Application.LoadLevel(Application.loadedLevel);
+            int child = GameObject.Find("DeathCanvas").transform.childCount;
+            for (int i = 0; i < child; i++)
+            {
+                GameObject.Find("DeathCanvas").transform.GetChild(i).gameObject.SetActive(false);
+            }
+            //Application.LoadLevel(Application.loadedLevel);
 
         }
 
