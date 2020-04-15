@@ -65,6 +65,7 @@ public class DeathLoad : MonoBehaviour
         else
         {
             gm.playerObject.SetActive(true);
+            gm.roomManager.GetComponent<Animator>().Play("Bridal");
             gm.playerObject.GetComponent<Transform>().position = gm.playerMovement.savedLocation.position;
             gm.player.isDead = false;
             
