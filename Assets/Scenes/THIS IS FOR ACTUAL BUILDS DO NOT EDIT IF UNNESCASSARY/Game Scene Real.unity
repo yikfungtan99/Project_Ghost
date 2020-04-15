@@ -1953,6 +1953,7 @@ MonoBehaviour:
   isCanceler: 0
   final: 0
   promptSleep: 0
+  promptLighter: 0
   isDisabled: 0
   ready: 0
 --- !u!4 &114386468
@@ -13008,6 +13009,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 130
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &519853032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519853033}
+  m_Layer: 8
+  m_Name: SaveSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &519853033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519853032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: -1.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3861305671966205664}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521240795
 GameObject:
@@ -29531,24 +29562,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5040786520374280018, guid: 1265e6adc30199e45854d6ab3d880ccb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1265e6adc30199e45854d6ab3d880ccb, type: 3}
---- !u!114 &1170821347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3861305671966205666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a5c0c26e88157a40ae6ae3012690db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  interactable: 1
-  isSeen: 0
-  itemGiver: 1
-  itemName: talisman
-  charges: 1
 --- !u!61 &1170821348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43249,7 +43262,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -43273,7 +43286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 33.9, y: -60.430004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61041,6 +61054,7 @@ Transform:
   m_LocalScale: {x: 1.114256, y: 1.163448, z: 1.144}
   m_Children:
   - {fileID: 1161691466}
+  - {fileID: 519853033}
   m_Father: {fileID: 1097366977702386506}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61105,7 +61119,6 @@ GameObject:
   - component: {fileID: 3861305671966205664}
   - component: {fileID: 3861305671966205665}
   - component: {fileID: 1170821348}
-  - component: {fileID: 1170821347}
   - component: {fileID: 3861305671966205667}
   m_Layer: 8
   m_Name: Buddha statue_Altar
@@ -61129,10 +61142,10 @@ MonoBehaviour:
   inRange: 0
   interactable: 1
   isSeen: 0
-  itemGiver: 0
-  itemName: 
-  charges: 0
-  spawnPoint: {fileID: 0}
+  itemGiver: 1
+  itemName: talisman
+  charges: 1
+  spawnPoint: {fileID: 519853033}
 --- !u!1 &3881788832917950543
 GameObject:
   m_ObjectHideFlags: 0
@@ -67394,7 +67407,7 @@ PrefabInstance:
     - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
