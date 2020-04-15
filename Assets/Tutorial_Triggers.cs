@@ -10,6 +10,7 @@ public class Tutorial_Triggers : MonoBehaviour
     public bool final = false;
 
     public bool promptSleep = false;
+    public bool promptLighter = false;
 
     public bool isDisabled = false;
 
@@ -24,6 +25,20 @@ public class Tutorial_Triggers : MonoBehaviour
                 promptSleep = false;
                 UpdateMonologue(1);
             }
+        }
+        else if (promptLighter)
+        {
+
+            if (collision.CompareTag("Player"))
+            {
+
+                GameManager.Instance.playerInventory.firstTime = true;
+                GameManager.Instance.TutorialNavi.gameObject.SetActive(true);
+                GameManager.Instance.TutorialNavi.UpdateBoard(2);
+                Destroy(gameObject);
+
+            }
+
         }
         else
         {
@@ -53,8 +68,8 @@ public class Tutorial_Triggers : MonoBehaviour
 
                                 GameManager.Instance.TutorialGhostTrigger(true);
 
-                                GameManager.Instance.TutorialNavi.gameObject.SetActive(true);
-                                GameManager.Instance.TutorialNavi.UpdateBoard(7);
+                                //GameManager.Instance.TutorialNavi.gameObject.SetActive(true);
+                                //GameManager.Instance.TutorialNavi.UpdateBoard(7);
 
                             }
                             else
