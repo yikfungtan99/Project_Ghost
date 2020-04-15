@@ -44,9 +44,9 @@ public class Ghost_Collide : MonoBehaviour
                 else
                 {
 
-                    Destroy(gm.playerObject);
-
-                    gm.deathScreenObject.transform.GetChild(0).gameObject.SetActive(true);
+                   // Destroy(gm.playerObject);
+                    gm.playerObject.GetComponent<Transform>().position = gm.playerMovement.savedLocation.position;
+                   // gm.deathScreenObject.transform.GetChild(0).gameObject.SetActive(true);
 
 
                 }

@@ -43,6 +43,7 @@ public class Player_Movement : MonoBehaviour
 
     bool pressedButton = false;
 
+    public Transform savedLocation;
     // Start is called before the first frame update
     void Start()
     {
@@ -284,5 +285,10 @@ public class Player_Movement : MonoBehaviour
         Gizmos.color = new Color(0, 1, 0, 0.5f);
         Gizmos.DrawCube(transform.position, new Vector2((safeArea * 2), 3));
 
+    }
+
+    public void save(Transform savePoint)
+    {
+        savedLocation = savePoint;
     }
 }

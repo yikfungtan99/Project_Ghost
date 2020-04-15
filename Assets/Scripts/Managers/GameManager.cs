@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
     public bool tutorialFirst = false;
     public bool tutorialComplete = false;
     public bool tutorialSleep = false;
+    public GameObject hand;
 
     [Header("Ghost/Enemy Components")] //! variables under Ghost Components is subject to change under Jin's new code
     public GameObject ghostMain;

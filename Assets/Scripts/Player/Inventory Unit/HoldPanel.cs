@@ -38,16 +38,18 @@ public class HoldPanel : MonoBehaviour, IDropHandler
 
                 if (!GameManager.Instance.tutorialComplete)
                 {
-                    if(transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "housekey")
+                    if(transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "housekey" && !keyDone)
                     {
 
                         GameManager.Instance.TutorialNavi.ui.gameObject.SetActive(false);
                         GameManager.Instance.TutorialNavi.UpdateBoard(4);
                         GameManager.Instance.playerInventory.firstTime = false;
+                        GameManager.Instance.playerInventory.secondTime = true;
                         keyDone = true;
+                        
                     }
 
-                    if (keyDone)
+                    if (!lighterDone)
                     {
                         if (transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
                         {
