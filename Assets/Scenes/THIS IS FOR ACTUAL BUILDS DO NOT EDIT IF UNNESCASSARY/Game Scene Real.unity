@@ -1980,7 +1980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 106
+  m_RootOrder: 107
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &114386469
 BoxCollider2D:
@@ -13050,7 +13050,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 107
+  m_RootOrder: 108
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519853032
 GameObject:
@@ -15133,7 +15133,7 @@ Transform:
   m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 108
+  m_RootOrder: 109
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627613483
 GameObject:
@@ -15424,6 +15424,36 @@ MonoBehaviour:
   cdTime: 12
   disableAutoRecover: 1
   canAutoRecover: 0
+--- !u!1 &633650960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633650961}
+  m_Layer: 0
+  m_Name: ghostInactive
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &633650961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633650960}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 54.22, y: -17.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 106
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &634438021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16911,6 +16941,7 @@ Transform:
   m_LocalScale: {x: 0.54289, y: 0.54289, z: 0.24805155}
   m_Children:
   - {fileID: 1796512094}
+  - {fileID: 2031946219}
   m_Father: {fileID: 657961325}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16958,6 +16989,8 @@ MonoBehaviour:
   itemGiver: 0
   itemName: razor
   charges: 1
+  spawnPoint: {fileID: 2031946219}
+  saveStationNumber: 3
 --- !u!212 &723179918
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19262,6 +19295,36 @@ MonoBehaviour:
   cdTime: 8
   disableAutoRecover: 1
   canAutoRecover: 0
+--- !u!1 &865686174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865686175}
+  m_Layer: 0
+  m_Name: DefaultSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865686175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865686174}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 35.71, y: -61.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 110
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &874462416
 GameObject:
   m_ObjectHideFlags: 0
@@ -29550,7 +29613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1169387287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31701,7 +31764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1276526045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33117,15 +33180,20 @@ PrefabInstance:
       propertyPath: stopRange
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2988962845036739214, guid: d9be689a28e32874fa113488ab0dab12,
+        type: 3}
+      propertyPath: inactiveLocation
+      value: 
+      objectReference: {fileID: 633650961}
     - target: {fileID: 2988962845036739215, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.49
+      value: 59.85
       objectReference: {fileID: 0}
     - target: {fileID: 2988962845036739215, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -30.99
+      value: -17.82
       objectReference: {fileID: 0}
     - target: {fileID: 2988962845036739215, guid: d9be689a28e32874fa113488ab0dab12,
         type: 3}
@@ -43562,7 +43630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7233353, y: -31.263565, z: -10}
+  m_LocalPosition: {x: 33.9, y: -60.430004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54303,6 +54371,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2031946218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031946219}
+  m_Layer: 8
+  m_Name: SaveSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031946219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031946218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19, y: -3.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 723179915}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2032106849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 983844782457266520, guid: c3c657d5e040b1748add6b2c9f902fe0,
@@ -61564,6 +61662,7 @@ MonoBehaviour:
   itemName: talisman
   charges: 1
   spawnPoint: {fileID: 519853033}
+  saveStationNumber: 2
 --- !u!1 &3881788832917950543
 GameObject:
   m_ObjectHideFlags: 0
@@ -66889,6 +66988,7 @@ MonoBehaviour:
   itemName: 
   charges: 0
   spawnPoint: {fileID: 0}
+  saveStationNumber: 1
 --- !u!1 &7073190561502222072
 GameObject:
   m_ObjectHideFlags: 0
@@ -67833,6 +67933,11 @@ PrefabInstance:
       propertyPath: sprintSpeed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8358413775741551711, guid: dcfdbc4d0098af14d80a097a056253a5,
+        type: 3}
+      propertyPath: defaultSpawn
+      value: 
+      objectReference: {fileID: 865686175}
     - target: {fileID: 8548607295132865385, guid: dcfdbc4d0098af14d80a097a056253a5,
         type: 3}
       propertyPath: hand

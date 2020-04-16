@@ -6,7 +6,7 @@ public class Save : Interactable
 {
     // Start is called before the first frame update
     public Transform spawnPoint;
-
+    public int saveStationNumber;
     private void Start()
     {
        // spawnPoint = this.gameObject.GetComponentInChildren<Transform>();
@@ -16,7 +16,7 @@ public class Save : Interactable
     {
         base.Interact();
         saveGame();
-        gm.playerObject.GetComponent<Player_Movement>().save(spawnPoint);
+        gm.playerObject.GetComponent<Player_Movement>().save(spawnPoint, saveStationNumber);
     }
 
 

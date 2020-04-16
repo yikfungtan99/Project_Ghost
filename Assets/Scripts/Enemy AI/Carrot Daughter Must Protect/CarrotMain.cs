@@ -8,6 +8,7 @@ using TMPro;
 public class CarrotMain : MonoBehaviour
 {
     private GameManager gm;
+    public Transform inactiveLocation;
     public float patrolSpeed = 1;
     public float chaseSpeed = 3;
     public Transform[] patrolSpots = new Transform[2];

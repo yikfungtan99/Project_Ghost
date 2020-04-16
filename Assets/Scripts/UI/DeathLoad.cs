@@ -65,8 +65,23 @@ public class DeathLoad : MonoBehaviour
         else
         {
             gm.playerObject.SetActive(true);
-            gm.roomManager.GetComponent<Animator>().Play("Bridal");
+           
+            if(gm.playerMovement.saveStationNum == 2)
+            {
+                gm.roomManager.GetComponent<Animator>().Play("Altar Room");
+            }
+            else if(gm.playerMovement.saveStationNum == 3)
+            {
+                gm.roomManager.GetComponent<Animator>().Play("Kitchen");
+            }
+            else
+            {
+                 gm.roomManager.GetComponent<Animator>().Play("Bridal");
+                
+            }
+            
             gm.playerObject.GetComponent<Transform>().position = gm.playerMovement.savedLocation.position;
+            gm.ghostMain.GetComponent<Transform>().position = gm.carrotMain.inactiveLocation.position;
             gm.player.isDead = false;
             
 

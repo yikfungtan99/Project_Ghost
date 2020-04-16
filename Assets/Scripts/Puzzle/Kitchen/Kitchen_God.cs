@@ -6,18 +6,20 @@ public class Kitchen_God : Interactable
 {
     private PuzzleManager pm;
     protected GameObject currentHeldItem;
-
+    public Transform spawnPoint;
+    public int saveStationNumber;
     public override void Awake()
     {
         base.Awake();
 
         pm = gm.puzzleManager;
+        spawnPoint = this.gameObject.transform.Find("SaveSpawn");
     }
 
     public override void Interact()
     {
         base.Interact();
-
+        gm.playerObject.GetComponent<Player_Movement>().save(spawnPoint, saveStationNumber);
         //! this interact function will not run until previous Dining Puzzle is completed
         if (pm.disableKitchenPuzzle)
         {

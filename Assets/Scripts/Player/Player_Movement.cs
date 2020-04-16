@@ -44,9 +44,12 @@ public class Player_Movement : MonoBehaviour
     bool pressedButton = false;
 
     public Transform savedLocation;
+    public int saveStationNum;
+    public Transform defaultSpawn;
     // Start is called before the first frame update
     void Start()
     {
+        savedLocation = defaultSpawn;
         gm = GetComponent<Player>().gm;
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator>();
@@ -287,8 +290,9 @@ public class Player_Movement : MonoBehaviour
 
     }
 
-    public void save(Transform savePoint)
+    public void save(Transform savePoint,int saveNum)
     {
         savedLocation = savePoint;
+        saveStationNum = saveNum;
     }
 }
