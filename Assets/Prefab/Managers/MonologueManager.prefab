@@ -312,6 +312,63 @@ MonoBehaviour:
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0
+  - description: '[41] Living: Bench Lore'
+    index: 41
+    sentenceText: I could use a break but these benches are never really comfy to
+      sit on.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[42] Living: Rightmost Cabinet Lore'
+    index: 42
+    sentenceText: An incredibly ornate, gilded cabinet. A great treasure from an ancestor...
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[43] Kitchen: Empty Cupboard Lore'
+    index: 43
+    sentenceText: Strangely, this cupboard is completely empty.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[44] Kitchen: Cooking Station Lore'
+    index: 44
+    sentenceText: I would see this pile of bricks everyday when I was young. Now,
+      I use an electric stove.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[45] Kitchen: Foreground Table Lore'
+    index: 45
+    sentenceText: The food is still somewhat warm.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[46] Hall 2: Any Item Lore'
+    index: 46
+    sentenceText: I am still amazed by the sight of this as I was as a child.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[47] Lounge: Table with Plants Lore'
+    index: 47
+    sentenceText: The most warm plants in this soothing room from my childhood.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[48] Living: Twin Paintings Lore'
+    index: 48
+    sentenceText: My past self would gaze in awe at these paintings until the break
+      of dusk.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[49] Outside: Windows Lore'
+    index: 49
+    sentenceText: Hmm, looks like nobody is home. Good thing I have a house key.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   typingSpeed: 0.01
   index: 0
   isSentenceDrawn: 0
