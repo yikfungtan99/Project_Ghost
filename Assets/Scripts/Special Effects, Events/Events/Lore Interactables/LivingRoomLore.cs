@@ -6,6 +6,8 @@ public class LivingRoomLore : Interactable
 {
     [Header("Living Room Lore")]
     [SerializeField] bool isGrandfatherClock = false;
+    [SerializeField] bool isBench = false;
+    [SerializeField] bool isRightCabinet = false;
 
     public override void Interact()
     {
@@ -20,6 +22,14 @@ public class LivingRoomLore : Interactable
         {
             UpdateMonologue(1);
         }
+        if(isBench)
+        {
+            UpdateMonologue(2);
+        }
+        if(isRightCabinet)
+        {
+            UpdateMonologue(3);
+        }
     }
 
     void UpdateMonologue(int displayIndex)
@@ -28,6 +38,12 @@ public class LivingRoomLore : Interactable
         {
             case 1: //! Grandfather Clock
                 gm.monologueManager.DisplaySentence(40);
+                break;
+            case 2: //! Bench(es)
+                gm.monologueManager.DisplaySentence(41);
+                break;
+            case 3: //! Rightmost Cabinet
+                gm.monologueManager.DisplaySentence(42);
                 break;
             default:
                 break;

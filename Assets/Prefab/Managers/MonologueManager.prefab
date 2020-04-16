@@ -356,7 +356,7 @@ MonoBehaviour:
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0
-  - description: '[48] Living: Twin Paintings Lore'
+  - description: '[48] Lounge: Twin Paintings Lore'
     index: 48
     sentenceText: My past self would gaze in awe at these paintings until the break
       of dusk.

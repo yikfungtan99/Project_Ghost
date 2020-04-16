@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -9925,197 +9925,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
         type: 3}
-      propertyPath: sentenceList.Array.size
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 1349278122}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[41].description
-      value: '[41] Living: Bench Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[41].index
-      value: 41
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[41].sentenceText
-      value: I could use a break but these benches are never really comfy to sit on.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[41].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[42].description
-      value: '[42] Living: Rightmost Cabinet Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[42].index
-      value: 42
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[42].sentenceText
-      value: An incredibly ornate, gilded cabinet. A great treasure from an ancestor...
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[42].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[43].description
-      value: '[43] Kitchen: Empty Cupboard Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[43].index
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[43].sentenceText
-      value: Strangely, this cupboard is completely empty.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[43].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[44].description
-      value: '[44] Kitchen: Cooking Station Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[44].index
-      value: 44
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[44].sentenceText
-      value: I would see this pile of bricks everyday when I was young. Now, I use
-        an electric stove.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[44].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[45].description
-      value: '[45] Kitchen: Foreground Table Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[45].index
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[45].sentenceText
-      value: The food is still somewhat warm.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[45].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[46].description
-      value: '[46] Hall 2: Any Item Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[46].index
-      value: 46
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[46].sentenceText
-      value: I am still amazed by the sight of this as I was as a child.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[46].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[47].description
-      value: '[47] Lounge: Table with Plants Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[47].index
-      value: 47
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[47].sentenceText
-      value: The most warm plants in this soothing room from my childhood.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[47].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[48].description
-      value: '[48] Living: Twin Paintings Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[48].index
-      value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[48].sentenceText
-      value: My past self would gaze in awe at these paintings until the break of
-        dusk.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[48].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[49].description
-      value: '[49] Living: Grandfather Clock Lore'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[49].index
-      value: 49
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[49].sentenceText
-      value: Huh, I remember this clock since I last stayed here... Mom and Dad really
-        did love their antiques.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231533299487635716, guid: cad0fa56c6dc6d04ca70668f1908df50,
-        type: 3}
-      propertyPath: sentenceList.Array.data[49].displayMonologueTimer
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5231533299487635717, guid: cad0fa56c6dc6d04ca70668f1908df50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43874,7 +43686,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -43898,7 +43710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708830731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 33.9, y: -61.01, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
