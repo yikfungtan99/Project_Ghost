@@ -15,8 +15,11 @@ public class JournalManager : MonoBehaviour
 
     public static JournalManager Instance;
 
-  //  [HideInInspector]             /////////////////// <--------------------THIS IS PANTANG
-    public bool[] notePickup = new bool[10];  // was 8, changed to 10 to test will work or not; was a failure
+    //  [HideInInspector]             /////////////////// <--------------------THIS IS PANTANG
+    public bool[] notePickup;//keep track of the notes picked up on the ground
+                                                                 //= new bool[10];  // was 8, changed to 10 to test will work or not; was a failure
+    public bool[] noteReadup;//keep track of the notes you read in the game
+
     public List<GameObject> pauseMenu = new List<GameObject>();
     public GameObject noteWarning;
     public List<NoteSets> noteList = new List<NoteSets>();
@@ -41,6 +44,8 @@ public class JournalManager : MonoBehaviour
                 Debug.Log(maxNoteCount);
             }
         }
+        noteReadup = new bool[maxNoteCount];//game will automatically set the maxnotecount to exactly how many notes there are in the game
+        notePickup = new bool[noteList.Count]; //noteList placed inside the array as there are 6 notes to be picked up, as noteList contains the notes that are pickupable, .Count to get int
         /*
         for(int i = 0; i < noteList.Count; i ++)
         {
@@ -69,7 +74,12 @@ public class JournalManager : MonoBehaviour
         {
             if(i == noteNum)
             {
-                notePickup[i] = true;
+                notePickup[i] = true;//indicte a note on the ground is picked up
+                for(int j = 0; j < noteList[i].noteBundle.Count; j++)//make the note you picked up readable using th bool array
+                {
+                    noteReadup[noteList[i].noteBundle[j].GetComponent<JournalPageScript>().pageNum] = true;
+                    //success in doing this cos got equal number of notereadup bools and notepickup bools
+                }
             }
         }
     }
@@ -111,11 +121,11 @@ public class JournalManager : MonoBehaviour
     {
         if (curIndex != maxNoteCount)
         {
-            GameObject cur = FindPage(curIndex);
+            GameObject cur = FindPage(curIndex);//set current page to current page number
             GameObject next;
             if(FindPage(curIndex+1) != null) 
             {
-                next = FindPage(curIndex + 1);
+                next = FindPage(curIndex + 1);//set next to current page number + 1, making it next page number just like how 2's next page is 3
                 if (cur != null && next != null)
                 {
                     cur.SetActive(false);
@@ -125,7 +135,22 @@ public class JournalManager : MonoBehaviour
             }
             else
             {
-                for (int i = curIndex + 1; i < maxNoteCount; i++) //lesser than maxnotecount to prevent going out of control, 
+                for(int i = curIndex + 1; i < noteReadup.Length; i++)
+                {
+                    if(noteReadup[i])
+                    {
+                        next = FindPage(i);
+                        if (cur != null && next != null)
+                        {
+                            cur.SetActive(false);
+                            next.SetActive(true);
+                            Debug.Log("NextPage called");
+                            break;
+                        }
+                    }
+                }
+                
+                /*for (int i = curIndex + 1; i < maxNoteCount; i++) //lesser than maxnotecount to prevent going out of control, 
                 {
                     for (int j = 0; j < noteList[i].noteBundle.Count; j++)//???
                     {  
@@ -138,7 +163,7 @@ public class JournalManager : MonoBehaviour
                             {
                                 cur.SetActive(false);//switch off current picture...
                                 next.SetActive(true);//...and go to next picture
-                                for (int k = maxNoteCount; k >= 0; k--)
+                                *//*for (int k = maxNoteCount; k >= 0; k--)
                                 {
                                     for (int l = noteList[k].noteBundle.Count - 1; l >= 0; l--)
                                     {
@@ -155,7 +180,7 @@ public class JournalManager : MonoBehaviour
                                     {
                                         break;
                                     }
-                                }
+                                }*//*
                                 Debug.Log("NextPage called");
                             }
                             break;
@@ -165,12 +190,12 @@ public class JournalManager : MonoBehaviour
 
                         }
                     }
-                    /**/
+                    *//**//*
                     if(notePickup[i] == true)
                     {
                         break;
                     }
-                }
+                }*/
             }
             
             /*
@@ -182,47 +207,44 @@ public class JournalManager : MonoBehaviour
 
     public void PrevPage(int curIndex)
     {
-        if (curIndex != 0)
+        Debug.Log("First call");
+        Debug.Log(curIndex);
+        if (curIndex >= 0)
         {
+            Debug.Log("First point 1 call");
             GameObject cur = FindPage(curIndex);
+            Debug.Log(cur);
             GameObject prev;
+            Debug.Log("prev");
             if (FindPage(curIndex - 1) != null)
             {
+                Debug.Log("Second call");
                 prev = FindPage(curIndex - 1);
                 if (cur != null && prev != null)
                 {
+                    Debug.Log("Third call");
                     cur.SetActive(false);
                     prev.SetActive(true);
-                    Debug.Log("NextPage called");
+                    Debug.Log("PrevPage called");
                 }
             }
             else
             {
                 for (int i = curIndex - 1; i >= 0; i--)
                 {
-                    for (int j = 0; j < noteList[i].noteBundle.Count; j++)
+                    Debug.Log("After else");
+                    if (noteReadup[i])
                     {
-                        Debug.Log("curIdex: " + curIndex);
-                        Debug.Log(i);
-                        if (notePickup[i] == true)
+                        Debug.Log("Fourth call");
+                        prev = FindPage(i);
+                        if (cur != null && prev != null)
                         {
-                            prev = noteList[i].noteBundle[j].gameObject;
-                            if (cur != null && prev != null)
-                            {
-                                cur.SetActive(false);
-                                prev.SetActive(true);
-                                Debug.Log("NextPage called");
-                            }
+                            Debug.Log("Fifth call");
+                            cur.SetActive(false);
+                            prev.SetActive(true);
+                            Debug.Log("PrevPage called");
                             break;
                         }
-                        else
-                        {
-
-                        }
-                    }
-                    if (notePickup[i] == true)
-                    {
-                        break;
                     }
                 }
             }
@@ -236,15 +258,17 @@ public class JournalManager : MonoBehaviour
     GameObject FindPage(int index)
     {
         int count = 0;
-        
+        /*if(noteReadup[index])//if noteReadup[index] == true
+        {
+            
+        }*/
         for (int i = 0; i < noteList.Count; i++)
         {
             for (int j = 0; j < noteList[i].noteBundle.Count; j++)
             {
-                
-                if(count == index)
+                if (count == index)
                 {
-                    if(notePickup[i] == true)
+                    if (notePickup[i] == true && noteReadup[index])
                     {
                         return noteList[i].noteBundle[j];
                     }
@@ -256,6 +280,7 @@ public class JournalManager : MonoBehaviour
                 count++;
             }
         }
+        /**/
 
         Debug.LogError("No note found in index");
         return null;
