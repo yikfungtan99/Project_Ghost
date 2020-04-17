@@ -82,7 +82,6 @@ public class Player : MonoBehaviour
 
         isDead = true;
         gameObject.SetActive(false);
-
         int child = GameObject.Find("DeathCanvas").transform.childCount;
         for (int i = 0; i < child; i++)
         {

@@ -2,17 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hallway2Lore : MonoBehaviour
+public class Hallway2Lore : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Hallway 2 Lore")]
+    [SerializeField] bool isAnything = false;
+
+    public override void Interact()
     {
-        
+        base.Interact();
+
+        IdentifyObject();
     }
 
-    // Update is called once per frame
-    void Update()
+    void IdentifyObject()
     {
-        
+        if (isAnything)
+        {
+            UpdateMonologue(1);
+        }
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        switch (displayIndex)
+        {
+            case 1: //! Any Item
+                gm.monologueManager.DisplaySentence(46);
+                break;
+            default:
+                break;
+        }
     }
 }
