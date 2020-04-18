@@ -95,7 +95,9 @@ MonoBehaviour:
     displayMonologue: 0
   - description: '[8] Clicking altar statue to get talisman'
     index: 8
-    sentenceText: Picked up the 1 Talisman laying near the statue foot.
+    sentenceText: 'Picked up the 1 Talisman laying near the statue foot.
+
+      [The Game has been Saved]'
     displayMonologueTimer: 3
     displayMonologueTimerCounter: 0
     displayMonologue: 0
@@ -300,8 +302,8 @@ MonoBehaviour:
     displayMonologue: 0
   - description: '[39] Item Description: Red Cloth'
     index: 39
-    sentenceText: Time has worn the cloth's gloss. Although dusty, it may still be
-      capable of blocking the vision of spirits.
+    sentenceText: Time has worn the cloth's gloss. Although dusty, it is still perfectly
+      opaque to cover anything.
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0
@@ -366,6 +368,258 @@ MonoBehaviour:
   - description: '[49] Outside: Windows Lore'
     index: 49
     sentenceText: Hmm, looks like nobody is home. Good thing I have a house key.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[50] Hall 1: Drawer Table Lore'
+    index: 50
+    sentenceText: Purely a decorative piece of furniture.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[51] Hall 1: Grandchild Clock Lore'
+    index: 51
+    sentenceText: Another clock, looks like this one needs some fixing up.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[52] Hall 1: Symmetrical Chairs Lore'
+    index: 52
+    sentenceText: A beautiful arrangement.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[53] Hall 1: Cabinet Lore'
+    index: 53
+    sentenceText: Were these put here just to fill space?
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[54] Dining: Broken Mirror Lore'
+    index: 54
+    sentenceText: "My\u2026 How did this get broken??"
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[55] Dining: Long Dining Table Lore'
+    index: 55
+    sentenceText: A Tok Panjang in my culture.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[56] Dining: Leftmost Shelf Lore'
+    index: 56
+    sentenceText: Just an odd collection of candles in here.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[57] Dining: Grandfather Clock Replica Lore'
+    index: 57
+    sentenceText: '... I can see a fake when I encounter one. Why did my parents like
+      collecting clocks?'
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[58] Hall 4: Grandfather Clock Replica Lore'
+    index: 58
+    sentenceText: Another replica of the grandfather clock I recognise.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[59] Toilet: Broken Toilet Mirror Lore'
+    index: 59
+    sentenceText: Did my parents ever call someone to fix this?
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[60] Toilet: Toilet Bowl Lore'
+    index: 60
+    sentenceText: The toilet bowl is kept decently clean.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[61] Toilet: Centre Water Tap Lore'
+    index: 61
+    sentenceText: "There must be something wrong with the piping\u2026 Guess the house
+      does need some renovating."
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[62] Storage: Any Shelf Lore'
+    index: 62
+    sentenceText: "There is nothing on the shelf\u2026 or is it just too dark to see?"
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[63] Storage: Candle on Table Lore'
+    index: 63
+    sentenceText: "A lone candle trapped in a dark room like myself once\u2026 Perhaps
+      we can help each other at some point."
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[64] Bridal Bedroom: Picture Frame Lore'
+    index: 64
+    sentenceText: A photo of my parents. I hope they arrive home soon.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[65] Bridal Bedroom: Makeup Table Lore'
+    index: 65
+    sentenceText: I do not need to do any makeup now.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[66] Bridal Bedroom: Face Wash Bowl Lore'
+    index: 66
+    sentenceText: I would rinse my face with this but there is no water at the moment.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[67] Bridal Bedroom: Giant Vase Lore'
+    index: 67
+    sentenceText: "Such a fragile thing\u2026 I am afraid I might tip it over."
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[68] Central Courtyard: Potted Orchid Plant Lore'
+    index: 68
+    sentenceText: "A fresh orchid. My parents\u2019 love for plants still has not
+      changed."
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[69] Central Courtyard: Picture Frames under Stairs Lore'
+    index: 69
+    sentenceText: Pictures of exploring the world, a symbol that my family has forgone
+      most of its strict tradition.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[70] Altar: Three Buddhas Lore'
+    index: 70
+    sentenceText: An illustration of the three bodies... looking over me.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[71] Altar: Guan Yin Statue Lore'
+    index: 71
+    sentenceText: A statue of Guan Yin, it somehow gives me a sense of safety.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[72] Altar: Windows Lore'
+    index: 72
+    sentenceText: I can see my car from the window here.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[73] Main Entrance: Coloured Flowers in Vase Lore'
+    index: 73
+    sentenceText: Many coloured roses in a vase, just lovely.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[74] Main Entrance: Painting Frame Set Lore'
+    index: 74
+    sentenceText: A magnificent piece of aesthetic.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[75] Main Entrance: Potted Plant on the Floor Lore'
+    index: 75
+    sentenceText: Cared plants in households rewards the freshest of air.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[76] Item Description: Talisman'
+    index: 76
+    sentenceText: A talisman parchment. I guess I will be safe if I hold on to it...
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[77] Item Description: Scissors'
+    index: 77
+    sentenceText: Scissors. Nothing can be cut if its other half is missing.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[78] Item Description: Spoon'
+    index: 78
+    sentenceText: A common porcelain spoon used for meals. It can be used to eat anything
+      with enough mastery.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[79] Item Description: Comb'
+    index: 79
+    sentenceText: When I think of a comb, I imagine using it to comb my messy hair
+      in the morning.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[80] Item Description: Razor'
+    index: 80
+    sentenceText: I remember by mother saying that holding a razor is a form of protection
+      during marriage.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[81] Item Description: Red Thread'
+    index: 81
+    sentenceText: If you have a roll of thread, you can sew any tears in clothing
+      with the right skill and patience.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[82] Item Description: Empty Photo Frame'
+    index: 82
+    sentenceText: An empty photo frame. I wonder who removed the photo that was once
+      displayed in this.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[83] Item Description: Lounge Statue'
+    index: 83
+    sentenceText: An artefact that is carved from wood and polished from natural tree
+      oils.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[84] Item Description: Flour'
+    index: 84
+    sentenceText: Flour, an essential in most Oriental cooking.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[85] Item Description: Sugar'
+    index: 85
+    sentenceText: I much prefer brown sugar but white sugar can do.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[86] Item Description: Baking Soda'
+    index: 86
+    sentenceText: Since young, I was thought various baking recipes. Baking Soda is
+      always a must.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[87] Item Description: Pink Dye'
+    index: 87
+    sentenceText: A bottle of artificial food colouring... and it is pink.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[88] Item Description: Kuih'
+    index: 88
+    sentenceText: Kuih feels so traditional for me, especially this one...
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[89] Game Saved Notification'
+    index: 89
+    sentenceText: '[The Game has been Saved]'
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0

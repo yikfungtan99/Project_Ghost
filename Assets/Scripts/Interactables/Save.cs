@@ -9,22 +9,27 @@ public class Save : Interactable
     public int saveStationNumber;
     private void Start()
     {
-       // spawnPoint = this.gameObject.GetComponentInChildren<Transform>();
         spawnPoint = this.gameObject.transform.Find("SaveSpawn");
     }
+
     public override void Interact()
     {
         base.Interact();
-        saveGame();
-        gm.playerObject.GetComponent<Player_Movement>().save(spawnPoint, saveStationNumber);
+
+        SaveGame();
     }
 
-
-    public void saveGame()
+    void SaveGame()
     {
-        Debug.LogWarning("GAME SAVED");
-       // this.gameObject.transform.Find("SaveSpawn");
+        if(itemName == "talisman")
+        {
+            itemName = null;
+            gm.playerObject.GetComponent<Player_Movement>().LoadSave(spawnPoint, saveStationNumber, true);
+        }
+        else
+        {
+            gm.playerObject.GetComponent<Player_Movement>().LoadSave(spawnPoint, saveStationNumber, false);
+        }
+        //Debug.Log("GAME SAVED");
     }
-    // Upate is called once per frame
-    
 }

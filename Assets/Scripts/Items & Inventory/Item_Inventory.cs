@@ -144,6 +144,48 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             case "red cloth":
                 gm.monologueManager.DisplaySentence(39);
                 break;
+            case "talisman":
+                gm.monologueManager.DisplaySentence(76);
+                break;
+            case "scissors":
+                gm.monologueManager.DisplaySentence(77);
+                break;
+            case "spoon":
+                gm.monologueManager.DisplaySentence(78);
+                break;
+            case "comb":
+                gm.monologueManager.DisplaySentence(79);
+                break;
+            case "razor":
+                gm.monologueManager.DisplaySentence(80);
+                break;
+            case "red thread":
+                gm.monologueManager.DisplaySentence(81);
+                break;
+            case "empty photo frame":
+                gm.monologueManager.DisplaySentence(82);
+                break;
+            case "lounge statue":
+                gm.monologueManager.DisplaySentence(83);
+                break;
+            case "flour":
+                gm.monologueManager.DisplaySentence(84);
+                break;
+            case "sugar":
+                gm.monologueManager.DisplaySentence(85);
+                break;
+            case "baking soda":
+                gm.monologueManager.DisplaySentence(86);
+                break;
+            case "pink dye":
+                gm.monologueManager.DisplaySentence(87);
+                break;
+            case "kuih":
+                gm.monologueManager.DisplaySentence(88);
+                break;
+            case null:
+                Debug.Log("Item is named improperly or is intentionally out of bounds.");
+                break;
         }
     }
 }

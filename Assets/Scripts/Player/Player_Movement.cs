@@ -290,9 +290,27 @@ public class Player_Movement : MonoBehaviour
 
     }
 
-    public void save(Transform savePoint,int saveNum)
+    public void LoadSave(Transform savePoint, int saveNum, bool isTalisman)
     {
         savedLocation = savePoint;
         saveStationNum = saveNum;
+        if(!isTalisman)
+        {
+            UpdateMonologue(1);
+        }
+        Debug.Log("GAME SAVED");
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        switch (displayIndex)
+        {
+            case 1:
+                gm.monologueManager.DisplaySentence(89);
+                break;
+            default:
+                Debug.LogWarning("Save notification could not be displayed.");
+                break;
+        }
     }
 }

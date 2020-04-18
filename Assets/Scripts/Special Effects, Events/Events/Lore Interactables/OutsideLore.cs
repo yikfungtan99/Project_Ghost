@@ -2,17 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OutsideLore : MonoBehaviour
+public class OutsideLore : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Outside Lore")]
+    [SerializeField] bool isWindow = false;
+
+    public override void Interact()
     {
-        
+        base.Interact();
+
+        IdentifyObject();
     }
 
-    // Update is called once per frame
-    void Update()
+    void IdentifyObject()
     {
-        
+        if (isWindow)
+        {
+            UpdateMonologue(1);
+        }
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        if(gm.inTutorial)
+        {
+            switch (displayIndex)
+            {
+                case 1: //! Window
+                    gm.monologueManager.DisplaySentence(49);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

@@ -2,17 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StorageLore : MonoBehaviour
+public class StorageLore : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Storage Lore")]
+    [SerializeField] bool isAnyShelf = false;
+    [SerializeField] bool isTableCandle = false;
+
+    public override void Interact()
     {
-        
+        base.Interact();
+
+        IdentifyObject();
     }
 
-    // Update is called once per frame
-    void Update()
+    void IdentifyObject()
     {
-        
+        if (isAnyShelf)
+        {
+            UpdateMonologue(1);
+        }
+        if (isTableCandle)
+        {
+            UpdateMonologue(2);
+        }
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        if (!gm.inTutorial)
+        {
+            switch (displayIndex)
+            {
+                case 1: //! Any Shelf
+                    gm.monologueManager.DisplaySentence(62);
+                    break;
+                case 2: //! Candle on Table
+                    gm.monologueManager.DisplaySentence(63);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

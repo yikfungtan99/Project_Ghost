@@ -2,17 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hallway4Lore : MonoBehaviour
+public class Hallway4Lore : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Hallway 4 Lore")]
+    [SerializeField] bool isGrandfatherClockReplica = false;
+
+    public override void Interact()
     {
-        
+        base.Interact();
+
+        IdentifyObject();
     }
 
-    // Update is called once per frame
-    void Update()
+    void IdentifyObject()
     {
-        
+        if (isGrandfatherClockReplica)
+        {
+            UpdateMonologue(1);
+        }
+    }
+
+    void UpdateMonologue(int displayIndex)
+    {
+        if (!gm.inTutorial)
+        {
+            switch (displayIndex)
+            {
+                case 1: //! Grandfather Clock Replica
+                    gm.monologueManager.DisplaySentence(58);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

@@ -34,19 +34,22 @@ public class KitchenLore : Interactable
 
     void UpdateMonologue(int displayIndex)
     {
-        switch (displayIndex)
+        if(!gm.inTutorial)
         {
-            case 1: //! Empty Cupboard
-                gm.monologueManager.DisplaySentence(43);
-                break;
-            case 2: //! Cooking Station
-                gm.monologueManager.DisplaySentence(44);
-                break;
-            case 3: //! Foreground Table
-                gm.monologueManager.DisplaySentence(45);
-                break;
-            default:
-                break;
+            switch (displayIndex)
+            {
+                case 1: //! Empty Cupboard
+                    gm.monologueManager.DisplaySentence(43);
+                    break;
+                case 2: //! Cooking Station
+                    gm.monologueManager.DisplaySentence(44);
+                    break;
+                case 3: //! Foreground Table
+                    gm.monologueManager.DisplaySentence(45);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

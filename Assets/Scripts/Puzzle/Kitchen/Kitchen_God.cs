@@ -19,7 +19,9 @@ public class Kitchen_God : Interactable
     public override void Interact()
     {
         base.Interact();
-        gm.playerObject.GetComponent<Player_Movement>().save(spawnPoint, saveStationNumber);
+
+        SaveGame();
+
         //! this interact function will not run until previous Dining Puzzle is completed
         if (pm.disableKitchenPuzzle)
         {
@@ -105,5 +107,10 @@ public class Kitchen_God : Interactable
 
             Debug.Log("kitchen puzzle clear!");
         }
+    }
+
+    void SaveGame()
+    {
+        gm.playerObject.GetComponent<Player_Movement>().LoadSave(spawnPoint, saveStationNumber, false);
     }
 }

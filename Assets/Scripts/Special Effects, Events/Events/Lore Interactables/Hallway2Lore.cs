@@ -24,13 +24,16 @@ public class Hallway2Lore : Interactable
 
     void UpdateMonologue(int displayIndex)
     {
-        switch (displayIndex)
+        if(!gm.inTutorial)
         {
-            case 1: //! Any Item
-                gm.monologueManager.DisplaySentence(46);
-                break;
-            default:
-                break;
+            switch (displayIndex)
+            {
+                case 1: //! Any Item
+                    gm.monologueManager.DisplaySentence(46);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

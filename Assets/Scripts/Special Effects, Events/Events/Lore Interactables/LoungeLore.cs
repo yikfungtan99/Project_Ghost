@@ -29,16 +29,19 @@ public class LoungeLore : Interactable
 
     void UpdateMonologue(int displayIndex)
     {
-        switch (displayIndex)
+        if(!gm.inTutorial)
         {
-            case 1: //! Table with Plants
-                gm.monologueManager.DisplaySentence(47);
-                break;
-            case 2: //! Twin Paintings
-                gm.monologueManager.DisplaySentence(48);
-                break;
-            default:
-                break;
+            switch (displayIndex)
+            {
+                case 1: //! Table with Plants
+                    gm.monologueManager.DisplaySentence(47);
+                    break;
+                case 2: //! Twin Paintings
+                    gm.monologueManager.DisplaySentence(48);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
