@@ -13,10 +13,23 @@ public class Interactable : MonoBehaviour
 
     public string itemName;
     public int charges = 0;
+    public GameObject highlight;
 
     virtual public void Awake()
     {
         gm = GameManager.Instance;
+        foreach (Transform child in transform)
+        {
+            if (child.tag == "Highlight")
+            {
+                highlight = child.gameObject;
+            }
+            else
+            {
+                highlight = null;
+            }
+                
+        }
 
     }
 
@@ -146,28 +159,32 @@ public class Interactable : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (GetComponentInChildren<ParticleSystem>(true))
+            if (highlight)//GetComponentInChildren<ParticleSystem>(true)
             {
                 if (itemGiver)
                 {
 
-                    if(charges > 0)
+                    if (charges > 0)
                     {
 
-                        GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+                        // GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+                        highlight.SetActive(isSeen);
 
                     }
                     else
                     {
-                        GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
+                        // GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
+                        highlight.SetActive(false);
                     }
 
                 }
                 else
                 {
-                    GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+                    // GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(isSeen);
+                    highlight.SetActive(isSeen);
+
                 }
-                
+
             }
         }
     }
