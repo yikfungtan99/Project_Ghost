@@ -74,11 +74,15 @@ public class DeathLoad : MonoBehaviour
             {
                 gm.roomManager.GetComponent<Animator>().Play("Kitchen");
             }
-            else
+            else if(gm.playerMovement.saveStationNum == 1)
             {
                  gm.roomManager.GetComponent<Animator>().Play("Bridal");
                 
             }
+            else
+            {
+                Application.LoadLevel(Application.loadedLevel);
+            }    
             
             gm.playerObject.GetComponent<Transform>().position = gm.playerMovement.savedLocation.position;
             gm.ghostMain.GetComponent<Transform>().position = gm.carrotMain.inactiveLocation.position;

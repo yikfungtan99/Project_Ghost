@@ -9,7 +9,7 @@ public class Win : MonoBehaviour
     public void Return()
     {
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
 
     }
 }
