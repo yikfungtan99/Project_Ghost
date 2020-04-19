@@ -54,10 +54,12 @@ public class HoldPanel : MonoBehaviour, IDropHandler
                         if (transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "lighter")
                         {
                             Debug.Log("DE");
+
                             GameManager.Instance.TutorialNavi.ui.gameObject.SetActive(false);
                             GameManager.Instance.TutorialNavi.UpdateBoard(6);
                             GameManager.Instance.playerInventory.secondTime = true;
                             lighterDone = true;
+                            
                         }
                     }
                 }
