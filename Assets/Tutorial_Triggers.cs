@@ -23,6 +23,7 @@ public class Tutorial_Triggers : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 promptSleep = false;
+                GameManager.Instance.TutorialNavi.gameObject.SetActive(false);
                 UpdateMonologue(1);
             }
         }

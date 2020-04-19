@@ -18,10 +18,22 @@ public class Interactable_Bed : Interactable
 
     public override void Interact()
     {
-        base.Interact();
 
-        TutorialFadeInOut();
-        gm.playerCheckpointPosition = new Vector2(transform.position.x, gm.player.transform.position.y);
+        if (!gm.playerLighter.lighterOn) {
+
+            base.Interact();
+
+            TutorialFadeInOut();
+            gm.playerCheckpointPosition = new Vector2(transform.position.x, gm.player.transform.position.y);
+
+        }
+        else
+        {
+
+            Debug.Log("Who the fuck sleeps with a lighter on?");
+
+        }
+       
 
     }
 
@@ -50,7 +62,7 @@ public class Interactable_Bed : Interactable
 
                 gm.FadeInOutAnim.SetBool("Go", true);
                 StartCoroutine(Delay(2));
-                
+
             }
 
         }
@@ -67,11 +79,13 @@ public class Interactable_Bed : Interactable
         gm.playerObject.SetActive(false);
         yield return new WaitForSeconds(waitForSeconds);
 
-        gm.playerObject.SetActive(true);
-        ableToSleep = false;
-        FadeInOut.SetActive(false);
-        gm.tutorialSleep = true;
-        UpdateMonologue(2);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+        //gm.playerObject.SetActive(true);
+        //ableToSleep = false;
+        //FadeInOut.SetActive(false);
+        //gm.tutorialSleep = true;
+        //UpdateMonologue(2);
     }
 
     void UpdateMonologue(int displayIndex)
