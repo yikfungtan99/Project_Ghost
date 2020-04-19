@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        #region Singleton
         //! first check if got singleton duplicate (purge all clones)
         if (thisInstance != null && thisInstance != this)
         {
@@ -124,6 +125,7 @@ public class GameManager : MonoBehaviour
         {
             thisInstance = this;
         }
+        #endregion
     }
 
     private void Start()

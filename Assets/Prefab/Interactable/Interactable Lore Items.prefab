@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 34239912}
   - component: {fileID: 34239913}
   - component: {fileID: 34239914}
-  m_Layer: 0
+  - component: {fileID: 34239915}
+  m_Layer: 8
   m_Name: Shelves (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,8 +101,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &34239915
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34239911}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &212112146
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +141,8 @@ GameObject:
   - component: {fileID: 212112147}
   - component: {fileID: 212112148}
   - component: {fileID: 212112149}
-  m_Layer: 0
+  - component: {fileID: 212112150}
+  m_Layer: 8
   m_Name: Shelves (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,8 +231,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &212112150
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212112146}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &268950896
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +271,8 @@ GameObject:
   - component: {fileID: 268950897}
   - component: {fileID: 268950898}
   - component: {fileID: 268950899}
-  m_Layer: 0
+  - component: {fileID: 268950900}
+  m_Layer: 8
   m_Name: Shelves (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,8 +361,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &268950900
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268950896}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &446019801
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +401,8 @@ GameObject:
   - component: {fileID: 446019802}
   - component: {fileID: 446019803}
   - component: {fileID: 446019804}
-  m_Layer: 0
+  - component: {fileID: 446019805}
+  m_Layer: 8
   m_Name: Shelves (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,8 +491,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &446019805
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446019801}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &560187991
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +531,8 @@ GameObject:
   - component: {fileID: 560187992}
   - component: {fileID: 560187993}
   - component: {fileID: 560187994}
-  m_Layer: 0
+  - component: {fileID: 560187995}
+  m_Layer: 8
   m_Name: Shelves (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,8 +621,115 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &560187995
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560187991}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
+--- !u!1 &633626304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633626305}
+  - component: {fileID: 633626306}
+  m_Layer: 0
+  m_Name: Kitchen_Left Cupboard 2_Highlight
+  m_TagString: Highlight
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &633626305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633626304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.096, y: -0.175, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 541612935683898659}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &633626306
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633626304}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 18
+  m_Sprite: {fileID: 21300000, guid: 9964cbe6ed2f69c40b06310557ce402c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.45, y: 4.98}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &637614262
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +742,7 @@ GameObject:
   - component: {fileID: 637614264}
   - component: {fileID: 8494722500002859073}
   - component: {fileID: 2159519819795986792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Wall deco '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,6 +830,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isOrchid: 0
   isPictureFrames: 1
 --- !u!61 &2159519819795986792
@@ -650,7 +871,7 @@ GameObject:
   - component: {fileID: 643115226}
   - component: {fileID: 6434948592147191042}
   - component: {fileID: 8530055723583197627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orkid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,6 +960,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isOrchid: 1
   isPictureFrames: 0
 --- !u!61 &8530055723583197627
@@ -778,7 +1000,8 @@ GameObject:
   - component: {fileID: 682376489}
   - component: {fileID: 682376490}
   - component: {fileID: 682376491}
-  m_Layer: 0
+  - component: {fileID: 682376492}
+  m_Layer: 8
   m_Name: Shelves (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -867,8 +1090,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &682376492
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682376488}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &1101497884
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +1130,8 @@ GameObject:
   - component: {fileID: 1101497885}
   - component: {fileID: 1101497886}
   - component: {fileID: 1101497887}
-  m_Layer: 0
+  - component: {fileID: 1101497888}
+  m_Layer: 8
   m_Name: Shelves (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,8 +1220,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &1101497888
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101497884}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &1242939603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1300,8 @@ GameObject:
   - component: {fileID: 1419205373}
   - component: {fileID: 1419205374}
   - component: {fileID: 1419205375}
-  m_Layer: 0
+  - component: {fileID: 1419205376}
+  m_Layer: 8
   m_Name: Shelves (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1111,8 +1390,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &1419205376
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419205372}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &1545606989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,7 +1467,10 @@ GameObject:
   - component: {fileID: 1873942495}
   - component: {fileID: 1873942494}
   - component: {fileID: 1873942496}
-  m_Layer: 0
+  - component: {fileID: 8918354866703075070}
+  - component: {fileID: 2753696996952496951}
+  - component: {fileID: 1873942497}
+  m_Layer: 8
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,8 +1559,87 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 0
   isTableCandle: 1
+--- !u!61 &8918354866703075070
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873942493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.56718826, y: 0.841959}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.67, y: 1.22}
+    newSize: {x: 1.67, y: 1.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5356235, y: 0.8393898}
+  m_EdgeRadius: 0
+--- !u!61 &2753696996952496951
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873942493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09803742}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.67, y: 1.22}
+    newSize: {x: 1.67, y: 1.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.67, y: 1.0239252}
+  m_EdgeRadius: 0
+--- !u!61 &1873942497
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873942493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5593431, y: 0.836216}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.67, y: 1.22}
+    newSize: {x: 1.67, y: 1.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5513139, y: 0.8394394}
+  m_EdgeRadius: 0
 --- !u!1 &2091013666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,7 +1651,8 @@ GameObject:
   - component: {fileID: 2091013667}
   - component: {fileID: 2091013668}
   - component: {fileID: 2091013669}
-  m_Layer: 0
+  - component: {fileID: 2091013670}
+  m_Layer: 8
   m_Name: Shelves (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,8 +1741,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &2091013670
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091013666}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &8190948569744481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1781,8 @@ GameObject:
   - component: {fileID: 8834874525305262128}
   - component: {fileID: 9107796305613845443}
   - component: {fileID: 8190948569744482}
-  m_Layer: 0
+  - component: {fileID: 2479279052467743535}
+  m_Layer: 8
   m_Name: Layer 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,10 +1871,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isDrawerTable: 1
   isGrandchildClock: 0
   isSymmetricalChairs: 0
   isCabinet: 0
+--- !u!61 &2479279052467743535
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8190948569744481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008756638, y: -0.21308255}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.98, y: 2.3}
+    newSize: {x: 3.98, y: 2.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.775673, y: 1.8738351}
+  m_EdgeRadius: 0
 --- !u!1 &212715137885105078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1913,8 @@ GameObject:
   - component: {fileID: 4021940499490493750}
   - component: {fileID: 8584956336562795541}
   - component: {fileID: 212715137885105079}
-  m_Layer: 0
+  - component: {fileID: 1047173375070452633}
+  m_Layer: 8
   m_Name: chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +2003,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &1047173375070452633
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212715137885105078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.18419504}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.84, y: 2.02}
+    newSize: {x: 3.84, y: 2.02}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.84, y: 1.5217347}
+  m_EdgeRadius: 0
 --- !u!1 &526606440810126212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +2042,8 @@ GameObject:
   - component: {fileID: 7555896996677421903}
   - component: {fileID: 5599523880269079563}
   - component: {fileID: 526606440810126213}
-  m_Layer: 0
+  - component: {fileID: 7293917440347438381}
+  m_Layer: 8
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1659,7 +2132,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &7293917440347438381
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526606440810126212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022756577, y: 0.08818138}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.86, y: 3.38}
+    newSize: {x: 2.86, y: 3.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.6210594, y: 3.1239898}
+  m_EdgeRadius: 0
 --- !u!1 &759974345561020926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +2172,7 @@ GameObject:
   - component: {fileID: 3971488221498942826}
   - component: {fileID: 759974345561020927}
   - component: {fileID: 5772941349336615339}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1761,6 +2261,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 0
   isLongTable: 0
   isLeftmostShelf: 1
@@ -1802,7 +2303,8 @@ GameObject:
   - component: {fileID: 4566232188474204280}
   - component: {fileID: 664161221234823236}
   - component: {fileID: 5082840503545073186}
-  m_Layer: 0
+  - component: {fileID: 970218060790474856}
+  m_Layer: 8
   m_Name: Layer 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +2393,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isGrandfatherClockReplica: 1
+--- !u!61 &970218060790474856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970218060790474855}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0583992, y: -0.06934929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.22, y: 4.4}
+    newSize: {x: 1.22, y: 4.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8987961, y: 4.217499}
+  m_EdgeRadius: 0
 --- !u!1 &1237721129731988103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +2432,8 @@ GameObject:
   - component: {fileID: 1057222204112310028}
   - component: {fileID: 5074531537596360242}
   - component: {fileID: 1237721129731988104}
-  m_Layer: 0
+  - component: {fileID: 6374895238938405818}
+  m_Layer: 8
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1992,10 +2522,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isDrawerTable: 0
   isGrandchildClock: 0
   isSymmetricalChairs: 0
   isCabinet: 1
+--- !u!61 &6374895238938405818
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237721129731988103}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06672478, y: 0.08634758}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.35, y: 4.36}
+    newSize: {x: 3.35, y: 4.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.0909538, y: 4.0617104}
+  m_EdgeRadius: 0
 --- !u!1 &1402154327965029126
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,7 +2564,8 @@ GameObject:
   - component: {fileID: 8109148815227135569}
   - component: {fileID: 9178606979720628081}
   - component: {fileID: 1402154327965029127}
-  m_Layer: 0
+  - component: {fileID: 3961651047531570024}
+  m_Layer: 8
   m_Name: Layer 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,9 +2654,36 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 0
   isToiletBowl: 1
   isWaterTap: 0
+--- !u!61 &3961651047531570024
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402154327965029126}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2.23}
+    newSize: {x: 1, y: 2.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.23}
+  m_EdgeRadius: 0
 --- !u!1 &1785212180946086907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,7 +2696,7 @@ GameObject:
   - component: {fileID: 7245622119468400094}
   - component: {fileID: 1785212180946086908}
   - component: {fileID: 6998933977442299932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_Wall Photo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2200,6 +2785,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isTableWithPlants: 0
   isTwinPaintings: 1
 --- !u!61 &6998933977442299932
@@ -2239,7 +2825,8 @@ GameObject:
   - component: {fileID: 2163337772591039241}
   - component: {fileID: 9117129005789429139}
   - component: {fileID: 1933982443594106001}
-  m_Layer: 0
+  - component: {fileID: 6238311597286590454}
+  m_Layer: 8
   m_Name: Layer 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2327,10 +2914,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isDrawerTable: 0
   isGrandchildClock: 0
   isSymmetricalChairs: 1
   isCabinet: 0
+--- !u!61 &6238311597286590454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933982443594106000}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0047311783, y: -0.02128601}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.53, y: 2.17}
+    newSize: {x: 3.53, y: 2.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.3691654, y: 1.9382095}
+  m_EdgeRadius: 0
 --- !u!1 &1961614225318321245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,7 +2956,8 @@ GameObject:
   - component: {fileID: 4146367235617726121}
   - component: {fileID: 1886755156672580543}
   - component: {fileID: 1961614225318321246}
-  m_Layer: 0
+  - component: {fileID: 1255630938564618063}
+  m_Layer: 8
   m_Name: Photo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2431,10 +3046,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isPictureFrame: 1
   isMakeupTable: 0
   isFaceWash: 0
   isVase: 0
+--- !u!61 &1255630938564618063
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961614225318321245}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08360863, y: 0.013484955}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.81, y: 2.31}
+    newSize: {x: 1.81, y: 2.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4378014, y: 1.9809494}
+  m_EdgeRadius: 0
 --- !u!1 &2658039606077104814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +3088,8 @@ GameObject:
   - component: {fileID: 2434669294359255491}
   - component: {fileID: 100381006573177379}
   - component: {fileID: 2658039606077104815}
-  m_Layer: 0
+  - component: {fileID: 1980776159588144322}
+  m_Layer: 8
   m_Name: furniture clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,10 +3178,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isDrawerTable: 0
   isGrandchildClock: 1
   isSymmetricalChairs: 0
   isCabinet: 0
+--- !u!61 &1980776159588144322
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2658039606077104814}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0074043274, y: 0.051829338}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.26, y: 3.84}
+    newSize: {x: 1.26, y: 3.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.97865295, y: 3.7363415}
+  m_EdgeRadius: 0
 --- !u!1 &2804472895924863211
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,7 +3221,7 @@ GameObject:
   - component: {fileID: 8733543819346136357}
   - component: {fileID: 2804472895924863212}
   - component: {fileID: 1534909459975369234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Left_Wall Photo '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2640,6 +3310,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isTableWithPlants: 0
   isTwinPaintings: 1
 --- !u!61 &1534909459975369234
@@ -2679,7 +3350,8 @@ GameObject:
   - component: {fileID: 1601735061934465264}
   - component: {fileID: 6218081586582102034}
   - component: {fileID: 2970286320914826064}
-  m_Layer: 0
+  - component: {fileID: 3215490832220726563}
+  m_Layer: 8
   m_Name: 'Face Wash Table '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2768,10 +3440,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isPictureFrame: 0
   isMakeupTable: 0
   isFaceWash: 1
   isVase: 0
+--- !u!61 &3215490832220726563
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970286320914826063}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0295372, y: -0.07876849}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.08, y: 3.63}
+    newSize: {x: 1.08, y: 3.63}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.784626, y: 3.4724631}
+  m_EdgeRadius: 0
 --- !u!1 &3180719458997424778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,7 +3484,7 @@ GameObject:
   - component: {fileID: 3180719458997424779}
   - component: {fileID: 3180719458997424780}
   - component: {fileID: 5139826456086842920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right_Candle Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2873,6 +3572,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isTableWithPlants: 1
   isTwinPaintings: 0
 --- !u!61 &3180719458997424780
@@ -2938,7 +3638,8 @@ GameObject:
   - component: {fileID: 4028233124324825258}
   - component: {fileID: 250727401144451371}
   - component: {fileID: 3274200712209749942}
-  m_Layer: 0
+  - component: {fileID: 8227480061606732832}
+  m_Layer: 8
   m_Name: mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3027,9 +3728,36 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 1
   isToiletBowl: 0
   isWaterTap: 0
+--- !u!61 &8227480061606732832
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274200712209749941}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.594429, y: -0.0788883}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.9, y: 3.63}
+    newSize: {x: 6.9, y: 3.63}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.029129, y: 1.6501591}
+  m_EdgeRadius: 0
 --- !u!1 &3702125563907220489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,7 +3769,9 @@ GameObject:
   - component: {fileID: 6041869546864135989}
   - component: {fileID: 3383503290669364103}
   - component: {fileID: 3702125563907220490}
-  m_Layer: 0
+  - component: {fileID: 1641713415445190089}
+  - component: {fileID: 3702125563907220491}
+  m_Layer: 8
   m_Name: table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3130,9 +3860,62 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isEmptyCupboard: 0
   isCookingStation: 0
   isForegroundTable: 1
+--- !u!61 &1641713415445190089
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3702125563907220489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.5330276, y: -0.55951524}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.55, y: 2.14}
+    newSize: {x: 5.55, y: 2.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6596832, y: 1.0209699}
+  m_EdgeRadius: 0
+--- !u!61 &3702125563907220491
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3702125563907220489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.16179657, y: -0.09483361}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.55, y: 2.14}
+    newSize: {x: 5.55, y: 2.14}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7133331, y: 1.9503331}
+  m_EdgeRadius: 0
 --- !u!1 &3861305671503534441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,7 +3928,7 @@ GameObject:
   - component: {fileID: 3861305671503534440}
   - component: {fileID: 6130794274699226199}
   - component: {fileID: 1367809649697461255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Picture_Altar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3234,6 +4017,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isThreeBuddhas: 1
   isGuanYin: 0
   isWindow: 0
@@ -3276,7 +4060,7 @@ GameObject:
   - component: {fileID: 7224885476368584309}
   - component: {fileID: 6887796456398367626}
   - component: {fileID: 404835603633524430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Window_Altar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,6 +4149,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isThreeBuddhas: 0
   isGuanYin: 0
   isWindow: 1
@@ -3433,7 +4218,7 @@ GameObject:
   - component: {fileID: 3880684834547764894}
   - component: {fileID: 3880684834547764895}
   - component: {fileID: 6807247566958426925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left_Candle Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3522,6 +4307,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isTableWithPlants: 1
   isTwinPaintings: 0
 --- !u!61 &3880684834547764895
@@ -3587,7 +4373,8 @@ GameObject:
   - component: {fileID: 6672533603253152645}
   - component: {fileID: 2517653624233390838}
   - component: {fileID: 4568552184303211699}
-  m_Layer: 0
+  - component: {fileID: 3763915453734032688}
+  m_Layer: 8
   m_Name: 'Shelves '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3676,8 +4463,35 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnyShelf: 1
   isTableCandle: 0
+--- !u!61 &3763915453734032688
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4568552184303211698}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.12, y: 3.46}
+    newSize: {x: 2.12, y: 3.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3.46}
+  m_EdgeRadius: 0
 --- !u!1 &4677569413557921227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3689,7 +4503,8 @@ GameObject:
   - component: {fileID: 4183065079060021599}
   - component: {fileID: 1501216862484550673}
   - component: {fileID: 4677569413557921228}
-  m_Layer: 0
+  - component: {fileID: 7708358056589915217}
+  m_Layer: 8
   m_Name: table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3778,7 +4593,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &7708358056589915217
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4677569413557921227}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.005288124, y: -0.13750672}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.6, y: 2.22}
+    newSize: {x: 3.6, y: 2.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.4519138, y: 1.7651691}
+  m_EdgeRadius: 0
 --- !u!1 &5125718698433480367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,7 +4632,8 @@ GameObject:
   - component: {fileID: 2466311888846652920}
   - component: {fileID: 7357281746119994818}
   - component: {fileID: 5125718698433480368}
-  m_Layer: 0
+  - component: {fileID: 5300905788780685324}
+  m_Layer: 8
   m_Name: tap_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3879,9 +4722,36 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 0
   isToiletBowl: 0
   isWaterTap: 1
+--- !u!61 &5300905788780685324
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125718698433480367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0020141602, y: 0.0046922565}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.27, y: 0.44}
+    newSize: {x: 0.27, y: 0.44}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.30618286, y: 0.48155987}
+  m_EdgeRadius: 0
 --- !u!1 &5291066493230342525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3894,7 +4764,7 @@ GameObject:
   - component: {fileID: 2870033438585507268}
   - component: {fileID: 4320667420164679475}
   - component: {fileID: 5291066493230342526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Frames
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3983,6 +4853,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isColouredFlowers: 0
   isPaintingFrameSet: 1
   isPottedPlant: 0
@@ -4023,7 +4894,9 @@ GameObject:
   - component: {fileID: 5791488674558019591}
   - component: {fileID: 541277337173584259}
   - component: {fileID: 5363287816034848290}
-  m_Layer: 0
+  - component: {fileID: 8793258965791565733}
+  - component: {fileID: 5363287816034848291}
+  m_Layer: 8
   m_Name: plant 2 copy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4112,7 +4985,60 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &8793258965791565733
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363287816034848289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.4031162, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.53, y: 1.78}
+    newSize: {x: 9.53, y: 1.78}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2130775, y: 1.78}
+  m_EdgeRadius: 0
+--- !u!61 &5363287816034848291
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5363287816034848289}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.486763, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.53, y: 1.78}
+    newSize: {x: 9.53, y: 1.78}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.257103, y: 1.78}
+  m_EdgeRadius: 0
 --- !u!1 &5456325144811622127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4125,7 +5051,7 @@ GameObject:
   - component: {fileID: 1453222955971641823}
   - component: {fileID: 5456325144811622128}
   - component: {fileID: 4348449561480455308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tok Panjang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4214,6 +5140,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 0
   isLongTable: 1
   isLeftmostShelf: 0
@@ -4255,7 +5182,8 @@ GameObject:
   - component: {fileID: 1674267774603728308}
   - component: {fileID: 4119773237542609944}
   - component: {fileID: 5467847337170889072}
-  m_Layer: 0
+  - component: {fileID: 2971636270263634811}
+  m_Layer: 8
   m_Name: frame 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4344,7 +5272,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &2971636270263634811
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5467847337170889071}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08189392, y: 0.034122705}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.75, y: 1.92}
+    newSize: {x: 1.75, y: 1.92}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5862122, y: 1.8517544}
+  m_EdgeRadius: 0
 --- !u!1 &5583791092343857673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,7 +5311,8 @@ GameObject:
   - component: {fileID: 807803629302319216}
   - component: {fileID: 3253884905204113444}
   - component: {fileID: 5583791092343857674}
-  m_Layer: 0
+  - component: {fileID: 9005226215036786391}
+  m_Layer: 8
   m_Name: Vase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4445,10 +5401,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isPictureFrame: 0
   isMakeupTable: 0
   isFaceWash: 0
   isVase: 1
+--- !u!61 &9005226215036786391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5583791092343857673}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.87, y: 2.22}
+    newSize: {x: 0.87, y: 2.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.87, y: 2.22}
+  m_EdgeRadius: 0
 --- !u!1 &5629691038219810854
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,6 +5918,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isGrandfatherClock: 1
   isBench: 0
   isRightCabinet: 0
@@ -5089,7 +6073,7 @@ GameObject:
   - component: {fileID: 8167893340846764709}
   - component: {fileID: 7994857087930509193}
   - component: {fileID: 6177844341464881874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Large Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5178,6 +6162,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isColouredFlowers: 1
   isPaintingFrameSet: 0
   isPottedPlant: 0
@@ -5219,7 +6204,7 @@ GameObject:
   - component: {fileID: 2159096530425777880}
   - component: {fileID: 6490913563945128010}
   - component: {fileID: 6819558750803064145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Clock '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5308,6 +6293,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 0
   isLongTable: 0
   isLeftmostShelf: 0
@@ -5349,7 +6335,8 @@ GameObject:
   - component: {fileID: 1773963137993227962}
   - component: {fileID: 3801308530430247760}
   - component: {fileID: 6894246418757920549}
-  m_Layer: 0
+  - component: {fileID: 1225942559863954891}
+  m_Layer: 8
   m_Name: plant 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5438,7 +6425,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &1225942559863954891
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6894246418757920548}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10741997, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 1.52}
+    newSize: {x: 1.1, y: 1.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.52101517, y: 1.52}
+  m_EdgeRadius: 0
 --- !u!1 &7079187658219104551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5450,7 +6464,8 @@ GameObject:
   - component: {fileID: 7128207926487617064}
   - component: {fileID: 7298899712839395502}
   - component: {fileID: 7079187658219104552}
-  m_Layer: 0
+  - component: {fileID: 9202054116378439815}
+  m_Layer: 8
   m_Name: Make Up Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5539,10 +6554,37 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isPictureFrame: 0
   isMakeupTable: 1
   isFaceWash: 0
   isVase: 0
+--- !u!61 &9202054116378439815
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079187658219104551}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.15097046, y: 0.07220328}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.09, y: 3.56}
+    newSize: {x: 3.09, y: 3.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3154602, y: 3.4155934}
+  m_EdgeRadius: 0
 --- !u!1 &7183116505618405755
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,7 +6596,8 @@ GameObject:
   - component: {fileID: 365474979165572922}
   - component: {fileID: 6931239871823630599}
   - component: {fileID: 7183116505618405756}
-  m_Layer: 0
+  - component: {fileID: 2777553207391748026}
+  m_Layer: 8
   m_Name: frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5643,7 +6686,34 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isAnything: 1
+--- !u!61 &2777553207391748026
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183116505618405755}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06081903, y: 0.1930387}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.19, y: 1.93}
+    newSize: {x: 2.19, y: 1.93}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.068362, y: 1.5439227}
+  m_EdgeRadius: 0
 --- !u!1 &7534272499214573956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,7 +6726,7 @@ GameObject:
   - component: {fileID: 4990418730351443705}
   - component: {fileID: 469398360234814692}
   - component: {fileID: 7534272499214573957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Layer 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5745,6 +6815,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isColouredFlowers: 0
   isPaintingFrameSet: 0
   isPottedPlant: 1
@@ -5785,7 +6856,8 @@ GameObject:
   - component: {fileID: 541612935683898659}
   - component: {fileID: 1172235854854273207}
   - component: {fileID: 7590298286450931105}
-  m_Layer: 0
+  - component: {fileID: 4269387833631522222}
+  m_Layer: 8
   m_Name: Left_Cupboard 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5802,7 +6874,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 134.04443, y: -30.01791, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 633626305}
   m_Father: {fileID: 5629691038755621719}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5843,7 +6916,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 20
   m_Sprite: {fileID: 3324547404494240795, guid: e8b2ed9b52598f846926a39950dcd14c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5874,9 +6947,36 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isEmptyCupboard: 1
   isCookingStation: 0
   isForegroundTable: 0
+--- !u!61 &4269387833631522222
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7590298286450931104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07411194, y: 0.1053133}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.07, y: 4.67}
+    newSize: {x: 2.07, y: 4.67}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6409607, y: 1.9474735}
+  m_EdgeRadius: 0
 --- !u!1 &7822968779191771512
 GameObject:
   m_ObjectHideFlags: 0
@@ -5889,7 +6989,7 @@ GameObject:
   - component: {fileID: 5556186755002678015}
   - component: {fileID: 7822968779191771513}
   - component: {fileID: 5803299508481859204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5978,6 +7078,7 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isBrokenMirror: 1
   isLongTable: 0
   isLeftmostShelf: 0
@@ -6019,7 +7120,9 @@ GameObject:
   - component: {fileID: 7646501887516917695}
   - component: {fileID: 7694889828010201933}
   - component: {fileID: 8783074450263937085}
-  m_Layer: 0
+  - component: {fileID: 7140280879948014667}
+  - component: {fileID: 8783074450263937086}
+  m_Layer: 8
   m_Name: cooking station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6108,6 +7211,59 @@ MonoBehaviour:
   itemGiver: 0
   itemName: 
   charges: 0
+  highlight: {fileID: 0}
   isEmptyCupboard: 0
   isCookingStation: 1
   isForegroundTable: 0
+--- !u!61 &7140280879948014667
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783074450263937084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.7044449, y: 0.33854675}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.05, y: 3.11}
+    newSize: {x: 6.05, y: 3.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.454239, y: 0.65805054}
+  m_EdgeRadius: 0
+--- !u!61 &8783074450263937086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783074450263937084}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.08138275, y: -0.77757525}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.05, y: 3.11}
+    newSize: {x: 6.05, y: 3.11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.034683, y: 1.5548491}
+  m_EdgeRadius: 0

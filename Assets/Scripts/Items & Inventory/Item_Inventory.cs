@@ -183,6 +183,9 @@ public class Item_Inventory : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             case "kuih":
                 gm.monologueManager.DisplaySentence(88);
                 break;
+            case "holy book":
+                gm.monologueManager.DisplaySentence(92);
+                break;
             case null:
                 Debug.Log("Item is named improperly or is intentionally out of bounds.");
                 break;

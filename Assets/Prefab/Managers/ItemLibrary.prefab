@@ -49,29 +49,29 @@ MonoBehaviour:
   - itemName: carrot
     itemSprite: {fileID: 21300000, guid: 37123afe423b8e44a8de644f2962aa12, type: 3}
   - itemName: talisman
-    itemSprite: {fileID: 21300000, guid: 82c8df2c1ed8ad040ae2ac1cd948dddf, type: 3}
+    itemSprite: {fileID: 21300000, guid: b38364ea782c4994c889adcf26865714, type: 3}
   - itemName: lighter
     itemSprite: {fileID: 21300000, guid: 31c9c16b442eb7f46908e733a00a341c, type: 3}
   - itemName: spoon
-    itemSprite: {fileID: 21300000, guid: 692029f4d5d00564c982f4ae0be90d1c, type: 3}
+    itemSprite: {fileID: 21300000, guid: 12f5f52fce7e23649b673c3754683aa6, type: 3}
   - itemName: zinc key
     itemSprite: {fileID: 21300000, guid: 1d17202947a5f4b46b12dac3cffb1283, type: 3}
   - itemName: note
     itemSprite: {fileID: 21300000, guid: 85fd4c240cbb5324dbfd7eb3b89bbf7f, type: 3}
   - itemName: red cloth
-    itemSprite: {fileID: 21300000, guid: f877b7dc75bb692449bcd1961b1d1305, type: 3}
+    itemSprite: {fileID: 21300000, guid: 63e8b85cd3f704442b822da3dc21c9bb, type: 3}
   - itemName: flour
-    itemSprite: {fileID: 21300000, guid: 5603ddd0c31968d4695c6819c1cffb9a, type: 3}
+    itemSprite: {fileID: 21300000, guid: c24b1067d6310254095c6952e4c421dd, type: 3}
   - itemName: sugar
-    itemSprite: {fileID: 21300000, guid: 0a4f89c728fd8874db2b4cc3759fd405, type: 3}
+    itemSprite: {fileID: 21300000, guid: 6d26abd52b6aa9e4ebd58dc553e35d89, type: 3}
   - itemName: baking soda
-    itemSprite: {fileID: 21300000, guid: cfbbdf46b714a154685433200a2e633c, type: 3}
+    itemSprite: {fileID: 21300000, guid: 84c9e1c315766c945a2deb0ea9788ce8, type: 3}
   - itemName: pink dye
-    itemSprite: {fileID: 21300000, guid: 401b44eab28e7f34197a5ad2123641a3, type: 3}
+    itemSprite: {fileID: 21300000, guid: 6de37bb628979e2459c0a764f3c6c426, type: 3}
   - itemName: kuih
-    itemSprite: {fileID: 21300000, guid: c4088ecf2b54c58448b7e561ad5868e6, type: 3}
+    itemSprite: {fileID: 21300000, guid: 50f03bdd446f4e4408baf7eeb48311bd, type: 3}
   - itemName: comb
-    itemSprite: {fileID: 21300000, guid: 1464e936212d2d048877c13d3ee634e1, type: 3}
+    itemSprite: {fileID: 21300000, guid: f56bef1197033f64b823441a17403796, type: 3}
   - itemName: empty photo frame
     itemSprite: {fileID: 21300000, guid: a993b75cf7e57b447a70adf73f282ce7, type: 3}
   - itemName: lounge statue
@@ -79,8 +79,10 @@ MonoBehaviour:
   - itemName: housekey
     itemSprite: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada, type: 3}
   - itemName: razor
-    itemSprite: {fileID: 21300000, guid: f8bedfcdb9bef7b46b7db5aedf178bc4, type: 3}
+    itemSprite: {fileID: 21300000, guid: b142f0978e4a47e419644d959418df92, type: 3}
   - itemName: red thread
-    itemSprite: {fileID: 21300000, guid: d3bb61bad37ccdb45810d54f9f5dbfcb, type: 3}
+    itemSprite: {fileID: 21300000, guid: ca4807710a477da4a80e1ec05fe1e404, type: 3}
   - itemName: scissors
-    itemSprite: {fileID: 21300000, guid: e3addfacd58a87d4ea625eb2416f518b, type: 3}
+    itemSprite: {fileID: 21300000, guid: 8cc7b467fd13465409eed0519f567bcd, type: 3}
+  - itemName: holy book
+    itemSprite: {fileID: 21300000, guid: cb143ed14590fcd4998fdd8e37bc60f9, type: 3}

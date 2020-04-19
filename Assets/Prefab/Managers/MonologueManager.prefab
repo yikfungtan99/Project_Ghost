@@ -256,7 +256,7 @@ MonoBehaviour:
   - description: '[32] Locked door: hint to complete Lounge Puzzle first (click)'
     index: 32
     sentenceText: 'A shadow says: "Present a tool which straightens lines that go
-      astray, a regulator that dispells bad luck to allow space for good ones to blossom."'
+      astray, a regulator that dispels bad luck to allow space for good ones to blossom."'
     displayMonologueTimer: 3
     displayMonologueTimerCounter: 0
     displayMonologue: 0
@@ -620,6 +620,27 @@ MonoBehaviour:
   - description: '[89] Game Saved Notification'
     index: 89
     sentenceText: '[The Game has been Saved]'
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[90] Locked door: hint to visit altar room (click)'
+    index: 90
+    sentenceText: 'A shadow says: "Acquire for me the words and verses of purity for
+      ye words alone are impotent to bypass this darkness."'
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[91] Unlock door: use holy book to unlock door (item click)'
+    index: 91
+    sentenceText: 'The shadow dissolves: "For your calm words to quell this darkness...
+      but is it enough to face your haunting self..."'
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[92] Item Description: Holy Book'
+    index: 92
+    sentenceText: A traditional holy book used in ceremonial events like a cultural
+      marriage arrangement. Inside contains many verses of spiritual insight.
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0

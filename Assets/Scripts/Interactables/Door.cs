@@ -128,10 +128,31 @@ public class Door : Interactable
             }
             Debug.Log("Living to Hall2");
         }
+
+        //! Unlock with Holy Book
         if(GatewayIsLocked(gm.doorHorizontalLivingToHall3))
         {
-            UpdateAudio(2);
-            UpdateMonologue(1, "");
+            if (gm.holdPanel.transform.childCount != 0 && gm.holdPanel.transform.GetChild(0).GetComponent<Item_Inventory>().itemName == "holy book")
+            {
+                gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalLivingToHall3, false);
+                gm.doorHorizontalLivingToHall3.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+                UpdateAudio(3);
+                UpdateMonologue(10, "");
+            }
+            else
+            {
+                if (!gm.inTutorial)
+                {
+                    UpdateMonologue(9, "");
+                }
+                else
+                {
+                    UpdateMonologue(1, "");
+                }
+                UpdateAudio(2);
+            }
+            Debug.Log("Living to Hall2");
         }
         if (GatewayIsLocked(gm.doorVerticalMainToStorage))
         {
@@ -189,7 +210,6 @@ public class Door : Interactable
                 Debug.Log("Outside to Main");
             }
         }
-
     }
 
     public void Open()
@@ -461,6 +481,12 @@ public class Door : Interactable
                 {
                     gm.monologueManager.DisplaySentence(33);
                 }
+                break;
+            case 9: //! ghost blocks door to hallway 3
+                gm.monologueManager.DisplaySentence(90);
+                break;
+            case 10: //! unblock door to storage
+                gm.monologueManager.DisplaySentence(91);
                 break;
         }
     }

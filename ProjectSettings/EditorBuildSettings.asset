@@ -34,20 +34,23 @@ EditorBuildSettings:
       V.S Fixes/Jun Yi Edit.unity
     guid: 93ad119bdda311d4f9cd1b5d8fc66aba
   - enabled: 1
-    path: Assets/Scenes/MainMenuIGuess.unity
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Project
+      Beta/MainMenuIGuess.unity
     guid: eb22bf1934f6eee46a2dac00a19447eb
   - enabled: 1
-    path: Assets/Scenes/Prologue Cutscene Sequence.unity
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Project
+      Beta/Prologue Cutscene Sequence.unity
     guid: 708e26eeb3562ac418874975fc7c11fa
   - enabled: 1
-    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Tutorial
-      Scene.unity
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Project
+      Beta/Tutorial Scene.unity
     guid: 7f016b93bf900224099c9b6856939a9d
   - enabled: 1
-    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Game
-      Scene Real.unity
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Project
+      Beta/Game Scene Real.unity
     guid: f0db274fc3c49254d9d2bf0ccddf330f
   - enabled: 1
-    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Win.unity
+    path: Assets/Scenes/THIS IS FOR ACTUAL BUILDS DO NOT EDIT IF UNNESCASSARY/Project
+      Beta/Win.unity
     guid: ad1aa22100eb1334282db1e84b0dc064
   m_configObjects: {}

@@ -55,6 +55,9 @@ public class PuzzleManager : MonoBehaviour
     {
         gm = GameManager.Instance;
 
+        //! Holy Book Trail
+        gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalLivingToHall3, true);
+
         //! Dining Puzzle Settings
         spoonTarget = null;
         gm.doorScript.SetIsLockedOnDoor(gm.doorHorizontalDiningToHall4, true);
