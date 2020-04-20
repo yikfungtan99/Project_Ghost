@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class PausingScript : MonoBehaviour
 {
     public Canvas canvas;
-    void Start()
-    {
-       
-    }
 
     void Update()
     {
@@ -37,13 +33,18 @@ public class PausingScript : MonoBehaviour
         GetCanvasChild(2).SetActive(false);
         Time.timeScale = 1f;
         GameManager.Instance.SetPause(false);
+		
+		UpdateAudio(2);
     }
+	
     void Pause()
     {
         Debug.Log("Pause()");
         GetCanvasChild(2).SetActive(true);
         Time.timeScale = 0f;
         GameManager.Instance.SetPause(true);
+		
+		UpdateAudio(2);
     }
 
     public void QuitGame()
@@ -56,6 +57,8 @@ public class PausingScript : MonoBehaviour
 
     public void PauseMenuQuitButtonToMainMenu()
     {
+		UpdateAudio(2);
+		
         SceneManager.LoadScene(0);
     }
 
@@ -191,6 +194,20 @@ public class PausingScript : MonoBehaviour
         GetCanvasChild(11).SetActive(false);//NotesMenu8
         GetCanvasChild(12).SetActive(false);//NotesMenu9
         GetCanvasChild(13).SetActive(false);//NotesMenu10
+		
+		UpdateAudio(1);
     }
-
+	
+	void UpdateAudio(int index)
+	{
+		switch(index)
+		{
+			case 1: //! Close Journal
+				GameManager.Instance.audioManager.ForcePlayAudio("close journal");
+				break;
+			case 2: //! Click any button (except journal button)
+				GameManager.Instance.audioManager.ForcePlayAudio("button click");
+				break;
+		}
+	}
 }

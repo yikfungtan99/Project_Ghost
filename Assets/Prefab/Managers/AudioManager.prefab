@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjustIn_GameAudioThruInspector: 1
+  audioMixer: {fileID: 24300002, guid: 0a80ba0cfed43e0428719570f9bf6cd7, type: 2}
   audioList:
   - name: Test Theme
     description: Played when test game is started
@@ -410,6 +411,59 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: open journal
+    description: opening journal notes from pause menu
+    audioClip: {fileID: 8300000, guid: 6e630c31b84bbb54c8aba591336ecbdc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: flip journal page
+    description: clicking next or previous buttons to flip through available journal
+      notes
+    audioClip: {fileID: 8300000, guid: 0fa7ebd1be4de3e45bfef477bf3b5dca, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: close journal
+    description: exiting the journal to go back into the pause menu
+    audioClip: {fileID: 8300000, guid: 03223bae0abc6794a8f3fccd30ebfec2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    defFadeInSeconds: 1
+    defFadeOutSeconds: 1
+    isPlaying: 0
+    isFading: 0
+    isPaused: 0
+    triggerOnce: 0
+    audioSource: {fileID: 0}
+  - name: button click
+    description: plays when any UI button is clicked (except journal button)
+    audioClip: {fileID: 8300000, guid: 134e5356eb83823488db6bf86134ca81, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     defFadeInSeconds: 1
     defFadeOutSeconds: 1
     isPlaying: 0

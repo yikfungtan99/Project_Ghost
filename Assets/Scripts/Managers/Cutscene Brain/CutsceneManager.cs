@@ -69,6 +69,8 @@ public class CutsceneManager : MonoBehaviour
     public void SceneTransition()
     {
         Debug.Log("Button click");
+		UpdateAudio(1);
+		
         StartCoroutine(FadeOut(true));
     }
 
@@ -125,6 +127,7 @@ public class CutsceneManager : MonoBehaviour
             fadeInOutImage.CrossFadeAlpha(0.0f, fadeOutTime, false);
 
             yield return new WaitForSeconds(fadeOutTime);
+			AudioManager.instance.ForceStopAudio("disquiet ambience");
             fadeInOutImage.canvasRenderer.SetAlpha(0.0f);
 
             if(fadeOutScene)
@@ -142,4 +145,14 @@ public class CutsceneManager : MonoBehaviour
             Debug.Log("Cutscene is still performing an animation!");
         }
     }
+	
+	void UpdateAudio(int index)
+	{
+		switch(index)
+		{
+			case 1: //! Click any button
+				AudioManager.instance.ForcePlayAudio("button click");
+				break;
+		}
+	}
 }

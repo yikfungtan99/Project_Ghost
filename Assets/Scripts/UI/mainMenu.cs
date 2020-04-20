@@ -8,15 +8,27 @@ public class mainMenu : MonoBehaviour
 
     public void PlayButton()
     {
-       
+		UpdateAudio(1);
+		
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //SceneManager.LoadScene(1);
     }
 
     public void QuitButton()
     {
+		UpdateAudio(1);
+		
         Debug.Log("Quit game");
         Application.Quit();
-
     }
+	
+	void UpdateAudio(int index)
+	{
+		switch(index)
+		{
+			case 1: //! Click any button
+				AudioManager.instance.ForcePlayAudio("button click");
+				break;
+		}
+	}
 }

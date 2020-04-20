@@ -24,6 +24,7 @@ public class DeathLoad : MonoBehaviour
     [System.Obsolete]
     public void Restart()
     {
+		UpdateAudio(1);
 
         if (forTutorial)
         {
@@ -65,7 +66,7 @@ public class DeathLoad : MonoBehaviour
         else
         {
             gm.playerObject.SetActive(true);
-           
+			
             if(gm.playerMovement.saveStationNum == 2)
             {
                 gm.roomManager.GetComponent<Animator>().Play("Altar Room");
@@ -99,5 +100,14 @@ public class DeathLoad : MonoBehaviour
         }
 
     }
-
+	
+	void UpdateAudio(int index)
+	{
+		switch(index)
+		{
+			case 1:
+				gm.audioManager.ForcePlayAudio("button click");
+				break;
+		}
+	}
 }

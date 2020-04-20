@@ -644,6 +644,19 @@ MonoBehaviour:
     displayMonologueTimer: 4
     displayMonologueTimerCounter: 0
     displayMonologue: 0
+  - description: '[93] Central Courtyard: Stairs'
+    index: 93
+    sentenceText: My parents are not home yet, so it is pointless to go upstairs.
+      I should find my room on this floor.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
+  - description: '[94] Altar: Cursed Window? Lore'
+    index: 94
+    sentenceText: Outside is... blurry. I cannot see anything from this window.
+    displayMonologueTimer: 4
+    displayMonologueTimerCounter: 0
+    displayMonologue: 0
   typingSpeed: 0.01
   index: 0
   isSentenceDrawn: 0

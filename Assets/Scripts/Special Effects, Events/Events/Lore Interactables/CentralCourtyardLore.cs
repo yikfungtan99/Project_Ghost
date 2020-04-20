@@ -7,6 +7,7 @@ public class CentralCourtyardLore : Interactable
     [Header("Central Courtyard Lore")]
     [SerializeField] bool isOrchid = false;
     [SerializeField] bool isPictureFrames = false;
+	[SerializeField] bool isStairs = false;
     
     public override void Interact()
     {
@@ -25,20 +26,34 @@ public class CentralCourtyardLore : Interactable
         {
             UpdateMonologue(2);
         }
+		if(isStairs)
+		{
+			UpdateMonologue(3);
+		}
     }
 
     void UpdateMonologue(int displayIndex)
     {
-        switch (displayIndex)
-        {
-            case 1: //! Orchid Plant
-                gm.monologueManager.DisplaySentence(68);
-                break;
-            case 2: //! Picture Frames
-                gm.monologueManager.DisplaySentence(69);
-                break;
-            default:
-                break;
-        }
+		switch (displayIndex)
+		{
+			case 1: //! Orchid Plant
+				gm.monologueManager.DisplaySentence(68);
+				break;
+			case 2: //! Picture Frames
+				gm.monologueManager.DisplaySentence(69);
+				break;
+			default:
+				break;
+		}
+		
+        if(gm.inTutorial)
+		{
+			switch(displayIndex)
+			{
+				case 3:
+					gm.monologueManager.DisplaySentence(93);
+					break;
+			}
+		}
     }
 }

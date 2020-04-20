@@ -22,40 +22,45 @@ public class AltarLore : Interactable
         {
             UpdateMonologue(1);
         }
-        if (isGuanYin)
-        {
-            UpdateMonologue(1);
-        }
         if (isWindow)
         {
             UpdateMonologue(2);
+        }
+		if (isGuanYin)
+        {
+            UpdateMonologue(3);
         }
     }
 
     void UpdateMonologue(int displayIndex)
     {
-        if(!gm.inTutorial)
-        {
-            switch (displayIndex)
+        switch (displayIndex)
+		{
+			case 1: //! Three Buddhas Painting
+				gm.monologueManager.DisplaySentence(70);
+				break;
+			case 2: //! Windows
+				if(gm.inTutorial)
+				{
+					gm.monologueManager.DisplaySentence(72);
+				}
+				else
+				{
+					gm.monologueManager.DisplaySentence(94);
+				}
+				break;
+			default:
+				break;
+		}
+		
+		if(gm.inTutorial)
+		{
+			switch(displayIndex)
             {
-                case 1: //! Three Buddhas Painting
-                    gm.monologueManager.DisplaySentence(70);
-                    break;
-                case 2: //! Windows
-                    gm.monologueManager.DisplaySentence(72);
-                    break;
-                default:
-                    break;
-            }
-        }
-        else
-        {
-            switch(displayIndex)
-            {
-                case 1: //! Guan Yin Statue
+                case 3: //! Guan Yin Statue
                     gm.monologueManager.DisplaySentence(71);
                     break;
             }
-        }
+		}
     }
 }

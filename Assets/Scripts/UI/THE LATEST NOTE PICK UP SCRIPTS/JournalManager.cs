@@ -115,6 +115,8 @@ public class JournalManager : MonoBehaviour
                 noteWarning.SetActive(true);
             }
         }
+		
+		UpdateAudio(1);
     }
 
     public void NextPage(int curIndex)
@@ -131,6 +133,8 @@ public class JournalManager : MonoBehaviour
                     cur.SetActive(false);
                     next.SetActive(true);
                     Debug.Log("NextPage called");
+					
+					UpdateAudio(2);
                 }
             }
             else
@@ -145,6 +149,8 @@ public class JournalManager : MonoBehaviour
                             cur.SetActive(false);
                             next.SetActive(true);
                             Debug.Log("NextPage called");
+							
+							UpdateAudio(2);
                             break;
                         }
                     }
@@ -226,6 +232,8 @@ public class JournalManager : MonoBehaviour
                     cur.SetActive(false);
                     prev.SetActive(true);
                     Debug.Log("PrevPage called");
+					
+					UpdateAudio(2);
                 }
             }
             else
@@ -243,6 +251,8 @@ public class JournalManager : MonoBehaviour
                             cur.SetActive(false);
                             prev.SetActive(true);
                             Debug.Log("PrevPage called");
+							
+							UpdateAudio(2);
                             break;
                         }
                     }
@@ -285,4 +295,17 @@ public class JournalManager : MonoBehaviour
         Debug.LogError("No note found in index");
         return null;
     }
+	
+	void UpdateAudio(int index)
+	{
+		switch(index)
+		{
+			case 1: //! Open Journal
+				GameManager.Instance.audioManager.ForcePlayAudio("open journal");
+				break;
+			case 2: //! Flip Journal Page
+				GameManager.Instance.audioManager.ForcePlayAudio("flip journal page");
+				break;
+		}
+	}
 }

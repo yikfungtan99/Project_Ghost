@@ -52,13 +52,15 @@ public class AudioManager : MonoBehaviour
             a.triggerOnce = false;
             ForceStopAudio(a.name);
         }
+		
+		//! Fade in this ambience when player starts in bridal bedroom (code may change later)
+        FadeInAudio("disquiet ambience", 0);
     }
 
     //! Only use this when an audioclip is to be played at the start of game (i.e. BGM theme)
     void Start()
     {
-        //! Fade in this ambience when player starts in bridal bedroom (code may change later)
-        FadeInAudio("disquiet ambience", 0);
+        
 
     }
 
