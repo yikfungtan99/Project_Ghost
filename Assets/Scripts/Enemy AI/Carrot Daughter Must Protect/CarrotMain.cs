@@ -61,7 +61,7 @@ public class CarrotMain : MonoBehaviour
         anima = GetComponent<Animator>();
         ghostMan = GameManager.Instance.ghostManager;
 
-        vanishChance = Random.Range(0, 2);
+        vanishChance = Random.Range(0, 4);
 
         gm = GameManager.Instance;
 
@@ -83,8 +83,8 @@ public class CarrotMain : MonoBehaviour
                     if (vanishChance == 0 && needNewNumber)
                     {
 
-                        vanishChance = Random.Range(0, 2);
-                        transform.position = new Vector2(0, 0);
+                        vanishChance = Random.Range(0, 4);
+                        transform.position = inactiveLocation.position;
                         needNewNumber = false;
                     }
 

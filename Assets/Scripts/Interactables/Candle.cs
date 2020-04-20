@@ -9,7 +9,15 @@ public class Candle : Interactable
     public bool isLit = false;
     public Sprite spriteLit;
     public Sprite spriteNotLit;
-
+    public bool LightOnStart = false;
+    public void Start()
+    {
+        if(LightOnStart==true)
+        {
+            LightCandle();
+        }    
+       
+    }
     public override void Interact()
     {
  
@@ -32,8 +40,13 @@ public class Candle : Interactable
 
         transform.GetChild(0).gameObject.SetActive(isLit);
 
-        UpdateAudio(1);
-        UpdateMonologue(-1, "");
+        if(LightOnStart == false)
+        {
+            UpdateAudio(1);
+            UpdateMonologue(-1, "");
+        }
+        
+        
     }
 
     void OnTriggerStay2D(Collider2D collision)

@@ -14,6 +14,7 @@ public class Interactable : MonoBehaviour
     public string itemName;
     public int charges = 0;
     public GameObject highlight;
+    public bool isGuanYin = false;
 
     virtual public void Awake()
     {
@@ -173,8 +174,15 @@ public class Interactable : MonoBehaviour
                     }
                     else
                     {
-                        // GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
-                        highlight.SetActive(false);
+                        if(isGuanYin==false)// GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
+                        {
+                            highlight.SetActive(false);
+                        }
+                        else
+                        {
+                            highlight.SetActive(isSeen);
+                        }
+                        
                     }
 
                 }

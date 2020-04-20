@@ -34,6 +34,7 @@ public class Mirror_Interactable : Interactable
         else
         {
             render.sprite = coveredSprite;
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
     public override void Interact()
