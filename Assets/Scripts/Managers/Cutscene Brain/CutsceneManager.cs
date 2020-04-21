@@ -21,7 +21,8 @@ public class CutsceneManager : MonoBehaviour
     private void Awake()
     {
         gm = GameManager.Instance;
-
+		
+		Time.timeScale = 1f;
         sequenceCount = 0;
         isFading = false;
 

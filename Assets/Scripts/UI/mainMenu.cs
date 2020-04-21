@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class mainMenu : MonoBehaviour
 {
-
+	void Awake()
+	{
+		Time.timeScale = 1f;
+	}
+	
     public void PlayButton()
     {
 		UpdateAudio(1);
