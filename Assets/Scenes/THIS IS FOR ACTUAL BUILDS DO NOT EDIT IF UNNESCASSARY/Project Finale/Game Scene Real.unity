@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -62190,6 +62190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Vertical(Living - Hall2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1576834179798116102, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2580779676812659452, guid: bb50755510f5c53429ac091384858fc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -64107,7 +64112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 3767537400963364341, guid: fccd6960e8266e34c9871514eeaaf21c,
+  m_Sprite: {fileID: -5242114933884791070, guid: c52e0f38e49c676458ba8721cb9ff3b1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
