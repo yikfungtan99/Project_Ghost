@@ -2362,6 +2362,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3089847882635572332}
     m_Modifications:
+    - target: {fileID: 2023210402936738432, guid: 6ce959657c0f9f849afd8f6955b62928,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023210402936738435, guid: 6ce959657c0f9f849afd8f6955b62928,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2023210403462486748, guid: 6ce959657c0f9f849afd8f6955b62928,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2421,6 +2431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lounge Left Hiding Spot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2023210403462486751, guid: 6ce959657c0f9f849afd8f6955b62928,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce959657c0f9f849afd8f6955b62928, type: 3}
@@ -12785,12 +12800,12 @@ PrefabInstance:
     - target: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
-      value: -5.3
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
-      value: -5.3
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
         type: 3}
@@ -12805,12 +12820,12 @@ PrefabInstance:
     - target: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -15.12
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: -15.12
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 1732947970624685398, guid: 7074d9e43c9c12041ae3b3cab53a0c47,
         type: 3}
@@ -21004,7 +21019,7 @@ PrefabInstance:
     - target: {fileID: 4273163424162267597, guid: bb50755510f5c53429ac091384858fc4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: -0.416
       objectReference: {fileID: 0}
     - target: {fileID: 4273163424162267597, guid: bb50755510f5c53429ac091384858fc4,
         type: 3}
@@ -26708,7 +26723,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 28
+  m_SortingOrder: 27
   m_Sprite: {fileID: 21300000, guid: bac61765f121dd0488e956f328d8fc92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -50029,7 +50044,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 29
+  m_SortingOrder: 28
   m_Sprite: {fileID: 8911686936752035815, guid: cd7829b5f5756d3488e72e02b2cd21bb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -67836,7 +67851,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_Sprite: {fileID: 144628371738707790, guid: 892ec97a18e661241bcff5911acaa1a6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -79063,7 +79078,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: 32
   m_Sprite: {fileID: -630688779792356938, guid: 892ec97a18e661241bcff5911acaa1a6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
