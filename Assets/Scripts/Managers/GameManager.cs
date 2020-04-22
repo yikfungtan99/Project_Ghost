@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public MonologueManager monologueManager;
     public RoomManager roomManager;
     public PuzzleManager puzzleManager;
-    public RealNotePickUp pauseMenuManager;
+    public PausingScript pauseMenuManager;
     public ItemLibrary itemLibrary;
     public MouseControls mouseControl;
 

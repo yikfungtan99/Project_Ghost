@@ -65,7 +65,9 @@ MonoBehaviour:
     displayMonologue: 0
   - description: '[3] When player picks up a note'
     index: 3
-    sentenceText: A piece of torn paper? Might be useful.
+    sentenceText: 'A piece of torn paper? Might be useful.
+
+      [Journal Updated]'
     displayMonologueTimer: 3
     displayMonologueTimerCounter: 0
     displayMonologue: 0
