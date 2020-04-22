@@ -17,7 +17,10 @@ public class DeathLoad : MonoBehaviour
     {
         gm = GameManager.Instance;
 
-        ghostInitPos = gm.ghostMain.transform.position;
+        if(gm.ghostMain != null)
+		{
+			ghostInitPos = gm.ghostMain.transform.position;
+		}
 
     }
 

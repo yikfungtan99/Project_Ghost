@@ -77,7 +77,7 @@ MonoBehaviour:
   adjustIn_GameAudioThruInspector: 1
   audioMixer: {fileID: 24300002, guid: 0a80ba0cfed43e0428719570f9bf6cd7, type: 2}
   audioList:
-  - name: Test Theme
+  - name: Secret Theme
     description: Played when test game is started
     audioClip: {fileID: 8300000, guid: bd7a2357b30cecb41b5f9427645d3c5c, type: 3}
     volume: 1
