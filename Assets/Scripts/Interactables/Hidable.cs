@@ -12,6 +12,8 @@ public class Hidable : Interactable
     public float cdTime;
     private float cdCount;
     private bool isUsable=true;
+	public float hideDelay;
+	public float hideTimer;
 
     // Start is called before the first frame update
     public void Start()
@@ -37,6 +39,17 @@ public class Hidable : Interactable
                 isUsable = true;
             }
         }
+		
+		if(hideTimer > 0)
+		{
+			hideTimer -= Time.deltaTime;
+			
+			if(hideTimer <= 0f)
+			{
+				hideTimer = 0f;
+				gm.player.hidden = true;
+			}
+		}
     }
 
     public override void UpdateCursor()
@@ -58,18 +71,23 @@ public class Hidable : Interactable
 
     public void Hide()
     {
-        UpdateAudio(1);
+		UpdateAudio(1);
         UpdateAudio(2);
-        initY = player.transform.position.y;
-        player.GetComponent<Player_Movement>().enabled = false;
+		
+		//gm.player.hidden = true;
+		
+		initY = player.transform.position.y;
+        player.GetComponent<Player_Movement>().stopMoving = true;
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = false;
-        gm.player.hidden = true;
-        player.layer = LayerMask.NameToLayer("HideLayer");
+        
+		player.layer = LayerMask.NameToLayer("HideLayer");
         player.transform.position = new Vector2(transform.position.x, transform.position.y);
         player.GetComponent<Player>().curHidable = transform.gameObject;
         gm.GlobalLight.intensity = 0;
 
         transform.GetChild(0).gameObject.SetActive(true);
+		
+		hideTimer = hideDelay;
     }
 
     public void Unhide()
@@ -78,7 +96,8 @@ public class Hidable : Interactable
         UpdateAudio(3);
         UpdateAudio(2);
         Debug.Log(initY);
-
+		
+		player.GetComponent<Player_Movement>().stopMoving = false;
         player.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
         player.GetComponent<Player>().hidden = false;
         player.layer = LayerMask.NameToLayer("Player");

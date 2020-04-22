@@ -11,6 +11,7 @@ public class MouseControls : MonoBehaviour
     public Texture2D cursorOnInventoryItem;
     public Texture2D cursorDrag;
     public Texture2D cursorHide;
+	public Texture2D cursorInvisible;
 
     private GameManager gm;
     private Camera cam;
@@ -82,6 +83,9 @@ public class MouseControls : MonoBehaviour
                 cursorToSwitch = cursorHide;
                 break;
 
+            case "invisible":
+                cursorToSwitch = cursorInvisible;
+                break;
         }
 
         Cursor.SetCursor(cursorToSwitch, new Vector2(cursorToSwitch.width/2, cursorToSwitch.height / 2), CursorMode.Auto);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Experimental.Rendering.LWRP;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Player_Movement : MonoBehaviour
@@ -23,6 +24,9 @@ public class Player_Movement : MonoBehaviour
     public float moveSpeed;
 
     public float distancePandG;
+	
+	public bool stopMoving = false;
+	
     //Sprint variables
     private bool sprint = false;
     [Header("Sprint")]
@@ -42,13 +46,19 @@ public class Player_Movement : MonoBehaviour
     bool randomized = false;
 
     bool pressedButton = false;
-
+	
+	[Header("Saving")]
     public Transform savedLocation;
     public int saveStationNum;
     public Transform defaultSpawn;
-    // Start is called before the first frame update
+	
+	[Header("Unhiding Delay")]
+	[SerializeField, ReadOnly] float holdStartTime;
+	[SerializeField] float unhideTime;
+	
     void Start()
     {
+		holdStartTime = 0f;
         savedLocation = defaultSpawn;
         gm = GetComponent<Player>().gm;
         rb = this.gameObject.GetComponent<Rigidbody2D>();
@@ -82,12 +92,21 @@ public class Player_Movement : MonoBehaviour
 
                     if (gm.player.hidden)
                     {
-
-                        gm.player.curHidable.GetComponent<Hidable>().Unhide();
-
+						//! This still set a start time since the mouse button was first held down
+						if(Input.GetMouseButtonDown(0))
+						{
+							Debug.LogWarning("Mouse held down");
+							holdStartTime = Time.time;
+						}
+                        //gm.player.curHidable.GetComponent<Hidable>().Unhide();
                     }
                     else
                     {
+						if(stopMoving)
+						{
+							return;
+						}
+						
                         if (GetComponentInChildren<Player_Interactable>().CheckForInteractables())
                         {
                             haveWayPoint = false;
@@ -147,6 +166,51 @@ public class Player_Movement : MonoBehaviour
                         }
                     }
                 }
+				
+				//! This will continue running as long as mouse button is down (update visuals)
+				if(Input.GetMouseButton(0))
+				{
+					if(gm.player.hidden)
+					{
+						if(holdStartTime == 0)
+						{
+							return;
+						}
+						
+						float holdDownTime = Time.time - holdStartTime;
+						Debug.LogWarning("hold down time: " + holdDownTime);
+						Debug.LogWarning("hold start time: " + holdStartTime);
+						
+						//! --> Function: Show visual indicator for timer
+						if(gm.unhidingUICanvas.transform.GetChild(0).GetComponent<Image>().enabled == false)
+						{
+							gm.unhidingUICanvas.transform.GetChild(0).GetComponent<Image>().enabled = true;
+						}
+						gm.unhidingUICanvas.transform.GetChild(0).GetComponent<WindUpRing>().UpdateFill(holdDownTime);
+						
+						if(GetComponent<Player>().curHidable != null)
+						{
+							if(holdDownTime >= GetComponent<Player>().curHidable.GetComponent<Hidable>().hideDelay)
+							{
+								CheckForUnhideTime(holdDownTime);
+							}
+						}
+					}
+				}
+				
+				//! This will detect when the mouse button is let go (use to cancel hold timer)
+				if(Input.GetMouseButtonUp(0))
+				{
+					if(gm.player.hidden)
+					{
+						Debug.LogWarning("Mouse let go");
+						Debug.LogWarning(Time.time - holdStartTime + " seconds");
+						
+						holdStartTime = 0f;
+						gm.unhidingUICanvas.transform.GetChild(0).GetComponent<Image>().fillAmount = 0f;
+						gm.unhidingUICanvas.transform.GetChild(0).GetComponent<Image>().enabled = false;
+					}
+				}
             }
 
 
@@ -300,7 +364,33 @@ public class Player_Movement : MonoBehaviour
         }
         Debug.Log("GAME SAVED");
     }
-
+	
+	void CheckForUnhideTime(float holdTime)
+	{
+		if(holdTime >= unhideTime)
+		{
+			Debug.LogWarning("Hold on...");
+			
+			holdStartTime = 0f;
+			gm.unhidingUICanvas.transform.GetChild(0).GetComponent<Image>().fillAmount = 0f;
+			gm.unhidingUICanvas.transform.GetChild(0).GetComponent<Image>().enabled = false;
+			
+			gm.player.curHidable.GetComponent<Hidable>().Unhide();
+		}
+	}
+	
+	public float UnhideTime
+	{
+		get
+		{
+			return unhideTime;
+		}
+		set
+		{
+			unhideTime = value;
+		}
+	}
+	
     void UpdateMonologue(int displayIndex)
     {
         switch (displayIndex)

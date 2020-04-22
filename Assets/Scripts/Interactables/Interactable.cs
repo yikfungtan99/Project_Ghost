@@ -174,7 +174,7 @@ public class Interactable : MonoBehaviour
                     }
                     else
                     {
-                        if(isGuanYin==false)// GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
+                        if(!isGuanYin)// GetComponentInChildren<ParticleSystem>(true).gameObject.SetActive(false);
                         {
                             highlight.SetActive(false);
                         }

@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject deathScreenObject;
     public GameObject winScreenObject;
     public GameObject itemLibraryObject;
+	public GameObject unhidingUICanvas;
     
     public AudioManager audioManager;
     public MonologueManager monologueManager;

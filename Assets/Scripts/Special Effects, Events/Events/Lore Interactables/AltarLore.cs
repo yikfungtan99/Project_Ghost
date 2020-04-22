@@ -6,7 +6,7 @@ public class AltarLore : Interactable
 {
     [Header("Altar Room Lore")]
     [SerializeField] bool isThreeBuddhas = false;
-    [SerializeField] bool isGuanYin = false;
+    [SerializeField] bool isGuanYinStatue = false;
     [SerializeField] bool isWindow = false;
 
     public override void Interact()
@@ -26,7 +26,7 @@ public class AltarLore : Interactable
         {
             UpdateMonologue(2);
         }
-		if (isGuanYin)
+		if (isGuanYinStatue)
         {
             UpdateMonologue(3);
         }
