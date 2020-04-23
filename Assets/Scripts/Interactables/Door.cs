@@ -187,14 +187,17 @@ public class Door : Interactable
                 UpdateMonologue(1, "");
             }
 
-            if (!done)
-            {
-                gm.TutorialNavi.UpdateBoard(2);
-                done = true;
-            }
+			if(gm.TutorialNavi != null)
+			{
+				if (!done)
+				{
+					gm.TutorialNavi.UpdateBoard(2);
+					done = true;
+				}	
+			}
             
             gm.playerInventory.firstTime = true;
-
+			
             if (CheckHoldSlot())
             {
                 //gm.TutorialNavi.GetComponent<Animator>().SetTrigger("Next");

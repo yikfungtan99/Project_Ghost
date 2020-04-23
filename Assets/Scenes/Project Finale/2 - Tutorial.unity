@@ -41915,7 +41915,7 @@ PrefabInstance:
         type: 3}
       propertyPath: items.Array.data[16].itemSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1d17202947a5f4b46b12dac3cffb1283,
+      objectReference: {fileID: 21300000, guid: 1894c146446f9a746b176e67d85de706,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16416b716eaaf464e8c378b1c317f48f, type: 3}
@@ -47348,7 +47348,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -7425035072305500635, guid: 2f895de374d318d48a7ac9f29b13abed,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.28627452}
@@ -48915,7 +48915,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: -3957385353998387691, guid: 2f895de374d318d48a7ac9f29b13abed,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
