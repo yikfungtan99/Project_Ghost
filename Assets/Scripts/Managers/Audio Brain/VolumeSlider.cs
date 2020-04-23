@@ -12,7 +12,16 @@ public class VolumeSlider : MonoBehaviour
 	{
 		if(audioMixer != null && PlayerPrefs.HasKey("MasterSliderVolume"))
 		{
-			float savedVolume = Mathf.Log10(PlayerPrefs.GetFloat("MasterSliderVolume", 1f)) * 20;
+			float savedVolume;
+			
+			if(PlayerPrefs.GetFloat("MasterSliderVolume", 1f) != 0)
+			{
+				savedVolume = Mathf.Log10(PlayerPrefs.GetFloat("MasterSliderVolume", 1f)) * 20;
+			}
+			else
+			{
+				savedVolume = -80;
+			}
 			
 			GetComponent<Slider>().value = PlayerPrefs.GetFloat("MasterSliderVolume", 1f);
 			audioMixer.SetFloat("ExposedMaster", savedVolume);
@@ -21,7 +30,16 @@ public class VolumeSlider : MonoBehaviour
 	
     public void SetLevel(float sliderValue)
     {
-		float newVolume = Mathf.Log10(sliderValue) * 20;
+		float newVolume;
+		
+		if(sliderValue != 0)
+		{
+			newVolume = Mathf.Log10(sliderValue) * 20;
+		}
+		else
+		{
+			newVolume = -80;
+		}
 		
         audioMixer.SetFloat("ExposedMaster", newVolume);
 		

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -42147,7 +42147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7699189192176562872, guid: d2566e2f6b7356145a3fda68e74c4698,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -45890,6 +45890,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2187059024796185159, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4631104741073442733, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
       propertyPath: m_IsActive
@@ -45903,12 +45908,37 @@ PrefabInstance:
     - target: {fileID: 7574524003553304254, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7574524003553304254, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450994128533472293, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450994128533472293, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526855678030119866, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526855678030119866, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526855678030119866, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8812354926530577524, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}

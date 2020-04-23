@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -31949,6 +31949,76 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3055894704831532277, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 343.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894704831532277, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894704831532277, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -189.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894704831532277, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894704831532278, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_Name
+      value: Pause Menu Master Volume Slider
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894704831532278, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705899554670, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705899554670, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705899554670, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705899554671, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705899554671, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705927503034, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705927503034, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3055894705927503034, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7574524003553304254, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -31958,6 +32028,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574524005084010783, guid: 83ebdedb7b54564478622a5c2784cb54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8812354926557087472, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
@@ -32077,7 +32152,7 @@ PrefabInstance:
     - target: {fileID: 8812354927271099167, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
       propertyPath: m_Name
-      value: New_Pause_Menu
+      value: Pause Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8812354927271099167, guid: 83ebdedb7b54564478622a5c2784cb54,
         type: 3}
