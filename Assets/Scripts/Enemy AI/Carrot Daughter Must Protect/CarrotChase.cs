@@ -25,6 +25,9 @@ public class CarrotChase : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //Remove move towards
+        //transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+
         if(transform.position.x < playerPos.position.x)
         {
 
