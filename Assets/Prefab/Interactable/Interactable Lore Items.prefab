@@ -839,6 +839,7 @@ MonoBehaviour:
   isGuanYin: 0
   isOrchid: 0
   isPictureFrames: 1
+  isStairs: 0
 --- !u!61 &2159519819795986792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -970,6 +971,7 @@ MonoBehaviour:
   isGuanYin: 0
   isOrchid: 1
   isPictureFrames: 0
+  isStairs: 0
 --- !u!61 &8530055723583197627
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4206,7 +4208,7 @@ MonoBehaviour:
   highlight: {fileID: 0}
   isGuanYin: 0
   isThreeBuddhas: 1
-  isGuanYin: 0
+  isGuanYinStatue: 0
   isWindow: 0
 --- !u!61 &1367809649697461255
 BoxCollider2D:
@@ -4339,7 +4341,7 @@ MonoBehaviour:
   highlight: {fileID: 0}
   isGuanYin: 0
   isThreeBuddhas: 0
-  isGuanYin: 0
+  isGuanYinStatue: 0
   isWindow: 1
 --- !u!61 &6887796456398367626
 BoxCollider2D:
