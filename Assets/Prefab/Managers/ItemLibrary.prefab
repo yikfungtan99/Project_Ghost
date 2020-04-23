@@ -77,7 +77,7 @@ MonoBehaviour:
   - itemName: lounge statue
     itemSprite: {fileID: 21300000, guid: 3c2f12f32b959ce4da270cc82a38553d, type: 3}
   - itemName: housekey
-    itemSprite: {fileID: 21300000, guid: a30de71391e29604289655eb2d39cada, type: 3}
+    itemSprite: {fileID: 0}
   - itemName: razor
     itemSprite: {fileID: 21300000, guid: b142f0978e4a47e419644d959418df92, type: 3}
   - itemName: red thread
