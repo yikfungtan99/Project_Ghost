@@ -34,18 +34,18 @@ EditorBuildSettings:
       V.S Fixes/Jun Yi Edit.unity
     guid: 93ad119bdda311d4f9cd1b5d8fc66aba
   - enabled: 1
-    path: Assets/Scenes/Project Finale/MainMenuIGuess.unity
+    path: Assets/Scenes/Project Finale/0 - Main Menu.unity
     guid: eb22bf1934f6eee46a2dac00a19447eb
   - enabled: 1
-    path: Assets/Scenes/Project Finale/Prologue Cutscene Sequence.unity
+    path: Assets/Scenes/Project Finale/1 - Prologue Cutscene.unity
     guid: 708e26eeb3562ac418874975fc7c11fa
   - enabled: 1
-    path: Assets/Scenes/Project Finale/Tutorial Scene.unity
+    path: Assets/Scenes/Project Finale/2 - Tutorial.unity
     guid: 7f016b93bf900224099c9b6856939a9d
   - enabled: 1
-    path: Assets/Scenes/Project Finale/Game Scene Real.unity
+    path: Assets/Scenes/Project Finale/3 - Main Game.unity
     guid: f0db274fc3c49254d9d2bf0ccddf330f
   - enabled: 1
-    path: Assets/Scenes/Project Finale/Win.unity
+    path: Assets/Scenes/Project Finale/4 - Win Screen.unity
     guid: ad1aa22100eb1334282db1e84b0dc064
   m_configObjects: {}
