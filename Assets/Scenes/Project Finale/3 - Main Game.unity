@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -18317,6 +18317,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 4.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.19528008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.409668
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.54590845
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156655094872495415, guid: bb50755510f5c53429ac091384858fc4,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.3183146
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb50755510f5c53429ac091384858fc4, type: 3}

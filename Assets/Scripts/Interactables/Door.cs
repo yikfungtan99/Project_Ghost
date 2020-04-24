@@ -221,10 +221,12 @@ public class Door : Interactable
 
         if (gm.playerInventory.firstTime)
         {
-            //gm.TutorialNavi.UpdateBoard(5);
-            gm.TutorialNavi.gameObject.SetActive(false);
-            gm.playerInventory.firstTime = false;
-            
+			if(gm.TutorialNavi != null)
+			{
+				//gm.TutorialNavi.UpdateBoard(5);
+				gm.TutorialNavi.gameObject.SetActive(false);
+				gm.playerInventory.firstTime = false;
+			}            
         }
 
         if (LeftRight)
